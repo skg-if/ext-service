@@ -1,6 +1,6 @@
 ---
 title: Data model
-parent: Extension template
+parent: Service
 layout: default
 nav_order: 3
 # nav_exclude: false
@@ -9,7 +9,7 @@ nav_order: 3
 # Extended data model
 
 {: .important }
-To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `tmpl`.
+To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `srv`.
 
 ## Main objective
 This extension template extends the [SKG-IF Ontology](https://w3id.org/skg-if/ontology/) in two ways:
@@ -24,7 +24,7 @@ In this modelling phase, two outcomes are expected
 
 These files need to be placed as indicated [here](../structure). In this way, everything will be automatically wired-up in order to deliver behind w3id.org and content negotiation all the assets developed within the extension.
 
-For example: this extension's ontology can be found at  [https://w3id.org/skg-if/extension/tmpl/ontology](https://w3id.org/skg-if/extension/tmpl/ontology).
+For example: this extension's ontology can be found at  [https://w3id.org/skg-if/extension/srv/ontology](https://w3id.org/skg-if/extension/srv/ontology).
 
 
 ## Methodological considerations

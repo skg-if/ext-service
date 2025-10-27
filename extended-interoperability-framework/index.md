@@ -1,15 +1,15 @@
 ---
 title: Interoperability framework
-parent: Extension template
+parent: Service
 layout: default
 nav_order: 2
 has_toc: false
 # nav_exclude: true
 ---
-# (tmpl) Interoperability framework
+# (srv) Interoperability framework
 
 {: .important }
-To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `tmpl`.
+To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `srv`.
 
 ## Core extensions
 As an example, this template extends these core entities:
