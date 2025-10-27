@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/skg-if/extension/tmpl/ontology/"
+     xml:base="https://w3id.org/skg-if/extension/tmpl/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="https://w3id.org/skg-if/extension/tmpl/ontology/">
+        <owl:versionIRI rdf:resource="https://w3id.org/skg-if/extension/tmpl/ontology/1.0.0/"/>
+        <dc:date>2025-05-07</dc:date>
+        <dc:rights>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode)</dc:rights>
+        <dc:title>SKG-IF Ontology: Extension template</dc:title>
+        <vann:preferredNamespacePrefix>tmpl</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/skg-if/extension/tmpl/ontology/</vann:preferredNamespaceUri>
+        <rdfs:comment>This extension template of the SKG-IF data model introduces is intended to kickstart extensions development. It just introduces a new class Comment and links it to Research products.</rdfs:comment>
+        <rdfs:label>SKG-O: extension template</rdfs:label>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/comment -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/comment">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label>schema:comment (SKG-IF labels: tmpl_comments)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>dcterms:description (SKG-IF labels: tmpl_content)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/spar/fabio/Work -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Work">
+        <dc:description>The properties that can be used with this class are:
+
+* schema:comment -[0..N]-&gt; schema:Comment</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label>fabio:Work (SKG-IF labels: Research product)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Comment -->
+
+
+    <owl:Class rdf:about="http://schema.org/Comment">
+        <dc:description>The properties that can be used with this class are:
+
+* dcterms:description -[0..1]-&gt; rdfs:Literal</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label>schema:Comment (SKG-IF labels: tmpl_comment)</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

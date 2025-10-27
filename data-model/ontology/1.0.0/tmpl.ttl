@@ -1,0 +1,47 @@
+@prefix tmpl: <https://w3id.org/skg-if/extension/tmpl/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+
+dc:date a owl:AnnotationProperty .
+dc:description a owl:AnnotationProperty .
+dc:rights a owl:AnnotationProperty .
+dc:title a owl:AnnotationProperty .
+
+tmpl: a owl:Ontology ;
+    rdfs:label "SKG-O: extension template" ;
+    dc:date "2025-05-07" ;
+    dc:rights "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode)" ;
+    dc:title "SKG-IF Ontology: Extension template" ;
+    vann:preferredNamespacePrefix "tmpl" ;
+    vann:preferredNamespaceUri "https://w3id.org/skg-if/extension/tmpl/ontology/"^^xsd:anyURI ;
+    rdfs:comment "This extension template of the SKG-IF data model introduces is intended to kickstart extensions development. It just introduces a new class Comment and links it to Research products." ;
+    owl:versionIRI <https://w3id.org/skg-if/extension/tmpl/ontology/1.0.0/> ;
+    owl:versionInfo "1.0.0" .
+
+fabio:Work a owl:Class ;
+    rdfs:label "fabio:Work (SKG-IF labels: Research product)" ;
+    dc:description """The properties that can be used with this class are:
+
+* schema:comment -[0..N]-> schema:Comment""" ;
+    rdfs:isDefinedBy schema: .
+
+schema:comment a owl:ObjectProperty ;
+    rdfs:label "schema:comment (SKG-IF labels: tmpl_comments)" ;
+    rdfs:isDefinedBy schema: .
+
+schema:Comment a owl:Class ;
+    rdfs:label "schema:Comment (SKG-IF labels: tmpl_comment)" ;
+    dc:description """The properties that can be used with this class are:
+
+* dcterms:description -[0..1]-> rdfs:Literal""";
+    rdfs:isDefinedBy schema: .
+
+dcterms:description a owl:DatatypeProperty ;
+    rdfs:label "dcterms:description (SKG-IF labels: tmpl_content)" ;
+    rdfs:isDefinedBy dcterms: .
