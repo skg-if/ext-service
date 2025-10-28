@@ -1,7 +1,7 @@
 ---
 title: Comment
 parent: Interoperability framework
-ancestor: Extension template
+ancestor: Service
 layout: default
 nav_order: 3
 # nav_exclude: true
@@ -47,18 +47,18 @@ Each identifier is structured as follows:
 ```
 
 ### `entity_type`
-*String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `tmpl_comment`. Please notice that you need to prepend the assigned `tmpl_` prefix to your type in order to prevent possible clashes with other extensions.
+*String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `srv_comment`. Please notice that you need to prepend the assigned `srv_` prefix to your type in order to prevent possible clashes with other extensions.
 
 ```json
-    "entity_type": "tmpl_comment"
+    "entity_type": "srv_comment"
 ```
 
-### `tmpl_content`
+### `srv_content`
 *String* (mandatory): attribute description.
 
 ```json
-    "tmpl_content": "In this paper, the authors contribute to the SoA with A, B, and C."
+    "srv_content": "In this paper, the authors contribute to the SoA with A, B, and C."
 ```
 
 ----
-[Comment]: {% link ext-tmpl/extended-interoperability-framework/extension-entities/tmpl-comment.md %}
+[Comment]: {% link ext-srv/extended-interoperability-framework/extension-entities/srv-comment.md %}

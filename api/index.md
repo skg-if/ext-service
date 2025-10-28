@@ -13,7 +13,7 @@ To prevent possible clashes with other extensions, each extension is assigned a 
 
 
 ## Expected output
-In this page, please document how your extension affects (if any) the optional [core Open API specifications](../api).
+In this page, please document how your extension affects (if any) the optional [core Open API specifications](/api).
 
 
 ### Methodological considerations
