@@ -21,6 +21,6 @@ In particular, the document you have to produce has to cover these fundamental a
 - Production of the extension [data model](/ext-srv/data-model/) and formal implementation in OWL;
 - Production of the [SHACL](/ext-srv/data-model/shacl/) file;
 - Production of the [JSON-LD context](/ext-srv/context/) for the extension;
-- Description of the [extended Interoperability Framework](./extended-interoperability-framework/) (properties and relations of core and new entities);
+- Description of the [extended Interoperability Framework](/ext-srv/extended-interoperability-framework/) (properties and relations of core and new entities);
 - Provide [APIs extensions](/ext-srv/api/) of the core OpenAPI specs; i.e., customisations of core API resolvers (if any) and/or introduction of custom API methods (if any);
 - Production of [JSON-LD examples](/ext-srv/examples/).
