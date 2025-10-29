@@ -87,13 +87,13 @@ In order to produce the `.html` documentation of the developed ontology, no spec
 In principle, the documentation can adhere to any format of choice and be developed with the preferred method.
 
 However, we suggest the use of [**WIDOCO**](https://github.com/dgarijo/Widoco), which can potentially streamline the workflow.
-For this extension, WIDOCO has been run from the dockerised version with
+For this extension, WIDOCO can be run from the dockerised version with
 
 ```
 docker run -ti --rm \
   -v `pwd`/test:/usr/local/widoco/in:Z \
   -v `pwd`/target/generated-doc:/usr/local/widoco/out:Z \
-  dgarijo/widoco -ontFile in/tmpl.ttl -outFolder out -rewriteAll -noPlaceHolderText
+  dgarijo/widoco -ontFile in/srv.ttl -outFolder out -rewriteAll -noPlaceHolderText
 ```
 The files produced under `generated-doc` have been placed in the extension repository as indicated [here](../structure).
 
