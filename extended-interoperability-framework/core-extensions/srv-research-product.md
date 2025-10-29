@@ -7,7 +7,7 @@ nav_order: 2
 # nav_exclude: true
 ---
 
-# (Ext) Research product
+# (srv) Research product
 
 {: .important }
 To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `srv`.
@@ -18,13 +18,13 @@ Here below, please describe the new properties and relations that the extension 
 
 ## Properties
 
-### `tmpl_comments`
+### `srv_comments`
 *List* (optional): a list of [Comment] identifiers.
 
 ```json
-    "tmpl_comments": ["comment_1", "comment_2"]
+    "srv_comments": ["comment_1", "comment_2"]
 ```
 
 ----
 [Research product]: {% link interoperability-framework/docs/research-product.md %}
-[Comment]: {% link ext-tmpl/extended-interoperability-framework/extension-entities/tmpl-comment.md %}
+[Comment]: {% link ext-srv/extended-interoperability-framework/extension-entities/srv-comment.md %}

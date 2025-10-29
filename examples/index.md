@@ -7,4 +7,4 @@ has_toc: false
 # nav_exclude: true
 ---
 
-# Examples of the extension template
+# Examples of the extension for Service
