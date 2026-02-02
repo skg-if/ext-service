@@ -62,7 +62,7 @@
 
 
     "website": { "@id": "foaf:homepage", "@type": "@id" },
-    "srv_supported_language": { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@base": "http://lexvo.org/id/" } },
+    "srv_supported_language": { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@base": "http://lexvo.org/id/iso639-3" } },
 
 
     "srv_deployment_of": { "@id": "srv:isDeploymentOf", "@type": "@id" },
