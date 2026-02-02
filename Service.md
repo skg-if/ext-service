@@ -7,14 +7,14 @@ nav_order: 2
 ---
 
 *Please note that the Service extension is still work in progress*
-*this extension ndd file was previously names "SoftwareExtension"
+*this extension md file was previously named "SoftwareExtension"
 
 # SKG-IF Service Extension
 
 A Service is a type of software application or component that provides specific 
 functionality or operations over a network, often via the internet, and is typically accessed 
 through an interface such as an API or a web application.
-(note Service is renaming of Software Service for which still used in many discussion documents)
+(note Service is renaming of Software Service, which is still used in many discussion documents)
 
 
 
@@ -109,9 +109,10 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 
 
 ### `srv_audience_byrole`
-*Object* (optional): the audience(s) that the service is intended to be used by
-This can  both express desire and/or design of the service operators. Values are mandatory taken from 
+*Object* (optional): The audience(s) that the service is intended to be used by
+This can both express desire and/or design of the service operators. Values are mandatory taken from 
 the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme 
+
 ```json
     "@context": {
         "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/"
@@ -120,17 +121,18 @@ the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme
 ```
 
 ### `srv_audience_byjurisdiction`
-*Object* (optional): the jurisdiction that is given by the service operator's legal status limits
-the audience. value take from either Global, Institution, National, or Regional aka multiple countries, from (https://zenodo.org/records/15516020)
+*Object* (optional): The jurisdiction that is given by the service operator's legal status limits.
+the audience. Values taken from either `Global`, `Institution`, `National`, or `Regional` aka multiple countries, from (https://zenodo.org/records/15516020).
 ```json
     "srv_audience_byjurisdiction": ["Institution", "National" ]
 ```
 
 ### `disciplines`
-*List* (optional):  The disciplines for which a [Software Service] is dedicated. 
+*List* (optional):  The disciplines to which a [Software Service] is dedicated. 
 The disciplines must be specified using the Library of Congress Classification codes, 
 available at https://id.loc.gov/authorities/classification (e.g. PA3000-PA3049 for classical literature). 
 In case a [Service] is discipline agnostic, the string "all" should be specified.
+
 ```json
     "@context": {
         "loc": "https://id.loc.gov/authorities/classification/"
@@ -155,7 +157,7 @@ In case a [Service] is discipline agnostic, the string "all" should be specified
 ```
 
 ### `srv_invocation_type`
-*List* (mandatory): the way the service is used or called. multiple values are possible, access rights and licenses are assumed to be the same. Values are specified by vocabulary https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
+*List* (mandatory): The way the service is used or called. Multiple values are possible, access rights and licenses are assumed to be the same. Values are specified by vocabulary: https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
 
 ```json
     "@context": {
@@ -165,8 +167,9 @@ In case a [Service] is discipline agnostic, the string "all" should be specified
 ```
 
 ### `srv_life_cycle_status`
-*List* (optional): indicates the development cycle and/or maturity status of the service. values are by vocabulary
-https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally specified in the EOSC Service Profile. Could extend with TRL classifications.
+*List* (optional): Indicates the development cycle and/or maturity status of the service. Values are by vocabulary:
+https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally specified in the EOSC Service Profile. Could be extended with TRL classifications.
+
 ```json
      "@context": {
         "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
@@ -175,7 +178,7 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 ```    
 
 ### `srv_availability_geographic`
-*List* (optional): list of countries and regions where the service is made available eg. for license reasons. 
+*List* (optional): list of countries and regions where the service is made available, eg. for license reasons. Values are by the vocabulary: https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/
 
 ```json
      "@context": {
@@ -186,7 +189,7 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 ```    
 
 ### `website`
-*String* (mandatory): landingpage for the service. preferably one maintained by the service operator 
+*String* (mandatory): Landingpage for the service. Preferably one maintained by the service operator 
 
 ```json
     "website": "https://ufal.mff.cuni.cz/udpipe/2"
@@ -199,14 +202,14 @@ _NOTE_ properties introduced by this extension, that are not from external origi
 
 ``` json
     "@context": {
-       "lexvo": "http://lexvo.org/id/"
+       "lexvo-iso639-3": "http://lexvo.org/id/iso639-3"
      },
-     "srv_supported_language": ["lexvo:iso639-3/deu","lexvo:iso639-3/nld"]
+     "srv_supported_language": ["lexvo-iso639-3/deu","lexvo-iso639-3/nld"]
 ```
 
 ### `topics`
 *List* (optional):  [Topic] object identifiers relevant for the scope (topic) of a [Service].
-_NOTE_ this is description is not consistent with other examples, should be discussed and repaired.
+_NOTE_ this description is not consistent with other examples, should be discussed and repaired.
 
 ```json
     "topics":  [
@@ -223,64 +226,72 @@ _NOTE_ this is description is not consistent with other examples, should be disc
 
 ### `srv_research_infrastructure` 
 
-*List* (optional): is associated with an [Organisation] organisation that provides facilities, resources and services for the research communities to conduct research. 
-_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return "local_identifier" and "entity_type".
+*List* (optional): Is associated with an [Organisation] that provides facilities, resources and services for the research communities to conduct research. 
+_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
 ```json
-            "srv_research_infrastructure": [{
-              "local_identifier": "https://ror.org/03wp25384",
-              "entity_type": "organisation",
-              "name": "CLARIN ERIC",
-              "types": [
-                "facility",
-                "srv_research_infrastructure"
-              ],
-              "country": "NL"
-            } ,
-            {
-              "local_identifier": "https://ror.org/03wp25384",
-              "entity_type": "organisation",
-            }]
+     "srv_research_infrastructure": [
+       {
+         "local_identifier": "https://ror.org/03wp25384",
+         "entity_type": "organisation",
+         "name": "CLARIN ERIC",
+         "types": [
+           "facility",
+           "srv_research_infrastructure"
+         ],
+         "country": "NL"
+       },
+       {
+         "local_identifier": "https://ror.org/03wp25384",
+         "entity_type": "organisation",
+       }
+     ]
 ```
+
 ### `srv_hosting_organisation` 
-*List* (optional): is depending on [Organisation] organisation reponsible for hosting a service or infrastructure component. 
-_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return "local_identifier" and "entity_type".
-```json
-            "srv_hosting_organisation": [ {
-              "local_identifier": "https://ror.org/00dd4fz34",
-              "entity_type": "organisation",
-              "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
-              "short_name": "LINDAT",
-              "types": [
-                "facility",
-                "srv_hosting_organisation"
-              ],
-              "country": "CZ"
-            },
-            { "local_identifier": "https://ror.org/00dd4fz34", 
-              "entity_type": "organisation"
-            }]
-```
-### `srv_hosting_legal_entity` 
-*List* (optional): is the specific [Organisation] organisation legally reponsible for the service operation and publishing
-_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return "local_identifier" and "entity_type".
+*List* (optional): Is depending on [Organisation] reponsible for hosting a service or infrastructure component. 
+_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
 
 ```json
-            "srv_hosting_legal_entity": [{
-              "local_identifier": "https://ror.org/024d6js02",
-              "entity_type": "organisation",
-              "name": "Charles University",
-              "types": [
-                "education",
-                "research"
-              ],
-              "country": "CZ"
-            }]
+     "srv_hosting_organisation": [
+       {
+         "local_identifier": "https://ror.org/00dd4fz34",
+         "entity_type": "organisation",
+         "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
+         "short_name": "LINDAT",
+         "types": [
+           "facility",
+           "srv_hosting_organisation"
+         ],
+         "country": "CZ"
+       },
+       {
+         "local_identifier": "https://ror.org/00dd4fz34", 
+         "entity_type": "organisation"
+       }
+     ]
+```
+
+### `srv_hosting_legal_entity` 
+*List* (optional): Is the specific [Organisation] legally reponsible for the service operation and publishing
+_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
+
+```json
+     "srv_hosting_legal_entity": [{
+        "local_identifier": "https://ror.org/024d6js02",
+        "entity_type": "organisation",
+        "name": "Charles University",
+        "types": [
+          "education",
+          "research"
+        ],
+        "country": "CZ"
+     }]
 ```
 
 
 ### `relevant_organisations`
 *List* (optional):  [Organisation] identifiers associated with and relevant for a [Service].
-identifiers can be of local or global identifier system type eg. ror, uri. Organizations that are identified by a local_identifier, can be given additional types: "research_infrastructure", "hosting_organisation" and "hosting_legal_entity".
+Identifiers can be of local or global identifier system type eg. ror, uri. Organizations that are identified by a local_identifier, can be given additional types: "research_infrastructure", "hosting_organisation" and "hosting_legal_entity".
 _NOTE_ this is provided by adding new types to the Organisation entity types
 
 ```json
@@ -309,7 +320,7 @@ It is structured as follows:
 
 
 ### `keywords`
-*List* (optional): list of keywords relevant for service discovery, values may be simple strings or concept URIs
+*List* (optional): List of keywords relevant for service discovery, values may be simple strings or concept URIs.
 
 ```json
     "keywords": ["https://www.wikidata.org/wiki/Q30642","parsing"]
