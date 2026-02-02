@@ -12,9 +12,10 @@ nav_order: 3
 To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `srv`.
 
 ## Main objective
-This extension template extends the [SKG-IF Ontology](https://w3id.org/skg-if/ontology/) in two ways:
-- It introduces a *new entity Comment*, which captures a textual comment possibly relevant to a research product;
-- It introduces a *new property* for [Research products](../../interoperability-framework/docs/research-product) in order to point to the relative Comment(s).
+This extension extends the [SKG-IF Ontology](https://w3id.org/skg-if/ontology/) by introducing:
+- A *new entity Service*, which models software applications or components that provide specific functionality over a network, typically accessed through an API or web application;
+- Supporting entities such as *APIProfile*, *FacilityPortal*, *ResearchInfrastructure*, and *HostingOrganisation*;
+- New properties for describing service characteristics, availability, audience, and relationships to research products.
 
 
 ## Expected outcomes
@@ -83,7 +84,7 @@ A few **simple, yet optional, recommendations** are provided for guide the devel
     - A range with minimum and maximum (e.g., `[0..1]`). Use N for unlimited maximum cardinality (e.g., `[1..N]`)
 
 ### Producing the documentation
-In order to produce the `.html` documentation of the developed ontology, no specific tool or format is required. 
+In order to produce the `.html` documentation of the developed ontology, no specific tool or format is required.
 In principle, the documentation can adhere to any format of choice and be developed with the preferred method.
 
 However, we suggest the use of [**WIDOCO**](https://github.com/dgarijo/Widoco), which can potentially streamline the workflow.
@@ -91,11 +92,24 @@ For this extension, WIDOCO can be run from the dockerised version with
 
 ```
 docker run -ti --rm \
-  -v `pwd`/test:/usr/local/widoco/in:Z \
-  -v `pwd`/target/generated-doc:/usr/local/widoco/out:Z \
-  dgarijo/widoco -ontFile in/srv.ttl -outFolder out -rewriteAll -noPlaceHolderText
+  -v `pwd`/ontology/current:/usr/local/widoco/in:Z \
+  -v `pwd`/ontology/current/doc:/usr/local/widoco/out:Z \
+  dgarijo/widoco -ontFile in/srv.ttl -outFolder out -rewriteAll -uniteSections
 ```
-The files produced under `generated-doc` have been placed in the extension repository as indicated [here](../structure).
 
-In case the HTML does not rendered properly on your local machine, please refer to [this](https://github.com/dgarijo/Widoco?tab=readme-ov-file#browser-issues-why-cant-i-see-the-generated-documentation--visualization).
+Or using the JAR directly:
+
+```
+java -jar widoco.jar -ontFile srv.ttl -outFolder ./doc -rewriteAll -uniteSections
+```
+
+The `-uniteSections` flag combines all sections into a single HTML file, which renders correctly when opened locally.
+
+#### Customising the introduction
+
+The file `ontology/current/intro-en.html` contains a custom introduction section with links to the source schemas and catalogues that informed this extension. After running Widoco, replace the placeholder introduction in the generated `index-en.html` with this content. The file includes usage instructions in an HTML comment.
+
+The files produced should be placed in the extension repository as indicated [here](../structure).
+
+In case the HTML does not render properly on your local machine, please refer to [this](https://github.com/dgarijo/Widoco?tab=readme-ov-file#browser-issues-why-cant-i-see-the-generated-documentation--visualization).
 It is most probably a JS-related issue and will be rendered properly once pushed on GitHub.

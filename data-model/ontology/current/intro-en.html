@@ -1,0 +1,28 @@
+<!--
+  Introduction section for SRV-O Widoco documentation.
+
+  Usage: After running Widoco, replace the placeholder introduction in the
+  generated index-en.html with this content:
+
+  java -jar widoco.jar -ontFile srv.ttl -outFolder ./doc -rewriteAll -uniteSections
+
+  Then manually replace the introduction section, or use:
+  sed -i '' '/id="intro"/,/<\/div>/{ /id="intro"/r intro-en.html
+  d; }' doc/index-en.html
+-->
+<h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>The SKG-IF Service Extension (SRV-O) defines entities for modelling Service-type objects in the Scientific Knowledge Graphs Interoperability Framework.</p>
+
+<p>A Service is a type of software application or component that provides specific functionality or operations over a network, often via the internet, and is typically accessed through an interface such as an API or a web application.</p>
+
+<p>The properties and classes in this extension were informed by several existing schemas and catalogues:</p>
+<ul>
+    <li>The CMDI schemas for tools and services used in the <a href="https://vlo.clarin.eu/">VLO catalogue</a></li>
+    <li>The <a href="https://marketplace.sshopencloud.eu/">SSH Open Marketplace</a> (SSHOMP) catalogue</li>
+    <li>The <a href="https://live.european-language-grid.eu/">European Language Grid</a> (ELG) catalogue</li>
+    <li>The <a href="https://switchboard.clarin.eu/">CLARIN Language Resource Switchboard</a> schema</li>
+    <li>The <a href="https://schema.org/SoftwareApplication">Schema.org SoftwareApplication</a> type</li>
+    <li>The <a href="https://wiki.eoscfuture.eu/display/PUBLIC/Service+Profile">EOSC Service Profile</a> (versions 4.1 and 5.0)</li>
+</ul>
+
+<p>This extension is developed in the context of the <a href="https://ostrails.eu/">OSTrails project</a>.</p>

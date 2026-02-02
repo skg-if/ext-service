@@ -98,6 +98,17 @@ dcat:endpointURL a owl:ObjectProperty ;
     rdfs:range xsd:anyURI ;
     rdfs:isDefinedBy dcat: .
 
+schema:url a owl:ObjectProperty ;
+    rdfs:label "schema:url (SKG-IF labels: api_specification_url)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* srv:APIProfile
+
+In SKG-IF, it is used to link to the URL(s) of the API specification document(s) (range):
+* xsd:anyURI""" ;
+    rdfs:domain srv:APIProfile ;
+    rdfs:range xsd:anyURI ;
+    rdfs:isDefinedBy schema: .
+
 dcterms:conformsTo a owl:ObjectProperty ;
     rdfs:label "dcterms:conformsTo (SKG-IF labels: conformsTo)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
@@ -422,13 +433,16 @@ srv:Service a owl:Class ;
 ############################
 
 srv: a owl:Ontology ;
-    rdfs:label "SRV-O: Service extension" ;
+    rdfs:label "SRV-O: Service Extension" ;
+    dc:creator "Scientific Knowledge Graphs – Interoperability Framework (SKG-IF) WG; OSTrails Project" ;
     dc:date "2025-11-23"^^xsd:date ;
     dc:rights "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode)" ;
-    dc:title "SKG-IF Ontology: Service extension" ;
+    dc:title "The SKG-IF Ontology: Service Extension" ;
+    dcterms:isPartOf <https://w3id.org/skg-if/> ;
+    rdfs:seeAlso <https://w3id.org/skg-if/ontology/> ;
     vann:preferredNamespacePrefix "srv" ;
     vann:preferredNamespaceUri <https://w3id.org/skg-if/extension/srv/ontology/> ;
-    rdfs:comment "This extension of the SKG-IF data model introduces entities necessary to model the Service type of objects that are use to process data in different use-cases, as well as the relationships with well-established entities in the SKG-IF model communication domain. This extension is being developed in the context of the OSTrails project" ;
+    rdfs:comment "SRV-O is an extension of the SKG-IF Ontology (SKG-O) that introduces entities necessary to model Service-type objects used to process data in various use-cases, as well as their relationships with well-established entities in the SKG-IF data model. This extension is developed in the context of the OSTrails project." ;
     owl:versionIRI <https://w3id.org/skg-if/extension/srv/ontology/service/1.1.0/> ;
     owl:versionInfo "1.1.0" .
 
