@@ -82,7 +82,7 @@ schema:SoftwareSourceCode a owl:Class ;
     dc:description """
 The properties that can be used with this class are:
 
-* srv:website -[0..N]-> foaf:Document
+* foaf:homepage -[0..N]-> foaf:Document
 * schema:codeRepository -[1..N]-> schema:url """ ;
     rdfs:comment """Computer programming source code, including full (compile-ready) solutions, code snippet samples, templates, scripts, and other software artefacts.  """ ; 
     rdfs:isDefinedBy schema: .
@@ -175,7 +175,7 @@ skos:altLabel a owl:DatatypeProperty ;
 ############################
 
 srv:audienceJurisdiction a owl:DatatypeProperty ;
-    rdfs:label "schema:audience  (SKG-IF labels: audience_byjurisdiction)" ;
+    rdfs:label "srv:audienceJurisdiction (SKG-IF labels: srv_audience_byjurisdiction)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
@@ -187,7 +187,7 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     rdfs:isDefinedBy srv: .
 
 srv:isDeploymentOf a owl:ObjectProperty ;
-    rdfs:label "srv:isDeploymentOf (SKG-IF labels: is_deployment_of)" ;
+    rdfs:label "srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
         
@@ -205,7 +205,7 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 
 srv:geographicalAvailability a owl:ObjectProperty ;
     rdfs:subPropertyOf dcterms:scope ;
-    rdfs:label "geographical availability" ;
+    rdfs:label "srv:geographicalAvailability (SKG-IF labels: srv_availability_geographic)" ;
     rdfs:range owl:Thing ;   # intentionally unconstrained
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
@@ -215,7 +215,7 @@ In SKG-IF, it is used to indicate geographic & administrative areas from  https:
     rdfs:isDefinedBy srv: .
 
 srv:hasTopics a owl:ObjectProperty ;
-    rdfs:label "has topic" ;
+    rdfs:label "srv:hasTopics (SKG-IF labels: srv_topics)" ;
     rdfs:domain srv:Service ;
     rdfs:range fabio:SubjectTerm ;
     rdfs:subPropertyOf dcterms:subject ;
@@ -227,7 +227,7 @@ In SKG-IF, it is used to link Service to relevant (range):
     rdfs:isDefinedBy srv: .
 
 srv:invocationType a owl:ObjectProperty ;
-    rdfs:label "srv:invocation-type" ;
+    rdfs:label "srv:invocationType (SKG-IF labels: srv_invocation_type)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
@@ -237,7 +237,7 @@ In SKG-IF, it is used to indicate the method of service invocation using values 
     rdfs:isDefinedBy srv: .
 
 srv:eoscLifeCycleStatus a owl:ObjectProperty ;
-    rdfs:label "srv:eoscLifeCycleStatus" ;
+    rdfs:label "srv:eoscLifeCycleStatus (SKG-IF labels: srv_life_cycle_status)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
@@ -248,7 +248,7 @@ In SKG-IF, it is used to indicate the maturity of the Service using values from 
 
 
 srv:intendedAudienceRole a owl:ObjectProperty ;
-    rdfs:label "srv:intendedAudienceRole" ;
+    rdfs:label "srv:intendedAudienceRole (SKG-IF labels: srv_audience_byrole)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
@@ -258,7 +258,7 @@ In SKG-IF, it is used to indicate audience roles from (https://vocabs.sshopenclo
     rdfs:isDefinedBy srv: .
 
 srv:relatedResearchProduct a owl:ObjectProperty ;
-    rdfs:label "related research product" ;
+    rdfs:label "srv:relatedResearchProduct (SKG-IF labels: related_products)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
@@ -271,7 +271,7 @@ related but not necessarily deployed by the service.""" ;
     rdfs:isDefinedBy srv: .
 
 srv:supportedLanguage a owl:ObjectProperty ;
-    rdfs:label "srv:supportedLanguage (SKG-IF labels: supported_language)" ;
+    rdfs:label "srv:supportedLanguage (SKG-IF labels: srv_supported_language)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
         
@@ -356,7 +356,7 @@ srv:ResearchInfrastructure a owl:Class ;
     rdfs:label "research infrastructure" ;
     rdfs:comment "organisation that provides facilities, resources and services for the research communities to conduct research."@en .
 srv:isPartOfResearchInfrastructure a owl:ObjectProperty ;
-   rdfs:label "part of research infrastructure"@en ;
+   rdfs:label "srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_research_infrastructure)"@en ;
    rdfs:domain srv:Service ;
    rdfs:range foaf:Organisation ;
    rdfs:comment "is part of research infrastructure organisation"@en .
@@ -365,12 +365,12 @@ srv:HostingOrganisation a owl:Class ;
    rdfs:label "hosting organisation"@en ;
    rdfs:comment "organisation reponsible for hosting a service or infrastructure component"@en .
 srv:hasHostingOrganisation a owl:ObjectProperty ;
-   rdfs:label "has hosting entity"@en ;
+   rdfs:label "srv:hasHostingOrganisation (SKG-IF labels: srv_hosting_organisation)"@en ;
    rdfs:domain srv:Service ;
    rdfs:range foaf:Organisation ;
    rdfs:comment "service is hosted by"@en .
 srv:hasHostingLegalEntity a owl:ObjectProperty ;
-   rdfs:label "has hosting legal entity"@en ;
+   rdfs:label "srv:hasHostingLegalEntity (SKG-IF labels: srv_hosting_legal_entity)"@en ;
    rdfs:domain srv:Service ;
    rdfs:range foaf:Organisation ;
    rdfs:comment "service associated legally responsible hosting organisation (legal entity)"@en .
@@ -394,7 +394,7 @@ srv:Service a owl:Class ;
 * skos:prefLabel -[1..N]-> rdfs:Literal
 * skos:altLabel -[0..N]-> rdfs:Literal
 * dcterms:description -[0..N]-> rdfs:langString
-* srv:website -[0..1]-> foaf:Document
+* foaf:homepage -[0..1]-> foaf:Document
 * srv:audienceJurisdiction -[0..N]-> xsd:string
 * srv:intendedAudienceRole -[0..N]-> skos:Concept 
 * dcterms:subject -[0..N]-> owl:Thing

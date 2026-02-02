@@ -3,7 +3,7 @@
     "@version": 1.1,
     "@protected": true,
 
-"_comment": "### aliases shared with the skg-if core, but need to be alert when they change"
+    "_comment1": "### aliases shared with the skg-if core, but need to be alert when they change",
 
     "schema": "http://schema.org/",
     "srv": "https://w3id.org/skg-if/extension/srv/ontology/",
@@ -16,10 +16,10 @@
     "lvont": "http://lexvo.org/ontology#",
     "loc": "http://id.loc.gov/authorities/",
     "sshopencloudvocabs": "https://vocabs.sshopencloud.eu/vocabularies/",
-    "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/"
-    "sshocinvt": "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/"
-    "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
-    "eoscgeoavail": "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/"
+    "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/",
+    "sshocinvt": "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/",
+    "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/",
+    "eoscgeoavail": "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/",
 
 
 
@@ -31,12 +31,11 @@
 
     "entity_type": { "@id": "@type", "@type": "@vocab"  },
 
-    "description": { "@id": "dcterms:description", "@container": "@language" },
+    "descriptions": { "@id": "dcterms:description", "@container": "@language" },
 
     "keywords": "schema:keyword",
 
-
-"_comment": "### aliases unique for the service extension"
+    "_comment2": "### aliases unique for the service extension",
 
     "TODO_WHEN_MADE_AVAILABLE eosc_service_profile": "https://github.com/EOSC-PLATFORM/service-profile/tree/4.0/",
 
@@ -45,11 +44,11 @@
 
     "srv_audience_byjurisdiction": { "@id": "srv:audienceJurisdiction", "@type": "xsd:string" },
 
-    "srv_disciplines": { "@id": "dcterms:subject", "@type": "@vocab", "@context": { "@base": "http://id.loc.gov/authorities/classification/" } },
+    "disciplines": { "@id": "dcterms:subject", "@type": "@vocab", "@context": { "@base": "http://id.loc.gov/authorities/classification/" } },
 
     "all": "loc:classification",
 
-    "srv_is_accessible_for_free": { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
+    "is_accessible_for_free": { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
 
     "srv_invocation_type": { "@id": "srv:invocationType", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:invocation-type" } },
 
@@ -62,20 +61,20 @@
     "srv_api_specification_uri": { "@id": "schema:url", "@type": "@id" },
 
 
-    "srv_website": { "@id": "foaf:homepage", "@type": "@id" },
+    "website": { "@id": "foaf:homepage", "@type": "@id" },
     "srv_supported_language": { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@base": "http://lexvo.org/id/" } },
 
 
     "srv_deployment_of": { "@id": "srv:isDeploymentOf", "@type": "@id" },
 
-    "srv_related_research_product": { "@id": "srv:relatedResearchProduct", "@type": "@id" },
+    "related_products": { "@id": "srv:relatedResearchProduct", "@type": "@id" },
     "srv_contributions": { "@id": "srv:relatedResearchProduct", "@type": "@id" },
 
     "topics": { "@id": "bido:holdsBibliometricDataInTime", "@type": "@vocab"  },
     "srv_topics": { "@id": "srv:hasTopics", "@type": "@id" },
     "srv_venues": { "@id": "srv:hasVenue", "@type": "@id" },
 
-    "srv_relevant_organisations": { "@id": "dcterms:relation", "@type": "@id" },
+    "relevant_organisations": { "@id": "dcterms:relation", "@type": "@id" },
 
     "srv_related_organisations": "@nest",
     "srv_research_infrastructure": { "@id": "dcterms:partOf", "@type": "@vocab", "@nest": "related organisations" } ,
@@ -85,8 +84,8 @@
 
 
     "other_names": { "@id": "skos:altLabel" },
-    "srv_name": { "@id": "skos:prefLabel" }
-    "name": { "@id": "foaf:name" }
+    "srv_name": { "@id": "skos:prefLabel" },
+    "name": { "@id": "foaf:name" },
 
     "srv_Service": "srv:Service",
     "srv_FacilityPortal": "srv:FacilityPortal",
@@ -94,11 +93,11 @@
 
     "facility": "frapo:Facility",
     "srv_portal":  "srv:Portal",
-    "srv_research_infrastructure": "srv:ResearchInfrastructure",
+    "srv_ResearchInfrastructure": "srv:ResearchInfrastructure",
     "srv_has_research_infrastructure": "srv:isPartOfResearchInfrastructure",
-    "srv_has_hosting_legal_entity": "srv:hasHostingLegalEntity"
-    "srv_has_hosting_organisation": "srv:hasHostingOrganisation"
-    "srv_hosting_organisation": "srv:HostingOrganisation"
+    "srv_has_hosting_legal_entity": "srv:hasHostingLegalEntity",
+    "srv_has_hosting_organisation": "srv:hasHostingOrganisation",
+    "srv_HostingOrganisation": "srv:HostingOrganisation"
   }
 }
 

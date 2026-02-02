@@ -77,7 +77,7 @@ skg_sh_srv:ServiceShape a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:website ],
+            sh:path foaf:homepage ],
         [ sh:class skg:research_product ;
             sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
@@ -147,7 +147,7 @@ skg_sh_srv:SoftwareSourceCodeShape a sh:NodeShape ;
         [ sh:class foaf:Document ;
             sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:website ] .
+            sh:path foaf:homepage ] .
 
 skg_sh_srv:StandardShape a sh:NodeShape ;
     sh:property [ sh:minCount 0 ;

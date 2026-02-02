@@ -21,7 +21,7 @@ through an interface such as an API or a web application.
 ## Properties
 
 The properties set was suggested and informed from a number of examples both thematic and general:
-- The different CMDI schema for tools & services used in the [VLO catalogue], esp the  [UDPipe example] 
+- The different CMDI schema for tools & services used in the [VLO catalogue], esp. the  [UDPipe example] 
 - [SSHOMP catalogue] (tools and services) different examples
 - [ELG catalogue] (tools and services) different examples
 - [CLARIN LR Switchboard schema]
@@ -29,6 +29,8 @@ The properties set was suggested and informed from a number of examples both the
 - The [EOSC Service Profile 4.1 rc (latest) and 5.0]
 
 
+
+_NOTE_ property naming: properties introduced by this extension, that are not defined by authorative external origin such as Schema.org or introduced in the SKG-IF core entities are prefixed with "srv_" to avoid clashes with properties with the same name potententially introduced by other extensions. However the practice seems overkill in view of the checks automatically done by json parsing, especially in cases where the extension can be expected to be authorative. TBD.
 
 ### `local_identifier`
 *String* (mandatory): Unique code identifying a [Software Service] in the SKG (if any, otherwise "stateless identifier").
@@ -81,26 +83,32 @@ The object is a dictionary, the keys represent language codes following [ISO 639
         "en": "UDPipe",
         "zh-cn": "UDPipe 工具"        
     },
+```
+
+### `other_names`
+*Object* (optional): The other names of a [Software service]. 
+
+```json
     "other_names": {
         "en": ["UDPipe 2", "UDPipe 2.0"]
     }
 ```
 
-### `description`
-*Object* (optional): The description of a [Service] (multiple for multilingualism).
+### `descriptions`
+*Object* (optional): The descriptions of a [Service] (multiple for multilingualism).
 
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
     "descriptions": {
         "en": ["UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them", "Summary"],
-        "cs": ["UDPipe je trénovatelný nástroj pro tokenizaci, tagging, lemmatizaci a závislostní parsing CoNLL-U souborů. UDPipe je jazykově nezávislý a pro natrénování modelů využívá anotovaná data ve formátu Universal Dependencies"]
+        "cs": ["UDPipe je trénovatelný nástroj pro tokenizaci, tagging, lemmatizaci a závislostní parsing CoNLL-U souborů. UDPipe je jazykově nezávislý a pro natrénování modelů využívá anotovaná data ve formátu Universal Dependencies"],
         "none": ["ontaligestring"]
     }
 ```
 
 
-### `audience_byrole`
+### `srv_audience_byrole`
 *Object* (optional): the audience(s) that the service is intended to be used by
 This can  both express desire and/or design of the service operators. Values are mandatory taken from 
 the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme 
@@ -108,12 +116,12 @@ the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme
     "@context": {
         "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/"
     },
-    "audience_byrole": ["sshocaudience:public", "sshocaudience:student" ]
+    "srv_audience_byrole": ["sshocaudience:public", "sshocaudience:student" ]
 ```
 
 ### `srv_audience_byjurisdiction`
 *Object* (optional): the jurisdiction that is given by the service operator's legal status limits
-the audience. value take from either Global, Institution, National, or Regional aka multiple countries, from https://zenodo.org/records/15516020)
+the audience. value take from either Global, Institution, National, or Regional aka multiple countries, from (https://zenodo.org/records/15516020)
 ```json
     "srv_audience_byjurisdiction": ["Institution", "National" ]
 ```
@@ -126,24 +134,28 @@ In case a [Service] is discipline agnostic, the string "all" should be specified
 ```json
     "@context": {
         "loc": "https://id.loc.gov/authorities/classification/"
-    }
+    },
     "disciplines": [
         "loc:QC790.95-QC791.8"
-    ],
+    ]
+```
+```json
+    "@context": {
+        "loc": "https://id.loc.gov/authorities/classification/"
+    },
     "disciplines": ["all"]
 ```
 
-### `isaccessible_for free`
-*String* (optional): A property to signal that the Service is accessible for free.
+### `is_accessible_for_free`
+*Boolean* (optional): A property to signal that the Service is accessible for free.
 
 ``` json
 
     "is_accessible_for_free": true
 ```
 
-### `invocation_type`
-*List* (mandatory): the way the service is used or called. multiple values are possible, access rights and licenses are assued to be the same.
-values are specified by vocabulary https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
+### `srv_invocation_type`
+*List* (mandatory): the way the service is used or called. multiple values are possible, access rights and licenses are assumed to be the same. Values are specified by vocabulary https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
 
 ```json
     "@context": {
@@ -152,17 +164,17 @@ values are specified by vocabulary https://vocabs.sshopencloud.eu/vocabularies/i
     "srv_invocation_type": [ "sshocinvt:restfullWebservice", "sshocinvt:webApplication" ]
 ```
 
-### `life_cycle_status`
+### `srv_life_cycle_status`
 *List* (optional): indicates the development cycle and/or maturity status of the service. values are by vocabulary
 https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally specified in the EOSC Service Profile. Could extend with TRL classifications.
 ```json
      "@context": {
         "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
-     }
-    "life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6" ]    
+     },
+    "srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6" ]    
 ```    
 
-### `availablity_geographic`
+### `srv_availability_geographic`
 *List* (optional): list of countries and regions where the service is made available eg. for license reasons. 
 
 ```json
@@ -170,7 +182,7 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
         "eoscgeoavail": "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/"
 
      },
-    "availability_geographic": ["eoscgeoavail:eu","eoscgeoavail:uk"]
+    "srv_availability_geographic": ["eoscgeoavail:eu","eoscgeoavail:uk"]
 ```    
 
 ### `website`
@@ -180,20 +192,21 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
     "website": "https://ufal.mff.cuni.cz/udpipe/2"
 ```
 
-### `supported_language`
+### `srv_supported_language`
 
-*List* (optional) if applicable the language(s) the service is able to process, values provided as ISO369-2 language codes
+*List* (optional) if applicable the language(s) the service is able to process, values provided as ISO369-3 language codes using Lexvo.org published vocabulary
+_NOTE_ properties introduced by this extension, that are not from external origin or also used in core entities are prefixed with "srv_" to avoid clashes with properties with the same name potententially introduced by other extensions
 
 ``` json
     "@context": {
        "lexvo": "http://lexvo.org/id/"
      },
-     "supported_language": ["lexvo:iso639-3/de","lexvo:iso639-3/nl"]
+     "srv_supported_language": ["lexvo:iso639-3/deu","lexvo:iso639-3/nld"]
 ```
 
 ### `topics`
 *List* (optional):  [Topic] object identifiers relevant for the scope (topic) of a [Service].
-Note this is description is not consistent with other examples , should be discussed and repaired
+_NOTE_ this is description is not consistent with other examples, should be discussed and repaired.
 
 ```json
     "topics":  [
@@ -209,9 +222,11 @@ Note this is description is not consistent with other examples , should be discu
 ```
 
 ### `srv_research_infrastructure` 
-*List* (optional): is associated with an [Organisation] organisation that provides facilities, resources and services for the research communities to conduct research. Query responses can return a complete Organisation iinformation but should minimally return "local_identifier" and "entity_type".
+
+*List* (optional): is associated with an [Organisation] organisation that provides facilities, resources and services for the research communities to conduct research. 
+_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return "local_identifier" and "entity_type".
 ```json
-            {
+            "srv_research_infrastructure": [{
               "local_identifier": "https://ror.org/03wp25384",
               "entity_type": "organisation",
               "name": "CLARIN ERIC",
@@ -224,12 +239,13 @@ Note this is description is not consistent with other examples , should be discu
             {
               "local_identifier": "https://ror.org/03wp25384",
               "entity_type": "organisation",
-            }
+            }]
 ```
 ### `srv_hosting_organisation` 
-*List* (optional): is depending on [Organisation] organisation reponsible for hosting a service or infrastructure component. Query responses can return a complete Organisation information but should minimally return "local_identifier" and "entity_type".
+*List* (optional): is depending on [Organisation] organisation reponsible for hosting a service or infrastructure component. 
+_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return "local_identifier" and "entity_type".
 ```json
-            {
+            "srv_hosting_organisation": [ {
               "local_identifier": "https://ror.org/00dd4fz34",
               "entity_type": "organisation",
               "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
@@ -240,16 +256,16 @@ Note this is description is not consistent with other examples , should be discu
               ],
               "country": "CZ"
             },
-            { "local_identifier": ""https://ror.org/00dd4fz34", 
+            { "local_identifier": "https://ror.org/00dd4fz34", 
               "entity_type": "organisation"
-            }
+            }]
 ```
 ### `srv_hosting_legal_entity` 
 *List* (optional): is the specific [Organisation] organisation legally reponsible for the service operation and publishing
-Query responses can return a complete Organisation iinformation but should minimally return "local_identifier" and "entity_type".
+_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return "local_identifier" and "entity_type".
 
 ```json
-            {
+            "srv_hosting_legal_entity": [{
               "local_identifier": "https://ror.org/024d6js02",
               "entity_type": "organisation",
               "name": "Charles University",
@@ -258,23 +274,22 @@ Query responses can return a complete Organisation iinformation but should minim
                 "research"
               ],
               "country": "CZ"
-            }
-           
+            }]
 ```
 
 
 ### `relevant_organisations`
 *List* (optional):  [Organisation] identifiers associated with and relevant for a [Service].
-identifiers can be of local or global identifier system type eg. ror, uri. Organizations can be given additional types: "research_infrastructure", "hosting_organisation" and "hosting_legal_entity".
+identifiers can be of local or global identifier system type eg. ror, uri. Organizations that are identified by a local_identifier, can be given additional types: "research_infrastructure", "hosting_organisation" and "hosting_legal_entity".
+_NOTE_ this is provided by adding new types to the Organisation entity types
 
 ```json
 	"relevant_organisations": ["https://ror.org/024d6js02", "https://ror.org/03wp25384"]
-
 ``` 
 
 ### `related_products`
-*Object* (optional): A dictionary of objects representing related [Research products], where the semantics of such relationships is specified as a key. 
-#TODO: THIS LIST HAS TO BE MODFIED FOR SERVICE/SOFTWARE RELATIONS
+*Object* (optional): A dictionary of objects representing related [Research products], where the semantics of such relationships is specified as a key and the related product by its local_identifier. 
+_NOTE_ (TODO): THIS LIST HAS TO BE MODFIED FOR SERVICE/SOFTWARE RELATIONS
 It is structured as follows:
 - `cites` *List* (optional): [Research products] identifiers that are cited by a given [Research product].
 - `is_supplemented_by` *List* (optional): [Research products] identifiers that are supplement of a given [Research product].
@@ -283,7 +298,7 @@ It is structured as follows:
 - `is_part_of` *List* (optional): [Research products] identifiers that contain the current [Research product].
 
 ```json
-    "srv_related_products": {
+    "related_products": {
         "cites": ["product_2", "product_3", "product_4"],
         "is_supplemented_by": ["product_7", "product_8", "product_9"],
         "is_documented_by": ["product_10", "product_13"],
@@ -297,19 +312,28 @@ It is structured as follows:
 *List* (optional): list of keywords relevant for service discovery, values may be simple strings or concept URIs
 
 ```json
-    "keywords": ["https://www.wikidata.org/wiki/Q30642","parsing",]
+    "keywords": ["https://www.wikidata.org/wiki/Q30642","parsing"]
 ``` 
 
-### `srv_deployment_of`
-*List* (optional) Research Product of type software, software class or sourcecode repository  link that the service is based on
-
-```json
-    "srv_deployment_of": [
-        { "@id": "https://github.com/ufal/udpipe", "@type": "schema:SoftwareSourceCode"},
-        { "@id": "http://example.org/research_product/RP_101", "@type": "skg:research_product"}
-    ]
-    
+### `srv_deployment_of`                                                                           
+  *List* (optional) The software that this service is a running instance of.                        
+                                                                                                    
+  Can be:                                                                                           
+  - A URI string (e.g., a source code repository link)                                              
+  - A typed reference:                                                                              
+    - `skg:research_product` — a Research Product of type software                                  
+    - `fabio:Software` — a software entity                                                          
+    - `schema:SoftwareSourceCode` — a source code entity                                            
+                                                                                                    
+```json                                                                                           
+  "srv_deployment_of": [                                                                            
+      "https://github.com/ufal/udpipe",                                                             
+      { "@id": "http://example.org/software/udpipe", "@type": "fabio:Software" },                   
+      { "@id": "http://example.org/source/udpipe", "@type": "schema:SoftwareSourceCode" },          
+      { "@id": "http://example.org/research_product/RP_101", "@type": "skg:research_product" }      
+  ]                                                                                                 
 ```
+
 
 ### `srv_contributions`
 *List* (optional) [Agents] that contributed to a [Service] (optional): 
@@ -321,15 +345,15 @@ It is structured as follows:
 
 ```json
     "srv_contributions": [ 
-           {
+               {
                     "by": "University of Sheffield",
                     "role": "operator"
-                },
-                {
+               },
+               {
                     "by": "UK Research and Innovation agency",
                     "role": "funder"
-                }  
-]    
+               }  
+    ]    
 ```
 
 
@@ -337,4 +361,10 @@ It is structured as follows:
 [Research product]: {% link interoperability-framework/docs/research-product.md %}
 [Agent]: {% link interoperability-framework/docs/agent.md %}
 [ISO 639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-
+[VLO catalogue]: https://vlo.clarin.eu/?2
+[UDPipe example]: https://vlo.clarin.eu/record/https_58__47__47_hdl.handle.net_47_11234_47_1-1702_64_format_61_cmdi?q=UDPipe
+[SSHOMP catalogue]: https://marketplace.sshopencloud.eu
+[ELG catalogue]: https://live.european-language-grid.eu/catalogue/
+[CLARIN LR Switchboard schema]: https://www.clarin.eu/sites/default/files/zinn-CLARIN2016_paper_26.pdf
+[Schema.org SoftwareApplication]: https://schema.org/SoftwareApplication
+[EOSC Service Profile 4.1 rc (latest) and 5.0]: https://eosc-service-profile.readthedocs.io/en/latest/introduction.html
