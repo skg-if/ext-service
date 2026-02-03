@@ -14,6 +14,7 @@
     "datacite": "http://purl.org/spar/datacite/",
     "dcterms": "http://purl.org/dc/terms/",
     "lvont": "http://lexvo.org/ontology#",
+    "lexvo-iso639-3": "http://lexvo.org/id/iso639-3/",
     "loc": "http://id.loc.gov/authorities/",
     "sshopencloudvocabs": "https://vocabs.sshopencloud.eu/vocabularies/",
     "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/",
@@ -93,11 +94,11 @@
 
     "facility": "frapo:Facility",
     "srv_portal":  "srv:Portal",
-    "srv_ResearchInfrastructure": "srv:ResearchInfrastructure",
+    "research_infrastructure": "srv:ResearchInfrastructure",
     "srv_has_research_infrastructure": "srv:isPartOfResearchInfrastructure",
     "srv_has_hosting_legal_entity": "srv:hasHostingLegalEntity",
     "srv_has_hosting_organisation": "srv:hasHostingOrganisation",
-    "srv_HostingOrganisation": "srv:HostingOrganisation"
+    "hosting_organisation": "srv:HostingOrganisation"
   }
 }
 

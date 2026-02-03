@@ -32,6 +32,21 @@ The properties set was suggested and informed from a number of examples both the
 
 _NOTE_ property naming: properties introduced by this extension, that are not defined by authorative external origin such as Schema.org or introduced in the SKG-IF core entities are prefixed with "srv_" to avoid clashes with properties with the same name potententially introduced by other extensions. However the practice seems overkill in view of the checks automatically done by json parsing, especially in cases where the extension can be expected to be authorative. TBD.
 
+## Extensions to core entities
+
+This extension adds new types to existing SKG-IF core entities:
+
+### Organisation
+New types for modeling service operations:
+- `hosting_organisation` - organisation responsible for hosting and operating a service
+- `research_infrastructure` - organisation providing facilities, resources and services for research communities
+
+### Venue
+New type for portal functionality:
+- `srv_portal` - a portal/catalogue through which services are discoverable and accessible
+
+## Properties
+
 ### `local_identifier`
 *String* (mandatory): Unique code identifying a [Software Service] in the SKG (if any, otherwise "stateless identifier").
 
@@ -236,7 +251,7 @@ _NOTE_ When querying the SKG-IF API, query responses may return as value for thi
          "name": "CLARIN ERIC",
          "types": [
            "facility",
-           "srv_research_infrastructure"
+           "research_infrastructure"
          ],
          "country": "NL"
        },
@@ -260,7 +275,7 @@ _NOTE_ When querying the SKG-IF API, query responses may return as value for thi
          "short_name": "LINDAT",
          "types": [
            "facility",
-           "srv_hosting_organisation"
+           "hosting_organisation"
          ],
          "country": "CZ"
        },
