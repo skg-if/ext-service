@@ -14,16 +14,26 @@ To prevent possible clashes with other extensions, each extension is assigned a 
 ## Extension-specific entities
 This extension introduces a new entity [Service] that models software applications or components providing specific functionality over a network, typically accessed through an API or web application.
 
-Supporting entities include:
-- **APIProfile** - pairs service endpoints with API specifications
-- **FacilityPortal** - organizational facility that operates services
-- **ResearchInfrastructure** - organisation providing facilities and services for research
-- **HostingOrganisation** - organisation responsible for hosting a service
+Supporting classes include:
+- **srv:APIProfile** - pairs service endpoints with API specifications
+- **srv:FacilityPortal** - organizational facility that operates services
+
+## Extensions to core entities
+
+### Organisation
+New types for modeling service operations:
+- `hosting_organisation` - organisation responsible for hosting and operating a service
+- `research_infrastructure` - organisation providing facilities, resources and services for research communities
+
+### Venue
+New type for portal functionality:
+- `srv_portal` - a portal/catalogue through which services are discoverable and accessible
 
 ## Relationships to core entities
 The Service entity can be linked to core SKG-IF entities:
 - **Research products** via `srv_deployment_of` (software deployed by the service) and `related_products` (conceptually related products)
-- **Organisations** via `srv_hosting_organisation`, `srv_hosting_legal_entity`, and `relevant_organisations`
+- **Organisations** via `srv_has_hosting_organisation`, `srv_has_research_infrastructure`, `srv_has_hosting_legal_entity`, and `relevant_organisations`
+- **Venues** via `srv_venues`
 - **Topics** via `disciplines` and `srv_topics`
 
 For the full property specification, see the [Service] documentation.
