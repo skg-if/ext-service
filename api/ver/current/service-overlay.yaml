@@ -159,7 +159,7 @@ actions:
               "local_identifier","entity_type"
             ]        
             properties:
-              entity_type:  # was already specified?
+              entity_type:  # was already specified, in /components/schemas/Entity?
                 type: string
                 default: "service"
                 x-faker:
@@ -189,7 +189,7 @@ actions:
                 examples:
                   - ["UDPipe", "UDPipe 工具"]
 
-              description:
+              descriptions:
                 type: object
                 description: |
                   The descriptions of a `service` (multiple for multilinguism).\
@@ -215,15 +215,18 @@ actions:
                   - ["sshocaudience:public", "sshocaudience:student" ]
 
               srv_audience_byjurisdiction:
-                description: The jurisdiction that is given by the service operator's legal status limits the audience. POtential values are from Global, Institution, National, or Regional aka multiple countries, from https://zenodo.org/records/15516020
-                type: string
-                enum: ["Global", "Institution", "National", "Regional"]
-                examples: 
-                  - ["National"]
+                description: The jurisdiction(s) given by the service operator's legal status that limit the audience. Values are from Global, Institution, National, or Regional (multiple countries), from https://zenodo.org/records/15516020
+                type: array
+                items:
+                  type: string
+                  enum: ["Global", "Institution", "National", "Regional"]
+                examples:
+                  - ["Global"]
+                  - ["National", "Regional"]
 #TODO
 #              disciplines:
 
-              srv_is_accessible_for_free:
+              is_accessible_for_free:
                 description: A property to flag that the Service is accessible for free, in the academic world most services are free or have a free modus
                 type: boolean
                 default: true
@@ -246,7 +249,7 @@ actions:
                 examples:
                   - ["elcs:life_cycle_status_production", "elcs:TRL6" ]
 
-              srv_website:
+              website:
                  type: string
                  description: The landingpage or website URL for a Service.
                  examples:
@@ -266,9 +269,9 @@ actions:
                 description: The languages supported by the service
                 items:
                   type: string
-                  pattern: "^(lexvo:iso639-3/[a-z]{2}|none)$"
+                  pattern: "^lexvo-iso639-3:[a-z]{3}$"
                 examples:
-                   - ["lexvo:iso639-3/en", "lexvo:iso639-3/nl"]
+                   - ["lexvo-iso639-3:eng", "lexvo-iso639-3:nld"]
 
               srv_deployment_of:
                 type: array
@@ -313,9 +316,9 @@ actions:
                     entity_type: 'organisation'
                     name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
                     short_name: "LINDAT"
-                    types: [facility, srv_hosting_organisation]
+                    types: [facility, hosting_organisation]
                     country: CZ
-                
+
               srv_has_research_infrastructure:
                 type: array
                 description: research infrastructure organisation(s) involved
@@ -328,7 +331,7 @@ actions:
                       - scheme: ror
                         value: https://ror.org/03wp25384
                     name: "CLARIN ERIC"
-                    types: [facility, srv_research_infrastructure]
+                    types: [facility, research_infrastructure]
                     country: NL
 
               srv_venues:
@@ -360,7 +363,7 @@ actions:
                      name: Arctic Portal
                      types: [srv_portal]
                      website: https://arcticportal.org 
-                   - local_indentifier: https://portal.ariadne-infrastructure.eu
+                   - local_identifier: https://portal.ariadne-infrastructure.eu
                      entity_type: "venue"
                      name: "Ariadne portal"
                      types: [srv_portal]
@@ -372,7 +375,7 @@ actions:
                 examples:
                   - cites: ["10.18653/v1/k17-3009", "10.30564/fls.v6i5.6957", "10.18653/v1/k18-2020"]
 
-              "dcterms:conformsTo":
+              srv_api_profile:
                 description: IRI of the API profile/standard, either simple link or complex (embedded) structure
                 anyOf:
                   - type: string
@@ -381,18 +384,18 @@ actions:
                 example:
                   - "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
 
-            topics:
-              type: array
-              description:  List of `topic` covered by the `product`
-              items:
-                required: [ "term" ]
-                properties:
-                  term:
-                    $ref: '#/components/schemas/Topic'
-                  # TODO provenance ?
-                labels: [Natural Language Processing, NLP]
+              topics:
+                type: array
+                description:  List of `topic` covered by the `product`
+                items:
+                  required: [ "term" ]
+                  properties:
+                    term:
+                      $ref: '#/components/schemas/Topic'
+                    # TODO provenance ?
+                  labels: [Natural Language Processing, NLP]
 
-              srv_relevant_organisations:
+              relevant_organisations:
                 type: array
                 description: list of relevant organisation  associated with the `service`, in case the individual affiliations of a `person` do not fit the contribution or are not available.
                 items:
@@ -402,7 +405,7 @@ actions:
                     entity_type: organisation
                     name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
                     short_name: "LINDAT"
-                    types: [facility, srv_hosting_organisation]
+                    types: [facility, hosting_organisation]
                     country: CZ
                   - local_identifier: https://ror.org/024d6js02
                     entity_type: organisation
@@ -412,7 +415,7 @@ actions:
                   - local_identifier: https://ror.org/03wp25384
                     entity_type: organisation
                     name: "CLARIN ERIC"
-                    types: [facility, srv_research_infrastructure]
+                    types: [facility, research_infrastructure]
                     country: NL
 
 #some additional organisation types should be added, see below
@@ -447,6 +450,7 @@ actions:
 #
 # FacilityPortal is a special class to model place and organisation facilitation a service
 # alternatively this can be done by adding types to venue and/or organisation
+# could be useful outside Service
 #
     update:
       FacilityPortal:
@@ -463,11 +467,19 @@ actions:
         provider: 
           minItems: 1 
 
+# CORE ENTITY EXTENSIONS
+# The following sections extend core SKG-IF entities (Venue, Organisation).
+# These modifications can be removed if the core entities are updated to
+# include these types natively, or if a different approach is preferred.
+
+# VENUE EXTENSION - BEGIN
+# Adds srv_portal type and services property to Venue entity
+# Remove this section if Venue is extended in the core or no longer needed
+
   - target: $.components.schemas.Venue.allOf[1].properties.type.enum
-#adapting 'Venue' can also model 'Portal' functionality
-#add "portal" as a Venue type
     update:
         - srv_portal
+
   - target: $.components.schemas.Venue.allOf[1].properties
     update:
       services:
@@ -476,18 +488,20 @@ actions:
         items:
           $ref: '#/components/schemas/Service'
 
+# VENUE EXTENSION - END
+
+# ORGANISATION EXTENSION - BEGIN
+# Adds new organisation types for modeling service operations:
+# - hosting_organisation: organisation responsible for hosting a service
+# - research_infrastructure: organisation providing facilities for research
+# - srv_portal: organisation aggregating and cataloging services
+# Remove this section if Organisation is extended in the core
+
   - target: $.components.schemas.Organisation.allOf[1].properties.types.items.enum
-#additional organisation types should be provided for modelling support and operating services
-# archive , company , education , facility , government , healthcare , nonprofit , funder , research , unspecified with types: infrastructure, hosting-entity ( see EOSC profiles, prefer use legal-entity names if relevant)
-#there seems no problem modeling a tool/service(s) as organisation ie. frapo defines facility as "A place or installation built or designed to serve a specific function or provide a specific service, for example an animal breeding centre, a DNA sequencing facility or a confocal imaging laboratory."
-# portal -> dcat:Catalog ( lacking supporting facilities and expertise offering)
-# facility -> frapo:Facility (is already used in skg-if organisation)
-# hosting-legal-entity/provider/operator -> eosc-profiles (v5) hostingLegalEntity
-# research-infrastructure -> organisation that provides facilities, resources and services for the research communities to conduct research
-# note frapo lacks: (software) service, (research) infrastructure etc.
-# EOSC profiles v5 and dcat offers match
     update:
       - srv_portal
-      - srv_research_infrastructure
-      - srv_hosting_organisation
+      - research_infrastructure
+      - hosting_organisation
+
+# ORGANISATION EXTENSION - END
 

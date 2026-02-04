@@ -33,7 +33,7 @@
                 "sshocaudience:public",
                 "sshocaudience:student"
             ],
-            "srv_audience_byjurisdiction": "Global",
+            "srv_audience_byjurisdiction": ["Global"],
             "is_accessible_for_free": true,
             "srv_invocation_type": [
                 "sshocinvt:restfullWebservice",

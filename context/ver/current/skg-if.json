@@ -43,7 +43,7 @@
 
     "srv_audience_byrole": { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@base": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" } },
 
-    "srv_audience_byjurisdiction": { "@id": "srv:audienceJurisdiction", "@type": "xsd:string" },
+    "srv_audience_byjurisdiction": { "@id": "srv:audienceJurisdiction" },
 
     "disciplines": { "@id": "dcterms:subject", "@type": "@vocab", "@context": { "@base": "http://id.loc.gov/authorities/classification/" } },
 
