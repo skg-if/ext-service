@@ -1,0 +1,159 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.11752/ILC-1005",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.11752/ILC-1005"
+        }
+      ],
+      "srv_name": [
+        "EpiLexO"
+      ],
+      "descriptions": {
+        "none": [
+          "EpiLexO is a user friendly web application for the creation and editing of an integrated system of language resources for ancient fragmentary languages centered on the lexicon, in compliance with current digital humanities and Linked Open Data principles. EpiLexo allows for the editing of lexica with all relevant cross-references: for their linking to their testimonies, as well as to bibliographic information and other (external) resources and common vocabularies. This front-end application rests on a Service-Oriented Architecture with two main back-end components, the LexO-server (\\handle) and the CASH-server (1github), which manage lexica and textual documents respectively via Rest-ful APIs web-services, plus additional services for the management of other aspects such as access and authentication, XML rendering, etc. All code is available on https://github.com/DigItAnt/ The application has been developed in the context of a project on the languages of fragmentary attestation of ancient Italy, but can be applied to other similar contexts."
+        ]
+      },
+      "keywords": [
+        "Digital Humanities",
+        "Ancient Languages",
+        "Linking and Editing tools",
+        "Linked Lexica",
+        "Linguistic Linked Data",
+        "GUI Web application",
+        "Ontolex-lemon",
+        "EpiDoc",
+        "Semantic web"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:eng"
+      ],
+      "website": "https://www.prin-italia-antica.unifi.it/",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://hdl.handle.net/20.500.11752/ILC-1005",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:webApplication"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/02d8a5s53",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/02d8a5s53"
+            }
+          ],
+          "name": "Institute for Computational Linguistics \"A. Zampolli\"",
+          "country": "IT",
+          "short_name": "ILC4CLARIN",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:it"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://www.prin-italia-antica.unifi.it/"
+        ],
+        "schema:url": [
+          "https://www.prin-italia-antica.unifi.it/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q184524",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q184524"
+              }
+            ],
+            "labels": {
+              "en": "Lexicography"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

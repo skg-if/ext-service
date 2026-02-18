@@ -1,0 +1,177 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11356/2034",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/11356/2034"
+        }
+      ],
+      "srv_name": [
+        "Service for querying dependency treebanks Drevesnik 1.2"
+      ],
+      "descriptions": {
+        "none": [
+          "Drevesnik (https://orodja.cjvt.si/drevesnik/) is an online service for querying Slovenian corpora parsed with the Universal Dependencies annotation scheme. It features an easy-to-use query language on the one hand and user-friendly graph visualizations on the other. \r\n\r\nIt is based on the open-source dep_search tool (https://github.com/TurkuNLP/dep_search), which was localized and modified so as to also support querying by JOS morphosyntactic tags, random distribution of results, and filtering by sentence length. \r\n\r\nThe source code and the documentation for the search backend and the web user interface are publicly available on the CLARIN.SI GitHub repository https://github.com/clarinsi/drevesnik. In comparison to previous version (1.1), release 1.2 introduces a new front-end design and some improved interface features."
+        ]
+      },
+      "keywords": [
+        "treebanks",
+        "dependency trees",
+        "universal dependencies",
+        "syntax",
+        "corpus linguistics",
+        "corpus querying"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:slv"
+      ],
+      "website": "https://github.com/clarinsi/drevesnik",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/clarinsi/drevesnik",
+          "@type": "schema:SoftwareSourceCode"
+        },
+        {
+          "@id": "https://hdl.handle.net/11356/2034",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:webApplication",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/05060sz93",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/05060sz93"
+            }
+          ],
+          "name": "Jožef Stefan Institute",
+          "country": "SI",
+          "short_name": "CLARIN.SI",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:si"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://orodja.cjvt.si/drevesnik/"
+        ],
+        "schema:url": [
+          "https://orodja.cjvt.si/drevesnik/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

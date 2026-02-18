@@ -1,0 +1,194 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/ATHENA-0000-0000-23E9-2",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/ATHENA-0000-0000-23E9-2"
+        }
+      ],
+      "srv_name": [
+        "Î£ÏÎ½ÏÎ±ÎºÏÎ¹ÎºÏÏ Î±Î½Î±Î»ÏÏÎ®Ï ÎÎÎ",
+        "ILSP Dependency parser",
+        "ilsp_depr"
+      ],
+      "descriptions": {
+        "el": [
+          "Î Î£Ï Î½ÏÎ±ÎºÏÎ¹ÎºÏÏ Î±Î½Î±Î»Ï ÏÎ®Ï ÎÎÎ ÎµÎ¯Î½Î±Î¹ Î¼Î¯Î± Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ® Ï ÏÎ·ÏÎµÏÎ¯Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÏ ÏÎ¹ÎºÎ®Ï Î³Î»ÏÏÏÎ±Ï, Î· Î¿ÏÎ¿Î¯Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹ÎµÎ¯ÏÎ±Î¹ Î³Î¹Î± ÏÎ· ÏÏ Î½ÏÎ±ÎºÏÎ¹ÎºÎ® Î±Î½Î¬Î»Ï ÏÎ· ÎºÎµÎ¹Î¼Î­Î½ÏÎ½ ÏÎ·Ï Î½Î­Î±Ï ÎÎ»Î»Î·Î½Î¹ÎºÎ®Ï Î³Î»ÏÏÏÎ±Ï. Î£Ï Î³ÎºÎµÎºÏÎ¹Î¼Î­Î½Î±, ÏÎ±ÏÎ¬Î³Î¿Î½ÏÎ±Î¹ Î´ÎµÎ½Î´ÏÎ¹ÎºÎ­Ï Î±Î½Î±ÏÎ±ÏÎ±ÏÏÎ¬ÏÎµÎ¹Ï Î³Î¹Î± ÎºÎ¬Î¸Îµ ÏÏÏÏÎ±ÏÎ· ÎµÎ½ÏÏ ÎºÎµÎ¹Î¼Î­Î½Î¿Ï , ÎµÎ½Ï ÎºÎ¬Î¸Îµ Î»Î­Î¾Î· ÎµÎ¼ÏÎ±Î½Î¯Î¶ÎµÏÎ±Î¹ ÏÏ ÎµÎ¾Î±ÏÏÏÎ¼ÎµÎ½Î· Î±ÏÏ Î¼Î¹Î± Î»Î­Î¾Î·-ÎºÎµÏÎ±Î»Î® ÎºÎ±Î¹ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÎ½ÎµÏÎ±Î¹ Î¼Îµ Î¼Î¹Î± ÎµÏÎ¹ÎºÎ­ÏÎ± Î´Î·Î»ÏÏÎ¹ÎºÎ® ÏÎ·Ï ÏÏÎ­ÏÎ·Ï ÏÎ·Ï ÏÏÎ¿Ï ÏÎ·Î½ Î»Î­Î¾Î·-ÎºÎµÏÎ±Î»Î® (Ï.Ï. Ï ÏÎ¿ÎºÎµÎ¯Î¼ÎµÎ½Î¿, Î±Î½ÏÎ¹ÎºÎµÎ¯Î¼ÎµÎ½Î¿, Îº.Î»Ï.). ÎÏÏÎ¹, ÏÏÎ·Î½ ÏÏÏÏÎ±ÏÎ· 'ÎÎ¹ Î±ÏÏÏÎ¿Î½ÏÎ¼Î¿Î¹ Î±Î½Î±ÎºÎ¬Î»Ï ÏÎ±Î½ Î­Î½Î± Î½Î­Î¿ ÏÎµÎ³Î³Î¬ÏÎ¹' Î±Î½Î±Î³Î½ÏÏÎ¯Î¶ÎµÎ¹, Î¼ÎµÏÎ±Î¾Ï Î¬Î»Î»ÏÎ½, ÏÏÎ¹ Î¿Î¹ Î»Î­Î¾ÎµÎ¹Ï 'Î±ÏÏÏÎ¿Î½ÏÎ¼Î¿Î¹' ÎºÎ±Î¹ 'ÏÎµÎ³Î³Î¬ÏÎ¹' Î±ÏÎ¿ÏÎµÎ»Î¿ÏÎ½ ÏÎ¿ Ï ÏÎ¿ÎºÎµÎ¯Î¼ÎµÎ½Î¿ ÎºÎ±Î¹ ÏÎ¿ Î±Î½ÏÎ¹ÎºÎµÎ¯Î¼ÎµÎ½Î¿ ÏÎ·Ï Î»Î­Î¾Î·Ï 'Î±Î½Î±ÎºÎ¬Î»Ï ÏÎ±Î½'. Î Î£Ï Î½ÏÎ±ÎºÏÎ¹ÎºÏÏ Î±Î½Î±Î»Ï ÏÎ®Ï ÎÎÎ ÎµÎºÏÎ±Î¹Î´ÎµÏÏÎ·ÎºÎµ ÏÏÎ¿ Greek Dependency Treebank , Î­Î½Î± Î³Î»ÏÏÏÎ¹ÎºÏ ÏÏÏÎ¿ ÏÎ¿Ï ÎÎÎ/ÎÎ \"ÎÎ¸Î·Î½Î¬\" ÏÎ¿Ï ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÎ¼Î­Î½Î¿ Ï Î»Î¹ÎºÏ ÏÎµ Î´Î¹Î¬ÏÎ¿ÏÎ± Î³Î»ÏÏÏÎ¿Î»Î¿Î³Î¹ÎºÎ¬ ÎµÏÎ¯ÏÎµÎ´Î±. Î¤Î± Î´ÎµÎ´Î¿Î¼Î­Î½Î± ÎµÎºÏÎ±Î¯Î´ÎµÏ ÏÎ·Ï ÏÏÎ¿ ÎµÏÎ¯ÏÎµÎ´Î¿ ÏÎ·Ï ÏÏÎ½ÏÎ±Î¾Î·Ï Î±Î½Î­ÏÏÎ¿Î½ÏÎ±Î¹ ÏÎµ ÏÎµÏÎ¯ÏÎ¿Ï 175 ÏÎ¹Î»Î¹Î¬Î´ÎµÏ Î»Î­Î¾ÎµÎ¹Ï, ÏÎ¿Ï ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÎ¸Î·ÎºÎ±Î½ ÏÏÎ¼ÏÏÎ½Î± Î¼Îµ Î­Î½Î± ÏÏÎ®Î¼Î± ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ·Ï ÏÎ¿Ï Î²Î±ÏÎ¯Î¶ÎµÏÎ±Î¹ ÏÏÎ· Î³ÏÎ±Î¼Î¼Î±ÏÎ¹ÎºÎ® ÎµÎ¾Î±ÏÏÎ®ÏÎµÏÎ½ (dependency grammar) ÎºÎ±Î¹ ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ 25 ÎºÏÏÎ¹ÎµÏ ÏÏÎ­ÏÎµÎ¹Ï ÎµÎ¾Î¬ÏÏÎ·ÏÎ·Ï. ÎÎ¹Î± ÏÎ·Î½ ÎµÎºÏÎ±Î¯Î´ÎµÏ ÏÎ· ÏÎ¿Ï ÏÏ Î½ÏÎ±ÎºÏÎ¹ÎºÎ¿Ï Î±Î½Î±Î»Ï ÏÎ® ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î®Î¸Î·ÎºÎµ Î¿ Maltparser.&nbsp; Î Ï ÏÎ·ÏÎµÏÎ¯Î± Î±Ï ÏÎ® Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î·Î¸ÎµÎ¯ Î³Î¹Î± ÏÎ·Î½ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î± Î¿ÏÎ¿Î¹Î¿Ï Î´Î®ÏÎ¿ÏÎµ TXT Î±ÏÏÎµÎ¯Î¿Ï ÏÎµ ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· UTF-8. Î¤Î¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÎµÎ¯Î½Î±Î¹ ÎµÎ¯ÏÎµ ÏÎµ Î¼Î¿ÏÏÎ®&nbsp; XMI Î±ÏÏÎµÎ¯Î¿Ï ÎµÎ¯ÏÎµ ÏÎµ Î¼Î¿ÏÏÎ® Î±ÏÏÎµÎ¯Î¿Ï CSV Î¼Îµ ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· UTF-8. Î Î£Ï Î½ÏÎ±ÎºÏÎ¹ÎºÏÏ Î±Î½Î±Î»Ï ÏÎ®Ï ÎÎÎ Î±ÏÎ¿ÏÎµÎ»ÎµÎ¯ ÏÎ¿ ÏÎµÎ»ÎµÏ ÏÎ±Î¯Î¿ Î²Î®Î¼Î± Î¼Î¯Î±Ï ÏÎ¿Î®Ï ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ¿Ï ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ ÏÎ± Î±ÎºÏÎ»Î¿Ï Î¸Î± ÏÏÎ¬Î´Î¹Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï: Î´Î¹Î±ÏÏÏÎ¹ÏÎ¼ÏÏ ÏÏÎ¿ÏÎ¬ÏÎµÏÎ½ ÎºÎ±Î¹ ÏÎ¼Î·Î¼Î±ÏÎ¿ÏÎ¿Î¯Î·ÏÎ· ÎºÎµÎ¹Î¼Î­Î½Î¿Ï , Î»Î·Î¼Î¼Î±ÏÎ¿ÏÎ¿Î¯Î·ÏÎ·, ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ· Î¼ÎµÏÏÎ½ ÏÎ¿Ï Î»ÏÎ³Î¿Ï ÎºÎ±Î¹ ÏÎ­Î»Î¿Ï, ÏÏ Î½ÏÎ±ÎºÏÎ¹ÎºÎ® Î±Î½Î¬Î»Ï ÏÎ·. Î©Ï ÎµÎº ÏÎ¿ÏÏÎ¿Ï , ÏÎ¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎµÎ¹Ï ÏÎµ ÎµÏÎ¯ÏÎµÎ´Î¿ ÏÏÏÏÎ±ÏÎ·Ï ( Sentence ID , Sentence ), Î»ÎµÎºÏÎ¹ÎºÎ®Ï Î¼Î¿Î½Î¬Î´Î±Ï ( Token ID , Token , Token Type ÏÏÎ¼ÏÏÎ½Î± Î¼Îµ ÏÎ¿ ILSP_NLP Token Tagset , Token Start , Token End ), Î»Î®Î¼Î¼Î±ÏÎ¿Ï , Î¼Î­ÏÎ¿Ï Ï ÏÎ¿Ï Î»ÏÎ³Î¿Ï ÏÏÎ¼ÏÏÎ½Î± Î¼Îµ ÏÎ¿ ILSP_NLP PoS Tagset , ÎºÎ±Î¹ ÏÏ Î½ÏÎ±ÎºÏÎ¹ÎºÏÎ½ ÎµÎ¾Î±ÏÏÎ®ÏÎµÏÎ½ (Relation ÎºÎ±Î¹ Head ID) ÏÏÎ¼ÏÏÎ½Î± Î¼Îµ ÏÎ¿ Universal Dependency Relations Tagset . ÎÎ½Î±ÏÏÎ­Î¾ÏÎµ ÏÏÎ¿ ÏÎµÎ´Î¯Î¿ Output Annotation Schema ÏÎ±ÏÎ±ÎºÎ¬ÏÏ Î³Î¹Î± ÏÎµÏÎ¹ÏÏÏÏÎµÏÎµÏ ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯ÎµÏ ÏÏÎµÏÎ¹ÎºÎ¬ Î¼Îµ ÏÎ± tagsets. ÎÎ¹Î± ÏÎµÏÎ½Î¹ÎºÎ¿ÏÏ Î»ÏÎ³Î¿Ï Ï, ÏÎ¿ Î±ÏÏÎµÎ¯Î¿ ÏÎ¿Ï Ï ÏÎ¿Î²Î¬Î»Î»ÎµÏÎ±Î¹ Î³Î¹Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î± Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± ÏÏÏÎ¹ÏÏÎµÎ¯ ÏÎµ Î¼Î¹ÎºÏÏÏÎµÏÎ± Î±ÏÏÎµÎ¯Î±, ÏÎ¿ Î¯Î´Î¹Î¿ ÎºÎ±Î¹ ÏÎ¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï. Î Ï ÏÎ·ÏÎµÏÎ¯Î± Î±Ï ÏÎ® Î­ÏÎµÎ¹ ÎµÎ½ÏÏÎ¼Î±ÏÏÎ¸ÎµÎ¯ ÏÏÎ¹Ï ÏÎ¿Î­Ï ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ·Ï Ï ÏÎ¿Î´Î¿Î¼Î®Ï CLARIN:EL, ÏÏÎ¿ÏÏÎ­ÏÎ¿Î½ÏÎ±Ï ÏÏÎ¿Ï Ï ÏÏÎ®ÏÏÎµÏ ÏÎ· Î´Ï Î½Î±ÏÏÏÎ·ÏÎ± ÎµÏÎºÎ¿Î»Î·Ï ÏÏÏÏÎ²Î±ÏÎ·Ï ÎºÎ±Î¹ ÏÏÎ®ÏÎ·Ï ÏÏ Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ® Ï ÏÎ·ÏÎµÏÎ¯Î±. ÎÏÎ¿ÏÎµÎ¯ÏÎµ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î®ÏÎµÏÎµ Î±Ï ÏÎ®Î½ ÏÎ·Î½ Ï ÏÎ·ÏÎµÏÎ¯Î± ÎµÏÎ¹Î»Î­Î³Î¿Î½ÏÎ±Ï ÏÎ¿ ÎºÎ¿Ï Î¼ÏÎ¯ \" Use \" ÏÎ¿Ï Î¸Î± Î²ÏÎµÎ¯ÏÎµ ÏÎµ Î±Ï ÏÎ®Î½ ÏÎ· ÏÎµÎ»Î¯Î´Î± Î® Î¼Î­ÏÏ ÏÎ·Ï ÏÎµÎ»Î¯Î´Î±Ï Ï ÏÎ·ÏÎµÏÎ¹ÏÎ½ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ¿Ï CLARIN:EL ."
+        ],
+        "en": [
+          "The ILSP Dependency Parser is a natural language processing web service designed to generate dependency annotations on Modern Greek texts. The service detects each word of a given text and associates it with a headword by assigning a label depicting its dependency relation to this headword (e.g., subject, object, etc.). Thus, in the sentence 'Astronomers discovered a new moon', the ILSP Dependency Parser recognizes that the words 'Astronomers' and 'moon' are the subject and the object of the word 'discovered'. The ILSP Dependency Parser has been trained with the Maltparser on the Greek Dependency Treebank - GDT , a language resource of ILSP/Athena RC that comprises data annotated at several linguistic levels. The training corpus consists of around 175,000 words annotated at syntactic level. The annotation scheme includes 25 main relations and is based on an adaptation of the guidelines for the Prague Dependency Treebank. You can use this service to process any TXT document in UTF-8 encoding and obtain the output in either UTF-8 encoded XMI format or in CSV file format. The ILSP Dependency Parser constitutes the final step of a workflow consisting of the following processing steps: sentence splitting and tokenization, lemmatization, part-of-speech tagging and finally dependency parsing. Therefore, the output of the service includes annotations on the level of sentence ( Sentence ID , Sentence ), token ( Token ID , Token , Token Type according to ILSP_NLP Token Tagset , Token Start , Token End ), lemma , part of speech according to ILSP_NLP PoS Tagset , and dependency relation (Relation and Head ID) according to Universal Dependency Relations Tagset . See the Output Annotation Schema field below for more information on the respective tagsets. For technical reasons, the file submitted for processing may be split into smaller files, and so will the output. This service is seamlessly integrated into the CLARIN:EL infrastructure's workflows, providing users with convenient and easy access as a web service. You can use this service by clicking the \" Use \" button on this page or by accessing it through the CLARIN:EL processing services page ."
+        ]
+      },
+      "keywords": [
+        "Î»Î·Î¼Î¼Î±ÏÎ¿ÏÎ¿Î¯Î·ÏÎ·",
+        "lemmatization",
+        "ÏÏÎ½ÏÎ±ÎºÏÎ¹ÎºÎ® Î±Î½Î¬Î»ÏÏÎ·",
+        "syntactic analysis",
+        "ÏÎ·ÏÎ® ÏÏÎ½ÏÎ±ÎºÏÎ¹ÎºÎ® Î±Î½Î¬Î»ÏÏÎ·",
+        "parsing",
+        "ÏÏÎ½ÏÎ±ÎºÏÎ¹ÎºÏÏ Î±Î½Î±Î»ÏÏÎ®Ï",
+        "dependency parser",
+        "DependencyParsing",
+        "Token",
+        "Sentence",
+        "PartOfSpeech",
+        "Lemma",
+        "DependencyTree"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ell"
+      ],
+      "website": "http://hdl.handle.net/11500/ATHENA-0000-0000-23E9-2",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:localApplication",
+        "sshocinvt:webApplication"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://hdl.handle.net/11500/ATHENA-0000-0000-23E9-2"
+        ],
+        "schema:url": [
+          "http://hdl.handle.net/11500/ATHENA-0000-0000-23E9-2"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.12537/274",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.12537/274"
+        }
+      ],
+      "srv_name": [
+        "Heyra (1.0)"
+      ],
+      "descriptions": {
+        "none": [
+          "Heyra is an Android application that provides three loosely coupled components, an implementation of Android's speech recognition interface, an intent handler activity for speech recognition actions from other applications and an input method service (i.e. virtual keyboard) that can either be used on its own or launched by supported applications. Heyra can be downloaded from the Google Play Store at https://play.google.com/store/apps/details?id=is.tiro.heyra\r\n\r\nHeyra er Android forrit sem inniheldur þrjá laustengda hluta; útfærslu á kerfisþjónustu í Android fyrir talgreiningu, meðhöndlara fyrir talgreiningaraðgerðir frá öðrum forritum og inntaksþjónustu (eða sýndarlyklaborð) sem hægt er að nota eitt og sér eða kalla á úr öðrum studdum forritum. Hægt er að sækja Heyra á Google Play Store á https://play.google.com/store/apps/details?id=is.tiro.heyra"
+        ]
+      },
+      "keywords": [
+        "asr",
+        "automatic speech recognition",
+        "android"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:isl"
+      ],
+      "website": "https://github.com/tiro-is/heyra",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/tiro-is/heyra",
+          "@type": "schema:SoftwareSourceCode"
+        },
+        {
+          "@id": "https://hdl.handle.net/20.500.12537/274",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:webApplication",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+          "entity_type": "organisation",
+          "name": "CLARIN Iceland",
+          "country": "IS",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:is"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

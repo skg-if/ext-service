@@ -1,0 +1,135 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/ATHENA-0000-0000-23E7-4",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/ATHENA-0000-0000-23E7-4"
+        }
+      ],
+      "srv_name": [
+        "ÎÎ½Î±Î³Î½ÏÏÎ¹ÏÏÎ®Ï Î³Î»ÏÏÏÎ±Ï ÏÎ·ÏÎ¹Î±ÎºÎ¿Ï ÎºÎµÎ¹Î¼Î­Î½Î¿Ï ÎÎÎ",
+        "ILSP Language Identification System",
+        "ILSP LangId"
+      ],
+      "descriptions": {
+        "el": [
+          "Î ÎÎ½Î±Î³Î½ÏÏÎ¹ÏÏÎ®Ï Î³Î»ÏÏÏÎ±Ï ÏÎ¿Ï ÎÎÎ ÎµÎ¯Î½Î±Î¹ Î­Î½Î± ÎµÏÎ³Î±Î»ÎµÎ¯Î¿ ÏÎ¿Ï ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹ÎµÎ¯ÏÎ±Î¹ Î³Î¹Î± ÏÎ·Î½ Î±Ï ÏÏÎ¼Î±ÏÎ· Î±Î½Î±Î³Î½ÏÏÎ¹ÏÎ· ÏÎ·Ï Î³Î»ÏÏÏÎ±Ï ÎµÎ½ÏÏ ÏÎ·ÏÎ¹Î±ÎºÎ¿Ï ÎºÎµÎ¹Î¼Î­Î½Î¿Ï . Î¤Î¿ ÎµÏÎ³Î±Î»ÎµÎ¯Î¿ Î±Î½Î±Î³Î½ÏÏÎ¯Î¶ÎµÎ¹ ÏÎ·Î½ ÎµÎ»Î»Î·Î½Î¹ÎºÎ®, Î±Î³Î³Î»Î¹ÎºÎ®, Î³ÎµÏÎ¼Î±Î½Î¹ÎºÎ®, Î³Î±Î»Î»Î¹ÎºÎ®, Î¿Î»Î»Î±Î½Î´Î¹ÎºÎ® Î³Î»ÏÏÏÎ± ÎºÎ±Î¸ÏÏ ÎºÎ±Î¹ Î³Î¹Î± ÏÎ± greeklish, ÎµÎ½Ï Î´Î¯Î½ÎµÏÎ±Î¹ ÎºÎ±Î¹ Î· Î´Ï Î½Î±ÏÏÏÎ·ÏÎ± ÏÏÎ¿ÏÎ¸Î®ÎºÎ·Ï ÎµÏÎ¹ÏÎ»Î­Î¿Î½ Î³Î»ÏÏÏÏÎ½ Î¼Îµ ÏÎ·Î½ ÏÏÎ¿ÏÎ¸Î®ÎºÎ· ÏÏ Î¼ÏÎ»Î·ÏÏÎ¼Î±ÏÎ¹ÎºÏÎ½ Î±ÏÏÎµÎ¯ÏÎ½ Î³Î¹Î± ÎºÎ¬Î¸Îµ Î³Î»ÏÏÏÎ±."
+        ],
+        "en": [
+          "The ILSP Language Identification System is a tool used for language identification in digital texts. The tool performs language identification for Greek, Greeklish, English, German, Dutch and French; it can also be used for other languages upon provision of specific supplementary external files for each new language."
+        ]
+      },
+      "keywords": [
+        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "text",
+        "ÎµÏÎ³Î±Î»ÎµÎ¯Î¿ Î±ÏÏÏÎ¼Î±ÏÎ·Ï Î±Î½Î±Î³Î½ÏÏÎ¹ÏÎ·Ï Î³Î»ÏÏÏÎ±Ï",
+        "language identification tool",
+        "LanguageIdentification",
+        "LanguageTechnology",
+        "BSD-2-Clause"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:fra",
+        "lexvo-iso639-3:nld",
+        "lexvo-iso639-3:eng",
+        "lexvo-iso639-3:ell",
+        "lexvo-iso639-3:deu"
+      ],
+      "website": "http://hdl.handle.net/11500/ATHENA-0000-0000-23E7-4",
+      "is_accessible_for_free": true,
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:localApplication"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

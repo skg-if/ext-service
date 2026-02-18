@@ -1,0 +1,170 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/ATHENA-0000-0000-279A-7",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/ATHENA-0000-0000-279A-7"
+        }
+      ],
+      "srv_name": [
+        "OpenNLP Sentence Detector (ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ¬)",
+        "OpenNLP Sentence Detector (German)",
+        "OpenNLP_sent_de"
+      ],
+      "descriptions": {
+        "el": [
+          "Î OpenNLP Sentence Detector (ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ¬) ÎµÎ¯Î½Î±Î¹ Î¼Î¯Î± Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ® Ï ÏÎ·ÏÎµÏÎ¯Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÏ ÏÎ¹ÎºÎ®Ï Î³Î»ÏÏÏÎ±Ï, Î· Î¿ÏÎ¿Î¯Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹ÎµÎ¯ÏÎ±Î¹ Î³Î¹Î± ÏÎ·Î½ Î±Î½Î¯ÏÎ½ÎµÏ ÏÎ· ÏÏÎ¿ÏÎ¬ÏÎµÏÎ½ ÏÎµ ÎºÎµÎ¯Î¼ÎµÎ½Î± ÏÎ·Ï ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ®Ï Î³Î»ÏÏÏÎ±Ï. Î Ï ÏÎ·ÏÎµÏÎ¯Î± Î±Î½Î±ÏÏÏÏÎ¸Î·ÎºÎµ Î±ÏÏ ÏÎ¿ ÎÎÎ/Î.Î. ÎÎ¸Î·Î½Î¬ ÎºÎ±Î¹ Î²Î±ÏÎ¯Î¶ÎµÏÎ±Î¹ ÏÏÎ· Î²Î¹Î²Î»Î¹Î¿Î¸Î®ÎºÎ· Apache OpenNLP, Î· Î¿ÏÎ¿Î¯Î± Î´Î¹Î±ÏÎ¯Î¸ÎµÏÎ±Î¹ Î¼Îµ Î¬Î´ÎµÎ¹Î± Apache Version 2.0. Î OpenNLP Sentence Detector Î³Î¹Î± ÏÎ± ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ¬ Î­ÏÎµÎ¹ ÎµÎºÏÎ±Î¹Î´ÎµÏ ÏÎµÎ¯ ÏÎ¬Î½Ï ÏÏÎ± Î´ÎµÎ´Î¿Î¼Î­Î½Î± ÏÎ¿Ï ÏÏÎ¼Î±ÏÎ¿Ï ÎºÎµÎ¹Î¼Î­Î½ÏÎ½ Î³Î¹Î± ÏÎ·Î½ ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ® Î³Î»ÏÏÏÎ± Tiger. Î Ï ÏÎ·ÏÎµÏÎ¯Î± Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î·Î¸ÎµÎ¯ Î³Î¹Î± ÏÎ·Î½ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±&nbsp; Î¿ÏÎ¿Î¹Î¿Ï Î´Î®ÏÎ¿ÏÎµ TXT Î±ÏÏÎµÎ¯Î¿Ï ÏÎµ ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· UTF-8. Î¤Î¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÎµÎ¯Î½Î±Î¹ ÎµÎ¯ÏÎµ ÏÎµ Î¼Î¿ÏÏÎ®&nbsp; XML Î±ÏÏÎµÎ¯Î¿Ï ÎµÎ¯ÏÎµ ÏÎµ Î¼Î¿ÏÏÎ® Î±ÏÏÎµÎ¯Î¿Ï CSV Î¼Îµ ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· UTF-8. Î OpenNLP Sentence Detector (ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ¬) Î±ÏÎ¿ÏÎµÎ»ÎµÎ¯ ÏÎ¿ ÏÏÏÏÎ¿ Î²Î®Î¼Î± ÏÎ»ÏÎ½ ÏÏÎ½ ÏÎ¿ÏÎ½ ÎµÏÎ³Î±ÏÎ¯Î±Ï Î³Î»ÏÏÏÎ¹ÎºÎ®Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï OpenNLP Î³Î¹Î± ÏÎ± ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ¬. Î¤Î¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎµÎ¹Ï ÏÎµ ÎµÏÎ¯ÏÎµÎ´Î¿ ÏÏÏÏÎ±ÏÎ·Ï ( Sentence ID , Sentence ). ÎÎ¹Î± ÏÎµÏÎ½Î¹ÎºÎ¿ÏÏ Î»ÏÎ³Î¿Ï Ï, ÏÎ¿ Î±ÏÏÎµÎ¯Î¿ ÏÎ¿Ï Ï ÏÎ¿Î²Î¬Î»Î»ÎµÏÎ±Î¹ Î³Î¹Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î± Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± ÏÏÏÎ¹ÏÏÎµÎ¯ ÏÎµ Î¼Î¹ÎºÏÏÏÎµÏÎ± Î±ÏÏÎµÎ¯Î±, ÏÎ¿ Î¯Î´Î¹Î¿ ÎºÎ±Î¹ ÏÎ¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï. Î Ï ÏÎ·ÏÎµÏÎ¯Î± Î±Ï ÏÎ® Î­ÏÎµÎ¹ ÎµÎ½ÏÏÎ¼Î±ÏÏÎ¸ÎµÎ¯ ÏÏÎ¹Ï ÏÎ¿Î­Ï ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ·Ï Ï ÏÎ¿Î´Î¿Î¼Î®Ï CLARIN:EL, ÏÏÎ¿ÏÏÎ­ÏÎ¿Î½ÏÎ±Ï ÏÏÎ¿Ï Ï ÏÏÎ®ÏÏÎµÏ ÏÎ· Î´Ï Î½Î±ÏÏÏÎ·ÏÎ± ÎµÏÎºÎ¿Î»Î·Ï ÏÏÏÏÎ²Î±ÏÎ·Ï ÎºÎ±Î¹ ÏÏÎ®ÏÎ·Ï ÏÏ Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ® Ï ÏÎ·ÏÎµÏÎ¯Î±. ÎÏÎ¿ÏÎµÎ¯ÏÎµ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î®ÏÎµÏÎµ Î±Ï ÏÎ®Î½ ÏÎ·Î½ Ï ÏÎ·ÏÎµÏÎ¯Î± ÎµÏÎ¹Î»Î­Î³Î¿Î½ÏÎ±Ï ÏÎ¿ ÎºÎ¿Ï Î¼ÏÎ¯ \" Use \" ÏÎ¿Ï Î¸Î± Î²ÏÎµÎ¯ÏÎµ ÏÎµ Î±Ï ÏÎ®Î½ ÏÎ· ÏÎµÎ»Î¯Î´Î± Î® Î¼Î­ÏÏ ÏÎ·Ï ÏÎµÎ»Î¯Î´Î±Ï Ï ÏÎ·ÏÎµÏÎ¹ÏÎ½ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ¿Ï CLARIN:EL ."
+        ],
+        "en": [
+          "The OpenNLP Sentence Detector (German) is a natural language processing web service designed to identify sentence boundaries in German texts.&nbsp; This service has been developed by ILSP/Athena RC, based on the Apache OpenNLP library, which is available with the Apache License Version 2.0. The OpenNLP Sentence Detector (German) has been trained on Tiger corpus data. You can use this service to process any TXT document in UTF-8 encoding and obtain the output in either UTF-8 encoded XML format or in CSV file format. The OpenNLP Sentence Detector (German) service constitutes the first step of OpenNLP language processing workflows for German. The output of the service includes annotations on the level of sentence ( Sentence ID , Sentence ). For technical reasons, the file submitted for processing may be split into smaller files, and so will the output. This service is seamlessly integrated into the CLARIN:EL infrastructure's workflows, providing users with convenient and easy access as a web service. You can use this service by clicking the \" Use \" button on this page or by accessing it through the CLARIN:EL processing services page ."
+        ]
+      },
+      "keywords": [
+        "ÎºÎ±ÏÎ¬ÏÎ¼Î·ÏÎ·",
+        "segmentation",
+        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "text",
+        "SentenceSplitting",
+        "Sentence"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:deu"
+      ],
+      "website": "https://opennlp.apache.org/",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:library",
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://opennlp.apache.org/"
+        ],
+        "schema:url": [
+          "https://opennlp.apache.org/"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11858/00-097C-0000-0023-8BD2-2",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/11858/00-097C-0000-0023-8BD2-2"
+        }
+      ],
+      "srv_name": [
+        "The Internet Language Reference Book"
+      ],
+      "descriptions": {
+        "none": [
+          "The ILRB has been created by two cooperating teams - by the team of the Institute of Czech Language, Czech Academy of Sciences and the team of the NLP Centre at the Faculty of Informatics, Masaryk University (2004-2008).\r\n\r\nThe tool consists of two sections: wordlist and reference (explanatory) one. Comments and remarks are welcome and should be send to the address poradna@ujc.cas.cz.\r\n\r\n1. Wordlist section\r\nIt contains more than 60 000 dictionary entries and is based on the glossary of the School Rules of Czech Orthography, the Dictionary of the Literary Czech and selected entries from the New Dictionary of Words of Foreign Origin and Dictionary of Neologisms. The entries typically include information that is asked about frequently by the users. Also inflectional forms of the particular words forms are offered in the form of tables thanks to the morphological analyzer ajka created at the Faculty of Informatics, MU. The dictionary part is linked to the explanatory one through the hypertext links.\r\n\r\n2. Reference section\r\nIt comprises the explanations about linguistic phenomena described in the Rules of Czech Orthography and contemporary Czech grammars, frequently and repeatedly asked by the users turning to the Linguistic Advisory Line in the Institute of Czech Language. In the offered explanations some typical spelling problems are dealt with including the appropriate recommendations. The ILRB is regularly updated and completed, new expressions are added and made more precise.",
+          "Academy of Sciences of the Czech Republic in project 1ET200610406 and Ministry of Education, Youth and Sports in projects LM2010013, LC536 and 2C06009."
+        ]
+      },
+      "keywords": [
+        "literature"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ces",
+        "lexvo-iso639-3:eng"
+      ],
+      "website": "http://prirucka.ujc.cas.cz/l/en/",
+      "is_accessible_for_free": true,
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:webApplication"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/lrt",
+          "entity_type": "organisation",
+          "name": "CLARIN Centres for Language Resources and Technology",
+          "country": "ES",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:es"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student",
+        "sshocaudience:trainer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://prirucka.ujc.cas.cz/l/en/"
+        ],
+        "schema:url": [
+          "http://prirucka.ujc.cas.cz/l/en/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q184524",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q184524"
+              }
+            ],
+            "labels": {
+              "en": "Lexicography"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

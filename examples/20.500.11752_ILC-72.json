@@ -1,0 +1,180 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.11752/ILC-72",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.11752/ILC-72"
+        }
+      ],
+      "srv_name": [
+        "Freeling IT"
+      ],
+      "descriptions": {
+        "none": [
+          "Freeling IT is a web service that performs sentence splitting, tokenization, part-of-speech tagging, morphological analysis and lemmatization on Italian texts only. It was originally deployed within the EU-FP7-STREP PANACEA project (www.panacea-lr.eu) and implements the Freeling 2.1 libraries with no modification of the original code (which is available at http://devel.cpl.upc.edu/freeling/downloads?order=time&desc=1).\r\nFor a description of the Freeling tool see Lluís Padró and Miquel Collado and Samuel Reese and Marina Lloberes and Irene Castellón. FreeLing 2.1: Five Years of Open-Source Language Processing Tools Proceedings of 7th Language Resources and Evaluation Conference (LREC 2010), ELRA La Valletta, Malta. May, 2010."
+        ]
+      },
+      "keywords": [
+        "Wsdl",
+        "Soap webservice",
+        "Text analysis",
+        "Sentence splitting",
+        "Tokenization",
+        "POS tagging",
+        "Morphological analysis"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ita"
+      ],
+      "website": "http://www.panacea-lr.eu",
+      "is_accessible_for_free": true,
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/02d8a5s53",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/02d8a5s53"
+            }
+          ],
+          "name": "Institute for Computational Linguistics \"A. Zampolli\"",
+          "country": "IT",
+          "short_name": "ILC4CLARIN",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:it"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://ilc4clarin.ilc.cnr.it/en/services/freeling-it/"
+        ],
+        "schema:url": [
+          "https://ilc4clarin.ilc.cnr.it/en/services/freeling-it/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q676880",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q676880"
+              }
+            ],
+            "labels": {
+              "en": "Text Mining"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

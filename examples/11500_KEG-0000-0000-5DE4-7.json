@@ -1,0 +1,145 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/KEG-0000-0000-5DE4-7",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/KEG-0000-0000-5DE4-7"
+        }
+      ],
+      "srv_name": [
+        "ÎÎ¿Î³Î¹ÏÎ¼Î¹ÎºÏ Î±Î½Î±Î³Î½ÏÏÎ¹Î¼ÏÏÎ·ÏÎ±Ï",
+        "CGL Readability Assessment Software"
+      ],
+      "descriptions": {
+        "el": [
+          "Î¤Î¿ Î»Î¿Î³Î¹ÏÎ¼Î¹ÎºÏ Î±Ï ÏÏ Î²Î¿Î·Î¸Î¬ ÏÎ¿Ï Ï Î´Î¹Î´Î¬ÏÎºÎ¿Î½ÏÎµÏ, Î½Î± Î±Î¾Î¹Î¿Î»Î¿Î³Î®ÏÎ¿Ï Î½ ÏÎ¿Î½ Î²Î±Î¸Î¼Ï Î±Î½Î±Î³Î½ÏÏÎ¹Î¼ÏÏÎ·ÏÎ±Ï Î¿ÏÎ¿Î¹Î¿Ï Î´Î®ÏÎ¿ÏÎµ ÎµÎ»Î»Î·Î½Î¹ÎºÎ¿Ï ÎºÎµÎ¹Î¼Î­Î½Î¿Ï Î²Î¬ÏÎµÎ¹ Î±Î½ÏÎ¹ÎºÎµÎ¹Î¼ÎµÎ½Î¹ÎºÏÎ½ ÎºÏÎ¹ÏÎ·ÏÎ¯ÏÎ½ Î¼Îµ ÏÏÏÏÎ¿ Î½Î± ÎµÎ½ÏÎ¿ÏÎ¯ÏÎ¿Ï Î½ ÎµÎ¬Î½ ÎµÎ¯Î½Î±Î¹ ÎºÎ±ÏÎ¬Î»Î»Î·Î»Î¿ Î³Î¹Î± ÏÎ¿ ÎµÏÎ¯ÏÎµÎ´Î¿ ÎµÎ»Î»Î·Î½Î¿Î¼Î¬Î¸ÎµÎ¹Î±Ï ÏÏÎ½ Î¼Î±Î¸Î·ÏÏÎ½ ÏÎ¿Ï Ï. Î Î²Î±Î¸Î¼ÏÏ Î±Î½Î±Î³Î½ÏÏÎ¹Î¼ÏÏÎ·ÏÎ±Ï Î±Î½Î±ÏÎ­ÏÎµÏÎ±Î¹ ÏÏÎ¿Î½ Î²Î±Î¸Î¼Ï Î´Ï ÏÎºÎ¿Î»Î¯Î±Ï Î±Î½Î¬Î³Î½ÏÏÎ·Ï ÎµÎ½ÏÏ ÎºÎµÎ¹Î¼Î­Î½Î¿Ï ."
+        ],
+        "en": [
+          "A software for the evaluation of the degree of readability of Modern Greek texts. The evaluation is based on objective criteria, aiming to determine the suitability of any given text according to the four levels of the Certificate of Attainment in Greek. The degree of readability corresponds to the degree of difficulty in terms of reading comprehension."
+        ]
+      },
+      "keywords": [
+        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "text",
+        "ÎµÎºÎ¼Î¬Î¸Î·ÏÎ· Î³Î»ÏÏÏÏÎ½",
+        "language learning",
+        "Î±Î½Î±Î³Î½ÏÏÎ¹Î¼ÏÏÎ·ÏÎ±",
+        "readability",
+        "ReadabilityAnnotation",
+        "Readability",
+        "DiscourseAnalysis",
+        "TextCategorization",
+        "AuthoringSupport",
+        "CC-BY-NC-SA-4.0"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ell"
+      ],
+      "website": "http://www.greek-language.gr/certification/readability/index.html",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:webApplication"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://www.greek-language.gr/certification/readability/index.html"
+        ],
+        "schema:url": [
+          "http://www.greek-language.gr/certification/readability/index.html"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

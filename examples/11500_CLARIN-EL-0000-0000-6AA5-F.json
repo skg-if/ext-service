@@ -1,0 +1,148 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/CLARIN-EL-0000-0000-6AA5-F",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6AA5-F"
+        }
+      ],
+      "srv_name": [
+        "Translation engine Greek to English\n                (NTEU)",
+        "el-en-nteu"
+      ],
+      "descriptions": {
+        "en": [
+          "Translation engine from Greek to English created as part of the NTEU project ."
+        ]
+      },
+      "keywords": [
+        "automatic translator",
+        "MachineTranslation",
+        "GPL-3.0-only"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ell",
+        "lexvo-iso639-3:eng"
+      ],
+      "website": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6AA5-F",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6AA5-F"
+        ],
+        "schema:url": [
+          "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6AA5-F"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q79798",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q79798"
+              }
+            ],
+            "labels": {
+              "en": "Machine Translation"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

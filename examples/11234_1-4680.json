@@ -1,0 +1,159 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11234/1-4680",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/11234/1-4680"
+        }
+      ],
+      "srv_name": [
+        "MCSQ Translation Models (en-de) (v1.0)"
+      ],
+      "descriptions": {
+        "none": [
+          "En-De translation models, exported via TensorFlow Serving, available in the Lindat translation service (https://lindat.mff.cuni.cz/services/translation/).\r\n\r\nThe models were trained using the MCSQ social surveys dataset (available at https://repo.clarino.uib.no/xmlui/bitstream/handle/11509/142/mcsq_v3.zip).\r\nTheir main use should be in-domain translation of social surveys.\r\n\r\nModels are compatible with Tensor2tensor version 1.6.6.\r\n\r\nFor details about the model training (data, model hyper-parameters), please contact the archive maintainer.\r\n\r\nEvaluation on MCSQ test set (BLEU):\r\nen->de: 67.5 (train: genuine in-domain MCSQ data only)\r\nde->en: 75.0 (train: additional in-domain backtranslated MCSQ data)\r\n(Evaluated using multeval: https://github.com/jhclark/multeval)"
+        ]
+      },
+      "keywords": [
+        "machine translation",
+        "transformer",
+        "neural machine translation"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:deu",
+        "lexvo-iso639-3:eng"
+      ],
+      "website": "https://hdl.handle.net/11234/1-4680",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://hdl.handle.net/11234/1-4680",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/00dd4fz34",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/00dd4fz34"
+            }
+          ],
+          "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
+          "country": "CZ",
+          "short_name": "LINDAT/CLARIAH-CZ",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:eo",
+        "eoscgeoavail:cz"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q79798",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q79798"
+              }
+            ],
+            "labels": {
+              "en": "Machine Translation"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

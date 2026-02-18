@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.12537/284",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.12537/284"
+        }
+      ],
+      "srv_name": [
+        "Spellchecking app for Android (22.10)"
+      ],
+      "descriptions": {
+        "none": [
+          "ENGLISH:\r\nThis is an Android application which provides spell and grammar checking for Icelandic. The app is available on Google Play Store under the name \"Réttritun\". The source code is written in Kotlin and could be used as a base for Android app projects that need an Icelandic spell checking service. The app uses the spell checker service as impelmented by Miðeind ehf. in the Language Technology Program.\r\nSee also: http://hdl.handle.net/20.500.12537/266 and http://hdl.handle.net/20.500.12537/270\r\n\r\nÍSLENSKA:\r\nRéttritun er Android app sem býður upp á málrýni fyrir íslensku. Appið er hægt að nálgast á Google Play Store. Kóðinn er skrifaður í Kotlin og gæti verið notaður sem grunnur fyrir önnur Android app verkefni sem vilja nýta málrýni fyrir íslensku. Appið notar málrýniþjónustu eins og þá sem Miðeind ehf. þróaði innan Máltækniáætlunarinnar. \r\nSjá: http://hdl.handle.net/20.500.12537/266 and http://hdl.handle.net/20.500.12537/270"
+        ]
+      },
+      "keywords": [
+        "spell and grammar checking",
+        "Android"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:isl"
+      ],
+      "website": "https://github.com/grammatek/simacorrect/releases/tag/v1.0.1",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/grammatek/simacorrect/releases/tag/v1.0.1",
+          "@type": "schema:SoftwareSourceCode"
+        },
+        {
+          "@id": "https://hdl.handle.net/20.500.12537/284",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:localApplication"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+          "entity_type": "organisation",
+          "name": "CLARIN Iceland",
+          "country": "IS",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:eo",
+        "eoscgeoavail:is"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

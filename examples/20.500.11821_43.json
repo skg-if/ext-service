@@ -1,0 +1,149 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.11821/43",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/20.500.11821/43"
+        }
+      ],
+      "srv_name": [
+        "Lithuanian speech-to-text Transcriber"
+      ],
+      "descriptions": {
+        "none": [
+          "Speech to text automatic transcriber for Lithuanian is a containerized application implemented into 17 containers. It covers four areas: administrative, legal, medical and general spoken language. For the installation of Transcriber, we recommend the installation of Docker and Docker Compose.  Demo service is provided at \r\nhttps://semantika.lt/Analysis/Transcriber, while IT solutions can be found at https://semantika.lt/Help/Info/Solutions. The transcription result is a set of files containing the same, but differently formatted information: plain text, a WebVTT format file (for subtitling purposes) and a file with data about transcription synchronization with the audio record. This latter file is intended for convenient editing of an audio-synchronized transcription. A transcription editor for this purpose can be found (http://semantikadocker.vdu.lt/files/transcription-editor-multi.zip)."
+        ]
+      },
+      "keywords": [
+        "transcription tool",
+        "automatic speech recognition",
+        "Lithuanian"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:lit"
+      ],
+      "website": "https://semantika.lt/",
+      "is_accessible_for_free": true,
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:webApplication",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/02jzgtq86",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/02jzgtq86"
+            }
+          ],
+          "name": "Vytautas Magnus University",
+          "country": "LT",
+          "short_name": "CLARIN-LT",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:lt"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://semantika.lt/"
+        ],
+        "schema:url": [
+          "https://semantika.lt/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

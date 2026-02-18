@@ -1,0 +1,148 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.12537/268",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.12537/268"
+        }
+      ],
+      "srv_name": [
+        "Tiro TTS web service (22.10)"
+      ],
+      "descriptions": {
+        "none": [
+          "Tiro TTS is a text-to-speech (TTS) API web service that works with various TTS backends. By default, it expects a FastSpeech2+Melgan+IceG2P backend. See the https://github.com/cadia-lvl/fastspeech2 repository for more information on the backend. The service can accept either unnormalized text or an SSML document and respond with audio (MP3, Ogg Vorbis or raw 16 bit PCM) or speech marks, indicating the byte and time offset of each synthesized word in the request. The full API documentation in OpenAPI 2 format is available online at tts.tiro.is. The code for the service along with further information is on https://github.com/tiro-is/tiro-tts/releases/tag/M9. You should also check if a newer version is out (see README.md)"
+        ]
+      },
+      "keywords": [
+        "TTS",
+        "tts",
+        "text-to-speech",
+        "web service"
+      ],
+      "website": "https://github.com/tiro-is/tiro-tts/releases/tag/M9",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/tiro-is/tiro-tts/releases/tag/M9",
+          "@type": "schema:SoftwareSourceCode"
+        },
+        {
+          "@id": "https://hdl.handle.net/20.500.12537/268",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+          "entity_type": "organisation",
+          "name": "CLARIN Iceland",
+          "country": "IS",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:is"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://tts.tiro.is/"
+        ],
+        "schema:url": [
+          "https://tts.tiro.is/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

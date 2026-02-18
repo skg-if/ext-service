@@ -1,0 +1,160 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11858/00-097C-0000-000D-F67C-5",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/11858/00-097C-0000-000D-F67C-5"
+        }
+      ],
+      "srv_name": [
+        "Korektor"
+      ],
+      "descriptions": {
+        "none": [
+          "Statistical spell- and (occasional) grammar-checker. There are three versions: a unix command line utility and an OS X SpellServer with a System Service, that integrates with native OS X GUI applications, and a web service run by Lindat-Clarin, that can be used either through a web form in a browser, or by web applications using API.",
+          "The LINDAT-CLARIN project (LM2010013), fully supported by TheMinistry of Education, Sports and Youth of The Czech Republic under the programme LM of \"Large Infrastructures\""
+        ]
+      },
+      "keywords": [
+        "grammar checker",
+        "spellchecker"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ces"
+      ],
+      "website": "https://redmine.ms.mff.cuni.cz/projects/korektor",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://hdl.handle.net/11858/00-097C-0000-000D-F67C-5",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice",
+        "sshocinvt:library",
+        "sshocinvt:commandLine",
+        "sshocinvt:webApplication"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/00dd4fz34",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/00dd4fz34"
+            }
+          ],
+          "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
+          "country": "CZ",
+          "short_name": "LINDAT/CLARIAH-CZ",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:cz"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student",
+        "sshocaudience:trainer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://lindat.mff.cuni.cz/services/korektor/api/"
+        ],
+        "schema:url": [
+          "https://lindat.mff.cuni.cz/services/korektor/api/",
+          "https://lindat.mff.cuni.cz/services/korektor/",
+          "https://lindat.mff.cuni.cz/services/korektor/api-reference.php"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

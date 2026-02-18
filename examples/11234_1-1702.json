@@ -1,0 +1,177 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11234/1-1702",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/11234/1-1702"
+        }
+      ],
+      "srv_name": [
+        "UDPipe"
+      ],
+      "descriptions": {
+        "none": [
+          "UDPipe is an trainable pipeline for tokenization, tagging, lemmatization and dependency parsing of CoNLL-U files. UDPipe is language-agnostic and can be trained given only annotated data in CoNLL-U format. Trained models are provided for nearly all UD treebanks. UDPipe is available as a binary, as a library for C++, Python, Perl, Java, C#, and as a web service.\r\n\r\nUDPipe is a free software under Mozilla Public License 2.0 (http://www.mozilla.org/MPL/2.0/) and the linguistic models are free for non-commercial use and distributed under CC BY-NC-SA (http://creativecommons.org/licenses/by-nc-sa/4.0/) license, although for some models the original data used to create the model may impose additional licensing conditions. UDPipe is versioned using Semantic Versioning (http://semver.org/).\r\n\r\nUDPipe website http://ufal.mff.cuni.cz/udpipe contains download links of both the released packages and trained models, hosts documentation and offers online demo.\r\n\r\nUDPipe development repository http://github.com/ufal/udpipe is hosted on GitHub."
+        ]
+      },
+      "keywords": [
+        "tokenizer",
+        "POS tagger",
+        "tagger",
+        "lemmatization",
+        "parser",
+        "dependency parser",
+        "CoNLL-U"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:eng"
+      ],
+      "website": "http://ufal.mff.cuni.cz/udpipe",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://hdl.handle.net/11234/1-1702",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice",
+        "sshocinvt:webApplication"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/00dd4fz34",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/00dd4fz34"
+            }
+          ],
+          "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
+          "country": "CZ",
+          "short_name": "LINDAT/CLARIAH-CZ",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:cz"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://lindat.mff.cuni.cz/services/udpipe/api/process"
+        ],
+        "schema:url": [
+          "https://lindat.mff.cuni.cz/services/udpipe/api/process",
+          "https://lindat.mff.cuni.cz/services/udpipe/",
+          "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php",
+          "http://ufal.mff.cuni.cz/udpipe"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

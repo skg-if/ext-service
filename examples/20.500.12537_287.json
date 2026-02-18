@@ -1,0 +1,141 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.12537/287",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.12537/287"
+        }
+      ],
+      "srv_name": [
+        "Icelandic TTS for Android (22.10)"
+      ],
+      "descriptions": {
+        "none": [
+          "ENGLISH:\r\nThe Símarómur application provides an Icelandic TTS application for the Android TTS service. The application provides access to voices over network of the Tiro TTS API and on-device voices that are bundled via assets. The app offers connections to most of the voices that have been developed within the LT program at this time. The voices themselves and the TTS service were developed at Reykjavik University and at Tiro ehf. (see e.g. http://hdl.handle.net/20.500.12537/268)\r\n\r\n\r\nÍSLENSKA:\r\nSímarómur er Android app sem gerir notendum kleift að nota íslenskan talgervil í símunum, t.d. sem skjálesara. Símarómur býður upp á tengingar við flestar þær raddir sem þróaðar hafa verið innan Máltækniáætlunarinnar, annars vegar gegnum vefþjónustu Tiro og hins vegar sem raddir sem keyra á símanum sjálfum. Raddirnar sem Símarómur notar voru þjálfaðar hjá Háskólanum í Reykjavík, Tiro ehf. þróaði TTS-vefþjónustuna sem Símarómur notar (sjá http://hdl.handle.net/20.500.12537/268)"
+        ]
+      },
+      "keywords": [
+        "text-to-speech",
+        "TTS",
+        "Android",
+        "mobile devices"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:isl"
+      ],
+      "website": "https://github.com/grammatek/simaromur/releases/tag/v1.2.0",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/grammatek/simaromur/releases/tag/v1.2.0",
+          "@type": "schema:SoftwareSourceCode"
+        },
+        {
+          "@id": "https://hdl.handle.net/20.500.12537/287",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:localApplication"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+          "entity_type": "organisation",
+          "name": "CLARIN Iceland",
+          "country": "IS",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:eo",
+        "eoscgeoavail:is"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

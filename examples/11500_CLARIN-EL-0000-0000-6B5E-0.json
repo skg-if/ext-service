@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/CLARIN-EL-0000-0000-6B5E-0",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6B5E-0"
+        }
+      ],
+      "srv_name": [
+        "ÎÎµÏÎ±ÏÏÎ¿ÏÎ­Î±Ï UTF-8 ÎÎÎ",
+        "ILSP UTF-8 converter"
+      ],
+      "descriptions": {
+        "el": [
+          "Î Î¼ÎµÏÎ±ÏÏÎ¿ÏÎ­Î±Ï UTF-8 ÏÎ¿Ï ÎÎÎ ÎµÎ»Î­Î³ÏÎµÎ¹ ÏÎ·Î½ ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· ÏÎ¿Ï ÎºÎµÎ¹Î¼ÎµÎ½Î¹ÎºÎ¿Ï ÏÎµÏÎ¹ÎµÏÎ¿Î¼Î­Î½Î¿Ï ÎµÎ½ÏÏ Î±ÏÏÎµÎ¯Î¿Ï ÎºÎ±Î¹ ÏÎ·Î½ Î¼ÎµÏÎ±ÏÏÎ­ÏÎµÎ¹ ÏÎµ UTF-8. Î¤Î± Î¼Î¿ÏÏÏÏÏ ÏÎ± Î±ÏÏÎµÎ¯ÏÎ½ ÏÎ¿Ï Ï ÏÎ¿ÏÏÎ·ÏÎ¯Î¶Î¿Î½ÏÎ±Î¹ ÎµÎ¯Î½Î±Î¹ plain text, HTML ÎºÎ±Î¹ XML. Î£ÏÎ·Î½ Î­Î¾Î¿Î´Ï ÏÎ¿Ï Î¿ Î¼ÎµÏÎ±ÏÏÎ¿ÏÎ­Î±Ï Î´Î¯Î½ÎµÎ¹ ÏÎ¿ Î±Î½ÏÎ¯ÏÏÎ¿Î¹ÏÎ¿ Î¼Î¿ÏÏÏÏÏ ÏÎ¿ Î±ÏÏÎµÎ¯Î¿Ï Î¼Îµ Î±Ï ÏÏ ÏÎ¿Ï ÎµÎ¹ÏÎ®ÏÎ¸Î·. Î¤Î¿ 2022 Î· ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· UTF-8 Î®ÏÎ±Î½ Î· ÎºÏ ÏÎ¯Î±ÏÏÎ· ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· ÏÏÎ¿Î½ ÏÎ±Î³ÎºÏÏÎ¼Î¹Î¿ Î¹ÏÏÏ ÎºÎ±Î¹ ÏÎ¹Ï ÏÎµÏÎ½Î¿Î»Î¿Î³Î¯ÎµÏ Î´Î¹Î±Î´Î¹ÎºÏÏÎ¿Ï ."
+        ],
+        "en": [
+          "The ILSP UTF-8 converter detects the encoding of the textual content of a file and converts this content to UTF-8. The supported input formats are txt, HTML and XML and the output is in the same format. As of 2022, UTF-8 is the dominant encoding for the World Wide Web and related internet technologies."
+        ]
+      },
+      "keywords": [
+        "Î¼ÎµÏÎ±ÏÏÎ¿ÏÎ® ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ·Ï",
+        "encoding conversion",
+        "Î¼ÎµÏÎ±ÏÏÎ¿ÏÎ­Î±Ï",
+        "converter",
+        "GPL-3.0-only"
+      ],
+      "website": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6B5E-0",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:localApplication"
+      ],
+      "srv_deployment_of": [
+        {
+          "@id": "https://registry.gitlab.com/ilsp-nlpli-elrc-share/data-mngmnt-processing-services/elrc-tools-rest",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6B5E-0"
+        ],
+        "schema:url": [
+          "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6B5E-0"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

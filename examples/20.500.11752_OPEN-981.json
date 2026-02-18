@@ -1,0 +1,224 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.11752/OPEN-981",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.11752/OPEN-981"
+        }
+      ],
+      "srv_name": [
+        "It-Sr-NER"
+      ],
+      "descriptions": {
+        "none": [
+          "It-Sr-NER tool is a CLARIN compatible NER web service for parallel texts with case study on Italian and Serbian; it can be used for recognizing and classifying named entities in bilingual natural language texts. Input parallel texts should be TMX (Translation Memory eXchange) files, e.g. Sr-It. It-Sr-NER can recognize six NER classes: demonyms (DEMO), works of art (WORK), person names (PERS), places (LOC), events (EVENT) and organisations (ORG). The service can also be used for monolingual text NER annotation for available spaCy NER models. It-Sr-NER uses a CNN architecture within the spaCy tool and Named Entity linking with Wikidata using spaCyOpenTapioca.\r\n\r\nFor further details:\r\n API usage is described in: http://ners.jerteh.rs/4api \r\nA Postman example is available at https://github.com/rankastankovic/It-Sr-NER/blob/main/static/Postman_call_ners-mono.PNG"
+        ]
+      },
+      "keywords": [
+        "NER",
+        "Named Entity Recognition",
+        "NEL",
+        "Named Entity Linking",
+        "TXM",
+        "aligned corpus annotation",
+        "web service"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:hrv",
+        "lexvo-iso639-3:pol",
+        "lexvo-iso639-3:ukr",
+        "lexvo-iso639-3:por",
+        "lexvo-iso639-3:ell",
+        "lexvo-iso639-3:jpn",
+        "lexvo-iso639-3:kor",
+        "lexvo-iso639-3:spa",
+        "lexvo-iso639-3:nld",
+        "lexvo-iso639-3:ita",
+        "lexvo-iso639-3:deu",
+        "lexvo-iso639-3:fin",
+        "lexvo-iso639-3:mkd",
+        "lexvo-iso639-3:lit",
+        "lexvo-iso639-3:cat",
+        "lexvo-iso639-3:rus",
+        "lexvo-iso639-3:fra",
+        "lexvo-iso639-3:dan",
+        "lexvo-iso639-3:srp",
+        "lexvo-iso639-3:ron",
+        "lexvo-iso639-3:swe",
+        "lexvo-iso639-3:eng"
+      ],
+      "website": "https://github.com/rankastankovic/It-Sr-NER/",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/rankastankovic/It-Sr-NER/",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/02d8a5s53",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/02d8a5s53"
+            }
+          ],
+          "name": "Institute for Computational Linguistics \"A. Zampolli\"",
+          "country": "IT",
+          "short_name": "ILC4CLARIN",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:it"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://ners.jerteh.rs/4api"
+        ],
+        "schema:url": [
+          "http://ners.jerteh.rs/4api",
+          "https://github.com/rankastankovic/It-Sr-NER/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q79798",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q79798"
+              }
+            ],
+            "labels": {
+              "en": "Machine Translation"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q676880",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q676880"
+              }
+            ],
+            "labels": {
+              "en": "Text Mining"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

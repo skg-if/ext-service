@@ -1,0 +1,155 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.12537/161",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.12537/161"
+        }
+      ],
+      "srv_name": [
+        "Tiro Web interface for speech recognition"
+      ],
+      "descriptions": {
+        "none": [
+          "Web interface for speech recognition (Tiro Speech Core)\r\n\r\nTiro Speech Core is a speech recognition server that implements a gRPC API. Support for REST is provided through a gRPC REST gateway. The server can either run real-time decoding or offline decoding. The server supports the use of Kaldi Chain models and has the added options of using OpenGram Thrax Grammar rules for number and abbreviation expansion and speaker diarization. \r\n\r\nThe code for the server along with further information is on https://github.com/icelandic-lt/tiro-tts. You should also check if a newer version is out (see README.md) \r\n\r\n-------------\r\n\r\nVefgátt fyrir talgreiningu (Tiro Talkjarni)\r\n\r\nTiro Talkjarni er talgreinisþjónn sem úfærir gRPC API. Stuðningur við REST er veittur í gegnum gRPC REST-gátt. Þjónninn getur bæði keyrt rauntímatalgreiningu sem og hefðbundna talgreiningu. Þjónninn styður notkun Kaldi-keðjulíkana og býður einnig uppá möguleika á að nota OpenGram Thrax Grammar-reglur fyrir útvíkkun talna og skammstafana sem og aðgreiningu mælanda. \r\n\r\nVefþjónninn, ásamt frekari upplýsingum, er aðgengilegur á https://github.com/icelandic-lt/tiro-tts. Einnig er gott að athuga þar hvort ný útgáfa sé komin út (sjá README.md)."
+        ]
+      },
+      "keywords": [
+        "ASR",
+        "automatic speech recognition",
+        "kaldi",
+        "speaker diarization",
+        "text-normalization",
+        "web service"
+      ],
+      "website": "https://github.com/icelandic-lt/tiro-tts",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/icelandic-lt/tiro-tts",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:webApplication",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+          "entity_type": "organisation",
+          "name": "CLARIN Iceland",
+          "country": "IS",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:is"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q79798",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q79798"
+              }
+            ],
+            "labels": {
+              "en": "Machine Translation"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

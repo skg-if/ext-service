@@ -1,0 +1,176 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/ATHENA-0000-0000-5826-3",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/ATHENA-0000-0000-5826-3"
+        }
+      ],
+      "srv_name": [
+        "WebAnno"
+      ],
+      "descriptions": {
+        "el": [
+          "Î¤Î¿ WebAnno ÎµÎ¯Î½Î±Î¹ Î¼Î¯Î± Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ® ÏÎ»Î±ÏÏÏÏÎ¼Î± ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ·Ï ÎºÎµÎ¹Î¼Î­Î½Î¿Ï . ÎÎ­ÏÏ ÏÎ¿Ï WebAnno Î´Î¯Î½ÎµÏÎ±Î¹ Î· Î´Ï Î½Î±ÏÏÏÎ·ÏÎ± Î³Î»ÏÏÏÎ¹ÎºÎ®Ï ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ·Ï, ÎºÎ±ÏÎ¬ ÏÎ·Î½ Î¿ÏÎ¿Î¯Î± ÏÏÎ¿ÏÎ±ÏÏÏÎ½ÏÎ±Î¹ ÎµÏÎ¹ÎºÎ­ÏÎµÏ (tags) ÏÎµ Î»Î­Î¾ÎµÎ¹Ï Î®/ÎºÎ±Î¹ ÏÏÎ½Î¿Î»Î± Î»Î­Î¾ÎµÏÎ½ ÎµÎ½ÏÏ ÎºÎµÎ¹Î¼Î­Î½Î¿Ï Î® ÎµÎ½ÏÏ ÏÏÎ¼Î±ÏÎ¿Ï ÎºÎµÎ¹Î¼Î­Î½ÏÎ½ Î´Î¯Î½Î¿Î½ÏÎ±Ï ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯ÎµÏ Î³Î¹Î± ÏÎ± Î¼Î¿ÏÏÎ¿ÏÏ Î½ÏÎ±ÎºÏÎ¹ÎºÎ¬ ÏÎ¿Ï Ï ÏÎ±ÏÎ±ÎºÏÎ·ÏÎ¹ÏÏÎ¹ÎºÎ¬ (MorphoSyntactic Tagging), ÏÎ· ÏÏ Î½ÏÎ±ÎºÏÎ¹ÎºÎ® ÏÎ¿Ï Ï Î´Î¿Î¼Î® (Syntactic Parsing), ÏÎ± ÏÎ·Î¼Î±ÏÎ¹Î¿Î»Î¿Î³Î¹ÎºÎ¬ ÏÎ¿Ï Ï ÏÎ±ÏÎ±ÎºÏÎ·ÏÎ¹ÏÏÎ¹ÎºÎ¬ (Semantic Annotation), Îº.Î¿.Îº. Î¤Î¿ WebAnno ÎµÏÎ¹ÏÏÎ­ÏÎµÎ¹ ÎµÏÎ¯ÏÎ·Ï ÏÎ· Î´Î·Î¼Î¹Î¿Ï ÏÎ³Î¯Î± ÎºÎ±Î¹ Î±ÏÏÎ´Î¿ÏÎ· ÎµÏÎ¹ÏÎ­Î´ÏÎ½ ÎºÎ±Î¹ ÎµÏÎ¹ÎºÎµÏÏÎ½ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ·Ï Î¿ÏÎ¹ÏÎ¼Î­Î½ÏÎ½ Î±ÏÏ ÏÎ¿Î½ ÏÏÎ®ÏÏÎ·, ÎºÎ±Î¸Î¹ÏÏÏÎ½ÏÎ±Ï ÏÎ¿ Î­ÏÏÎ¹ Î­Î½Î± ÎµÏÎ³Î±Î»ÎµÎ¯Î¿ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ·Ï ÏÎ¿Ï Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î·Î¸ÎµÎ¯ Î³Î¹Î± ÎºÎ¬Î¸Îµ ÎµÎ¯Î´Î¿Ï Ï ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ· ÏÎ­ÏÎ±Î½ ÏÎ·Ï Î³Î»ÏÏÏÎ¹ÎºÎ®Ï. Î ÏÏÎ®ÏÏÎ·Ï Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± Î´Î·Î¼Î¹Î¿Ï ÏÎ³Î®ÏÎµÎ¹ ÏÎ± Î´Î¹ÎºÎ¬ ÏÎ¿Ï project ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ·Ï, Î½Î± Î¼ÎµÏÎ±ÏÎ¿ÏÏÏÏÎµÎ¹ ÏÎ¿/Î± Î±ÏÏÎµÎ¯Î¿/Î± ÏÎ¿Ï ÎµÏÎ¹Î¸Ï Î¼ÎµÎ¯ Î½Î± ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎµÎ¹, Î½Î± ÎµÏÎ¹Î»Î­Î¾ÎµÎ¹ ÎºÎ±Î¹ Î½Î± Î¿ÏÎ¯ÏÎµÎ¹ ÎµÎºÎµÎ¯Î½Î¿Ï ÏÎ± Î¬ÏÎ¿Î¼Î± ÏÎ¿Ï Î¸Î± ÏÏ Î¼Î¼ÎµÏÎ¬ÏÏÎ¿Ï Î½ ÏÏÎ¿ project ÏÎ¿Ï ÎºÎ±Î¹ ÏÎ¿Î½ ÏÏÎ»Î¿ ÏÎ¿Ï Î¸Î± Î­ÏÎµÎ¹ Î¿ ÎºÎ±Î¸Î­Î½Î±Ï Î±ÏÏ Î±Ï ÏÎ¿ÏÏ (ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎ®Ï, ÎµÏÎ¹Î¼ÎµÎ»Î·ÏÎ®Ï, ÏÏ Î½ÏÎ¿Î½Î¹ÏÏÎ®Ï) ÎºÎ±Î¸ÏÏ ÎºÎ±Î¹ Î½Î± ÎµÎ¾Î±Î³Î¬Î³ÎµÎ¹ ÏÎµ Î¼Î¿ÏÏÎ® ÏÏ Î¼ÏÎ¹ÎµÏÎ¼Î­Î½Î¿Ï Î±ÏÏÎµÎ¯Î¿Ï ÏÎ¿ ÏÎµÎ»Î¹ÎºÏ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÎ¼Î­Î½Î¿ ÎºÎµÎ¯Î¼ÎµÎ½Î¿ Î® ÏÏÎ¼Î± ÎºÎµÎ¹Î¼Î­Î½ÏÎ½. Î¤Î¿ WebAnno Î±Î½Î±ÏÏÏÏÎ¸Î·ÎºÎµ Î±ÏÏ ÏÎ¿ Î¤Î¼Î®Î¼Î± Î Î»Î·ÏÎ¿ÏÎ¿ÏÎ¹ÎºÎ®Ï ÏÎ¿Ï Technische UniversitÃ¤t Darmstadt ÎºÎ±Î¹ Î´Î¹Î±ÏÎ¯Î¸ÎµÏÎ±Î¹ ÏÏ Î¿Î»Î¿ÎºÎ»Î·ÏÏÎ¼Î­Î½Î· Ï ÏÎ·ÏÎµÏÎ¯Î± (ÎºÎ±Î¹) Î¼Î­ÏÏ ÏÎ·Ï Ï ÏÎ¿Î´Î¿Î¼Î®Ï CLARIN:EL."
+        ],
+        "en": [
+          "WebAnno is a general purpose web-based annotation tool for a wide range of linguistic annotations including various layers of morphological, syntactical, and semantic annotations. Additionaly, custom annotation layers can be defined, allowing WebAnno to be used also for non-linguistic annotation tasks. WebAnno is a multi-user tool supporting different roles such as annotator, curator, and project manager. The progress and quality of annotation projects can be monitored and measuered in terms of inter-annotator agreement. Multiple annotation projects can be conducted in parallel. Different modes of annotation are supported, including a correction mode to review externally pre-annotated data, and an automation mode in which WebAnno learns and offers annotation suggestions. WebAnno has been developed by the Faculty of Computer Science of Technische UniversitÃ¤t Darmstadt and is available through the CLARIN-D Research Infrastructure."
+        ]
+      },
+      "keywords": [
+        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "text",
+        "ÏÎ»Î±ÏÏÏÏÎ¼Î± ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎ·Ï",
+        "annotation platform",
+        "ÏÎµÎ¹ÏÏÎ½Î±ÎºÏÎ¹ÎºÎ® ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎ·",
+        "manual annotation",
+        "ÏÏÎ½ÎµÏÎ³Î±ÏÎ¹ÎºÎ® ÏÎ»Î±ÏÏÏÏÎ¼Î±",
+        "collaborative platform",
+        "Annotation",
+        "Apache-2.0"
+      ],
+      "website": "https://webanno.github.io/webanno/",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:webApplication"
+      ],
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/webanno/webanno/releases/download/webanno-3.6.7/webanno-standalone-3.6.7.jar",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataCreator",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://webanno.github.io/webanno/"
+        ],
+        "schema:url": [
+          "https://webanno.github.io/webanno/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

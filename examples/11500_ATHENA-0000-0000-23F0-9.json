@@ -1,0 +1,198 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/ATHENA-0000-0000-23F0-9",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/ATHENA-0000-0000-23F0-9"
+        }
+      ],
+      "srv_name": [
+        "ÎÏÎ³Î±Î»ÎµÎ¯Î± ÏÏÎ±ÏÎ¹ÏÏÎ¹ÎºÎ®Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï Î»Î­Î¾ÎµÏÎ½ ÎºÎ±Î¹ ÏÏÎ½Î´ÏÎ±ÏÎ¼ÏÎ½ Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½ IPLR",
+        "IPLR Online Tools",
+        "IPLR tools"
+      ],
+      "descriptions": {
+        "el": [
+          "Î¤Î± IPLR Online Tools ÎµÎ¯Î½Î±Î¹ Î¼Î¯Î± ÏÎµÎ¹ÏÎ¬ Î±ÏÏ ÎµÏÎ³Î±Î»ÎµÎ¯Î± ÏÎ¿Ï ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î¿ÏÎ½ÏÎ±Î¹ Î³Î¹Î± ÏÎ·Î½ Î±Î½Î±Î¶Î®ÏÎ·ÏÎ· ÎºÎ±Î¹ ÏÏÎ±ÏÎ¹ÏÏÎ¹ÎºÎ® ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î± Î»Î­Î¾ÎµÏÎ½ ÎºÎ±Î¹ ÏÏ Î½Î´Ï Î±ÏÎ¼ÏÎ½ Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½ ÏÎ·Ï ÎÎ­Î±Ï ÎÎ»Î»Î·Î½Î¹ÎºÎ®Ï Î¼Îµ ÏÎºÎ¿ÏÏ ÏÎ¿Î½ Ï ÏÎ¿Î»Î¿Î³Î¹ÏÎ¼Ï ÏÎ¿ÏÎ¿ÏÎ¹ÎºÏÎ½ ÎºÎ±Î¹ ÏÎ¿Î¹Î¿ÏÎ¹ÎºÏÎ½ Î¹Î´Î¹Î¿ÏÎ®ÏÏÎ½ ÏÎ¿Ï Ï (ÏÏ Î»Î»Î±Î²Î¹ÏÎ¼Ï, ÏÏ ÏÎ½ÏÏÎ·ÏÎµÏ, Î³ÎµÎ¯ÏÎ¿Î½ÎµÏ Îº.Î¬.). Î£Ï Î³ÎºÎµÎºÏÎ¹Î¼Î­Î½Î±, ÏÏÎ± IPLR Online Tools ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½Î¿Î½ÏÎ±Î¹ ÏÎ± ÎµÎ¾Î®Ï: - NUM: ÎÏÎ³Î±Î»ÎµÎ¯Î¿ Ï ÏÎ¿Î»Î¿Î³Î¹ÏÎ¼Î¿Ï ÏÎ¿ÏÎ¿ÏÎ¹ÎºÏÎ½ Î¼ÎµÏÏÎ®ÏÎµÏÎ½ ÏÎ·Ï Î»Î­Î¾Î·Ï Î® ÏÎ¿Ï ÏÏ Î½Î´Ï Î±ÏÎ¼Î¿Ï Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½ ÏÎ¿Ï ÎµÎ¹ÏÎ¬Î³ÎµÏÎ±Î¹, ÏÏÏÏ Î¼Î®ÎºÎ¿Ï (Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½, ÏÏ Î»Î»Î±Î²ÏÎ½), ÏÏ ÏÎ½ÏÏÎ·ÏÎ± ÏÎµ ÏÏ Î³ÎºÎµÎºÏÎ¹Î¼Î­Î½Î¿ ÏÏÎ¼Î± ÎºÎµÎ¹Î¼Î­Î½ÏÎ½, ÏÏ ÏÎ½ÏÏÎ·ÏÎ± Î´Î¹Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½, Î±ÏÎ¹Î¸Î¼Ï ÎºÎ±Î¹ ÏÏ ÏÎ½ÏÏÎ·ÏÎ± Î¿ÏÎ¸Î¿Î³ÏÎ±ÏÎ¹ÎºÏÎ½ ÎºÎ±Î¹ ÏÏÎ½Î¿Î»Î¿Î³Î¹ÎºÏÎ½ Î³ÎµÎ¹ÏÏÎ½ÏÎ½ ÎºÏÎ». - TEXT: ÎÏÎ³Î±Î»ÎµÎ¯Î¿ ÏÎ¿Ï ÏÎ±Î¯ÏÎ½ÎµÎ¹ ÏÏ ÎµÎ¯ÏÎ¿Î´Î¿ Î­Î½Î± Î³ÏÎ¬Î¼Î¼Î± ÎºÎ±Î¹ ÏÎ±ÏÎ¿Ï ÏÎ¹Î¬Î¶ÎµÎ¹ Î³Î¹Î± Î±Ï ÏÏ ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯ÎµÏ ÏÏÏÏ ÏÏÎ¿ÏÎ¿ÏÎ¬, ÏÏ Î»Î»Î±Î²Î­Ï ÏÏÎ¿Ï ÎµÎ¼ÏÎ±Î½Î¯Î¶ÎµÏÎ±Î¹, ÏÏÎ½Î¿Î»Î¿Î³Î¹ÎºÎ¿ÏÏ ÎºÎ±Î¹ Î¿ÏÎ¸Î¿Î³ÏÎ±ÏÎ¹ÎºÎ¿ÏÏ Î³ÎµÎ¯ÏÎ¿Î½ÎµÏ ÎºÏÎ». - SEL: ÎÏÎ³Î±Î»ÎµÎ¯Î¿ ÏÎ¿Ï ÎµÏÎ¹Î»Î­Î³ÎµÎ¹ Î±ÏÏ ÏÏÎ¿-ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¼Î­Î½Î¿ ÏÏÎ¼Î± ÎºÎµÎ¹Î¼Î­Î½ÏÎ½ ÏÎ¹Ï Î»Î­Î¾ÎµÎ¹Ï Î® ÏÏ Î½Î´Ï Î±ÏÎ¼Î¿ÏÏ Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½ ÏÎ¿Ï Î±ÏÎ±Î½ÏÎ¿ÏÎ½ ÏÏÎ± ÎºÏÎ¹ÏÎ®ÏÎ¹Î± ÏÎ¿Ï Î¸Î­ÏÎµÎ¹ Î¿ ÏÏÎ®ÏÏÎ·Ï, ÏÏÏÏ Î±ÏÎ¹Î¸Î¼Ï Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½, ÏÏ ÏÎ½ÏÏÎ·ÏÎ±, Î¸Î­ÏÎ· ÏÏÎ½Î¿Ï , Î´ÎµÎ¯ÎºÏÎµÏ Î¿ÏÎ¸Î¿Î³ÏÎ±ÏÎ¹ÎºÎ®Ï Î´Î¹Î±ÏÎ¬Î½ÎµÎ¹Î±Ï ÎºÏÎ». - FIND: ÎÏÎ³Î±Î»ÎµÎ¯Î¿ ÏÎ¿Ï ÏÎ±ÏÎ¿Ï ÏÎ¹Î¬Î¶ÎµÎ¹ ÏÏÎ¿Î½ ÏÏÎ®ÏÏÎ· ÏÎ¹Ï Î»Î­Î¾ÎµÎ¹Ï Î® ÏÏ Î½Î´Ï Î±ÏÎ¼Î¿ÏÏ Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½ (Î±ÏÏ ÏÏÎ¿-ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¼Î­Î½Î¿ ÏÏÎ¼Î± ÎºÎµÎ¹Î¼Î­Î½ÏÎ½) ÏÎ¿Ï ÏÎ±Î¹ÏÎ¹Î¬Î¶Î¿Ï Î½ ÏÏÎ·Î½ Î±Î½Î±Î¶Î®ÏÎ·ÏÎ· ÏÎ¿Ï ÏÏÎ®ÏÏÎ· (Ï.Ï. Î»Î­Î¾ÎµÎ¹Ï ÏÎ¿Ï Î±ÏÏÎ¯Î¶Î¿Ï Î½ Î±ÏÏ Î±Î²*) Î¼Î±Î¶Î¯ Î¼Îµ ÎµÏÎ¹Î»ÎµÎ³Î¼Î­Î½Î± ÏÎ¿ÏÎ¿ÏÎ¹ÎºÎ¬ Î¼Î­ÏÏÎ±. - COMBO: Î£Ï Î½Î´Ï Î±ÏÎ¼ÏÏ ÏÏÎ½ Î´ÏÎ¿ ÏÏÎ¿Î·Î³Î¿ÏÎ¼ÎµÎ½ÏÎ½ ÎµÏÎ³Î±Î»ÎµÎ¯ÏÎ½ (SEL ÎºÎ±Î¹ FIND). Î¤Î± ÎµÏÎ³Î±Î»ÎµÎ¯Î± Î±Ï ÏÎ¬ ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½Î¿Î½ÏÎ±Î¹ ÎºÎ±Î¹ ÏÎµÏÎ¹Î³ÏÎ¬ÏÎ¿Î½ÏÎ±Î¹ ÏÏÎ·Î½ YÏÎ¿Î´Î¿Î¼Î® CLARIN:EL ÎºÎ±Î¹ ÏÏ Î¾ÎµÏÏÏÎ¹ÏÏÎ¬ ÎµÏÎ³Î±Î»ÎµÎ¯Î± ÏÏÏÎµ Î½Î± ÎµÎ¯Î½Î±Î¹ ÎµÏ ÎºÎ¿Î»ÏÏÎµÏÎ· Î· ÏÏÏÏÎ²Î±ÏÎ· ÏÎµ Î±Ï ÏÎ¬. Î¤Î± IPLR Online Tools Î­ÏÎ¿Ï Î½ ÏÏÎµÎ´Î¹Î±ÏÏÎµÎ¯ ÎºÎ±Î¹ Î±Î½Î±ÏÏÏ ÏÎ¸ÎµÎ¯ Î±ÏÏ ÏÎ¿ ÎÎÎ/ÎÎ \"ÎÎ¸Î·Î½Î¬\" ÎºÎ±Î¹ ÎµÎ¯Î½Î±Î¹ ÏÎ»Î± ÏÎ¿Ï Ï Î´Î¹Î±Î¸Î­ÏÎ¹Î¼Î± ÏÏ Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ­Ï Ï ÏÎ·ÏÎµÏÎ¯ÎµÏ Î¼Î­ÏÏ ÎµÎ¹Î´Î¹ÎºÎ¿Ï Î¹ÏÏÏÏÎ¿ÏÎ¿Ï ."
+        ],
+        "en": [
+          "The IPLR Online Tools are a set of tools used for word search and for calculation of quantity and quality properties of the Greek language (i.e. neighbours, frequencies etc.). More specifically, the IPLR Online Tools include: - The NUM tool provides quantitative measures for each letter string you submit. - The TEXT tool provides a variety of text results for one letter string you submit. - The SEL tool retrieves subsets of the CLEAN corpus (pre-processed corpus) that match quantitative criteria you specify on the available measures. - The FIND tool allows you to retrieve subsets of the CLEAN corpus that match a specific spelling or pronunciation pattern. - The COMBO tool combines the FIND and SEL tools. The above tools are included and described in the CLARIN:EL Infrastructure as separate records in order to facilitate their access. The IPLR Online Tools are designed and developed by the Institute for Language and Speech Processing / Athena Research Centre and are available as online services through a dedicated website."
+        ]
+      },
+      "keywords": [
+        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "text",
+        "ÏÏÎ±ÏÎ¹ÏÏÎ¹ÎºÎ® ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯Î±",
+        "statistical information",
+        "ÏÎ¿ÏÎ¿ÏÎ¹ÎºÎ­Ï Î¼ÎµÏÏÎ®ÏÎµÎ¹Ï",
+        "quantititative measures",
+        "LinguisticAnalysis",
+        "ExtractionOfQuantitativeInformation",
+        "BSD-2-Clause"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ell"
+      ],
+      "website": "http://speech.ilsp.gr/iplr/index.htm",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:localApplication"
+      ],
+      "srv_deployment_of": [
+        {
+          "@id": "http://speech.ilsp.gr/iplr/downloads.htm",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://speech.ilsp.gr/iplr/Tools.htm"
+        ],
+        "schema:url": [
+          "http://speech.ilsp.gr/iplr/Tools.htm",
+          "http://speech.ilsp.gr/iplr/index.htm"
+        ]
+      },
+      "related_products": {
+        "is_documented_by": [
+          "10.1007/s10579-010-9130-z"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

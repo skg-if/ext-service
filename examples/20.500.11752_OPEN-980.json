@@ -1,0 +1,183 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.11752/OPEN-980",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.11752/OPEN-980"
+        }
+      ],
+      "srv_name": [
+        "It-Sr-NER: CLARIN compatible NER and geoparsing web services for parallel texts: case study Italian and Serbian"
+      ],
+      "descriptions": {
+        "none": [
+          "It-Sr-NER-corp is the Italian/Serbian bilingual corpus with 10,000 aligned sentences compiled in the scope of the It-Sr-project from samples of several Italian novels translated to Serbian and vice versa,  with the aim of the development of the CLARIN compatible NER web service for parallel text with the case study on Italian and Serbian. The set of 10,000 natural language segments is split into 4 files: 1*1000+3*3000. The corpus comprises of: 1) text versions,  Italian and Serbian, with one segment per line 2) TMX (Translation Memory eXchange) bilingual aligned segments; 3) monolingual text and TMX files with automatically annotated named entities for six NER classes: demonyms (DEMO), works of art (WORK), person names (PERS), places (LOC), events (EVENT) and organizations (ORG). It-Sr-NER annotation uses a powerful Convolutional Neural Network architecture within the spaCy tool, for Italien WikiNER (Joel Nothman, Nicky Ringland, Will Radford, Tara Murphy, James R Curran) and for Serbian SrpCNNER (Cvetana Krstev, Ranka Stanković, Milica Ikonić Nešić, Branislava Šandrih Todorović)."
+        ]
+      },
+      "keywords": [
+        "NER",
+        "TXM",
+        "Named Entity Recognition",
+        "aliged corpus",
+        "Serbian",
+        "Italian"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:srp",
+        "lexvo-iso639-3:ita"
+      ],
+      "website": "https://github.com/rankastankovic/It-Sr-NER/",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/rankastankovic/It-Sr-NER/",
+          "@type": "schema:SoftwareSourceCode"
+        },
+        {
+          "@id": "https://hdl.handle.net/20.500.11752/OPEN-980",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/02d8a5s53",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/02d8a5s53"
+            }
+          ],
+          "name": "Institute for Computational Linguistics \"A. Zampolli\"",
+          "country": "IT",
+          "short_name": "ILC4CLARIN",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:it"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q79798",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q79798"
+              }
+            ],
+            "labels": {
+              "en": "Machine Translation"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

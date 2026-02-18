@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11356/1751",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/11356/1751"
+        }
+      ],
+      "srv_name": [
+        "Slovenian text summarization models"
+      ],
+      "descriptions": {
+        "none": [
+          "A text summarisation task aims to convert a longer text into a shorter text while preserving the essential information of the source text. In general, there are two approaches to text summarization. The extractive approach simply rewrites the most important sentences or parts of the text, whereas the abstractive approach is more similar to human-made summaries. We release 5 models that cover extractive, abstractive, and hybrid types:\r\n\r\nMetamodel: a neural model based on the Doc2Vec document representation that suggests the best summariser.\r\nGraph-based model: unsupervised graph-based extractive approach that returns the N most relevant sentences.\r\nHeadline model: a supervised abstractive approach (T5 architecture) that returns returns headline-like abstracts.\r\nArticle model: a supervised abstract approach (T5 architecture) that returns short summaries.\r\nHybrid-long model: unsupervised hybrid (graph-based and transformer model-based) approach that returns short summaries of long texts.\r\n\r\nDetails and instructions to run and train the models are available at https://github.com/clarinsi/SloSummarizer. \r\n\r\nThe web service with a demo is available at https://slovenscina.eu/povzemanje."
+        ]
+      },
+      "keywords": [
+        "text summarization",
+        "T5",
+        "graph methods"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:slv"
+      ],
+      "website": "https://rsdo.slovenscina.eu/",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://hdl.handle.net/11356/1751",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:webApplication",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/05060sz93",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/05060sz93"
+            }
+          ],
+          "name": "Jožef Stefan Institute",
+          "country": "SI",
+          "short_name": "CLARIN.SI",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:si"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://rsdo.slovenscina.eu/"
+        ],
+        "schema:url": [
+          "https://rsdo.slovenscina.eu/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

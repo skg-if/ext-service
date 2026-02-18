@@ -1,0 +1,150 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/CLARIN-EL-0000-0000-6788-3",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6788-3"
+        }
+      ],
+      "srv_name": [
+        "Dependency Parser (ÎÎ­ÏÎ¼Î· ÎµÏÎ³Î±Î»ÎµÎ¯ÏÎ½ ÎÎ¦Î Î³Î¹Î± ÏÎ± ÎµÎ»Î»Î·Î½Î¹ÎºÎ¬)",
+        "Dependency Parser (Greek NLP toolkit)"
+      ],
+      "descriptions": {
+        "en": [
+          "Dependency Parser, part of the Greek NLP toolkit, a Transformer-based Natural Language Processing Pipeline for Greek. This toolkit has state-of-the art accuracies in Greek and offers predictions for Named Entity Recognition, Part-of-Speech Tagging, Morphological Tagging as well as Dependency Parsing."
+        ]
+      },
+      "keywords": [
+        "dependency parsing",
+        "DependencyParsing",
+        "Dependency",
+        "Python",
+        "Apache-2.0"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ell"
+      ],
+      "website": "https://pypi.org/project/gr-nlp-toolkit",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:library"
+      ],
+      "srv_deployment_of": [
+        {
+          "@id": "https://pypi.org/project/gr-nlp-toolkit/#files",
+          "@type": "schema:SoftwareSourceCode"
+        },
+        {
+          "@id": "https://github.com/katkorre/greek_nlp_toolkit",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ]
+    }
+  ]
+}

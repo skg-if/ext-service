@@ -1,0 +1,189 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/DEMOKRITOS-0000-0000-246F-C",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/DEMOKRITOS-0000-0000-246F-C"
+        }
+      ],
+      "srv_name": [
+        "HBrill"
+      ],
+      "descriptions": {
+        "el": [
+          "Î HBrill ÎµÎ¯Î½Î±Î¹ Î¼Î¯Î± Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ® Ï ÏÎ·ÏÎµÏÎ¯Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÏ ÏÎ¹ÎºÎ®Ï Î³Î»ÏÏÏÎ±Ï, Î· Î¿ÏÎ¿Î¯Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹ÎµÎ¯ÏÎ±Î¹ Î³Î¹Î± ÏÎ·Î½ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ· ÎºÎ¬Î¸Îµ Î»Î­Î¾Î·Ï ÎµÎ½ÏÏ ÎºÎµÎ¹Î¼Î­Î½Î¿Ï ÏÏ ÏÏÎ¿Ï ÏÎ¿ Î¼Î­ÏÎ¿Ï ÏÎ¿Ï Î»ÏÎ³Î¿Ï ÏÏÎ¿ Î¿ÏÎ¿Î¯Î¿ Î±Î½Î®ÎºÎµÎ¹, Ï.Ï. Î¿Ï ÏÎ¹Î±ÏÏÎ¹ÎºÏ, ÏÎ®Î¼Î±, ÎµÏÎ¯Î¸ÎµÏÎ¿, ÎµÏÎ¯ÏÏÎ·Î¼Î±, Îº.Î»Ï.. Î Ï ÏÎ·ÏÎµÏÎ¯Î± Î±Ï ÏÎ® Ï ÏÎ¿ÏÏÎ·ÏÎ¯Î¶ÎµÎ¹ ÏÎ·Î½ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î± ÎºÎµÎ¹Î¼Î­Î½ÏÎ½ ÏÏÎ·Î½ ÎÎ»Î»Î·Î½Î¹ÎºÎ® Î³Î»ÏÏÏÎ± ÎºÎ±Î¹ Î­ÏÎµÎ¹ Î±Î½Î±ÏÏÏ ÏÎ¸ÎµÎ¯ Î±ÏÏ ÏÎ¿ ÎÎÎÎ¦Î ÎÎ·Î¼ÏÎºÏÎ¹ÏÎ¿Ï. Î HBrill Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î·Î¸ÎµÎ¯ Î³Î¹Î± ÏÎ·Î½ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î± Î¿ÏÎ¿Î¹Î¿Ï Î´Î®ÏÎ¿ÏÎµ TXT Î±ÏÏÎµÎ¯Î¿Ï ÏÎµ ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· UTF-8. Î¤Î¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÎµÎ¯Î½Î±Î¹ ÎµÎ¯ÏÎµ ÏÎµ Î¼Î¿ÏÏÎ®&nbsp; XML Î±ÏÏÎµÎ¯Î¿Ï ÎµÎ¯ÏÎµ ÏÎµ Î¼Î¿ÏÏÎ® Î±ÏÏÎµÎ¯Î¿Ï CSV Î¼Îµ ÎºÏÎ´Î¹ÎºÎ¿ÏÎ¿Î¯Î·ÏÎ· UTF-8. Î HBrill Î±ÏÎ¿ÏÎµÎ»ÎµÎ¯ ÏÎ¿ ÏÎµÎ»ÎµÏ ÏÎ±Î¯Î¿ Î²Î®Î¼Î± Î¼Î¯Î±Ï ÏÎ¿Î®Ï ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ¿Ï ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ ÏÎ± Î±ÎºÏÎ»Î¿Ï Î¸Î± ÏÏÎ¬Î´Î¹Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï: Î´Î¹Î±ÏÏÏÎ¹ÏÎ¼ÏÏ ÏÏÎ¿ÏÎ¬ÏÎµÏÎ½, ÏÎ¼Î·Î¼Î±ÏÎ¿ÏÎ¿Î¯Î·ÏÎ· ÎºÎµÎ¹Î¼Î­Î½Î¿Ï , ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ· Î¼ÎµÏÏÎ½ ÏÎ¿Ï Î»ÏÎ³Î¿Ï . Î©Ï ÎµÎº ÏÎ¿ÏÏÎ¿Ï , ÏÎ¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎµÎ¹Ï ÏÎµ ÎµÏÎ¯ÏÎµÎ´Î¿ ÏÏÏÏÎ±ÏÎ·Ï ( Sentence ID , Sentence ), Î»ÎµÎºÏÎ¹ÎºÎ®Ï Î¼Î¿Î½Î¬Î´Î±Ï ( Token ID , Token , Token Type ÏÏÎ¼ÏÏÎ½Î± Î¼Îµ ÏÎ¿ Ellogon Token Tagset , Token Start , Token End ), ÎºÎ±Î¹ Î¼Î­ÏÎ¿Ï Ï ÏÎ¿Ï Î»ÏÎ³Î¿Ï ÏÏÎ¼ÏÏÎ½Î± Î¼Îµ ÏÎ¿ Ellogon PoS Tagset . ÎÎ½Î±ÏÏÎ­Î¾ÏÎµ ÏÏÎ¿ ÏÎµÎ´Î¯Î¿ Output Annotation Schema ÏÎ±ÏÎ±ÎºÎ¬ÏÏ Î³Î¹Î± ÏÎµÏÎ¹ÏÏÏÏÎµÏÎµÏ ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯ÎµÏ ÏÏÎµÏÎ¹ÎºÎ¬ Î¼Îµ ÏÎ± tagsets. ÎÎ¹Î± ÏÎµÏÎ½Î¹ÎºÎ¿ÏÏ Î»ÏÎ³Î¿Ï Ï, ÏÎ¿ Î±ÏÏÎµÎ¯Î¿ ÏÎ¿Ï Ï ÏÎ¿Î²Î¬Î»Î»ÎµÏÎ±Î¹ Î³Î¹Î± ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î± Î¼ÏÎ¿ÏÎµÎ¯ Î½Î± ÏÏÏÎ¹ÏÏÎµÎ¯ ÏÎµ Î¼Î¹ÎºÏÏÏÎµÏÎ± Î±ÏÏÎµÎ¯Î±, ÏÎ¿ Î¯Î´Î¹Î¿ ÎºÎ±Î¹ ÏÎ¿ Î±ÏÎ¿ÏÎ­Î»ÎµÏÎ¼Î± ÏÎ·Ï ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï. Î Ï ÏÎ·ÏÎµÏÎ¯Î± Î±Ï ÏÎ® Î­ÏÎµÎ¹ ÎµÎ½ÏÏÎ¼Î±ÏÏÎ¸ÎµÎ¯ ÏÏÎ¹Ï ÏÎ¿Î­Ï ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ·Ï Ï ÏÎ¿Î´Î¿Î¼Î®Ï CLARIN:EL, ÏÏÎ¿ÏÏÎ­ÏÎ¿Î½ÏÎ±Ï ÏÏÎ¿Ï Ï ÏÏÎ®ÏÏÎµÏ ÏÎ· Î´Ï Î½Î±ÏÏÏÎ·ÏÎ± ÎµÏÎºÎ¿Î»Î·Ï ÏÏÏÏÎ²Î±ÏÎ·Ï ÎºÎ±Î¹ ÏÏÎ®ÏÎ·Ï ÏÏ Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ® Ï ÏÎ·ÏÎµÏÎ¯Î±. ÎÏÎ¿ÏÎµÎ¯ÏÎµ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î®ÏÎµÏÎµ Î±Ï ÏÎ®Î½ ÏÎ·Î½ Ï ÏÎ·ÏÎµÏÎ¯Î± ÎµÏÎ¹Î»Î­Î³Î¿Î½ÏÎ±Ï ÏÎ¿ ÎºÎ¿Ï Î¼ÏÎ¯ \" Use \" ÏÎ¿Ï Î¸Î± Î²ÏÎµÎ¯ÏÎµ ÏÎµ Î±Ï ÏÎ®Î½ ÏÎ· ÏÎµÎ»Î¯Î´Î± Î® Î¼Î­ÏÏ ÏÎ·Ï ÏÎµÎ»Î¯Î´Î±Ï Ï ÏÎ·ÏÎµÏÎ¹ÏÎ½ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÎ¯Î±Ï ÏÎ¿Ï CLARIN:EL ."
+        ],
+        "en": [
+          "HBrill is a natural language processing web service used for annotating every word of a text with the corresponding part of speech (POS) tag, e.g. noun, verb, adjective, adverb, etc..&nbsp;HBrill performs POS tagging for texts in Modern Greek. It has been developed by NCSR Demokritos. You can use this service to process any TXT document in UTF-8 encoding and obtain the output in either UTF-8 encoded XML format or in CSV file format. The HBrill service constitutes the last step of a workflow consisting of the following processing steps: sentence splitting, tokenization and part of speech tagging. Therefore, the output of the service includes annotations on the level of sentence ( Sentence ID , Sentence ), token ( Token ID , Token , Token Type according to Ellogon Token Tagset , Token Start , Token End ) and part of speech according to Ellogon PoS Tagset . See the Output Annotation Schema field below for more information on the respective tagsets. For technical reasons, the file submitted for processing may be split into smaller files, and so will the output. This service is seamlessly integrated into the CLARIN:EL infrastructure's workflows, providing users with convenient and easy access as a web service. You can use this service by clicking the \" Use \" button on this page or by accessing it through the CLARIN:EL processing services page ."
+        ]
+      },
+      "keywords": [
+        "ÎºÎ±ÏÎ¬ÏÎ¼Î·ÏÎ·",
+        "segmentation",
+        "Î³ÏÎ±ÏÏÏÏ Î»ÏÎ³Î¿Ï",
+        "written language",
+        "Î¼Î¿ÏÏÎ¿ÏÏÎ½ÏÎ±ÎºÏÎ¹ÎºÎ® Î±Î½Î¬Î»ÏÏÎ·",
+        "morphosyntactic analysis",
+        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "text",
+        "MorphosyntacticTagging",
+        "Sentence",
+        "Token",
+        "PartOfSpeech"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ell"
+      ],
+      "website": "http://www.ellogon.org/",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:library",
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "http://www.ellogon.org/"
+        ],
+        "schema:url": [
+          "http://www.ellogon.org/"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q865083",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q865083"
+              }
+            ],
+            "labels": {
+              "en": "Corpus Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "Natural Language Processing"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

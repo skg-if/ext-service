@@ -1,0 +1,158 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.12537/160",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "https://hdl.handle.net/20.500.12537/160"
+        }
+      ],
+      "srv_name": [
+        "Tiro TTS web service"
+      ],
+      "descriptions": {
+        "none": [
+          "Tiro TTS is a text-to-speech (TTS) API web service that works with various TTS backends. By default, it expects a FastSpeech2+Melgan+Sequitur backend. See the cadia-lvl/FastSpeech2 repository for more information on the backend.\r\n\r\nThe service can accept either unnormalized text or an SSML document and respond with audio (MP3, Ogg Vorbis or raw 16 bit PCM) or speech marks, indicating the byte and time offset of each synthesized word in the request.\r\n\r\nThe code for the service along with further information is on https://github.com/tiro-is/tiro-tts/releases/tag/M6. You should also check if a newer version is out (see README.md)\r\n\r\n------------------\r\n\r\nTiro Talgervill\r\n\r\nTiro Talgervill er vefgátt fyrir talgervingu (TTS). Vefgáttin ræður við ýmsar tegundir talgervilslíkana. Sjálfgefna stillingin gerir ráð fyrir FastSpeech2+Melgan+Sequitur TTS líkani. Sjá cadia-lvl/FastSpeech2 Git-lindina fyrir meiri upplýsingar um líkanið.\r\n\r\nVefgáttinn gerir notendum kleift að gera köll með forritaskilum þar sem notandinn sendir inn ónormaðan texta eða SSML skrá og fær til baka svar í formi hljóðskráar (MP3, Ogg Vorbis eða hrátt 16 bita PCM) með samsvarandi tali eða gögn um tímasetningu hvers mælts orðs.\r\n\r\nVefgáttin, ásamt frekari upplýsingum, er aðgengileg á https://github.com/tiro-is/tiro-tts/releases/tag/M6. Einnig er gott að athuga þar hvort ný útgáfa sé komin út (sjá README.md)."
+        ]
+      },
+      "keywords": [
+        "TTS",
+        "text-to-speech",
+        "web service"
+      ],
+      "website": "https://github.com/tiro-is/tiro-tts/releases/tag/M6",
+      "is_accessible_for_free": true,
+      "srv_deployment_of": [
+        {
+          "@id": "https://github.com/tiro-is/tiro-tts/releases/tag/M6",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice",
+        "sshocinvt:sourceCode"
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+          "entity_type": "organisation",
+          "name": "CLARIN Iceland",
+          "country": "IS",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:is"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:dataEngineer",
+        "sshocaudience:researcher"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://tts.tiro.is/"
+        ],
+        "schema:url": [
+          "https://tts.tiro.is/"
+        ]
+      },
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q79798",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q79798"
+              }
+            ],
+            "labels": {
+              "en": "Machine Translation"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3358061",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3358061"
+              }
+            ],
+            "labels": {
+              "en": "Speech Processing"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

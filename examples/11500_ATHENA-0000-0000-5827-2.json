@@ -1,0 +1,134 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/ATHENA-0000-0000-5827-2",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "handle",
+          "value": "http://hdl.handle.net/11500/ATHENA-0000-0000-5827-2"
+        }
+      ],
+      "srv_name": [
+        "Voyant Tools"
+      ],
+      "descriptions": {
+        "el": [
+          "Î¤Î± Voyant Tools ÎµÎ¯Î½Î±Î¹ Î­Î½Î± Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÏ ÏÎµÏÎ¹Î²Î¬Î»Î»Î¿Î½ Î±Î½Î¿Î¹ÏÏÎ¿Ï ÎºÏÎ´Î¹ÎºÎ± ÏÎ¿Ï ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹ÎµÎ¯ÏÎ±Î¹ Î³Î¹Î± ÏÎ·Î½ Î±Î½Î¬Î³Î½ÏÏÎ· ÎºÎ±Î¹ Î±Î½Î¬Î»Ï ÏÎ· ÎºÎµÎ¹Î¼Î­Î½Î¿Ï Î®/ÎºÎ±Î¹ ÏÏÎ¼Î¬ÏÏÎ½ ÎºÎµÎ¹Î¼Î­Î½ÏÎ½. Î¤Î¿ ÏÎµÏÎ¹Î²Î¬Î»Î»Î¿Î½ ÏÏÎ½ Voyant Tools ÏÏÎµÎ´Î¹Î¬ÏÏÎ·ÎºÎµ ÎºÎ±Î¹ Ï Î»Î¿ÏÎ¿Î¹Î®Î¸Î·ÎºÎµ Î±ÏÏ ÏÎ¿Ï Ï StÃ©fan Sinclair ÎºÎ±Î¹ Geoffrey Rockwell ÏÎ¿ 2016 Î¼Îµ ÏÏÏÏÎ¿ Î½Î± Î´Î¹ÎµÏ ÎºÎ¿Î»ÏÎ½ÎµÎ¹ ÏÎ¿Ï Ï ÏÎ¿Î¹ÏÎ·ÏÎ­Ï ÎºÎ±Î¹ Î±ÎºÎ±Î´Î·Î¼Î±ÏÎºÎ¿ÏÏ ÏÏÎ½ ÏÎ·ÏÎ¹Î±ÎºÏÎ½ Î±Î½Î¸ÏÏÏÎ¹ÏÏÎ¹ÎºÏÎ½ ÎµÏÎ¹ÏÏÎ·Î¼ÏÎ½ Î±Î½Î±ÏÎ¿ÏÎ¹ÎºÎ¬ Î¼Îµ ÏÎ¹Ï ÏÏÎ±ÎºÏÎ¹ÎºÎ­Ï Î±Î½Î¬Î³Î½ÏÏÎ·Ï ÎºÎ±Î¹ ÎµÏÎ¼Î·Î½ÎµÎ¯Î±Ï ÎºÎµÎ¹Î¼ÎµÎ½Î¹ÎºÎ¿Ï Ï Î»Î¹ÎºÎ¿Ï. Î£Ï Î³ÎºÎµÎºÏÎ¹Î¼Î­Î½Î±, Î¼ÏÎ¿ÏÎµÎ¯ÏÎµ Î½Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹Î®ÏÎµÏÎµ ÏÎ± Voyant Tools Î³Î¹Î±: - Î½Î± Î´ÎµÎ¯ÏÎµ ÏÏÏ ÎµÏÎ¹ÏÏ Î³ÏÎ¬Î½ÎµÏÎ±Î¹ Î· ÎºÎµÎ¹Î¼ÎµÎ½Î¹ÎºÎ® Î±Î½Î¬Î»Ï ÏÎ· Î¼Îµ ÏÎ· Î²Î¿Î®Î¸ÎµÎ¹Î± Ï ÏÎ¿Î»Î¿Î³Î¹ÏÏÎ¹ÎºÏÎ½ ÎµÏÎ³Î±Î»ÎµÎ¯ÏÎ½, - Î½Î± Î¼ÎµÎ»ÎµÏÎ®ÏÎµÏÎµ ÎºÎµÎ¯Î¼ÎµÎ½Î± ÏÎ¿Ï Î²ÏÎ¯ÏÎºÎµÏÎµ ÏÏÎ¿ Î´Î¹Î±Î´Î¯ÎºÏÏ Î¿ Î® ÎºÎµÎ¯Î¼ÎµÎ½Î± ÏÎ¿Ï Î­ÏÎµÏÎµ ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÏÎµÎ¯ ÎºÎ±Î¹ ÏÎ± Î¿ÏÎ¿Î¯Î± Î²ÏÎ¯ÏÎºÎ¿Î½ÏÎ±Î¹ Î±ÏÎ¿Î¸Î·ÎºÎµÏ Î¼Î­Î½Î± ÏÎ¿ÏÎ¹ÎºÎ¬ ÏÏÎ¿Î½ Î/Î¥ ÏÎ±Ï, - Î½Î± ÏÏÎ¿ÏÎ¸Î­ÏÎµÏÎµ ÎµÏÎ¹ÏÎ»Î­Î¿Î½ Î»ÎµÎ¹ÏÎ¿Ï ÏÎ³Î¹ÎºÏÏÎ·ÏÎµÏ ÏÏÎ¹Ï Î´Î¹Î±Î´Î¹ÎºÏÏ Î±ÎºÎ­Ï ÏÎ±Ï ÏÏ Î»Î»Î¿Î³Î­Ï, ÏÎµÏÎ¹Î¿Î´Î¹ÎºÎ¬, Î¹ÏÏÎ¿Î»ÏÎ³Î¹Î± Î® Î¹ÏÏÏÏÎ¿ÏÎ¿Ï Ï, ÏÏÏÎµ Î½Î± Î¼ÏÎ¿ÏÎµÎ¯ ÎºÎ±Î½ÎµÎ¯Ï Î½Î± Î´ÎµÎ¹ ÏÎ¿ Ï Î»Î¹ÎºÏ Î±Ï ÏÏ Î¼Îµ ÏÎ· Î²Î¿Î®Î¸ÎµÎ¹Î± ÎµÏÎ³Î±Î»ÎµÎ¯ÏÎ½ Î±Î½Î¬Î»Ï ÏÎ·Ï, - Î½Î± ÏÏÎ¿ÏÎ¸Î­ÏÎµÏÎµ Î´Î¹Î±Î´ÏÎ±ÏÏÎ¹ÎºÎ¬ ÏÏÎ¿Î¹ÏÎµÎ¯Î± ÏÏÎ± ÎºÎµÎ¯Î¼ÎµÎ½Î± Î® ÏÏÎ± Î¬ÏÎ¸ÏÎ± ÏÎ¿Ï Î´Î·Î¼Î¿ÏÎ¹ÎµÏÎµÏÎµ ÏÏÎ¿ Î´Î¹Î±Î´Î¯ÎºÏÏ Î¿ Î® Î±ÎºÏÎ¼Î± ÎºÎ±Î¹ Î½Î± ÏÏÎ¿ÏÎ¸Î­ÏÎµÏÎµ Î´Î¹Î±Î´ÏÎ±ÏÏÎ¹ÎºÎ¬ ÏÎ¬Î½ÎµÎ» ÏÏÎ¹Ï ÎµÏÎµÏ Î½Î·ÏÎ¹ÎºÎ­Ï ÏÎ±Ï ÎµÎºÎ¸Î­ÏÎµÎ¹Ï (ÎµÏÏÏÎ¿Î½ Î±Ï ÏÎ­Ï Î¼ÏÎ¿ÏÎ¿ÏÎ½ Î½Î± Î´Î·Î¼Î¿ÏÎ¹ÎµÏ Î¸Î¿ÏÎ½ ÏÏÎ¿ Î´Î¹Î±Î´Î¯ÎºÏÏ Î¿), ÏÏÏÎµ Î¿Î¹ Î±Î½Î±Î³Î½ÏÏÏÎµÏ ÏÎ±Ï Î½Î± Î¼ÏÎ¿ÏÎ¿ÏÎ½ ÏÎ¿Î»Ï Î³ÏÎ®Î³Î¿ÏÎ± Î½Î± Î²ÏÎ¿Ï Î½ ÏÎ± Î²Î±ÏÎ¹ÎºÎ¬ ÏÎ·Î¼ÎµÎ¯Î± ÎºÎ±Î¹ ÏÎ± Î±ÏÎ¿ÏÎµÎ»Î­ÏÎ¼Î±ÏÎ± ÏÎ·Ï Î­ÏÎµÏ Î½Î¬Ï ÏÎ±Ï, - Î½Î± Î±Î½Î±ÏÏÏÎ¾ÎµÏÎµ ÏÎ± Î´Î¹ÎºÎ¬ ÏÎ±Ï ÎµÏÎ³Î±Î»ÎµÎ¯Î± ÏÏÎ·ÏÎ¹Î¼Î¿ÏÎ¿Î¹ÏÎ½ÏÎ±Ï ÏÎ¹Ï Î»ÎµÎ¹ÏÎ¿Ï ÏÎ³Î¹ÎºÏÏÎ·ÏÎµÏ ÎºÎ±Î¹ ÏÎ¿Î½ ÎºÏÎ´Î¹ÎºÎ± ÏÏÎ½ Voyant Tools."
+        ],
+        "en": [
+          "Voyant Tools is a web-based text reading and analysis environment. It is a scholarly project that is designed to facilitate reading and interpretive practices for digital humanities students and scholars as well as for the general public. What you can do with Voyant: --Use it to learn how computers-assisted analysis works. Check out our examples that show you how to do real academic tasks with Voyant. --Use it to study texts that you find on the web or texts that you have carefully edited and have on your computer. --Use it to add functionality to your online collections, journals, blogs or web sites so others can see through your texts with analytical tools. --Use it to add interactive evidence to your essays that you publish online. Add interactive panels right into your research essays (if they can be published online) so your readers can recapitulate your results. --Use it to develop your own tools using our functionality and code."
+        ]
+      },
+      "keywords": [
+        "ÎºÎµÎ¹Î¼ÎµÎ½Î¹ÎºÎ® Î±Î½Î¬Î»ÏÏÎ·",
+        "textual analysis",
+        "LinguisticAnalysis",
+        "GPL-3.0-or-later",
+        "CC-BY-4.0"
+      ],
+      "website": "https://voyant-tools.org/",
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:webApplication"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://voyant-tools.org/"
+        ],
+        "schema:url": [
+          "https://voyant-tools.org/"
+        ]
+      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://vlo.clarin.eu",
+          "entity_type": "venue",
+          "name": "CLARIN Virtual Language Observatory",
+          "website": "https://vlo.clarin.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/0576by029",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/0576by029"
+            }
+          ],
+          "name": "Athena Research and Innovation Center",
+          "country": "GR",
+          "short_name": "CLARIN:EL",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo",
+        "eoscgeoavail:gr"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:public",
+        "sshocaudience:researcher",
+        "sshocaudience:student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ],
+            "labels": {
+              "en": "Linguistics"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
