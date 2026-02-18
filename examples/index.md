@@ -12,3 +12,4 @@ has_toc: false
 An example of an object serialised using this extension can be found on GitHub [here](https://github.com/skg-if/ext-srv/tree/main/examples) against the latest version of the extended [JSON-LD context](w3id.org/skg-if/extension/srv/context/skg-if.json). In particular:
 
 * [srv_1.json](https://github.com/skg-if/ext-srv/tree/main/examples/srv_1.json) contains an example with most of the relevant fields, although not all represent reality
+* additionally about 120 Service records were created on the basis of CLARIN CMDI metadta records obtained from the CLARIN VLO and enriched after conversion
