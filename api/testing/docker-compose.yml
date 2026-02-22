@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  fastapi:
+    image: vicding81/athenstest:latest
+    volumes:
+      - ./docker_build/app.py:/app/app.py
+      - ${DATA_PATH:-./data}:/app/data
+      - ${SERVICES_DATA:-./data/services}:/app/data/services
+    expose:
+      - "8000"
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+
+  prism:
+    image: stoplight/prism:4
+    platform: linux/amd64
+    command: proxy -h 0.0.0.0 /spec/openapi.yaml http://fastapi:8000 --errors
+    volumes:
+      - ${OPENAPI_SPEC:-./openapi.yaml}:/spec/openapi.yaml:ro
+    ports:
+      - "4010:4010"
+    depends_on:
+      - fastapi
+
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    environment:
+      SWAGGER_JSON: /spec/openapi.yaml
+    volumes:
+      - ${OPENAPI_SPEC:-./openapi.yaml}:/spec/openapi.yaml:ro
+    ports:
+      - "8080:8080"

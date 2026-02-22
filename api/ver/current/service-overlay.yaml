@@ -32,30 +32,99 @@ actions:
               Get a list of `service`. See definition in SKG-IF [Service] (https://skg-if.github.io/interoperability-framework/docs/service.html) (entity_type: service ).
 
               __Attribute filters__ \
-              You can filter using these attributes of the `service` object
-              | Filter key| Attribute filter example |
+              You can filter using these attributes of the `service` object. Exact match.
+              The `country` filter is a shorthand that resolves via `srv_has_hosting_organisation.country`.
+
+              | Filter key | Attribute filter example |
               | -------- | -------- |
-              | identifiers.id | `identifiers.id:https://hdl.handle.net/11234/1-1702` |
-              | name | `name:UDPIpe` |
+              | entity_type | `entity_type:service` |
+              | identifiers.scheme | `identifiers.scheme:handle` |
+              | identifiers.value | `identifiers.value:https://hdl.handle.net/11234/1-1702` |
+              | name | `name:UDPipe` |
               | website | `website:https://ufal.mff.cuni.cz/udpipe` |
-              | country | `country:CZ` |
+              | country | `country:CZ` (shorthand for `srv_has_hosting_organisation.country`) |
+              | srv_invocation_type | `srv_invocation_type:sshocinvt:webApplication` |
+              | relevant_organisations.name | `relevant_organisations.name:CLARIN` |
+              | relevant_organisations.identifiers.scheme | `relevant_organisations.identifiers.scheme:ror` |
+              | relevant_organisations.identifiers.value | `relevant_organisations.identifiers.value:https://ror.org/03wp25384` |
+              | srv_has_hosting_legal_entity.name | `srv_has_hosting_legal_entity.name:Charles University` |
+              | srv_has_hosting_legal_entity.identifiers.scheme | `srv_has_hosting_legal_entity.identifiers.scheme:ror` |
+              | srv_has_hosting_legal_entity.identifiers.value | `srv_has_hosting_legal_entity.identifiers.value:https://ror.org/024d6js02` |
+              | srv_has_hosting_organisation.name | `srv_has_hosting_organisation.name:LINDAT` |
+              | srv_has_hosting_organisation.identifiers.scheme | `srv_has_hosting_organisation.identifiers.scheme:ror` |
+              | srv_has_hosting_organisation.identifiers.value | `srv_has_hosting_organisation.identifiers.value:https://ror.org/00dd4fz34` |
+              | srv_has_research_infrastructure.name | `srv_has_research_infrastructure.name:CLARIN ERIC` |
+              | srv_has_research_infrastructure.identifiers.scheme | `srv_has_research_infrastructure.identifiers.scheme:ror` |
+              | srv_has_research_infrastructure.identifiers.value | `srv_has_research_infrastructure.identifiers.value:https://ror.org/03wp25384` |
 
               __Convenience filters__ \
-              These filters aren't attributes of the `organization` object, but they're handy for solving some common use cases.
+              These filters aren't attributes of the `service` object, but they're handy for solving some common use cases.
 
               | Filter key | Filter value | List returned | Attribute filter example |
               | -------- | -------- | ------- | ------- |
-              | cf.search.name | a string | `organisation` with name containing the filter value | `cf.search.name:UFAL` |
+              | cf.search.name | a string | `service` with name containing the filter value | `cf.search.name:UDPipe` |
+              | cf.search.keyword | a string | `service` with keyword containing the filter value | `cf.search.keyword:morphology` |
+              | cf.search.org_name | a string | `service` with any related organisation `name` or `short_name` containing the filter value (searches across `relevant_organisations`, `srv_has_hosting_legal_entity`, `srv_has_hosting_organisation`, `srv_has_research_infrastructure`) | `cf.search.org_name:LINDAT` |
 
               __Query parameter syntax examples__ \
-    
-               * `/services?filter=identifiers.scheme:ror,identifiers.id:11234/1-1702`
-               * `/services?filter=cf.search.name:UDPipe`
-               * `/services?filter=cf.search.name:UDPipe&page=1&page_size=5`
-# refine the last exmple into one really needing multiple pages
 
-          parameters:    
-            - $ref : '#/components/parameters/filterQueryParam'
+               * `/services?filter=identifiers.scheme:handle,identifiers.value:https://hdl.handle.net/11234/1-1702`
+               * `/services?filter=cf.search.name:UDPipe`
+               * `/services?filter=cf.search.keyword:morphology`
+               * `/services?filter=cf.search.name:UDPipe&page=1&page_size=5`
+               * `/services?filter=country:CZ&page=1&page_size=10`
+               * `/services?filter=srv_invocation_type:sshocinvt:webApplication`
+               * `/services?filter=relevant_organisations.name:CLARIN`
+               * `/services?filter=srv_has_hosting_organisation.name:LINDAT`
+               * `/services?filter=srv_has_research_infrastructure.name:CLARIN ERIC`
+               * `/services?filter=srv_has_hosting_legal_entity.identifiers.scheme:ror,srv_has_hosting_legal_entity.identifiers.value:https://ror.org/024d6js02`
+               * `/services?filter=relevant_organisations.identifiers.scheme:ror,relevant_organisations.identifiers.value:https://ror.org/03wp25384`
+               * `/services?filter=cf.search.org_name:LINDAT`
+
+          parameters:
+            - name: filter
+              in: query
+              description: |
+                Search filter. Format : Coma separated filter_name:filter_value elements ( filter_name_1:filter_value_1,filter_name_2:filter_value_2,filter_name_3:filter_value_3... ). Server side operator used is _AND_.
+              schema:
+                type: string
+                pattern: '^(,?.+:.+)*$'
+              examples:
+                service_name_ex:
+                  value: cf.search.name:UDPipe
+                  summary: Get all services with name containing `UDPipe`
+                service_country_ex:
+                  value: country:CZ
+                  summary: Get all services in country CZ
+                service_identifier_ex:
+                  value: identifiers.scheme:handle,identifiers.value:https://hdl.handle.net/11234/1-1702
+                  summary: Get service with specific handle identifier
+                service_keyword_ex:
+                  value: cf.search.keyword:morphology
+                  summary: Get all services with keyword containing `morphology`
+                service_org_name_ex:
+                  value: relevant_organisations.name:CLARIN
+                  summary: Get all services with relevant organisation named `CLARIN`
+                service_hosting_org_ex:
+                  value: srv_has_hosting_organisation.name:LINDAT
+                  summary: Get all services hosted by organisation `LINDAT`
+                service_ri_ex:
+                  value: srv_has_research_infrastructure.name:CLARIN ERIC
+                  summary: Get all services of research infrastructure `CLARIN ERIC`
+                service_legal_entity_ror_ex:
+                  value: srv_has_hosting_legal_entity.identifiers.scheme:ror,srv_has_hosting_legal_entity.identifiers.value:https://ror.org/024d6js02
+                  summary: Get all services hosted by legal entity with ROR `024d6js02`
+                service_org_ror_ex:
+                  value: relevant_organisations.identifiers.scheme:ror,relevant_organisations.identifiers.value:https://ror.org/03wp25384
+                  summary: Get all services with relevant organisation by ROR identifier
+                service_search_org_ex:
+                  value: cf.search.org_name:LINDAT
+                  summary: Get all services related to any organisation with name or short_name containing `LINDAT`
+                service_invocation_ex:
+                  value: srv_invocation_type:sshocinvt:webApplication
+                  summary: Get all web application services
+            - $ref: '#/components/parameters/pageQueryParam'
+            - $ref: '#/components/parameters/pageSizeQueryParam'
           responses:
             '200':
               description: Success
