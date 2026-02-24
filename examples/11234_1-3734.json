@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11234/1-3734"
         }
       ],
-      "srv_name": [
-        "Tensor2tensor Translation for Docker"
-      ],
       "descriptions": {
         "none": [
           "This submission contains Dockerfile for creating a Docker image with compiled Tensor2tensor backend with compatible (TensorFlow Serving) models available in the Lindat Translation service (https://lindat.mff.cuni.cz/services/transformer/). Additionally, the submission contains a web frontend for simple in-browser access to the dockerized backend service.\r\n\r\nTensor2Tensor (https://github.com/tensorflow/tensor2tensor) is a library of deep learning models and datasets designed to make deep learning more accessible and accelerate ML research."
@@ -135,7 +132,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "Tensor2tensor Translation for Docker"
     }
   ]
 }

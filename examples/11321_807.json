@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11321/807"
         }
       ],
-      "srv_name": [
-        "Metaphor annotations in Polish political debates from 2020 (TVP 2019-10-01 and TVN 2019-10-08) – presidential election"
-      ],
       "descriptions": {
         "none": [
           "The data published here are a supplementary for a paper to be published in Metaphor and Social Words (under revision).\r\n\r\nTwo debates organised and published by TVP and TVN were transcribed and annotated with Metaphor Identification Method. We have used eMargin software (a collaborative textual annotation tool, (Kehoe and Gee 2013) and a slightly modified version of MIP (Pragglejaz 2007). Each lexical unit in the transcript was labelled as a metaphor related word (MRW) if its “contextual meaning was related to the more basic meaning by some form of similarity” (Steen 2007). The meanings were established with the Wielki Słownik Języka Polskiego (Great Dictionary of Polish, ed. (Żmigrodzki 2019). In addition to MRW, lexemes which create a metaphorical expression together with MRW were tagged as metaphor expression word (MEW). At least two words are needed to identify the actual metaphorical expression, since MRW cannot appear without MEW. Grammatical construction of the metaphor (Sullivan 2009) is asymmetrical: one word is conceptually autonomous and the other is conceptually dependent on the first. Within construction grammar terms (Langacker 2008), metaphor related word is elaborated with/by metaphorical expression word, because the basic meaning of MRW is elaborated and extended to more figurative meaning only if it is used jointly with MEW. Moreover, the meaning of the MEW is rather basic, concrete, as it remains unchanged in connection with the MRW. This can be clearly seen in the expression often used in our data: “Służba zdrowia jest w zapaści” (“Health service suffers from a collapse.”) where the word “zapaść” (“collapse”) is an example of MRW and words “służba zdrowia” (“health service”) are labeled as MEW. The English translation of this expression needs a different verb, instead of “jest w zapaści” (“is in collapse”) the English unmarked collocation is “suffers from a collapse”, therefore words “suffers from a collapse” are labeled as MRW. The “collapse” could be caused by heart failure, such as cardiac arrest or any other life-threatening medical condition and “health service” is portrayed as if it could literally suffer from such a condition – a collapse.\r\n\r\nThe data are in csv tables exported from xml files downloaded from eMargin site. Prior to annotation transcripts were divided to 40 parts, each for one annotator. MRW words are marked as MLN, MEW are marked as MLP and functional words within metaphorical expression are marked MLI, other words are marked just noana, which means no annotation needed."
@@ -166,7 +163,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "Metaphor annotations in Polish political debates from 2020 (TVP 2019-10-01 and TVN 2019-10-08) – presidential election"
     }
   ]
 }

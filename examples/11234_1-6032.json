@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11234/1-6032"
         }
       ],
-      "srv_name": [
-        "EdUKate translation models 2025"
-      ],
       "descriptions": {
         "none": [
           "This package includes three models adapted for sentence-level machine translation in educational domain: Czech-to-Ukrainian, Czech-to-English and Czech-to-German. The models are provided as LoRA adapters on top of EuroLLM-9B-Instruct LLM and can be used in the Charles Translator service (https://translator.cuni.cz) and in the web portal Škola s nadhledem (https://skolasnadhledem.cz/). The models were developed within the EdUKate project, which aims to help mitigate language barriers between non-Czech-speaking children in the Czech Republic and the education in the Czech school system. The project focuses on the development and dissemination of multilingual digital learning materials for students in primary and secondary schools."
@@ -143,7 +140,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "EdUKate translation models 2025"
     }
   ]
 }

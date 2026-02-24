@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/20.500.12537/268"
         }
       ],
-      "srv_name": [
-        "Tiro TTS web service (22.10)"
-      ],
       "descriptions": {
         "none": [
           "Tiro TTS is a text-to-speech (TTS) API web service that works with various TTS backends. By default, it expects a FastSpeech2+Melgan+IceG2P backend. See the https://github.com/cadia-lvl/fastspeech2 repository for more information on the backend. The service can accept either unnormalized text or an SSML document and respond with audio (MP3, Ogg Vorbis or raw 16 bit PCM) or speech marks, indicating the byte and time offset of each synthesized word in the request. The full API documentation in OpenAPI 2 format is available online at tts.tiro.is. The code for the service along with further information is on https://github.com/tiro-is/tiro-tts/releases/tag/M9. You should also check if a newer version is out (see README.md)"
@@ -142,7 +139,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "Tiro TTS web service (22.10)"
     }
   ]
 }

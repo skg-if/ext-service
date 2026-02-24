@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11234/1-1451"
         }
       ],
-      "srv_name": [
-        "Moses Web Demo"
-      ],
       "descriptions": {
         "none": [
           "An interactive web demo of selected ÚFAL MT systems.",
@@ -147,7 +144,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "Moses Web Demo"
     }
   ]
 }

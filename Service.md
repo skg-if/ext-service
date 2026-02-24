@@ -89,25 +89,25 @@ Needed for parsing purposes; fixed to `service`.
 ```
 
 ### `name`
-*Object* (optional): The names of a [Software service] (multiple for multilingualism). 
-
-The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
+*String* (optional): The canonical name of the service in English. Maps to `foaf:name`.
 
 ```json
-    "name": {
-        "en": "UDPipe",
-        "zh-cn": "UDPipe 工具"        
-    },
+    "name": "UDPipe"
 ```
 
 ### `other_names`
-*Object* (optional): The other names of a [Software service]. 
+*List* (optional): Accepted alternative names, e.g. native language names or short codes. Maps to `skos:altLabel`.
 
 ```json
+    "other_names": ["UDPipe 工具", "UDPipe 2"]
+```
+
+<!-- Previously other_names was modelled as a multilingual object:
     "other_names": {
         "en": ["UDPipe 2", "UDPipe 2.0"]
     }
-```
+    This form is superseded by the flat list above. -->
+
 
 ### `descriptions`
 *Object* (optional): The descriptions of a [Service] (multiple for multilingualism).
@@ -204,10 +204,30 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 ```    
 
 ### `website`
-*String* (mandatory): Landingpage for the service. Preferably one maintained by the service operator 
+*String* (mandatory): Landingpage for the service. Preferably one maintained by the service operator
 
 ```json
     "website": "https://ufal.mff.cuni.cz/udpipe/2"
+```
+
+### `srv_api_profile`
+*String or Object* (optional): IRI of the API profile/standard, either as a simple link or a structured object with endpoint and documentation URLs.
+
+Simple form (a single URL pointing to API documentation or reference):
+```json
+    "srv_api_profile": "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
+```
+
+Structured form (object with `dcat:endpointURL` and `schema:url`):
+```json
+    "srv_api_profile": {
+        "dcat:endpointURL": ["https://lindat.mff.cuni.cz/services/udpipe/api/process"],
+        "schema:url": [
+            "https://lindat.mff.cuni.cz/services/udpipe/",
+            "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php",
+            "https://ufal.mff.cuni.cz/udpipe"
+        ]
+    }
 ```
 
 ### `srv_supported_language`
@@ -239,12 +259,12 @@ _NOTE_ this description is not consistent with other examples, should be discuss
     } ]
 ```
 
-### `srv_research_infrastructure` 
+### `srv_has_research_infrastructure`
 
-*List* (optional): Is associated with an [Organisation] that provides facilities, resources and services for the research communities to conduct research. 
+*List* (optional): Is associated with an [Organisation] that provides facilities, resources and services for the research communities to conduct research.
 _NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
 ```json
-     "srv_research_infrastructure": [
+     "srv_has_research_infrastructure": [
        {
          "local_identifier": "https://ror.org/03wp25384",
          "entity_type": "organisation",
@@ -257,17 +277,17 @@ _NOTE_ When querying the SKG-IF API, query responses may return as value for thi
        },
        {
          "local_identifier": "https://ror.org/03wp25384",
-         "entity_type": "organisation",
+         "entity_type": "organisation"
        }
      ]
 ```
 
-### `srv_hosting_organisation` 
-*List* (optional): Is depending on [Organisation] reponsible for hosting a service or infrastructure component. 
+### `srv_has_hosting_organisation`
+*List* (optional): Is depending on [Organisation] responsible for hosting a service or infrastructure component.
 _NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
 
 ```json
-     "srv_hosting_organisation": [
+     "srv_has_hosting_organisation": [
        {
          "local_identifier": "https://ror.org/00dd4fz34",
          "entity_type": "organisation",
@@ -280,18 +300,18 @@ _NOTE_ When querying the SKG-IF API, query responses may return as value for thi
          "country": "CZ"
        },
        {
-         "local_identifier": "https://ror.org/00dd4fz34", 
+         "local_identifier": "https://ror.org/00dd4fz34",
          "entity_type": "organisation"
        }
      ]
 ```
 
-### `srv_hosting_legal_entity` 
-*List* (optional): Is the specific [Organisation] legally reponsible for the service operation and publishing
+### `srv_has_hosting_legal_entity`
+*List* (optional): Is the specific [Organisation] legally responsible for the service operation and publishing.
 _NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
 
 ```json
-     "srv_hosting_legal_entity": [{
+     "srv_has_hosting_legal_entity": [{
         "local_identifier": "https://ror.org/024d6js02",
         "entity_type": "organisation",
         "name": "Charles University",
@@ -304,14 +324,55 @@ _NOTE_ When querying the SKG-IF API, query responses may return as value for thi
 ```
 
 
-### `relevant_organisations`
-*List* (optional):  [Organisation] identifiers associated with and relevant for a [Service].
-Identifiers can be of local or global identifier system type eg. ror, uri. Organizations that are identified by a local_identifier, can be given additional types: "research_infrastructure", "hosting_organisation" and "hosting_legal_entity".
-_NOTE_ this is provided by adding new types to the Organisation entity types
+### `srv_venues`
+*List* (optional): Portals or catalogues through which the service is advertised and accessible. Each entry references a [Venue] with type `srv_portal`.
+_NOTE_ When querying the SKG-IF API, query responses should minimally return `local_identifier` and `entity_type`.
 
 ```json
+    "srv_venues": [
+        {
+            "local_identifier": "https://ror.org/03sj9b840",
+            "entity_type": "venue",
+            "name": "EOSC node",
+            "types": ["srv_portal"],
+            "website": "https://open-science-cloud.ec.europa.eu/support/getting-started-eosc-eu-node"
+        },
+        {
+            "local_identifier": "https://portal.ariadne-infrastructure.eu",
+            "entity_type": "venue",
+            "name": "Ariadne portal",
+            "types": ["srv_portal"],
+            "website": "https://portal.ariadne-infrastructure.eu/about"
+        }
+    ]
+```
+
+### `relevant_organisations`
+*List* (optional):  [Organisation] identifiers associated with and relevant for a [Service].
+Identifiers can be of local or global identifier system type e.g. ror, uri. Organizations can be given additional types: `"research_infrastructure"`, `"hosting_organisation"` and `"hosting_legal_entity"` to indicate their role.
+_NOTE_ Each item may be a plain identifier string or a full Organisation object. API responses may expand identifiers to full Organisation objects. For semantically typed roles use the specific `srv_has_*` properties instead.
+
+Simple form (flat identifier strings, preferred for input/storage):
+```json
 	"relevant_organisations": ["https://ror.org/024d6js02", "https://ror.org/03wp25384"]
-``` 
+```
+
+Expanded form (as may be returned by the API):
+```json
+    "relevant_organisations": [
+        {
+            "local_identifier": "https://ror.org/024d6js02",
+            "entity_type": "organisation",
+            "name": "Charles University",
+            "types": ["education", "research"],
+            "country": "CZ"
+        },
+        {
+            "local_identifier": "https://ror.org/03wp25384",
+            "entity_type": "organisation"
+        }
+    ]
+```
 
 ### `related_products`
 *Object* (optional): A dictionary of objects representing related [Research products], where the semantics of such relationships is specified as a key and the related product by its local_identifier. 

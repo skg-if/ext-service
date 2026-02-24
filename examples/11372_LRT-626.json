@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11372/LRT-626"
         }
       ],
-      "srv_name": [
-        "English-Lithuanian Machine Translation Service"
-      ],
       "descriptions": {
         "none": [
           "On-line freely accessible machine translation tool for translating English webpages or texts into Lithuanian."
@@ -132,7 +129,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "English-Lithuanian Machine Translation Service"
     }
   ]
 }

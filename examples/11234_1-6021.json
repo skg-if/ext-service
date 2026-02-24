@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11234/1-6021"
         }
       ],
-      "srv_name": [
-        "Evaldio-residency | Automatic Assessment of Spoken Czech as a Foreign Language: Permanent Residency in the Czech Republic"
-      ],
       "descriptions": {
         "none": [
           "Evaldio for Permanent Residency Permit is a service/tool that provides an automatic speech assessment of the oral part of the Czech language exam at the A2 level. Passing the exam is mandatory for issuing the permanent residency permit in Czechia. The service/tool expects a recording of the exam in the input and outputs the predicted relative score and probability of passing the exam at the A2 level. Furthermore, the service/tool presents the user with the automatic transcription, diarization, and additional statistics."
@@ -149,7 +146,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "Evaldio-residency | Automatic Assessment of Spoken Czech as a Foreign Language: Permanent Residency in the Czech Republic"
     }
   ]
 }

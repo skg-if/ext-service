@@ -17,10 +17,6 @@
           "value": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6788-3"
         }
       ],
-      "srv_name": [
-        "Dependency Parser (ÎÎ­ÏÎ¼Î· ÎµÏÎ³Î±Î»ÎµÎ¯ÏÎ½ ÎÎ¦Î Î³Î¹Î± ÏÎ± ÎµÎ»Î»Î·Î½Î¹ÎºÎ¬)",
-        "Dependency Parser (Greek NLP toolkit)"
-      ],
       "descriptions": {
         "en": [
           "Dependency Parser, part of the Greek NLP toolkit, a Transformer-based Natural Language Processing Pipeline for Greek. This toolkit has state-of-the art accuracies in Greek and offers predictions for Named Entity Recognition, Part-of-Speech Tagging, Morphological Tagging as well as Dependency Parsing."
@@ -144,6 +140,10 @@
       ],
       "srv_audience_byjurisdiction": [
         "Global"
+      ],
+      "name": "Dependency Parser (Greek NLP toolkit)",
+      "other_names": [
+        "Dependency Parser (ÎÎ­ÏÎ¼Î· ÎµÏÎ³Î±Î»ÎµÎ¯ÏÎ½ ÎÎ¦Î Î³Î¹Î± ÏÎ± ÎµÎ»Î»Î·Î½Î¹ÎºÎ¬)"
       ]
     }
   ]

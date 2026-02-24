@@ -85,7 +85,6 @@
 
 
     "other_names": { "@id": "skos:altLabel" },
-    "srv_name": { "@id": "skos:prefLabel" },
     "name": { "@id": "foaf:name" },
 
     "srv_Service": "srv:Service",

@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11234/1-4669"
         }
       ],
-      "srv_name": [
-        "Image Annotation Tool"
-      ],
       "descriptions": {
         "none": [
           "Image annotation tool is a web application that allows users to mark zones of interest in an image. These zones are then converted to TEI P5 code snippet that can be used in your document to connect the image and the text. This tool was developed to help students and teachers at the Faculty of Arts, Charles University to mark and annotate images of manuscripts."
@@ -147,7 +144,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "Image Annotation Tool"
     }
   ]
 }

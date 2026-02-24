@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11234/1-4816"
         }
       ],
-      "srv_name": [
-        "UDPipe 2"
-      ],
       "descriptions": {
         "none": [
           "UDPipe 2 is a POS tagger, lemmatizer and dependency parser. \r\n\r\nCompared to UDPipe 1:\r\n\r\n- UDPipe 2 is Python-only and tested only in Linux,\r\n\r\n- UDPipe 2 is meant as a research tool, not as a user-friendly UDPipe 1 replacement,\r\n\r\n- UDPipe 2 achieves much better performance, but requires a GPU for reasonable performance,\r\n\r\n- UDPipe 2 does not perform tokenization by itself – it uses UDPipe 1 for that.\r\n\r\nUDPipe 2 is available in the udpipe-2 branch of the UDPipe repository at https://github.com/ufal/udpipe/tree/udpipe-2. It is a free software under Mozilla Public License 2.0 (http://www.mozilla.org/MPL/2.0/) and the models are free for non-commercial use and distributed under CC BY-NC-SA (http://creativecommons.org/licenses/by-nc-sa/4.0/) license, although for some models the original data used to create the model may impose additional licensing conditions.\r\n\r\nUDPipe 2 is also available as a REST service running at https://lindat.mff.cuni.cz/services/udpipe. If you like, you can use the https://github.com/ufal/udpipe/blob/udpipe-2/udpipe2_client.py script to interact with it."
@@ -146,7 +143,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "UDPipe 2"
     }
   ]
 }

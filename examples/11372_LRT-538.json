@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11372/LRT-538"
         }
       ],
-      "srv_name": [
-        "panacea_conversor"
-      ],
       "descriptions": {
         "none": [
           "Format conversion service: Panacea conversion tool"
@@ -111,7 +108,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "panacea_conversor"
     }
   ]
 }

@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11372/LRT-1402"
         }
       ],
-      "srv_name": [
-        "freeling"
-      ],
       "descriptions": {
         "none": [
           "Web service consisting of the Freeling open source language analysis tool suite."
@@ -112,7 +109,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "freeling"
     }
   ]
 }

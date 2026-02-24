@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11372/LRT-1418"
         }
       ],
-      "srv_name": [
-        "Catalan Annotated Corpora CQP"
-      ],
       "descriptions": {
         "none": [
           "This RESTful service allows to define a sub-corpus from different annotated corpora. The service includes a POS tag harmonisation process where original tags are converted to EAGLES/Parole format. The eventual sub-corpus is indexed using the IMS CWB tool. The user receives an ID which can be used by the CQP service to exploit the sub-corpus."
@@ -143,7 +140,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "Catalan Annotated Corpora CQP"
     }
   ]
 }

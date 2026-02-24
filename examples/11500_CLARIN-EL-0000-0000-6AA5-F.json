@@ -17,10 +17,6 @@
           "value": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-6AA5-F"
         }
       ],
-      "srv_name": [
-        "Translation engine Greek to English\n                (NTEU)",
-        "el-en-nteu"
-      ],
       "descriptions": {
         "en": [
           "Translation engine from Greek to English created as part of the NTEU project ."
@@ -142,6 +138,10 @@
             }
           }
         }
+      ],
+      "name": "Translation engine Greek to English\n                (NTEU)",
+      "other_names": [
+        "el-en-nteu"
       ]
     }
   ]

@@ -7,6 +7,8 @@ parent: Extensions
 #search_exclude: true
 ---
 
+*Please note that the Service extension is still work in progress*
+
 # Service extension
 
 

@@ -249,14 +249,18 @@ actions:
                         fake : ['{{internet.url}}/record/{{random.alphaNumeric(8)}}']
                       examples:
                         - "https://live.european-language-grid.eu/catalogue/tool-service/18189"
-              srv_name:
+              name:
+                type: string
+                description: The canonical (English) name of the service. Maps to foaf:name.
+                examples:
+                  - "UDPipe"
+              other_names:
                 type: array
-                description: The names of a [service] (multiple for multilingualism)
-              # simplified compared to earlier spec, no iso-639-1  qualified strings
+                description: Accepted alternative names of the service (e.g. native language names, short codes). Maps to skos:altLabel.
                 items:
                   type: string
                 examples:
-                  - ["UDPipe", "UDPipe 工具"]
+                  - ["UDPipe 工具"]
 
               descriptions:
                 type: object
@@ -292,8 +296,24 @@ actions:
                 examples:
                   - ["Global"]
                   - ["National", "Regional"]
-#TODO
-#              disciplines:
+              disciplines:
+                type: array
+                description: |
+                  Disciplines to which the service is dedicated, using Library of Congress Classification codes (https://id.loc.gov/authorities/classification).
+                  Use the prefix `loc:` defined in the context. In case the service is discipline-agnostic, use `["all"]`.
+                items:
+                  type: string
+                examples:
+                  - ["loc:P98-98.5"]
+                  - ["all"]
+
+              keywords:
+                type: array
+                description: Keywords relevant for service discovery. Values may be simple strings or concept URIs.
+                items:
+                  type: string
+                examples:
+                  - ["https://www.wikidata.org/wiki/Q30642", "parsing", "NLP"]
 
               is_accessible_for_free:
                 description: A property to flag that the Service is accessible for free, in the academic world most services are free or have a free modus
@@ -466,26 +486,43 @@ actions:
 
               relevant_organisations:
                 type: array
-                description: list of relevant organisation  associated with the `service`, in case the individual affiliations of a `person` do not fit the contribution or are not available.
+                description: >
+                  List of relevant Organisation identifiers associated with the `service`, in case
+                  individual affiliations do not fit the contribution or are not available.
+                  Each item may be a plain identifier string (local_identifier or external URI such
+                  as a ROR URL) or a full Organisation object. API responses may expand identifiers
+                  to full Organisation objects.
                 items:
-                  $ref: '#/components/schemas/Organisation'
-                example:
-                  - local_identifier: https://ror.org/00dd4fz34
-                    entity_type: organisation
-                    name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
-                    short_name: "LINDAT"
-                    types: [facility, hosting_organisation]
-                    country: CZ
-                  - local_identifier: https://ror.org/024d6js02
-                    entity_type: organisation
-                    name: "Charles University"
-                    types: [education, research]
-                    country: CZ
-                  - local_identifier: https://ror.org/03wp25384
-                    entity_type: organisation
-                    name: "CLARIN ERIC"
-                    types: [facility, research_infrastructure]
-                    country: NL
+                  anyOf:
+                    - type: string
+                      format: uri
+                      description: Organisation identifier (local_identifier or external URI)
+                    - $ref: '#/components/schemas/Organisation'
+                examples:
+                  simple:
+                    summary: Flat identifier list (input / storage form)
+                    value:
+                      - "https://ror.org/024d6js02"
+                      - "https://ror.org/03wp25384"
+                  expanded:
+                    summary: Expanded Organisation objects (API response form)
+                    value:
+                      - local_identifier: https://ror.org/00dd4fz34
+                        entity_type: organisation
+                        name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
+                        short_name: "LINDAT"
+                        types: [facility, hosting_organisation]
+                        country: CZ
+                      - local_identifier: https://ror.org/024d6js02
+                        entity_type: organisation
+                        name: "Charles University"
+                        types: [education, research]
+                        country: CZ
+                      - local_identifier: https://ror.org/03wp25384
+                        entity_type: organisation
+                        name: "CLARIN ERIC"
+                        types: [facility, research_infrastructure]
+                        country: NL
 
 #some additional organisation types should be added, see below
 

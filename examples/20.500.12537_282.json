@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/20.500.12537/282"
         }
       ],
-      "srv_name": [
-        "TTS Document Reader (22.10)"
-      ],
       "descriptions": {
         "none": [
           "ENGLISH:\r\nThis project contains a web application where users can upload a text document for reading by a TTS system. To set up this application you need a connection to a TTS service, the communication with the service is implemented in a way that matches the TTS service interface as implemented by the LT program. The application is written in Ruby-on-Rails.\r\n\r\nÍSLENSKA:\r\nÞessi hugbúnaðarpakki inniheldur vefviðmótið Skjalalestur. Notendur geta hlaðið upp textaskjölum og fengið .mp3-skrá til baka þar sem skjalið hefur verið lesið af talgervli. Til þess að setja upp viðmótið þarf að hafa aðgang að talgervilsþjónustu. Ef nota á hugbúnaðinn óbreyttan þarf talgervilsþjónustan að hafa sömu forritunarskil (API) og talgervilsþjónustan sem þróuð var innan íslensku máltækniáætlunarinnar."
@@ -138,7 +135,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "TTS Document Reader (22.10)"
     }
   ]
 }

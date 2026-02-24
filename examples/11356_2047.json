@@ -17,9 +17,6 @@
           "value": "https://hdl.handle.net/11356/2047"
         }
       ],
-      "srv_name": [
-        "ASR model evaluator"
-      ],
       "descriptions": {
         "none": [
           "Docker image with ASR evaluation tool that has support for WER calculation on punctuated and capitalised transcripts. The UI allows uploading the reference and predicted transcripts, and choice to perform WER calculation with or without consideration of punctuation and capitalisation. When punctuation and capitalisation is considered the resulting WER is augmented by the accuracy, recall and F1 statistics for punctuation (comma, full stop, question mark, exclamation point) and capital letters.\r\n\r\nStart the service by running \"docker image load <evaluator.1.0.3.tar.gz\" followed by \"docker run -ti --rm eval-service:1.0.3\". This will start a web service on http://localhost:8888. Use the tool by visiting the said address."
@@ -149,7 +146,8 @@
             }
           }
         }
-      ]
+      ],
+      "name": "ASR model evaluator"
     }
   ]
 }
