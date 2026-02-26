@@ -499,30 +499,26 @@ actions:
                       description: Organisation identifier (local_identifier or external URI)
                     - $ref: '#/components/schemas/Organisation'
                 examples:
-                  simple:
-                    summary: Flat identifier list (input / storage form)
-                    value:
-                      - "https://ror.org/024d6js02"
-                      - "https://ror.org/03wp25384"
-                  expanded:
-                    summary: Expanded Organisation objects (API response form)
-                    value:
-                      - local_identifier: https://ror.org/00dd4fz34
-                        entity_type: organisation
-                        name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
-                        short_name: "LINDAT"
-                        types: [facility, hosting_organisation]
-                        country: CZ
-                      - local_identifier: https://ror.org/024d6js02
-                        entity_type: organisation
-                        name: "Charles University"
-                        types: [education, research]
-                        country: CZ
-                      - local_identifier: https://ror.org/03wp25384
-                        entity_type: organisation
-                        name: "CLARIN ERIC"
-                        types: [facility, research_infrastructure]
-                        country: NL
+                  # Flat identifier list (input / storage form)
+                  - - "https://ror.org/024d6js02"
+                    - "https://ror.org/03wp25384"
+                  # Expanded Organisation objects (API response form)
+                  - - local_identifier: https://ror.org/00dd4fz34
+                      entity_type: organisation
+                      name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
+                      short_name: "LINDAT"
+                      types: [facility, hosting_organisation]
+                      country: CZ
+                    - local_identifier: https://ror.org/024d6js02
+                      entity_type: organisation
+                      name: "Charles University"
+                      types: [education, research]
+                      country: CZ
+                    - local_identifier: https://ror.org/03wp25384
+                      entity_type: organisation
+                      name: "CLARIN ERIC"
+                      types: [facility, research_infrastructure]
+                      country: NL
 
 #some additional organisation types should be added, see below
 
