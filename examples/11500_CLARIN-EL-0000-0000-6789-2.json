@@ -23,7 +23,7 @@
         ]
       },
       "keywords": [
-        "Î¼Î¿ÏÏÎ¿Î»Î¿Î³Î¹ÎºÎ¬ ÏÎ±ÏÎ±ÎºÏÎ·ÏÎ¹ÏÏÎ¹ÎºÎ¬",
+        "μορφολογικά χαρακτηριστικά",
         "morphological features",
         "MorphologicalAnnotation",
         "MorphologicalFeature",
@@ -144,7 +144,7 @@
       ],
       "name": "Morphological Tagger (Greek NLP toolkit)",
       "other_names": [
-        "ÎÎ¿ÏÏÎ¿Î»Î¿Î³Î¹ÎºÏÏ Tagger (ÎÎ­ÏÎ¼Î· ÎµÏÎ³Î±Î»ÎµÎ¯ÏÎ½ Î³Î¹Î± ÎÎ¦Î Î³Î¹Î± ÏÎ± ÎµÎ»Î»Î·Î½Î¹ÎºÎ¬)",
+        "Μορφολογικός Tagger (Δέσμη εργαλείων για ΕΦΓ για τα ελληνικά)",
         "Morphological Tagger (gr-nlp-toolkit)"
       ]
     }

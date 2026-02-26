@@ -26,9 +26,9 @@
         ]
       },
       "keywords": [
-        "Î¼Î¿ÏÏÎ¿ÏÏÎ½ÏÎ±ÎºÏÎ¹ÎºÎ® ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ·",
+        "μορφοσυντακτική επισημείωση",
         "morphosyntactic annotation",
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
         "MorphosyntacticTagging",
         "Sentence",
@@ -194,7 +194,7 @@
       ],
       "name": "OpenNLP Part-of-Speech Tagger (English)",
       "other_names": [
-        "OpenNLP Part-of-Speech Tagger (ÎÎ³Î³Î»Î¹ÎºÎ¬)",
+        "OpenNLP Part-of-Speech Tagger (Αγγλικά)",
         "OpenNLP_PoS_en"
       ]
     }

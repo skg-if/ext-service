@@ -26,7 +26,7 @@
         ]
       },
       "keywords": [
-        "ÎµÏÎµÎ¾ÎµÏÎ³Î±ÏÏÎ®Ï Î¿Î½ÏÎ¿Î»Î¿Î³Î¹ÏÎ½",
+        "επεξεργαστής οντολογιών",
         "editor for ontologies",
         "LexiconCreation",
         "LexiconEnhancement",
@@ -155,7 +155,7 @@
       ],
       "name": "ELEON ontology authoring and enrichment tool",
       "other_names": [
-        "ÎÏÎ³Î±Î»ÎµÎ¯Î¿ ÏÏÎ³Î³ÏÎ±ÏÎ®Ï ÎºÎ±Î¹ ÎµÎ¼ÏÎ»Î¿ÏÏÎ¹ÏÎ¼Î¿Ï Î¿Î½ÏÎ¿Î»Î¿Î³Î¹ÏÎ½ ELEON"
+        "Εργαλείο συγγραφής και εμπλουτισμού οντολογιών ELEON"
       ]
     }
   ]

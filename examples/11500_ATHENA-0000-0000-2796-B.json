@@ -26,11 +26,11 @@
         ]
       },
       "keywords": [
-        "ÎºÎ±ÏÎ¬ÏÎ¼Î·ÏÎ·",
+        "κατάτμηση",
         "segmentation",
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
-        "Î±Î½Î¯ÏÎ½ÎµÏÏÎ· ÏÏÎ¿ÏÎ¬ÏÎµÏÎ½",
+        "ανίχνευση προτάσεων",
         "sentence detector",
         "SentenceSplitting",
         "Sentence"
@@ -164,7 +164,7 @@
       ],
       "name": "OpenNLP Sentence Detector (Portuguese)",
       "other_names": [
-        "OpenNLP Sentence Detector (Î Î¿ÏÏÎ¿Î³Î±Î»Î¹ÎºÎ¬)",
+        "OpenNLP Sentence Detector (Πορτογαλικά)",
         "OpenNLP_sent_pt"
       ]
     }

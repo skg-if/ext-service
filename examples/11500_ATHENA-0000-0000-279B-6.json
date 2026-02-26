@@ -26,9 +26,9 @@
         ]
       },
       "keywords": [
-        "ÏÎ¼Î·Î¼Î±ÏÎ¿ÏÎ¿Î¯Î·ÏÎ·",
+        "τμηματοποίηση",
         "segmentation",
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
         "Tokenization",
         "Sentence",
@@ -163,7 +163,7 @@
       ],
       "name": "OpenNLP Tokenizer (German)",
       "other_names": [
-        "OpenNLP Tokenizer (ÎÎµÏÎ¼Î±Î½Î¹ÎºÎ¬)",
+        "OpenNLP Tokenizer (Γερμανικά)",
         "OpenNLP_tok_de"
       ]
     }

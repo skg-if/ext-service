@@ -26,9 +26,9 @@
         ]
       },
       "keywords": [
-        "Î¿Î½Î¿Î¼Î±ÏÎ¹ÎºÎ­Ï Î¿Î½ÏÏÏÎ·ÏÎµÏ",
+        "ονοματικές οντότητες",
         "named entities",
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
         "NamedEntityRecognition",
         "Sentence",
@@ -180,7 +180,7 @@
       ],
       "name": "OpenNLP Name Finder (English)",
       "other_names": [
-        "OpenNLP Name Finder (ÎÎ³Î³Î»Î¹ÎºÎ¬)",
+        "OpenNLP Name Finder (Αγγλικά)",
         "OpenNLP_Name_en"
       ]
     }

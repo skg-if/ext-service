@@ -26,9 +26,9 @@
         ]
       },
       "keywords": [
-        "Î¿Î½Î¿Î¼Î±ÏÎ¹ÎºÎ­Ï Î¿Î½ÏÏÏÎ·ÏÎµÏ",
+        "ονοματικές οντότητες",
         "named entities",
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
         "NamedEntityRecognition",
         "Token",
@@ -202,7 +202,7 @@
       ],
       "name": "Annotator of Named Entities GrNE-Tagger",
       "other_names": [
-        "ÎÏÎ¹ÏÎ·Î¼ÎµÎ¹ÏÏÎ®Ï ÎÎ½Î¿Î¼Î±ÏÎ¹ÎºÏÎ½ ÎÎ½ÏÎ¿ÏÎ®ÏÏÎ½ GrNE-Tagger",
+        "Επισημειωτής Ονοματικών Οντοτήτων GrNE-Tagger",
         "GrNE-Tagger"
       ]
     }

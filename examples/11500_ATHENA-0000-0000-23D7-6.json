@@ -26,11 +26,11 @@
         ]
       },
       "keywords": [
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
-        "ÏÏÎ±ÏÎ¹ÏÏÎ¹ÎºÎ® ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯Î±",
+        "στατιστική πληροφορία",
         "statistical information",
-        "ÏÎ¿ÏÎ¿ÏÎ¹ÎºÎ­Ï Î¼ÎµÏÏÎ®ÏÎµÎ¹Ï",
+        "ποσοτικές μετρήσεις",
         "quantititative measures",
         "LinguisticAnalysis",
         "ExtractionOfQuantitativeInformation",
@@ -193,7 +193,7 @@
       ],
       "name": "SEL - Tool for extracting words or letter combinations based on quantitative criteria",
       "other_names": [
-        "SEL - ÎÏÎ³Î±Î»ÎµÎ¯Î¿ ÎµÎ¾Î±Î³ÏÎ³Î®Ï Î»Î­Î¾ÎµÏÎ½ Î® ÏÏÎ½Î´ÏÎ±ÏÎ¼ÏÎ½ Î³ÏÎ±Î¼Î¼Î¬ÏÏÎ½ Î¼Îµ Î²Î¬ÏÎ· ÏÎ¿ÏÎ¿ÏÎ¹ÎºÎ¬ ÎºÏÎ¹ÏÎ®ÏÎ¹Î±",
+        "SEL - Εργαλείο εξαγωγής λέξεων ή συνδυασμών γραμμάτων με βάση ποσοτικά κριτήρια",
         "SEL"
       ]
     }

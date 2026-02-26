@@ -26,11 +26,11 @@
         ]
       },
       "keywords": [
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
-        "ÏÏÎ±ÏÎ¹ÏÏÎ¹ÎºÎ® ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯Î±",
+        "στατιστική πληροφορία",
         "statistical information",
-        "ÏÎ¿ÏÎ¿ÏÎ¹ÎºÎ­Ï Î¼ÎµÏÏÎ®ÏÎµÎ¹Ï",
+        "ποσοτικές μετρήσεις",
         "quantititative measures",
         "LinguisticAnalysis",
         "ExtractionOfQuantitativeInformation",
@@ -178,7 +178,7 @@
       ],
       "name": "TEXT - Tool for extracting information for one-letter strings",
       "other_names": [
-        "TEXT - ÎÏÎ³Î±Î»ÎµÎ¯Î¿ ÎµÎ¾Î±Î³ÏÎ³Î®Ï ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯Î±Ï Î³Î¹Î± Î³ÏÎ¬Î¼Î¼Î±ÏÎ±",
+        "TEXT - Εργαλείο εξαγωγής πληροφορίας για γράμματα",
         "TEXT"
       ]
     }

@@ -26,11 +26,11 @@
         ]
       },
       "keywords": [
-        "ÎºÎµÎ¯Î¼ÎµÎ½Î¿",
+        "κείμενο",
         "text",
-        "ÏÏÎ±ÏÎ¹ÏÏÎ¹ÎºÎ® ÏÎ»Î·ÏÎ¿ÏÎ¿ÏÎ¯Î±",
+        "στατιστική πληροφορία",
         "statistical information",
-        "ÏÎ¿ÏÎ¿ÏÎ¹ÎºÎ­Ï Î¼ÎµÏÏÎ®ÏÎµÎ¹Ï",
+        "ποσοτικές μετρήσεις",
         "quantititative measures",
         "LinguisticAnalysis",
         "ExtractionOfQuantitativeInformation",
@@ -178,7 +178,7 @@
       ],
       "name": "NUM - Tool for extraction of quantitative measures",
       "other_names": [
-        "NUM - ÎÏÎ³Î±Î»ÎµÎ¯Î¿ ÏÏÎ¿Î»Î¿Î³Î¹ÏÎ¼Î¿Ï ÏÎ¿ÏÎ¿ÏÎ¹ÎºÏÎ½ Î¼ÎµÏÏÎ®ÏÎµÏÎ½",
+        "NUM - Εργαλείο υπολογισμού ποσοτικών μετρήσεων",
         "NUM"
       ]
     }
