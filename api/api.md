@@ -83,7 +83,7 @@ Substring and cross-field search filters — not direct attributes of the `servi
 
 | Filter key | Filter value | Returns |
 |---|---|---|
-| cf.search.name | string | services with `name` or `srv_name` containing the value (case-insensitive) |
+| cf.search.name | string | services with `name` containing the value (case-insensitive) |
 | cf.search.keyword | string | services with a keyword containing the value |
 | cf.search.org_name | string | services with any related organisation `name` or `short_name` containing the value (searches across `relevant_organisations`, `srv_has_hosting_legal_entity`, `srv_has_hosting_organisation`, `srv_has_research_infrastructure`) |
 

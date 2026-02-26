@@ -68,15 +68,10 @@ def matches_filter(graph_item: dict, key: str, value: str) -> bool:
     Supports nested dotted paths and cf.search.* convenience filters."""
     # Convenience filters
     if key == "cf.search.name":
-        # Services use srv_name; other entities use name
-        for field in ("name", "srv_name"):
-            val = graph_item.get(field, "")
-            if isinstance(val, list):
-                if any(value.lower() in n.lower() for n in val if isinstance(n, str)):
-                    return True
-            elif val and value.lower() in str(val).lower():
-                return True
-        return False
+        val = graph_item.get("name", "")
+        if isinstance(val, list):
+            return any(value.lower() in n.lower() for n in val if isinstance(n, str))
+        return bool(val and value.lower() in str(val).lower())
     if key == "cf.search.keyword":
         keywords = graph_item.get("keywords", [])
         if isinstance(keywords, str):
@@ -110,11 +105,7 @@ def matches_filter(graph_item: dict, key: str, value: str) -> bool:
         return any(str(v).lower() == value.lower() for v in resolved)
 
     # Attribute filters — resolve dotted path
-    # For 'name' key: also try srv_name (Service entities use srv_name instead of name)
-    if key == "name":
-        resolved = resolve_dotted_path(graph_item, "name") or resolve_dotted_path(graph_item, "srv_name")
-    else:
-        resolved = resolve_dotted_path(graph_item, key)
+    resolved = resolve_dotted_path(graph_item, key)
     return any(str(v).lower() == value.lower() for v in resolved)
 
 

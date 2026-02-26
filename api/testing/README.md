@@ -71,10 +71,7 @@ DATA_PATH=/absolute/path/to/data docker compose up
 
 ## Service-specific changes in app.py
 
-This `docker_build/app.py` is based on `api/openapi/docker_build/app.py` with two fixes for the Service entity:
-
-- `cf.search.name` — searches both `name` and `srv_name` fields (Service entities use `srv_name`)
-- `filter=name:<value>` — resolves to `srv_name` field when `name` is absent
+This `docker_build/app.py` is based on `api/openapi/docker_build/app.py` with no functional differences for Service entities — `name` is used as the standard field for service names.
 
 ## Docker images
 
