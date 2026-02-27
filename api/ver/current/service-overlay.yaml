@@ -195,6 +195,9 @@ actions:
                         maxItems: 1
                         items:
                           $ref: "#/components/schemas/Service"
+            '404':
+              description: |
+                Error if entity does not exist
 
   - target: $.components.parameters
     update:

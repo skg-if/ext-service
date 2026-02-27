@@ -951,13 +951,42 @@ async def read_root():
     return "<h1>Hello, World!</h1><p>Example: <a href='/products/test.json'>/products/test.json</a></p>"
 
 
+# Per-type index: local_identifier value → absolute filepath (built lazily, cached)
+_lid_index: dict[str, dict[str, str]] = {}
+
+
+def _get_lid_index(type_path: str) -> dict[str, str]:
+    """Return (and lazily build) a mapping from local_identifier → filepath for type_path."""
+    if type_path in _lid_index:
+        return _lid_index[type_path]
+    index: dict[str, str] = {}
+    type_dir = os.path.join(data_root, type_path)
+    if os.path.isdir(type_dir):
+        for fname in os.listdir(type_dir):
+            if not fname.endswith(".json"):
+                continue
+            fpath = os.path.join(type_dir, fname)
+            try:
+                with open(fpath) as f:
+                    doc = json.load(f)
+                for item in doc.get("@graph", []):
+                    lid = item.get("local_identifier")
+                    if lid:
+                        index[lid] = fpath
+            except Exception:
+                pass
+    _lid_index[type_path] = index
+    return index
+
+
 # short_local_identifier may contain slashes (e.g. 11234/1-1451)
 @app.get("/{type_path}/{short_local_identifier:path}")
 async def get_file(type_path: str, short_local_identifier: str, accept: str | None = Query(None)):
     logger.warning(f"type_path: {type_path}, short_local_identifier: {short_local_identifier}")
     accept_header = get_accept_header(accept)
 
-    # Map short_local_identifier to filename: replace / with _ and try with/without .json
+    # 1. Filename-based lookup: replace / with _ and try with/without .json extension.
+    #    Covers plain-string and on-the-fly local_identifier forms.
     filename_base = short_local_identifier.replace("/", "_")
     candidates = [short_local_identifier, filename_base]
     for base in [short_local_identifier, filename_base]:
@@ -970,6 +999,13 @@ async def get_file(type_path: str, short_local_identifier: str, accept: str | No
             with open(full_path, "r") as file:
                 data = json.load(file)
             return create_response(data, accept_header)
+
+    # 2. local_identifier index lookup: supports full-URL forms (sandbox, handle, etc.)
+    lid_index = _get_lid_index(type_path)
+    if short_local_identifier in lid_index:
+        with open(lid_index[short_local_identifier]) as f:
+            data = json.load(f)
+        return create_response(data, accept_header)
 
     return JSONResponse(content={"error": f"No record found for: {short_local_identifier}"}, status_code=404)
 

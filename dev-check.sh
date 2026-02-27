@@ -131,12 +131,125 @@ info "Step 5: Starting Docker development stack"
 
 cp "$CONSOLIDATED" "$DOCKER_DIR/openapi.yaml"
 ok "Copied consolidated spec to $DOCKER_DIR/openapi.yaml"
+sleep 2   # let Prism detect the spec change and begin reload before we poll
 
 echo "  Starting Prism + FastAPI + Swagger UI..."
 echo "  → Prism mock/proxy:  http://localhost:4010"
 echo "  → Swagger UI:        http://localhost:8080"
-echo "  Press Ctrl+C to stop."
 echo ""
 
 cd "$DOCKER_DIR"
-docker compose up
+docker compose up -d \
+    && ok "Containers started (detached)" \
+    || fail "docker compose up failed"
+
+# Restart fastapi to ensure it loads the latest app.py from the volume mount.
+# uvicorn StatReload can miss changes due to macOS bind-mount cache timing.
+docker compose restart fastapi \
+    && ok "FastAPI restarted (latest app.py loaded)" \
+    || fail "docker compose restart fastapi failed"
+
+echo ""
+echo "  Opening container log stream in a new Terminal window..."
+osascript - "$DOCKER_DIR" <<'APPLESCRIPT'
+on run argv
+    set dockerDir to item 1 of argv
+    tell application "Terminal"
+        do script "echo '── SKG-IF dev stack logs ──' && cd " & quoted form of dockerDir & " && docker compose logs -f"
+        activate
+    end tell
+end run
+APPLESCRIPT
+
+ok "Done. Use 'docker compose down' in $DOCKER_DIR to stop."
+
+# ── Step 6: API smoke tests ───────────────────────────────────────────────────
+info "Step 6: Waiting for Prism to be ready"
+
+PRISM_URL="http://localhost:4010"
+MAX_WAIT=30
+for i in $(seq 1 $MAX_WAIT); do
+    if curl -s -o /dev/null -w "%{http_code}" "$PRISM_URL/services" | grep -q "^[23]"; then
+        ok "Prism is ready (after ${i}s)"
+        break
+    fi
+    if [[ $i -eq $MAX_WAIT ]]; then
+        fail "Prism did not become ready after ${MAX_WAIT}s"
+    fi
+    sleep 1
+done
+
+info "Step 6: Running API smoke tests against $PRISM_URL"
+
+PASS=0; FAIL=0
+
+# Helper: run a curl call, check expected HTTP status, optionally grep response body
+api_test() {
+    local description="$1"
+    local expected_status="$2"
+    local url="$3"
+    local body_check="${4:-}"   # optional string that must appear in the response body
+
+    local response
+    response=$(curl -s -w "\n__STATUS__%{http_code}" "$url") \
+        || response=$'\n__STATUS__000'
+    local body="${response%$'\n'__STATUS__*}"
+    local status="${response##*__STATUS__}"
+
+    local status_ok=false
+    local body_ok=true
+
+    [[ "$status" == "$expected_status" ]] && status_ok=true
+    if [[ -n "$body_check" ]] && ! echo "$body" | grep -q "$body_check"; then
+        body_ok=false
+    fi
+
+    if $status_ok && $body_ok; then
+        ok "[$status] $description"
+        PASS=$((PASS+1))
+    else
+        local reason=""
+        $status_ok || reason+=" status=${status} (expected ${expected_status})"
+        $body_ok   || reason+=" missing '${body_check}' in body"
+        echo -e "${RED}✗${NC} [$status] $description —$reason"
+        FAIL=$((FAIL+1))
+    fi
+}
+
+# ── /services  (list) ─────────────────────────────────────────────────────────
+api_test "GET /services  (all)"                            200 "$PRISM_URL/services"                                                                    "@graph"
+api_test "GET /services  page=1 page_size=5"              200 "$PRISM_URL/services?page=1&page_size=5"                                                  "@graph"
+
+# ── /services  attribute filters ─────────────────────────────────────────────
+api_test "filter: country:CZ"                             200 "$PRISM_URL/services?filter=country:CZ"                                                   "entity_type"
+api_test "filter: name:UDPipe"                            200 "$PRISM_URL/services?filter=name:UDPipe"                                                  "UDPipe"
+api_test "filter: identifiers.scheme:handle"              200 "$PRISM_URL/services?filter=identifiers.scheme:handle"                                    "handle"
+api_test "filter: identifiers.value (handle URI)"         200 "$PRISM_URL/services?filter=identifiers.value:https://hdl.handle.net/11234/1-4816"        "11234"
+api_test "filter: srv_invocation_type:webApplication"     200 "$PRISM_URL/services?filter=srv_invocation_type:sshocinvt:webApplication"                 "entity_type"
+api_test "filter: relevant_organisations.name:CLARIN"     200 "$PRISM_URL/services?filter=relevant_organisations.name:CLARIN"                          "entity_type"
+api_test "filter: srv_has_research_infrastructure.name"   200 "$PRISM_URL/services?filter=srv_has_research_infrastructure.name:CLARIN%20ERIC"          "entity_type"
+api_test "filter: srv_has_hosting_organisation.name"      200 "$PRISM_URL/services?filter=srv_has_hosting_organisation.name:LINDAT"                     "entity_type"
+api_test "filter: srv_has_hosting_legal_entity (ROR)"     200 "$PRISM_URL/services?filter=srv_has_hosting_legal_entity.identifiers.scheme:ror,srv_has_hosting_legal_entity.identifiers.value:https://ror.org/024d6js02" "entity_type"
+
+# ── /services  convenience filters ───────────────────────────────────────────
+api_test "cf.search.name:UDPipe"                          200 "$PRISM_URL/services?filter=cf.search.name:UDPipe"                                        "UDPipe"
+api_test "cf.search.keyword:morphology"                   200 "$PRISM_URL/services?filter=cf.search.keyword:morphology"                                 "entity_type"
+api_test "cf.search.org_name:LINDAT"                      200 "$PRISM_URL/services?filter=cf.search.org_name:LINDAT"                                    "entity_type"
+
+# ── /services/{id}  (by identifier) — all local_identifier forms ─────────────
+# form 2: plain string resolved via @base (slashes encoded as %2F)
+api_test "GET /services/{id}  plain string (handle path)" 200 "$PRISM_URL/services/11234%2F1-4816"                                                                         "local_identifier"
+api_test "GET /services/{id}  plain string (ATHENA)"      200 "$PRISM_URL/services/11500%2FATHENA-0000-0000-588F-D"                                                         "local_identifier"
+# form 3: on-the-fly plain string (no slashes, resolved via @base)
+api_test "GET /services/{id}  on-the-fly identifier"      200 "$PRISM_URL/services/otf___1730027051396___svc-test-1"                                                        "local_identifier"
+# form 1: full URL — sandbox (percent-encoded)
+api_test "GET /services/{id}  full URL sandbox"           200 "$PRISM_URL/services/https%3A%2F%2Fw3id.org%2Fskg-if%2Fsandbox%2Fclarin-vlo%2F11234%2F1-4816"                "local_identifier"
+# form 1: full URL — non-sandbox (OpenCitations URI, srv_1.json)
+api_test "GET /services/{id}  full URL non-sandbox"       200 "$PRISM_URL/services/https%3A%2F%2Fw3id.org%2Foc%2Fmeta%2Fra%2F0614010840729"                                "local_identifier"
+# 404
+api_test "GET /services/{id}  not found → 404"            404 "$PRISM_URL/services/does-not-exist"
+
+# ── summary ───────────────────────────────────────────────────────────────────
+echo ""
+echo -e "  Tests passed: ${GREEN}${PASS}${NC}   Failed: ${RED}${FAIL}${NC}"
+[[ $FAIL -eq 0 ]] && ok "All API smoke tests passed." || fail "${FAIL} smoke test(s) failed."
