@@ -10,7 +10,7 @@ HTTP client
     ↓
 Prism :4010  [proxy mode — validates requests/responses against the OpenAPI spec]
     ↓
-FastAPI :8000  [serves service JSON-LD files from ./data/services/]
+FastAPI :8000  [serves service JSON-LD files from examples/]
 ```
 
 Swagger UI is available at :8080.
@@ -32,16 +32,8 @@ cp ../../../api/consolidated-openapi.yaml ./openapi.yaml
 
 ### 2. Provide service data
 
-The FastAPI backend reads JSON-LD files from `./data/services/`. Either copy or symlink your data:
-
-```bash
-# copy from api/Docker (if available)
-cp -r ../../../api/Docker/data/services ./data/services
-
-# or symlink to an external data directory
-mkdir -p data
-ln -s /path/to/your/jsonld_files ./data/services
-```
+The FastAPI backend reads JSON-LD files from `examples/` (the repository's single source of truth).
+`docker-compose.yml` mounts `../../examples` by default — no manual data copy or symlink needed.
 
 ### 3. Start
 
@@ -61,7 +53,7 @@ docker compose up
 |-----------------|---------------------|--------------------------------------|
 | `OPENAPI_SPEC`  | `./openapi.yaml`    | Path to the OpenAPI spec             |
 | `DATA_PATH`     | `./data`            | Root data directory                  |
-| `SERVICES_DATA` | `./data/services`   | Services JSON-LD directory           |
+| `SERVICES_DATA` | `../../examples`    | Services JSON-LD directory           |
 
 Example with overrides:
 
