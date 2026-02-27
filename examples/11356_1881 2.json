@@ -9,7 +9,7 @@
   ],
   "@graph": [
     {
-      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11356/1881",
+      "local_identifier": "https://hdl.handle.net/11356/1881",
       "entity_type": "service",
       "identifiers": [
         {
@@ -64,6 +64,40 @@
           "website": "https://vlo.clarin.eu",
           "types": [
             "srv_portal"
+          ]
+        }
+      ],
+      "relevant_organisations": [
+        {
+          "local_identifier": "https://ror.org/05060sz93",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/05060sz93"
+            }
+          ],
+          "name": "Jožef Stefan Institute",
+          "country": "SI",
+          "short_name": "CLARIN.SI",
+          "types": [
+            "facility",
+            "hosting_organisation"
+          ]
+        },
+        {
+          "local_identifier": "https://ror.org/04wr6tn02",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/04wr6tn02"
+            }
+          ],
+          "name": "Institute of Contemporary History",
+          "country": "SI",
+          "types": [
+            "research"
           ]
         }
       ],

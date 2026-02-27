@@ -1,6 +1,7 @@
 {
   "@context": [
-    "https://w3id.org/skg-if/context/skg-if.json",
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
     {
       "@base": "https://w3id.org/skg-if/sandbox/oc/"
     },
@@ -73,22 +74,24 @@
           "country": "CZ"
         }
       ],
-      "srv_has_research_infrastructure": {
-        "local_identifier": "https://ror.org/03wp25384",
-        "entity_type": "organisation",
-        "identifiers": [
-          {
-            "scheme": "ror",
-            "value": "https://ror.org/03wp25384"
-          }
-        ],
-        "name": "CLARIN ERIC",
-        "types": [
-          "facility",
-          "research_infrastructure"
-        ],
-        "country": "NL"
-      },
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "name": "CLARIN ERIC",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "country": "NL"
+        }
+      ],
       "name": "UDPipe",
       "other_names": [
         "UDPipe 工具"
