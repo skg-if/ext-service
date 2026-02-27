@@ -86,7 +86,7 @@ check SYNC     "base_query.py"     "openapi/docker_build/base_query.py"    "dock
 echo ""
 echo "── diverged files (manual merge required) ───────────────────────────────────"
 check DIVERGED "docker_build/app.py"  "openapi/docker_build/app.py"  "docker_build/app.py"
-echo "   (ext-srv change: cf.search.name and 'name' filter also resolve srv_name)"
+echo "   (review any ext-srv specific filter changes)"
 echo ""
 check DIVERGED "docker-compose.yml"   "Docker/docker-compose.yml"    "docker-compose.yml"
 echo "   (ext-srv change: app.py mount is ./docker_build/app.py, not ../openapi/docker_build/app.py)"
