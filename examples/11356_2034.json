@@ -22,7 +22,7 @@
           "Drevesnik (https://orodja.cjvt.si/drevesnik/) is an online service for querying Slovenian corpora parsed with the Universal Dependencies annotation scheme. It features an easy-to-use query language on the one hand and user-friendly graph visualizations on the other. \r\n\r\nIt is based on the open-source dep_search tool (https://github.com/TurkuNLP/dep_search), which was localized and modified so as to also support querying by JOS morphosyntactic tags, random distribution of results, and filtering by sentence length. \r\n\r\nThe source code and the documentation for the search backend and the web user interface are publicly available on the CLARIN.SI GitHub repository https://github.com/clarinsi/drevesnik. In comparison to previous version (1.1), release 1.2 introduces a new front-end design and some improved interface features."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "treebanks",
         "dependency trees",
         "universal dependencies",

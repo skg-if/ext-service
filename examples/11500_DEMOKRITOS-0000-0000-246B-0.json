@@ -25,7 +25,7 @@
           "Ellogon natural language processing platform is an infrastructure for creating natural language processing applications. As a platform, it provides an environment that supports the development of natural language processing modules in various programming languages (indicatively C, C++, Tcl, Python, Perl, Java) ensuring communication and interoperability between them. In addition, it provides functions that deal with basic standard tasks needed by natural language processing modules or the end user, such as: - Corpus management (creating, saving, modifying, tagging, retrieving). - Management of (linguistic) information related to text processing, through the form of 'annotations'. - Search/retrieval of information related to text processing. - Management of modules and creation of 'applications' (sequences of modules performing a specific natural language processing task, such as entity name recognition). - manipulation of the platform both through a graphical interface and through macros stored in files (scripts); - presentation of information related to text processing to the end user through appropriate visualisation tools. - Modification of information related to text processing by the end user through appropriate markup tools. - Machine that build annotation tools, adapting to end-user defined annotation schemes, via XML files. &nbsp;"
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "πλατφόρμα επισημείωσης",
         "annotation platform",
         "πλατφόρμα επεξεργασίας φυσικής γλώσσας",

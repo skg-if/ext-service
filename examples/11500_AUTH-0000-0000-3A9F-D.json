@@ -25,7 +25,7 @@
           "The Online Discourse Analysis Tool ElConc is an online toolkit for text analysis and concordancing. ElConc can process any text up to 300.000 words by copying the text and then pasting it in the text box that you can find in its first screen. Pressing the “Continue” button, you can see the word frequencies table which presents each word by descending frequencies order and on the right side, there are options like: a) Concordance plot for specific keyword (the user must enter a keyword) b) Bar chart for up to four words (the bar chart presents the word’s distribution among the text) c) N-grams (N=2,3,4,5) which shows N length clusters."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "text analysis",
         "concordances",
         "word frequencies",

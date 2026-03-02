@@ -23,7 +23,7 @@
           "The LINDAT-CLARIN project (LM2010013), fully supported by TheMinistry of Education, Sports and Youth of The Czech Republic under the programme LM of \"Large Infrastructures\""
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "grammar checker",
         "spellchecker"
       ],

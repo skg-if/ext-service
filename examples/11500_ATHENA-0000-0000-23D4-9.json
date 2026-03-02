@@ -25,7 +25,7 @@
           "The NUM Tool is a natural language processing tool which provides quantitative measures for words or letter strings of the greek language, such as length (letters, phones, syllables), frequency, uniqueness/recognition point, cumulative syllable and bigram frequency, number and frequency of orthographic and phonological neighbors, cohort, stress and Levenshtein distance neighbors, and indices of orthographic transparency, etc.. The NUM Tool can be used as an online service by submitting up to 20 words or strings of characters at a time and selecting the measures that the user is interested in by ticking the appropriate boxes. The results are provided in tab-separated form that can be displayed in your browser or downloaded for processing by any program that can read text columns (e.g., MS Excel). The NUM Tool is part of the the IPLR Online Tools which are designed and developed by the Institute for Language and Speech Processing / Athena Research Centre and are available as online services through a dedicated website."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "στατιστική πληροφορία",

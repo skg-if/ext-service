@@ -22,7 +22,7 @@
           "Desr is a web service that performs dependency parsing on Italian tokenised, part-of-speech tagged, morphologically analysed texts. The web service was originally deployed by CNR-ILC within the EU-FP7-STREP PANACEA project (www.panacea-lr.eu) and implements the 2007 DeSR Parser [r4] code developed at the University of Pisa by Prof. Attardi and his group, and available at https://sourceforge.net/p/desr/code/HEAD/tree/branches. \r\nFor details on the tool and code please see http://desr.sourceforge.net and the scientific references therein."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "Dependency parser",
         "Italian Language",
         "Written language",

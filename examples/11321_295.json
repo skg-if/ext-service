@@ -22,7 +22,7 @@
           "This archive contains the source code of the Polish grapheme-to-phoneme conversion tool and the webservice located at http://mowa.clarin-pl.eu/transcriber/"
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "phonetisation",
         "grapheme-to-phoneme"
       ],

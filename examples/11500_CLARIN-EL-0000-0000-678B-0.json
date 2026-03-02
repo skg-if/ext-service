@@ -25,7 +25,7 @@
           "Part-of-Speech Tagger, part of the Greek NLP toolkit, a Transformer-based Natural Language Processing Pipeline for Greek. This toolkit has state-of-the art accuracies in Greek and offers predictions for Named Entity Recognition, Part-of-Speech Tagging, Morphological Tagging as well as Dependency Parsing."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "ÎµÏÎ¹ÏÎ·Î¼ÎµÎ¯ÏÏÎ· Î¼ÎµÏÏÎ½ ÏÎ¿Ï Î»ÏÎ³Î¿Ï",
         "Part-of-Speech tagging",
         "PosTagging",

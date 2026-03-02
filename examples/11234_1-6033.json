@@ -22,7 +22,7 @@
           "This software package includes three tools: web frontend (charles-translator-web-frontend) for machine translation featuring phonetic transcription of Ukrainian suitable for Czech speakers, API server (lindat-translation) and a tool for translation of documents with markup including html, docx, odt, pptx and odp (document-translations). These tools are used in the Charles Translator service (https://translator.cuni.cz). This software was developed within the EdUKate project, which aims to help mitigate language barriers between non-Czech-speaking children in the Czech Republic and the education in the Czech school system. The project focuses on the development and dissemination of multilingual digital learning materials for students in primary and secondary schools."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "machine translation"
       ],
       "srv_supported_language": [

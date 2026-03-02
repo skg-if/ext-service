@@ -25,7 +25,7 @@
           "A software for the evaluation of the degree of readability of Modern Greek texts. The evaluation is based on objective criteria, aiming to determine the suitability of any given text according to the four levels of the Certificate of Attainment in Greek. The degree of readability corresponds to the degree of difficulty in terms of reading comprehension."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "εκμάθηση γλωσσών",

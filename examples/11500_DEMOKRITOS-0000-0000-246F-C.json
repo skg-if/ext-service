@@ -25,7 +25,7 @@
           "HBrill is a natural language processing web service used for annotating every word of a text with the corresponding part of speech (POS) tag, e.g. noun, verb, adjective, adverb, etc..&nbsp;HBrill performs POS tagging for texts in Modern Greek. It has been developed by NCSR Demokritos. You can use this service to process any TXT document in UTF-8 encoding and obtain the output in either UTF-8 encoded XML format or in CSV file format. The HBrill service constitutes the last step of a workflow consisting of the following processing steps: sentence splitting, tokenization and part of speech tagging. Therefore, the output of the service includes annotations on the level of sentence ( Sentence ID , Sentence ), token ( Token ID , Token , Token Type according to Ellogon Token Tagset , Token Start , Token End ) and part of speech according to Ellogon PoS Tagset . See the Output Annotation Schema field below for more information on the respective tagsets. For technical reasons, the file submitted for processing may be split into smaller files, and so will the output. This service is seamlessly integrated into the CLARIN:EL infrastructure's workflows, providing users with convenient and easy access as a web service. You can use this service by clicking the \" Use \" button on this page or by accessing it through the CLARIN:EL processing services page ."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κατάτμηση",
         "segmentation",
         "γραπτός λόγος",

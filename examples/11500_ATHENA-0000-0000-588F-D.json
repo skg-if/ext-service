@@ -25,7 +25,7 @@
           "Hypothesis is an open-source, web-based, collaborative text annotation tool. It allows users to annotate any text they find on the Web as well as documents in PDF and/or DOC format. Hypothesis can also be used to create notes, highlights, and replies on comments or annotations made by a colleague, as well as setting up working groups for a specific annotation project."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "πλατφόρμα επισημείωσης",

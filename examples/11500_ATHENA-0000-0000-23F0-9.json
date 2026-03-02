@@ -25,7 +25,7 @@
           "The IPLR Online Tools are a set of tools used for word search and for calculation of quantity and quality properties of the Greek language (i.e. neighbours, frequencies etc.). More specifically, the IPLR Online Tools include: - The NUM tool provides quantitative measures for each letter string you submit. - The TEXT tool provides a variety of text results for one letter string you submit. - The SEL tool retrieves subsets of the CLEAN corpus (pre-processed corpus) that match quantitative criteria you specify on the available measures. - The FIND tool allows you to retrieve subsets of the CLEAN corpus that match a specific spelling or pronunciation pattern. - The COMBO tool combines the FIND and SEL tools. The above tools are included and described in the CLARIN:EL Infrastructure as separate records in order to facilitate their access. The IPLR Online Tools are designed and developed by the Institute for Language and Speech Processing / Athena Research Centre and are available as online services through a dedicated website."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "στατιστική πληροφορία",

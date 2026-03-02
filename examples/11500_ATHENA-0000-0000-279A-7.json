@@ -25,7 +25,7 @@
           "The OpenNLP Sentence Detector (German) is a natural language processing web service designed to identify sentence boundaries in German texts.&nbsp; This service has been developed by ILSP/Athena RC, based on the Apache OpenNLP library, which is available with the Apache License Version 2.0. The OpenNLP Sentence Detector (German) has been trained on Tiger corpus data. You can use this service to process any TXT document in UTF-8 encoding and obtain the output in either UTF-8 encoded XML format or in CSV file format. The OpenNLP Sentence Detector (German) service constitutes the first step of OpenNLP language processing workflows for German. The output of the service includes annotations on the level of sentence ( Sentence ID , Sentence ). For technical reasons, the file submitted for processing may be split into smaller files, and so will the output. This service is seamlessly integrated into the CLARIN:EL infrastructure's workflows, providing users with convenient and easy access as a web service. You can use this service by clicking the \" Use \" button on this page or by accessing it through the CLARIN:EL processing services page ."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κατάτμηση",
         "segmentation",
         "κείμενο",

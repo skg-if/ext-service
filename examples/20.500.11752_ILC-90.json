@@ -22,7 +22,7 @@
           "The 'SCF Extractor (language independent)' is a service that performs inductive subcategorisation extraction from dependency parsed texts, formatted according to the CoNLL-X format. The SCF Extractor tool was developed at CNR-ILC and deployed as a soap web service within the EU-FP7-STREP PANACEA project (www.panacea-lr.eu). This version of the tool/service was not optimized for any language.; it requires 2 input data: 1) a dependency parsed text corpus the CONLL-X format; 2) a list of verb lemmas for which the subcategorization frames will be extracted."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "Subcategorisation frames extraction",
         "Automatic lexical acquisition",
         "CoNLL-X input format"

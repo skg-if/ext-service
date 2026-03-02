@@ -22,7 +22,7 @@
           "The Símarómur application provides an Icelandic TTS application for the Android TTS service. The application provides access to one on-device voice. The app is developed with the needs of the visually impaired in mind, i.e. the voice is lightweight and very fast. Furthermore, Símarómur includes a user dictionary that allows users to define their pronunciation of words and abbreviations.\r\n\r\nSímarómur er Android app sem gerir notendum kleift að nota íslenskan talgervil í símunum, t.d. sem skjálesara. Ein rödd er í appinu, en appið er sérstaklega miðað að þörfum blindra og sjónskertra, þ.e. röddin er \"létt\" og mjög hröð. Einnig inniheldur Símarómur orðabók þar sem notendur geta skilgreint eigin framburð á orðum og skammstöfunum."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "tts",
         "android app"
       ],

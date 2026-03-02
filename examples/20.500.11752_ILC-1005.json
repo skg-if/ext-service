@@ -22,7 +22,7 @@
           "EpiLexO is a user friendly web application for the creation and editing of an integrated system of language resources for ancient fragmentary languages centered on the lexicon, in compliance with current digital humanities and Linked Open Data principles. EpiLexo allows for the editing of lexica with all relevant cross-references: for their linking to their testimonies, as well as to bibliographic information and other (external) resources and common vocabularies. This front-end application rests on a Service-Oriented Architecture with two main back-end components, the LexO-server (\\handle) and the CASH-server (1github), which manage lexica and textual documents respectively via Rest-ful APIs web-services, plus additional services for the management of other aspects such as access and authentication, XML rendering, etc. All code is available on https://github.com/DigItAnt/ The application has been developed in the context of a project on the languages of fragmentary attestation of ancient Italy, but can be applied to other similar contexts."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "Digital Humanities",
         "Ancient Languages",
         "Linking and Editing tools",

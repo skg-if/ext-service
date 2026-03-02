@@ -22,7 +22,7 @@
           "Simple web build on the top of the PML Tree Query service."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "Perl",
         "PML-TQ",
         "PML"

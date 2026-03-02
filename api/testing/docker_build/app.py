@@ -73,7 +73,7 @@ def matches_filter(graph_item: dict, key: str, value: str) -> bool:
             return any(value.lower() in n.lower() for n in val if isinstance(n, str))
         return bool(val and value.lower() in str(val).lower())
     if key == "cf.search.keyword":
-        keywords = graph_item.get("keywords", [])
+        keywords = graph_item.get("srv_keywords", [])
         if isinstance(keywords, str):
             keywords = [keywords]
         return any(value.lower() in kw.lower() for kw in keywords if isinstance(kw, str))

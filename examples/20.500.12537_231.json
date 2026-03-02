@@ -22,7 +22,7 @@
           "[ENGLISH]\r\ng2p-service is a simple REST API made using a naive Flask wrapper for Sequitur(1) and fairseq(2) g2p models, a.k.a. pronunciation dictionaries."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "g2p",
         "phoneticizer"
       ],

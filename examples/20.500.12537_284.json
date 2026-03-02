@@ -22,7 +22,7 @@
           "ENGLISH:\r\nThis is an Android application which provides spell and grammar checking for Icelandic. The app is available on Google Play Store under the name \"Réttritun\". The source code is written in Kotlin and could be used as a base for Android app projects that need an Icelandic spell checking service. The app uses the spell checker service as impelmented by Miðeind ehf. in the Language Technology Program.\r\nSee also: http://hdl.handle.net/20.500.12537/266 and http://hdl.handle.net/20.500.12537/270\r\n\r\nÍSLENSKA:\r\nRéttritun er Android app sem býður upp á málrýni fyrir íslensku. Appið er hægt að nálgast á Google Play Store. Kóðinn er skrifaður í Kotlin og gæti verið notaður sem grunnur fyrir önnur Android app verkefni sem vilja nýta málrýni fyrir íslensku. Appið notar málrýniþjónustu eins og þá sem Miðeind ehf. þróaði innan Máltækniáætlunarinnar. \r\nSjá: http://hdl.handle.net/20.500.12537/266 and http://hdl.handle.net/20.500.12537/270"
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "spell and grammar checking",
         "Android"
       ],

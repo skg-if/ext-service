@@ -25,7 +25,7 @@
           "The Ellogon tagging engine creates appropriate graphical interfaces through which users can tag corpora with linguistic information (stored in the form of tags). The annotation engine receives as input a markup schema (expressed as an XML file), which contains information about the type of annotations to be produced by the annotation process, the attributes of the annotations, and the tag sets of each attribute. Given a tagging schema, the Ellogon platform's tagging engine automatically generates an appropriate graphical interface for tagging bodies of text with the input schema. The functionality of the tool is twofold: it can create a graphical interface within the Ellogon platform, as well as a standalone annotation application that works without installing the Ellogon platform. The Ellogon tagging engine is distributed both with the Ellogon platform and as a stand-alone tool (http://www.ellogon.org/index.php/annotation-tool). Both distributions of the Ellogon platform tagging engine can work both locally (where a user tags a body of text that resides locally, on the same computer as the tagging tool) and distributed, where a group of users can collaboratively tag a body of text that resides on a host computer that contains a relational database (MySQL, MariaDB, and PostgreSQL databases are supported). &nbsp;"
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "πλατφόρμα επισημείωσης",
         "annotation platform",
         "συνεργατική επισημείωση",

@@ -25,7 +25,7 @@
           "The ILSP file format converter extracts the textual content from files in a set of input formats (HTML, PDF, DOC, DOCX) and converts this content in TXT. Depending on the format of each input file, proper processes are triggered (i.e. text extraction from docx or pdf files , cleaning for HTML files). &nbsp;Apart from its textual content, a typical web page also contains boilerplate, i.e. \"noisy\" elements like navigation headers, advertisements, disclaimers, photos, etc., which are of only limited or no use for the production of good-quality language resources. For removing boileplate, a modified version of Boilerpipe &nbsp;(Kohlschütter et al, 2010) was used that also extracts structural information like title , heading and list item ( &lt;p&gt; , &lt;br&gt; and &lt;li&gt;) . The produced txt file is segmented in paragraphs on the basis of these specific HTML tags. This is also the case for PDF files."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "μετατροπή αρχείων",
         "file conversion",
         "μετατροπέας",

@@ -22,7 +22,7 @@
           "Heyra is an Android application that provides three loosely coupled components, an implementation of Android's speech recognition interface, an intent handler activity for speech recognition actions from other applications and an input method service (i.e. virtual keyboard) that can either be used on its own or launched by supported applications. Heyra can be downloaded from the Google Play Store at https://play.google.com/store/apps/details?id=is.tiro.heyra\r\n\r\nHeyra er Android forrit sem inniheldur þrjá laustengda hluta; útfærslu á kerfisþjónustu í Android fyrir talgreiningu, meðhöndlara fyrir talgreiningaraðgerðir frá öðrum forritum og inntaksþjónustu (eða sýndarlyklaborð) sem hægt er að nota eitt og sér eða kalla á úr öðrum studdum forritum. Hægt er að sækja Heyra á Google Play Store á https://play.google.com/store/apps/details?id=is.tiro.heyra"
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "asr",
         "automatic speech recognition",
         "android"

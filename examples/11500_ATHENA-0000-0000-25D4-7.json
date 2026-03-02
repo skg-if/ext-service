@@ -25,7 +25,7 @@
           "The COMBO Tool is a tool for the extraction of words or letter combinations from a pre-processed corpus of the greek language named CLEAN based on specific spelling or pronunciation patterns as well as quantitative criteria set by the user, such as word length (by letters, phones, syllables), frequency, uniqueness/recognition point, cumulative syllable and bigram frequency, number of orthographic and phonological neighbors, and indices of orthographic transparency. The results of the COMBO Tool are provided as plain text in Greek encoding (CP1253/ISO-8859-7) and can be displayed in your browser or downloaded to your computer, along with a set of properties of your choice for the selected words. The COMBO Tool can be used as an online service and combines the FIND and SEL Tools of the IPLR set of Online Tools which are designed and developed by the Institute for Language and Speech Processing / Athena Research Centre."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "στατιστική πληροφορία",

@@ -22,7 +22,7 @@
           "The SynSemClass Search Tool provides a web search tool for the SynSemClass ontology (4.0 and higher). It includes several search options and criteria for building complex queries. The search results are rendered in a clear and user-friendly interactive representation.\r\n\r\nThe source code for the service is available on github (https://github.com/ufal/SynSemClassSearch)."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "ontology",
         "lexical semantics",
         "search tool",

@@ -25,7 +25,7 @@
           "The OpenNLP Tokenizer (English) is a natural language processing service used for splitting English documents into smaller units (such as words, punctuation characters, numbers, or symbols) called tokens. This service has been developed by ILSP/Athena RC, based on the Apache OpenNLP library, which is available with the Apache License Version 2.0. The OpenNLP Tokenizer (English) has been trained on OpenNLP training data. You can use this service to process any TXT document in UTF-8 encoding and obtain the output in either UTF-8 encoded XML format or in CSV file format. The OpenNLP Tokenizer (English) constitutes the last step of a workflow consisting of two processing steps: sentence splitting and tokenization. Therefore, the output of the service includes annotations on the level of sentence ( Sentence ID , Sentence ) and token ( Token ID , Token ). For technical reasons, the file submitted for processing may be split into smaller files, and so will the output. This service is seamlessly integrated into the CLARIN:EL infrastructure's workflows, providing users with convenient and easy access as a web service. You can use this service by clicking the \" Use \" button on this page or by accessing it through the CLARIN:EL processing services page ."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κατάτμηση",
         "segmentation",
         "κείμενο",

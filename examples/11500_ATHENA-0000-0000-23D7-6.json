@@ -25,7 +25,7 @@
           "The SEL Tool is a natural language processing tool for the extraction of words or letter combinations of the greek language from a pre-processed corpus named CLEAN based on quantitative criteria set by the user. More specifically, the SEL Tool retrieves subsets of the CLEAN corpus that match quantitative criteria you specify on the available measures, such as length (letters, phones, syllables), frequency, uniqueness/recognition point, cumulative syllable and bigram frequency, number of orthographic and phonological neighbors, cohort, stress and Levenshtein distance neighbors, and indices of orthographic transparency. The SEL Tool can be used as an online service by filling in the range of acceptable values for as many measures as you wish. The results are provided as plain text in Greek encoding (CP1253/ISO-8859-7) and can be displayed in your browser or downloaded to your computer, along with a set of properties of your choice for the selected words. The SEL Tool is part of the the IPLR Online Tools which are designed and developed by the Institute for Language and Speech Processing / Athena Research Centre and are available as online services through a dedicated website."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "στατιστική πληροφορία",

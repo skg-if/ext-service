@@ -25,7 +25,7 @@
           "All Greek to me!™ is the first complete system for automatic transcription of Greeklish into Greek and vice versa, obtaining correct spelling. It consists of a result of long research activities of ILSP / \"Athena\" RC, and it is very accurate and efficient in handling mixed-multilingual texts containing Greek, Greeklish and English words or phrases. All Greek to me!™ is based on advanced statistical models for the Greek language providing the most probable Greek word for every Greeklish one. This, in combination with exhaustive dictionaries of more than 1,500,000 words, allows coping with all possible ways of Greeklish transcription, at the best possible speed and efficiency. All Greek to me!™ can also produce the most probable phonetic representation of every Greeklish word, in the case of words unknown to the lexicons. By doing so, it becomes the best solution for cases where speech synthesis services are needed, such as email or SMS reading. All Greek to me!™ is available as an online service."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "σύστημα αυτόματης μεταγραφής",

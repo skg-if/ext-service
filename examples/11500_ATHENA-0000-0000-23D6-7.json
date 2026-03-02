@@ -25,7 +25,7 @@
           "The TEXT Tool is a natural language processing tool which provides a variety of text results for one letter string (or word) of the greek language you submit, such as pronunciation, syllables, phoneme-grapheme and syllable-level alignment, maximal cohort competitors, phonological and orthographic neighbors, cohort, Levenshtein distance, and stress neighbors. The TEXT Tool can be used as an online service by submitting one letter strings and selecting the kinds of results you are interested in by ticking the appropriate boxes. The results are provided as plain text in Greek encoding (CP1253/ISO-8859-7) and can be displayed in your browser or downloaded to your computer. The TEXT Tool is part of the the IPLR Online Tools which are designed and developed by the Institute for Language and Speech Processing / Athena Research Centre and are available as online services."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "στατιστική πληροφορία",

@@ -25,7 +25,7 @@
           "The FIND Tool is a tool for the extraction of words from a pre-processed corpus of the greek language named CLEAN based on specific spelling or pronunciation patterns set by the user. More specifically, the FIND Tool allows you to retrieve subsets of the CLEAN corpus that match spelling and/or pronunciation criteria you specify on the available measures, such as word length (by letters, phones, syllables), frequency, uniqueness/recognition point, cumulative syllable and bigram frequency, number of orthographic and phonological neighbors, and indices of orthographic transparency. The FIND Tool can be used as an online service by providing a single orthographic or phonological string to be matched, using the wildcards ? (question mark; for any single character) and * (asterisk; for any number of characters). The results are provided as plain text in Greek encoding (CP1253/ISO-8859-7) and can be displayed in your browser or downloaded to your computer. The FIND Tool is part of the the IPLR Online Tools which are designed and developed by the Institute for Language and Speech Processing / Athena Research Centre."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "στατιστική πληροφορία",

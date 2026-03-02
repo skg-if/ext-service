@@ -22,7 +22,7 @@
           "En-De translation models, exported via TensorFlow Serving, available in the Lindat translation service (https://lindat.mff.cuni.cz/services/translation/).\r\n\r\nThe models were trained using the MCSQ social surveys dataset (available at https://repo.clarino.uib.no/xmlui/bitstream/handle/11509/142/mcsq_v3.zip).\r\nTheir main use should be in-domain translation of social surveys.\r\n\r\nModels are compatible with Tensor2tensor version 1.6.6.\r\n\r\nFor details about the model training (data, model hyper-parameters), please contact the archive maintainer.\r\n\r\nEvaluation on MCSQ test set (BLEU):\r\nen->de: 67.5 (train: genuine in-domain MCSQ data only)\r\nde->en: 75.0 (train: additional in-domain backtranslated MCSQ data)\r\n(Evaluated using multeval: https://github.com/jhclark/multeval)"
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "machine translation",
         "transformer",
         "neural machine translation"

@@ -22,7 +22,7 @@
           "Translation engine from Greek to English created as part of the NTEU project ."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "automatic translator",
         "MachineTranslation",
         "GPL-3.0-only"

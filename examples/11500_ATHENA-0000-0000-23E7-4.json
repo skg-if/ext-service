@@ -25,7 +25,7 @@
           "The ILSP Language Identification System is a tool used for language identification in digital texts. The tool performs language identification for Greek, Greeklish, English, German, Dutch and French; it can also be used for other languages upon provision of specific supplementary external files for each new language."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "εργαλείο αυτόματης αναγνώρισης γλώσσας",

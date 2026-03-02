@@ -25,7 +25,7 @@
           "The ILSP Lemmatizer is a natural language processing web service, which, for any given token in a Modern Greek text, assigns the corresponding lemma. For example, for the word-forms 'gone', 'going' and 'went' it returns the lemma 'go'. You can use this service to process any TXT document in UTF-8 encoding and obtain the output in either UTF-8 encoded XMI format or in CSV file format. This service constitutes the final step of a workflow consisting of the following processing steps: sentence splitting, tokenization, part of speech tagging and lemmatization. Therefore, the output of the service includes annotations on the level of sentence ( Sentence ID , Sentence ), token ( Token ID , Token , Token Type according to ILSP_NLP Token Tagset , Token Start , Token End ), lemma and part of speech according to ILSP_NLP PoS Tagset . See the Output Annotation Schema field below for more information on the respective tagsets. For technical reasons, the file submitted for processing may be split into smaller files, and so will the output. This service is seamlessly integrated into the CLARIN:EL infrastructure's workflows, providing users with convenient and easy access as a web service. You can use this service by clicking the \" Use \" button on this page or by accessing it through the CLARIN:EL processing services page ."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "λημματοποίηση",
         "lemmatization",
         "κείμενο",

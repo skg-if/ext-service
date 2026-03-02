@@ -22,7 +22,7 @@
           "CUBBITT En-Pl translation models, exported via TensorFlow Serving, available in the Lindat translation service (https://lindat.mff.cuni.cz/services/translation/).\r\n\r\nModels are compatible with Tensor2tensor version 1.6.6.\r\n\r\nFor details about the model training (data, model hyper-parameters), please contact the archive maintainer.\r\n\r\nEvaluation on newstest2020 (BLEU):\r\nen->pl: 12.3\r\npl->en: 20.0\r\n(Evaluated using multeval: https://github.com/jhclark/multeval)"
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "machine translation",
         "neural machine translation",
         "transformer",

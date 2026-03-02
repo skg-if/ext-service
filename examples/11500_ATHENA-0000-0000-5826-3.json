@@ -25,7 +25,7 @@
           "WebAnno is a general purpose web-based annotation tool for a wide range of linguistic annotations including various layers of morphological, syntactical, and semantic annotations. Additionaly, custom annotation layers can be defined, allowing WebAnno to be used also for non-linguistic annotation tasks. WebAnno is a multi-user tool supporting different roles such as annotator, curator, and project manager. The progress and quality of annotation projects can be monitored and measuered in terms of inter-annotator agreement. Multiple annotation projects can be conducted in parallel. Different modes of annotation are supported, including a correction mode to review externally pre-annotated data, and an automation mode in which WebAnno learns and offers annotation suggestions. WebAnno has been developed by the Faculty of Computer Science of Technische Universität Darmstadt and is available through the CLARIN-D Research Infrastructure."
         ]
       },
-      "keywords": [
+      "srv_keywords": [
         "κείμενο",
         "text",
         "πλατφόρμα επισημειωσης",
