@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 # dev-check.sh — SKG-IF local development check and run
 #
-# 1. Generate consolidated OpenAPI spec (core + ext-srv service overlay)
-# 2. Lint core and consolidated specs with Spectral
-# 3. Check ext-srv context file compatibility (all srv_* properties declared)
-# 4. Copy consolidated spec to api/Docker/ and start the development stack
+# 1. Ontology syntax check (riot — srv.ttl only)
+# 2. SHACL generation from srv.ttl (shacl-extractor); validates cardinality format; riot-validates output
+# 3. Cross-file alignment: ontology ↔ JSON-LD context ↔ SHACL ↔ OpenAPI overlay + rdfs:label check
+# 4. Generate consolidated OpenAPI spec (core + ext-srv service overlay)
+# 5. Lint core OpenAPI spec with Spectral
+# 6. Lint consolidated OpenAPI spec with Spectral
+# 7. Check ext-srv context file compatibility (all srv_* properties declared)
+# 8. Copy consolidated spec to api/Docker/ and start the development stack
+# 9. API smoke tests against Prism
 #
 # Usage:
 #   ./dev-check.sh              # run all steps including docker compose up
@@ -16,15 +21,18 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 API_DIR="$(cd "$SCRIPT_DIR/../api" && pwd)"
 
+ONTOLOGY_TTL="$SCRIPT_DIR/data-model/ontology/current/srv.ttl"
+SHACL_TTL="$SCRIPT_DIR/data-model/shacl/current/shacl.ttl"
 CORE_SPEC="$API_DIR/openapi/ver/current/skg-if-openapi.yaml"
 OVERLAY="$SCRIPT_DIR/api/ver/current/service-overlay.yaml"
-#CONSOLIDATED="$API_DIR/consolidated-openapi.yaml"
 CONSOLIDATED="$SCRIPT_DIR/consolidated-openapi.yaml"
-CORE_CTX="$API_DIR/openapi/ver/current/context/skg-if-api.json"
-EXT_CTX="$SCRIPT_DIR/context/ver/current/skg-if.json"
+SKG_CTX_DIR="$(cd "$SCRIPT_DIR/../shacl-extractor/context/ver" && pwd)"                   # core entity context versions dir
+API_CTX="$API_DIR/openapi/ver/current/context/skg-if-api.json"                              # API-layer context (pagination etc.)
+EXT_CTX="$SCRIPT_DIR/context/ver/current/skg-if.json"                                       # service extension context
 SPECTRAL_RULESET="$API_DIR/.spectral.yaml"
-#DOCKER_DIR="$API_DIR/Docker"
 DOCKER_DIR="$SCRIPT_DIR/api/Docker"
+SHACL_EXTRACTOR_DIR="$(cd "$SCRIPT_DIR/../shacl-extractor" && pwd)"
+SHACL_EXTRACTOR_PY="$SHACL_EXTRACTOR_DIR/.venv/bin/python"
 
 START_DOCKER=true
 for arg in "$@"; do
@@ -43,18 +51,255 @@ warn() { echo -e "${YELLOW}⚠${NC} $1"; }
 # ── Preflight ─────────────────────────────────────────────────────────────────
 info "Checking prerequisites"
 
-[[ -f "$CORE_SPEC"   ]] || fail "Core spec not found: $CORE_SPEC"
-[[ -f "$OVERLAY"     ]] || fail "Service overlay not found: $OVERLAY"
-[[ -f "$CORE_CTX"    ]] || fail "Core context not found: $CORE_CTX"
-[[ -f "$EXT_CTX"     ]] || fail "Ext-srv context not found: $EXT_CTX"
+[[ -f "$ONTOLOGY_TTL" ]] || fail "Ontology not found: $ONTOLOGY_TTL"
+[[ -f "$SHACL_TTL"    ]] || warn "shacl.ttl not found — will be generated in Step 2"
+[[ -f "$CORE_SPEC"    ]] || fail "Core spec not found: $CORE_SPEC"
+[[ -f "$OVERLAY"      ]] || fail "Service overlay not found: $OVERLAY"
+[[ -f "$SKG_CTX_DIR/current/skg-if.json" ]] || fail "Core entity context not found: $SKG_CTX_DIR/current/skg-if.json"
+[[ -f "$API_CTX"      ]] || fail "API context not found: $API_CTX"
+[[ -f "$EXT_CTX"      ]] || fail "Ext-srv context not found: $EXT_CTX"
 
+command -v riot      &>/dev/null || fail "'riot' not found — brew install jena"
 command -v speakeasy &>/dev/null || fail "'speakeasy' not found — install from https://www.speakeasy.com"
 command -v npx       &>/dev/null || fail "'npx' not found — install Node.js"
 command -v python3   &>/dev/null || fail "'python3' not found"
+python3 -c "import rdflib" 2>/dev/null || fail "'rdflib' not found — pip install rdflib"
+[[ -f "$SHACL_EXTRACTOR_PY" ]] || fail "shacl-extractor venv not found at $SHACL_EXTRACTOR_PY — run 'uv sync' in $SHACL_EXTRACTOR_DIR"
 ok "All prerequisites met"
 
-# ── Step 1: Generate consolidated spec ───────────────────────────────────────
-info "Step 1: Generating consolidated OpenAPI spec"
+# ── Step 1: Ontology syntax ───────────────────────────────────────────────────
+info "Step 1: Ontology syntax check"
+
+riot --validate "$ONTOLOGY_TTL" 2>&1 \
+    && ok "srv.ttl syntax OK" \
+    || fail "srv.ttl has syntax errors"
+
+# ── Step 2: SHACL generation ──────────────────────────────────────────────────
+info "Step 2: SHACL generation from srv.ttl"
+
+SHACL_GENERATED="$(mktemp /tmp/srv-shacl-XXXXXX.ttl)"
+trap 'rm -f "$SHACL_GENERATED"' EXIT
+
+"$SHACL_EXTRACTOR_PY" "$SHACL_EXTRACTOR_DIR/src/main_srv_ext.py" \
+    --input "$ONTOLOGY_TTL" \
+    "$SHACL_GENERATED" 2>&1 \
+    && ok "SHACL generated from srv.ttl" \
+    || fail "SHACL extraction failed — fix dc:description cardinality format in srv.ttl"
+
+riot --validate "$SHACL_GENERATED" 2>&1 \
+    && ok "Generated SHACL syntax OK" \
+    || fail "Generated SHACL has syntax errors"
+
+if [[ -f "$SHACL_TTL" ]]; then
+    if diff -q "$SHACL_TTL" "$SHACL_GENERATED" &>/dev/null; then
+        ok "shacl.ttl is up to date"
+    else
+        warn "shacl.ttl differs from freshly generated SHACL — updating"
+        cp "$SHACL_GENERATED" "$SHACL_TTL"
+        ok "shacl.ttl updated"
+    fi
+else
+    cp "$SHACL_GENERATED" "$SHACL_TTL"
+    ok "shacl.ttl created"
+fi
+
+# ── Step 3: Cross-file alignment check ───────────────────────────────────────
+info "Step 3: Cross-file alignment check"
+
+python3 - "$ONTOLOGY_TTL" "$SHACL_TTL" "$EXT_CTX" "$OVERLAY" "$SKG_CTX_DIR" << 'PYEOF'
+import sys, json, re, os
+from rdflib import Graph, RDF, OWL
+
+ontology_path, shacl_path, ctx_path, overlay_path, skg_ctx_dir = \
+    sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5]
+
+from rdflib import RDFS
+SRV_NS      = "https://w3id.org/skg-if/extension/srv/ontology/"
+SH_PATH     = "http://www.w3.org/ns/shacl#path"
+PROP_TYPES  = {str(OWL.ObjectProperty), str(OWL.DatatypeProperty)}
+ENTITY_TYPES = PROP_TYPES | {str(OWL.Class), str(RDFS.Class)}
+
+warnings = []
+
+# ── Parse ontology: srv:* properties and classes ──────────────────────────────
+g_ont = Graph()
+g_ont.parse(ontology_path, format="turtle")
+ont_srv_props    = {str(s) for s, p, o in g_ont          # properties only (for Checks 1 & 3)
+                    if str(p) == str(RDF.type) and str(o) in PROP_TYPES
+                    and str(s).startswith(SRV_NS)}
+ont_srv_entities = {str(s) for s, p, o in g_ont          # properties + classes (for Check 2)
+                    if str(p) == str(RDF.type) and str(o) in ENTITY_TYPES
+                    and str(s).startswith(SRV_NS)}
+
+# ── Parse SHACL: all srv:* sh:path values ────────────────────────────────────
+g_shacl = Graph()
+g_shacl.parse(shacl_path, format="turtle")
+shacl_srv_paths = {str(o) for s, p, o in g_shacl
+                   if str(p) == SH_PATH and str(o).startswith(SRV_NS)}
+
+# ── Parse JSON-LD context: build term → full URI map ─────────────────────────
+ctx = json.load(open(ctx_path)).get("@context", {})
+
+# Prefix map: context keys whose value is a namespace URI (ends with / or #)
+prefix_map = {k: v for k, v in ctx.items()
+              if isinstance(v, str) and not k.startswith("@") and not k.startswith("_")
+              and (v.endswith("/") or v.endswith("#"))}
+
+def resolve_curie(val):
+    if not val or val.startswith("@"):
+        return None
+    if val.startswith("http"):
+        return val
+    if ":" in val:
+        pfx, local = val.split(":", 1)
+        if pfx in prefix_map:
+            return prefix_map[pfx] + local
+    return None
+
+ctx_uri_map = {}
+for k, v in ctx.items():
+    if k.startswith("_") or k.startswith("@"):
+        continue
+    raw_id = v.get("@id") if isinstance(v, dict) else v if isinstance(v, str) else None
+    uri = resolve_curie(raw_id)
+    if uri:
+        ctx_uri_map[k] = uri
+
+# srv_* context terms that map into the srv: namespace
+srv_ctx = {k: v for k, v in ctx_uri_map.items()
+           if k.startswith("srv_") and v.startswith(SRV_NS)}
+
+# ── Check 1: SHACL srv:* paths declared in ontology? ─────────────────────────
+undeclared = sorted(shacl_srv_paths - ont_srv_props)
+if undeclared:
+    for uri in undeclared:
+        warnings.append(f"SHACL sh:path srv:{uri[len(SRV_NS):]} not declared as property in srv.ttl")
+else:
+    print(f"  ✓ All {len(shacl_srv_paths)} SHACL srv:* paths declared in ontology")
+
+# ── Check 2: Context srv_*→srv:* terms all resolve to a declared ontology entity ─
+stale = {k: v for k, v in srv_ctx.items() if v not in ont_srv_entities}
+if stale:
+    for term, uri in sorted(stale.items()):
+        warnings.append(f"Context '{term}' maps to srv:{uri[len(SRV_NS):]} — not declared in ontology")
+else:
+    print(f"  ✓ All {len(srv_ctx)} context srv_*→srv:* mappings resolve to declared ontology entities")
+
+# ── Check 3: Ontology srv:* properties covered by at least one context term? ─
+covered = set(srv_ctx.values())
+uncovered = sorted(ont_srv_props - covered)
+if uncovered:
+    for uri in uncovered:
+        warnings.append(f"Ontology property srv:{uri[len(SRV_NS):]} has no srv_* term in context")
+else:
+    print(f"  ✓ All {len(ont_srv_props)} ontology srv:* properties covered in context")
+
+# ── Check 4: Context srv_* terms present in overlay schema? (informational) ──
+overlay_text = open(overlay_path).read()  # reused by Check 5
+overlay_srv = set(re.findall(r'(?m)^[ \t]{4,}(srv_\w+)\s*:', overlay_text))
+ctx_srv_all  = {k for k in ctx if k.startswith("srv_")}
+not_in_overlay = sorted(ctx_srv_all - overlay_srv)
+if not_in_overlay:
+    for term in not_in_overlay:
+        warnings.append(f"Context term '{term}' absent from overlay schema (may be intentional)")
+else:
+    print(f"  ✓ All context srv_* terms present in overlay schema")
+
+# ── Check 5: Core context version pinned in overlay matches local 'current' ───
+m = re.search(r'skg-if/context/(\d+\.\d+\.\d+)/skg-if\.json', overlay_text)
+if not m:
+    warnings.append("Could not find pinned skg-if core context version in overlay")
+else:
+    pinned_ver = m.group(1)
+    versioned_path = os.path.join(skg_ctx_dir, pinned_ver, "skg-if.json")
+    current_path   = os.path.join(skg_ctx_dir, "current",   "skg-if.json")
+    if not os.path.exists(versioned_path):
+        warnings.append(f"Pinned core context version {pinned_ver} not found locally ({versioned_path})")
+    else:
+        pinned_text  = open(versioned_path).read()
+        current_text = open(current_path).read()
+        if pinned_text == current_text:
+            print(f"  ✓ Core context 'current' matches pinned version {pinned_ver}")
+        else:
+            warnings.append(
+                f"Core context 'current' differs from pinned version {pinned_ver} "
+                f"— update the version pin in overlay or sync 'current'"
+            )
+
+# ── Check 6: Ext-srv context terms don't conflict with core context ───────────
+core_ctx = json.load(open(os.path.join(skg_ctx_dir, "current", "skg-if.json"))).get("@context", {})
+core_prefix_map = {k: v for k, v in core_ctx.items()
+                   if isinstance(v, str) and not k.startswith("@") and not k.startswith("_")
+                   and (v.endswith("/") or v.endswith("#"))}
+
+def resolve_core(val):
+    if not val or val.startswith("@"):
+        return None
+    if val.startswith("http"):
+        return val
+    if ":" in val:
+        pfx, local = val.split(":", 1)
+        if pfx in core_prefix_map:
+            return core_prefix_map[pfx] + local
+    return None
+
+conflicts = []
+for term, ext_uri in ctx_uri_map.items():
+    if term not in core_ctx:
+        continue
+    core_val = core_ctx[term]
+    raw = core_val.get("@id") if isinstance(core_val, dict) else core_val if isinstance(core_val, str) else None
+    core_uri = resolve_core(raw)
+    if core_uri and core_uri != ext_uri:
+        conflicts.append(f"'{term}': ext-srv → <{ext_uri}>  vs  core → <{core_uri}>")
+
+if conflicts:
+    for c in conflicts:
+        warnings.append(f"Conflicting term definition with core context: {c}")
+else:
+    print(f"  ✓ No conflicting term definitions between ext-srv and core context")
+
+# ── Check 7: rdfs:label (SKG-IF labels: X) present and X in ext-srv context ──
+RDFS_LABEL = str(RDFS.label)
+label_issues = []
+for prop_uri in sorted(ont_srv_props):
+    labels = [str(o) for s, p, o in g_ont
+              if str(s) == prop_uri and str(p) == RDFS_LABEL]
+    if not labels:
+        label_issues.append(f"srv:{prop_uri[len(SRV_NS):]} has no rdfs:label")
+        continue
+    found = False
+    for lbl in labels:
+        m = re.search(r'\(SKG-IF labels:\s*(\w+)\)', lbl)
+        if m:
+            json_name = m.group(1)
+            if json_name not in ctx:
+                label_issues.append(
+                    f"srv:{prop_uri[len(SRV_NS):]} rdfs:label references "
+                    f"'{json_name}' — not found in ext-srv context")
+            found = True
+            break
+    if not found:
+        label_issues.append(
+            f"srv:{prop_uri[len(SRV_NS):]} rdfs:label missing '(SKG-IF labels: X)' pattern")
+
+if label_issues:
+    for issue in label_issues:
+        warnings.append(f"Label: {issue}")
+else:
+    print(f"  ✓ All {len(ont_srv_props)} ontology srv:* properties have correct SKG-IF label format")
+
+# ── Summary ───────────────────────────────────────────────────────────────────
+if warnings:
+    print(f"\n  {len(warnings)} alignment warning(s):")
+    for w in warnings:
+        print(f"  ⚠ {w}")
+PYEOF
+
+ok "Alignment check complete"
+
+# ── Step 4: Generate consolidated spec ───────────────────────────────────────
+info "Step 4: Generating consolidated OpenAPI spec"
 speakeasy overlay apply \
     -s "$CORE_SPEC" \
     -o "$OVERLAY" \
@@ -62,32 +307,31 @@ speakeasy overlay apply \
     && ok "consolidated-openapi.yaml generated → $CONSOLIDATED" \
     || fail "speakeasy overlay apply failed"
 
-# ── Step 2: Lint core spec ────────────────────────────────────────────────────
-info "Step 2: Linting core OpenAPI spec"
+# ── Step 5: Lint core spec ────────────────────────────────────────────────────
+info "Step 5: Linting core OpenAPI spec"
 npx --yes @stoplight/spectral-cli lint "$CORE_SPEC" \
     --ruleset "$SPECTRAL_RULESET" \
     && ok "Core spec lint passed" \
     || fail "Core spec lint failed — fix errors before continuing"
 
-# ── Step 3: Lint consolidated spec ───────────────────────────────────────────
-info "Step 3: Linting consolidated OpenAPI spec"
+# ── Step 6: Lint consolidated spec ───────────────────────────────────────────
+info "Step 6: Linting consolidated OpenAPI spec"
 npx @stoplight/spectral-cli lint "$CONSOLIDATED" \
     --ruleset "$SPECTRAL_RULESET" \
     && ok "Consolidated spec lint passed" \
     || fail "Consolidated spec lint failed"
 
-# ── Step 4: Context compatibility check ──────────────────────────────────────
-info "Step 4: Checking JSON-LD context compatibility"
+# ── Step 7: Context compatibility check ──────────────────────────────────────
+info "Step 7: Checking JSON-LD context compatibility"
 
-python3 - "$OVERLAY" "$EXT_CTX" "$CORE_CTX" << 'PYEOF'
+python3 - "$OVERLAY" "$EXT_CTX" "$API_CTX" << 'PYEOF'
 import sys, json, re
 
-overlay_path, ext_ctx_path, core_ctx_path = sys.argv[1], sys.argv[2], sys.argv[3]
+overlay_path, ext_ctx_path, api_ctx_path = sys.argv[1], sys.argv[2], sys.argv[3]
 errors = []
-warnings = []
 
 # Validate context files are well-formed JSON
-for label, path in [("ext-srv context", ext_ctx_path), ("core API context", core_ctx_path)]:
+for label, path in [("ext-srv context", ext_ctx_path), ("API context", api_ctx_path)]:
     try:
         json.load(open(path))
         print(f"  ✓ {label} is valid JSON")
@@ -118,14 +362,14 @@ PYEOF
 
 ok "Context compatibility check complete"
 
-# ── Step 5: Docker ────────────────────────────────────────────────────────────
+# ── Step 8: Docker ────────────────────────────────────────────────────────────
 if [[ "$START_DOCKER" == false ]]; then
     echo ""
     ok "All checks passed. Skipping docker compose (--no-docker)."
     exit 0
 fi
 
-info "Step 5: Starting Docker development stack"
+info "Step 8: Starting Docker development stack"
 
 [[ -d "$DOCKER_DIR" ]] || fail "api/Docker/ directory not found — see api/CLAUDE.md for setup"
 
@@ -163,8 +407,8 @@ APPLESCRIPT
 
 ok "Done. Use 'docker compose down' in $DOCKER_DIR to stop."
 
-# ── Step 6: API smoke tests ───────────────────────────────────────────────────
-info "Step 6: Waiting for Prism to be ready"
+# ── Step 9: API smoke tests ───────────────────────────────────────────────────
+info "Step 9: Waiting for Prism to be ready"
 
 PRISM_URL="http://localhost:4010"
 MAX_WAIT=30
@@ -179,7 +423,7 @@ for i in $(seq 1 $MAX_WAIT); do
     sleep 1
 done
 
-info "Step 6: Running API smoke tests against $PRISM_URL"
+info "Step 9: Running API smoke tests against $PRISM_URL"
 
 PASS=0; FAIL=0
 
