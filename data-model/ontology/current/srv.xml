@@ -1,0 +1,898 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/skg-if/extension/srv/ontology/"
+     xml:base="https://w3id.org/skg-if/extension/srv/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/skg-if/extension/srv/ontology/">
+        <owl:versionIRI rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/service/1.1.0/"/>
+        <dc:creator>Scientific Knowledge Graphs – Interoperability Framework (SKG-IF) WG; OSTrails Project</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-23</dc:date>
+        <dc:rights>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode)</dc:rights>
+        <dc:title>The SKG-IF Ontology: Service Extension</dc:title>
+        <terms:isPartOf rdf:resource="https://w3id.org/skg-if/"/>
+        <vann:preferredNamespacePrefix>srv</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:comment>SRV-O is an extension of the SKG-IF Ontology (SKG-O) that introduces entities necessary to model Service-type objects used to process data in various use-cases, as well as their relationships with well-established entities in the SKG-IF data model. This extension is developed in the context of the OSTrails project.</rdfs:comment>
+        <rdfs:label>SRV-O: Service Extension</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/skg-if/ontology/"/>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/APIProfile"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+
+* srv:Service
+
+In SKG-IF, it is used to link a Service to an APIProfile instance describing endpoint and API specifications.
+* srv:APIProfile</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>dcterms:conformsTo (SKG-IF labels: conformsTo)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/relation">
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+* fabio:Work
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* foaf:Organization</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>dcterms:relation (SKG-IF labels: relevant_organisations)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/requires -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/requires">
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* SoftwareSourceCode, requires the presence of a url (landing page, source code rep.)
+</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>dcterms:requires (SKG-IF labels: requires)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/scope -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/scope"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject">
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* dcat:DataService
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* owl:Thing</dc:description>
+        <rdfs:comment>The disciplines for which a Service, Data source is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at https://id.loc.gov/authorities/classification (e.g. `PA3000-PA3049` for classical literature). In case a Data source is discipline agnostic, the string `all` should be specified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>dcterms:subject (SKG-IF labels: disciplines)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+        <rdfs:label>skos:inScheme (SKG-IF labels: defined_in)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#endpointURL -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#endpointURL">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/APIProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* foaf:Document</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>foaf:homepage (SKG-IF labels: website)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/provider -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/provider">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/url -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/url">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/APIProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/eoscLifeCycleStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/eoscLifeCycleStatus">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to indicate the maturity of the Service using values from the vocabulary (https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/)</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:eoscLifeCycleStatus (SKG-IF labels: srv_life_cycle_status)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/geographicalAvailability -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/geographicalAvailability">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/scope"/>
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to indicate geographic &amp; administrative areas from  https://vocabs.sshopencloud.eu/browse/eosc-geographical-availability/en/</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:geographicalAvailability (SKG-IF labels: srv_availability_geographic)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/hasHostingLegalEntity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/hasHostingLegalEntity">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organisation"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* foaf:Organisation</dc:description>
+        <rdfs:comment xml:lang="en">service associated legally responsible hosting organisation (legal entity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label xml:lang="en">srv:hasHostingLegalEntity (SKG-IF labels: srv_has_hosting_legal_entity)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organisation"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* foaf:Organisation (type: hosting_organisation)</dc:description>
+        <rdfs:comment xml:lang="en">service is hosted by</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label xml:lang="en">srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/hasTopics -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/hasTopics">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/fabio/SubjectTerm"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+In SKG-IF, it is used to link Service to relevant (range):
+* Topics</dc:description>
+        <dc:description>Links a Service to one or more topics defined in SKG-IF.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:hasTopics (SKG-IF labels: srv_topics)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/hasVenue -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/hasVenue">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/skg-if/ontology/Venue"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* skg:Venue (type: srv_portal)</dc:description>
+        <rdfs:comment>Links a Service to the portals or catalogues through which it is advertised and accessible.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:hasVenue (SKG-IF labels: srv_venues)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/intendedAudienceRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/intendedAudienceRole">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to indicate audience roles from (https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme)</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:intendedAudienceRole (SKG-IF labels: srv_audience_byrole)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/invocationType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/invocationType">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to indicate the method of service invocation using values from the vocabulary (https://vocabs.sshopencloud.eu/vocabularies/invocation-type/)</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:invocationType (SKG-IF labels: srv_invocation_type)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/fabio/Software"/>
+                    <rdf:Description rdf:about="https://schema.org/SoftwareSourceCode"/>
+                    <rdf:Description rdf:about="https://w3id.org/skg-if/ontology/research_product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+        
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* skg:research_product (type software)
+* fabio:Software
+* schema:SoftwareSourceCode</dc:description>
+        <rdfs:comment>A identifier for the software or software research product.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organisation"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* foaf:Organisation (type: research_infrastructure)</dc:description>
+        <rdfs:comment xml:lang="en">is part of research infrastructure organisation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label xml:lang="en">srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_has_research_infrastructure)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/relatedResearchProduct -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/relatedResearchProduct">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/skg-if/ontology/research_product"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link a Service to one or more research products 
+(e.g. software, datasets, workflows, publications) that are conceptually 
+related but not necessarily deployed by the service.</dc:description>
+        <rdfs:comment>Links a Service to one or more related SKG-IF research products (e.g., software, datasets, workflows). Complements `srv:isDeploymentOf` (software actually deployed).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:relatedResearchProduct (SKG-IF labels: related_products)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/supportedLanguage -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/supportedLanguage">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://lexvo.org/ontology#Language"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+        
+In SKG-IF, it is used to indicate the languages (identifiers)the Service can process (range):
+* lvont:Language</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:supportedLanguage (SKG-IF labels: srv_supported_language)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following data types (range):
+* xsd:string</dc:description>
+        <rdfs:comment>Describe the type of Service and its function.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>dcterms:description (SKG-IF labels: description)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+        <rdfs:label>skos:altLabel (SKG-IF labels: other_names)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+        <rdfs:label>skos:prefLabel (SKG-IF labels: labels)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#endpointURL -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#endpointURL">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/url -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/url">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following data types (range):
+* xsd:string</dc:description>
+        <rdfs:comment>The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve (i.e., either Global, Institution, National, or Regional aka multiple countries, from https://zenodo.org/records/15516020).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:audienceJurisdiction (SKG-IF labels: srv_audience_byjurisdiction)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lexvo.org/ontology#Language -->
+
+
+    <owl:Class rdf:about="http://lexvo.org/ontology#Language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Standard -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Standard">
+        <dc:description>The properties that can be used with this class are:
+
+* skos:prefLabel -[0..N]-&gt; rdfs:Literal</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>dcterms:Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/datacite/IdentifierScheme -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/datacite/IdentifierScheme">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+        <rdfs:label>datacite:IdentifierScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Software -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Software">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+        <rdfs:label>fabio:Software (SKG-IF labels: software)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/SubjectTerm -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/SubjectTerm">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+        <rdfs:label>fabio:SubjectTerm (SKG-IF labels: Topic)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Work -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Work">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+        <rdfs:label>fabio:Work (SKG-IF labels: any)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/frapo/Facility -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/frapo/Facility">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/frapo/InfrastructureEntity"/>
+        <rdfs:comment xml:lang="en">A place or installation built or designed to serve a specific function or provide a specific service, for example an animal breeding centre, a DNA sequencing facility or a confocal imaging laboratory.</rdfs:comment>
+        <rdfs:label xml:lang="en">facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/frapo/InfrastructureEntity -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/frapo/InfrastructureEntity"/>
+    
+
+
+    <!-- http://purl.org/spar/pro/Role -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/pro/Role">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pro/"/>
+        <rdfs:label>pro:Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+        <rdfs:label>skos:ConceptScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Catalog -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organisation -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organisation"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- https://schema.org/CreativeWork -->
+
+
+    <owl:Class rdf:about="https://schema.org/CreativeWork"/>
+    
+
+
+    <!-- https://schema.org/SoftwareApplication -->
+
+
+    <owl:Class rdf:about="https://schema.org/SoftwareApplication"/>
+    
+
+
+    <!-- https://schema.org/SoftwareSourceCode -->
+
+
+    <owl:Class rdf:about="https://schema.org/SoftwareSourceCode">
+        <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+        <dc:description>
+The properties that can be used with this class are:
+
+* foaf:homepage -[0..N]-&gt; foaf:Document
+* schema:codeRepository -[1..N]-&gt; schema:url </dc:description>
+        <rdfs:comment>Computer programming source code, including full (compile-ready) solutions, code snippet samples, templates, scripts, and other software artefacts.  </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label>schema:SoftwareSourceCode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/WebSite -->
+
+
+    <owl:Class rdf:about="https://schema.org/WebSite"/>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/APIProfile -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/APIProfile">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Standard"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://schema.org/url"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#endpointURL"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A concrete API profile or specification that pairs service endpoints with (possibly) several API standards. The properties that can be used with this class are:
+* dcat:endpointURL -[1]-&gt; xsd:anyURI
+* schema:url -[1..N]-&gt; xsd:anyURI </dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>API Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/WebSite"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://schema.org/provider"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://schema.org/provider"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>The properties that can be used with this class are:
+* schema:provider -[1]-&gt; foaf:Organization
+* skos:prefLabel -[1..N]-&gt; rdfs:Literal
+* skos:altLabel -[0..N]-&gt; rdfs:Literal
+</dc:description>
+        <rdfs:comment>organizational facility that operates services and provides portal access to them</rdfs:comment>
+        <rdfs:label>Facility Portal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation">
+        <rdfs:comment xml:lang="en">organisation reponsible for hosting a service or infrastructure component</rdfs:comment>
+        <rdfs:label xml:lang="en">hosting organisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/Portal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/Portal">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:comment xml:lang="en">organisation responsible for aggregating and cataloging meta data of data sets and services and supporting users search access</rdfs:comment>
+        <rdfs:label>portal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure">
+        <rdfs:comment xml:lang="en">organisation that provides facilities, resources and services for the research communities to conduct research.</rdfs:comment>
+        <rdfs:label>research infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/skg-if/extension/srv/ontology/Service -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/Service">
+        <rdfs:subClassOf rdf:resource="https://schema.org/SoftwareApplication"/>
+        <dc:description>The properties that can be used with this class are:
+* datacite:hasIdentifier -[0..N]-&gt; datacite:Identifier
+* skos:prefLabel -[1..N]-&gt; rdfs:Literal
+* skos:altLabel -[0..N]-&gt; rdfs:Literal
+* dcterms:description -[0..N]-&gt; rdfs:langString
+* foaf:homepage -[0..1]-&gt; foaf:Document
+* srv:audienceJurisdiction -[0..N]-&gt; xsd:string
+* srv:intendedAudienceRole -[0..N]-&gt; skos:Concept 
+* dcterms:subject -[0..N]-&gt; owl:Thing
+* srv:invocationType -[0..N]-&gt; skos:Concept 
+* srv:eoscLifeCycleStatus -[0..1]-&gt; skos:Concept 
+* srv:geographicalAvailability -[0..N]-&gt; owl:Thing
+* srv:supportedLanguage -[0..N]-&gt; lvont:Language
+* srv:isPartOfResearchInfrastructure -[0..N]-&gt; foaf:Organization
+* srv:hasHostingOrganisation -[0..N]-&gt; foaf:Organization
+* srv:hasHostingLegalEntity -[0..1]-&gt; foaf:Organization
+* dcterms:relation -[0..N]-&gt; foaf:Organization
+* dcterms:conformsTo -[0..N]-&gt; srv:APIProfile
+* schema:provider -[0..1]-&gt; srv:FacilityPortal
+* srv:isDeploymentOf -[0..N]-&gt; fabio:Software
+* srv:isDeploymentOf -[0..N]-&gt; schema:SoftwareSourceCode
+* srv:isDeploymentOf -[0..N]-&gt; skg:research_product
+* srv:relatedResearchProduct -[0..N]-&gt; skg:research_product
+* dcterms:subject -[0..N]-&gt; fabio:SubjectTerm
+* srv:hasVenue -[0..1]-&gt; skg:Venue
+* schema:isAccessibleForFree -[0..1]-&gt; xsd:boolean </dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
+        <rdfs:label>srv:Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/skg-if/ontology/Venue -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/ontology/Venue"/>
+    
+
+
+    <!-- https://w3id.org/skg-if/ontology/research_product -->
+
+
+    <owl:Class rdf:about="https://w3id.org/skg-if/ontology/research_product"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endpointURL">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
+        <rdfs:label>endpoint URL</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://schema.org/url">
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:APIProfile
+
+In SKG-IF, it is used to link to the URL(s) of the API specification document(s) (range):
+* xsd:anyURI</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label>schema:url (SKG-IF labels: api_specification_url)</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -17,6 +17,10 @@ This extension extends the [SKG-IF Ontology](https://w3id.org/skg-if/ontology/) 
 - Supporting entities such as *APIProfile*, *FacilityPortal*, *ResearchInfrastructure*, and *HostingOrganisation*;
 - New properties for describing service characteristics, availability, audience, and relationships to research products.
 
+The data model is summarised in the following [Graffoo diagram](https://essepuntato.it/graffoo):
+
+![srv diagram]({% link ext-srv/data-model/graphs/srv.png %})
+
 
 ## Expected outcomes
 In this modelling phase, two outcomes are expected
