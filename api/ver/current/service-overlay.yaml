@@ -310,9 +310,9 @@ actions:
                   - ["loc:P98-98.5"]
                   - ["all"]
 
-              keywords:
+              srv_keywords:
                 type: array
-                description: Keywords relevant for service discovery. Values may be simple strings or concept URIs.
+                description: Keywords relevant for service discovery. Values may be simple strings or concept URIs. Maps to schema:keyword.
                 items:
                   type: string
                 examples:
@@ -478,14 +478,34 @@ actions:
 
               topics:
                 type: array
-                description:  List of `topic` covered by the `product`
+                description:  List of `topic` covered by the `service`
                 items:
                   required: [ "term" ]
                   properties:
                     term:
-                      $ref: '#/components/schemas/Topic'
-                    # TODO provenance ?
-                  labels: [Natural Language Processing, NLP]
+                      description: Identifier of a `topic`. May be a plain identifier string or a full Topic object.
+                      anyOf:
+                        - type: string
+                          description: Topic identifier (local_identifier or external URI)
+                        - $ref: '#/components/schemas/Topic'
+                    # provenance: deferred — will be added as a general extension across all SKG-IF entities
+                examples:
+                  - - term:
+                        local_identifier: "https://www.wikidata.org/wiki/Q8162"
+                        entity_type: "topic"
+                        identifiers:
+                          - scheme: "wikidata"
+                            value: "https://www.wikidata.org/wiki/Q8162"
+                        labels:
+                          en: "Linguistics"
+                    - term:
+                        local_identifier: "https://www.wikidata.org/wiki/Q30642"
+                        entity_type: "topic"
+                        identifiers:
+                          - scheme: "wikidata"
+                            value: "https://www.wikidata.org/wiki/Q30642"
+                        labels:
+                          en: "Natural Language Processing"
 
               relevant_organisations:
                 type: array

@@ -3,101 +3,93 @@
     "@version": 1.1,
     "@protected": true,
 
-    "_comment1": "### aliases shared with the skg-if core, but need to be alert when they change",
+    "_comment1a": "### namespace prefixes also declared in skg-if core — values must stay in sync with core",
 
-    "schema": "http://schema.org/",
-    "srv": "https://w3id.org/skg-if/extension/srv/ontology/",
-    "skg": "https://w3id.org/skg-if/ontology/",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "http://purl.org/spar/datacite/",
-    "dcterms": "http://purl.org/dc/terms/",
-    "lvont": "http://lexvo.org/ontology#",
-    "lexvo-iso639-3": "http://lexvo.org/id/iso639-3/",
-    "loc": "http://id.loc.gov/authorities/",
+    "schema":    "https://schema.org/",
+    "foaf":      "http://xmlns.com/foaf/0.1/",
+    "skos":      "http://www.w3.org/2004/02/skos/core#",
+    "dcat":      "http://www.w3.org/ns/dcat#",
+    "datacite":  "http://purl.org/spar/datacite/",
+    "dcterms":   "http://purl.org/dc/terms/",
+    "loc":       "http://id.loc.gov/authorities/",
+    "bido":      "http://purl.org/spar/bido/",
+    "cito":      "http://purl.org/spar/cito/",
+    "frapo":     "http://purl.org/cerif/frapo/",
+
+    "_comment1b": "### namespace prefixes new in the srv extension (not declared in skg-if core)",
+
+    "srv":             "https://w3id.org/skg-if/extension/srv/ontology/",
+    "skg":             "https://w3id.org/skg-if/ontology/",
+    "lvont":           "http://lexvo.org/ontology#",
+    "lexvo-iso639-3":  "http://lexvo.org/id/iso639-3/",
     "sshopencloudvocabs": "https://vocabs.sshopencloud.eu/vocabularies/",
-    "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/",
-    "sshocinvt": "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/",
-    "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/",
-    "eoscgeoavail": "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/",
+    "sshocaudience":   "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/",
+    "sshocinvt":       "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/",
+    "elcs":            "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/",
+    "eoscgeoavail":    "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/",
 
-
-
-
+    "_comment2a": "### property aliases also declared in skg-if core — values must stay in sync",
 
     "local_identifier": "@id",
+    "identifiers":  { "@id": "datacite:hasIdentifier", "@type": "@vocab" },
+    "entity_type":  { "@id": "@type", "@type": "@vocab"  },
+    "name":         { "@id": "foaf:name" },
+    "other_names":  { "@id": "skos:altLabel" },
+    "website":      { "@id": "foaf:homepage", "@type": "@vocab" },
+    "disciplines":  { "@id": "dcterms:subject", "@type": "@vocab", "@context": { "@base": "http://id.loc.gov/authorities/classification/" } },
+    "all":          "loc:classification",
+    "topics":                 { "@id": "bido:holdsBibliometricDataInTime", "@type": "@vocab"  },
+    "term":                   { "@id": "bido:withBibliometricData", "@type": "@vocab" },
+    "defined_in":             { "@id": "skos:inScheme", "@type": "@vocab" },
+    "facility":               "frapo:Facility",
+    "relevant_organisations": { "@id": "dcterms:relation", "@type": "@vocab" },
+    "related_products":       "@nest",
 
-    "identifiers": { "@id": "datacite:hasIdentifier", "@type": "@vocab" },
+    "_comment3": "### aliases unique for the service extension",
+    "_comment3_descriptions": "### 'descriptions' follows the core pattern of 'titles'/'abstracts' (language-map, plural key) — fills a gap core left with its singular xsd:string 'description'",
 
-    "entity_type": { "@id": "@type", "@type": "@vocab"  },
-
-    "descriptions": { "@id": "dcterms:description", "@container": "@language" },
-
-    "keywords": "schema:keyword",
-
-    "_comment2": "### aliases unique for the service extension",
+    "descriptions":  { "@id": "dcterms:description", "@container": "@language" },
+    "is_cited_by":   { "@id": "cito:isCitedBy", "@type": "@vocab", "@nest": "related_products" },
 
     "TODO_WHEN_MADE_AVAILABLE eosc_service_profile": "https://github.com/EOSC-PLATFORM/service-profile/tree/4.0/",
 
+    "srv_keywords": "schema:keyword",
 
-    "srv_audience_byrole": { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@base": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" } },
-
+    "srv_audience_byrole":       { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@base": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" } },
     "srv_audience_byjurisdiction": { "@id": "srv:audienceJurisdiction" },
 
-    "disciplines": { "@id": "dcterms:subject", "@type": "@vocab", "@context": { "@base": "http://id.loc.gov/authorities/classification/" } },
+    "is_accessible_for_free":    { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
 
-    "all": "loc:classification",
-
-    "is_accessible_for_free": { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
-
-    "srv_invocation_type": { "@id": "srv:invocationType", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:invocation-type" } },
-
-    "srv_life_cycle_status": { "@id": "srv:eoscLifeCycleStatus", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:eosc-life-cycle-status/" } },
+    "srv_invocation_type":       { "@id": "srv:invocationType", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:invocation-type" } },
+    "srv_life_cycle_status":     { "@id": "srv:eoscLifeCycleStatus", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:eosc-life-cycle-status/" } },
     "srv_availability_geographic": { "@id": "srv:geographicalAvailability", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:eosc-geographical-availability" } },
 
-
-    "srv_api_profile": { "@id": "dcterms:conformsTo", "@type": "@id" },
-    "srv_api_endpoint": { "@id": "dcat:endpointURL", "@type": "@id" },
+    "srv_api_profile":           { "@id": "dcterms:conformsTo", "@type": "@id" },
+    "srv_api_endpoint":          { "@id": "dcat:endpointURL", "@type": "@id" },
     "srv_api_specification_uri": { "@id": "schema:url", "@type": "@id" },
 
+    "srv_supported_language":    { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@base": "http://lexvo.org/id/iso639-3" } },
 
-    "website": { "@id": "foaf:homepage", "@type": "@id" },
-    "srv_supported_language": { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@base": "http://lexvo.org/id/iso639-3" } },
+    "srv_deployment_of":         { "@id": "srv:isDeploymentOf", "@type": "@id" },
 
+    "srv_venues":  { "@id": "srv:hasVenue", "@type": "@id" },
 
-    "srv_deployment_of": { "@id": "srv:isDeploymentOf", "@type": "@id" },
+    "_comment4": "### nested org-role block — NOT used in examples or API spec; kept for reference only; prefer the flat srv_has_* properties above",
+    "srv_related_organisations":   "@nest",
+    "srv_research_infrastructure": { "@id": "dcterms:partOf", "@type": "@vocab", "@nest": "related organisations" },
+    "srv_in_portal":               { "@id": "dcterms:publisher", "@type": "@vocab", "@nest": "related organisations" },
+    "srv_hosting_legal_entity":    { "@id": "srv:hasHostingLegalEntity", "@type": "@vocab", "@nest": "related organisations" },
+    "srv_other":                   { "@id": "dcterms:relation", "@type": "@vocab", "@nest": "related organisations" },
 
-    "related_products": { "@id": "srv:relatedResearchProduct", "@type": "@id" },
-    "srv_contributions": { "@id": "srv:relatedResearchProduct", "@type": "@id" },
-
-    "topics": { "@id": "bido:holdsBibliometricDataInTime", "@type": "@vocab"  },
-    "srv_topics": { "@id": "srv:hasTopics", "@type": "@id" },
-    "srv_venues": { "@id": "srv:hasVenue", "@type": "@id" },
-
-    "relevant_organisations": { "@id": "dcterms:relation", "@type": "@id" },
-
-    "srv_related_organisations": "@nest",
-    "srv_research_infrastructure": { "@id": "dcterms:partOf", "@type": "@vocab", "@nest": "related organisations" } ,
-    "srv_in_portal": { "@id": "dcterms:publisher", "@type": "@vocab", "@nest": "related organisations" } ,
-    "srv_hosting_legal_entity": { "@id": "srv:hostingLegalEntity", "@type": "@vocab", "@nest": "related organisations" } ,
-    "srv_other": { "@id": "dcterms:relation", "@type": "@vocab", "@nest": "related organisations" } ,
-
-
-    "other_names": { "@id": "skos:altLabel" },
-    "name": { "@id": "foaf:name" },
-
-    "srv_Service": "srv:Service",
+    "service":          "srv:Service",
     "srv_FacilityPortal": "srv:FacilityPortal",
-    "srv_APIProfile": "srv:APIProfile",
+    "srv_APIProfile":   "srv:APIProfile",
 
-    "facility": "frapo:Facility",
-    "srv_portal":  "srv:Portal",
-    "research_infrastructure": "srv:ResearchInfrastructure",
+    "srv_portal":                    "srv:Portal",
+    "research_infrastructure":       "srv:ResearchInfrastructure",
     "srv_has_research_infrastructure": "srv:isPartOfResearchInfrastructure",
-    "srv_has_hosting_legal_entity": "srv:hasHostingLegalEntity",
-    "srv_has_hosting_organisation": "srv:hasHostingOrganisation",
-    "hosting_organisation": "srv:HostingOrganisation"
+    "srv_has_hosting_legal_entity":  "srv:hasHostingLegalEntity",
+    "srv_has_hosting_organisation":  "srv:hasHostingOrganisation",
+    "hosting_organisation":          "srv:HostingOrganisation"
   }
 }
-

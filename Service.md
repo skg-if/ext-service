@@ -243,20 +243,43 @@ _NOTE_ properties introduced by this extension, that are not from external origi
 ```
 
 ### `topics`
-*List* (optional):  [Topic] object identifiers relevant for the scope (topic) of a [Service].
-_NOTE_ this description is not consistent with other examples, should be discussed and repaired.
+*List* (optional): [Topic] entities relevant for the scope of a [Service]. Each entry wraps a Topic reference via the `term` key. The Topic is identified by its `local_identifier` (preferably a Wikidata IRI) and may inline `entity_type`, `identifiers`, and human-readable `labels` for convenience.
+
+_NOTE_: Unlike research products, services assert topics directly — no provenance or trust scores apply here.
 
 ```json
-    "topics":  [
-    {
-            "term": "topic_1",
-            "provenance": [
-                {
-                    "associated_with": "openaire-infra",
-                    "trust": 0.7
+    "topics": [
+        {
+            "term": {
+                "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+                "entity_type": "topic",
+                "identifiers": [
+                    {
+                        "scheme": "wikidata",
+                        "value": "https://www.wikidata.org/wiki/Q8162"
+                    }
+                ],
+                "labels": {
+                    "en": "Linguistics"
                 }
-            ]
-    } ]
+            }
+        },
+        {
+            "term": {
+                "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+                "entity_type": "topic",
+                "identifiers": [
+                    {
+                        "scheme": "wikidata",
+                        "value": "https://www.wikidata.org/wiki/Q30642"
+                    }
+                ],
+                "labels": {
+                    "en": "Natural Language Processing"
+                }
+            }
+        }
+    ]
 ```
 
 ### `srv_has_research_infrastructure`
@@ -375,31 +398,30 @@ Expanded form (as may be returned by the API):
 ```
 
 ### `related_products`
-*Object* (optional): A dictionary of objects representing related [Research products], where the semantics of such relationships is specified as a key and the related product by its local_identifier. 
-_NOTE_ (TODO): THIS LIST HAS TO BE MODFIED FOR SERVICE/SOFTWARE RELATIONS
-It is structured as follows:
-- `cites` *List* (optional): [Research products] identifiers that are cited by a given [Research product].
-- `is_supplemented_by` *List* (optional): [Research products] identifiers that are supplement of a given [Research product].
-- `is_documented_by` *List* (optional): [Research products] identifiers that documents a given [Research product].
-- `is_new_version_of` *List* (optional): [Research products] identifiers that are prior versions of a given [Research product].
-- `is_part_of` *List* (optional): [Research products] identifiers that contain the current [Research product].
+*Object* (optional): A dictionary of objects representing related [Research products], where the semantics of such relationship is specified as a key and the related product identified by its local_identifier.
+
+For services, the applicable relation types are:
+- `is_documented_by` *List* (optional): Identifiers of [Research products] (e.g. papers, reports) that document this service. Maps to `cito:isDocumentedBy`.
+- `is_cited_by` *List* (optional): Identifiers of [Research products] (e.g. papers) that cite or mention this service. Maps to `cito:isCitedBy`.
 
 ```json
     "related_products": {
-        "cites": ["product_2", "product_3", "product_4"],
-        "is_supplemented_by": ["product_7", "product_8", "product_9"],
-        "is_documented_by": ["product_10", "product_13"],
-        "is_new_version_of": ["product_10", "product_13"],
-        "is_part_of": ["product_11"]
+        "is_documented_by": ["https://doi.org/10.1007/s10579-010-9130-z"],
+        "is_cited_by": ["https://doi.org/10.18653/v1/2020.acl-main.1"]
     }
 ```
 
+> **Future extension — `related_services` on Research products**: There is a use case for extending the core `research_product` entity with a reciprocal `related_services` nested property, supporting the following relation types from the research product side:
+> - `cites` — a publication cites a service
+> - `documents` — a publication documents a service
+> - `is_created_by` — a dataset was created by a service
 
-### `keywords`
-*List* (optional): List of keywords relevant for service discovery, values may be simple strings or concept URIs.
+
+### `srv_keywords`
+*List* (optional): List of keywords relevant for service discovery, values may be simple strings or concept URIs. Maps to `schema:keyword`.
 
 ```json
-    "keywords": ["https://www.wikidata.org/wiki/Q30642","parsing"]
+    "srv_keywords": ["https://www.wikidata.org/wiki/Q30642","parsing"]
 ``` 
 
 ### `srv_deployment_of`                                                                           
@@ -423,25 +445,8 @@ It is structured as follows:
 
 
 ### `srv_contributions`
-*List* (optional) [Agents] that contributed to a [Service] (optional): 
-A dictionary of objects representing contributing [Agents], where the semantics of the contributionis specified as a key.
-#TODO: THIS LIST OF CONTRIBUTION TYPES HAS TO BE MODFIED FOR SERVICE/SOFTWARE CONTRIBUTIONS
-#Recommended to use the specific properties such  as "research_infrastructure", "hosting_organisation" etc. to measure contribution of organisations. Individual person contributions of software developers, data managers etc. are well taken care under research-products. It is difficult to track individiual contributions to operations anyway
 
-It is structured as follows:
-
-```json
-    "srv_contributions": [ 
-               {
-                    "by": "University of Sheffield",
-                    "role": "operator"
-               },
-               {
-                    "by": "UK Research and Innovation agency",
-                    "role": "funder"
-               }  
-    ]    
-```
+> **Removed**: The `srv_has_hosting_organisation`, `srv_has_research_infrastructure`, and `relevant_organisations` properties are considered sufficient to capture the organisational relationships of a service. A general agent+role contribution pattern (as used for research products) is for now not recommended for services, as operational contributions are difficult to track at that level of granularity. `srv_contributions` has been removed.
 
 
 ----
