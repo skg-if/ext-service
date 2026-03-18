@@ -34,7 +34,7 @@ The Service entity can be linked to core SKG-IF entities:
 - **Research products** via `srv_deployment_of` (software deployed by the service) and `related_products` (conceptually related products)
 - **Organisations** via `srv_has_hosting_organisation`, `srv_has_research_infrastructure`, `srv_has_hosting_legal_entity`, and `relevant_organisations`
 - **Venues** via `srv_venues`
-- **Topics** via `disciplines` and `srv_topics`
+- **Topics** via `disciplines` and `topics`
 
 For the full property specification, see the [Service] documentation.
 

@@ -238,6 +238,18 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
     rdfs:comment "The disciplines for which a Service, Data source is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at https://id.loc.gov/authorities/classification (e.g. `PA3000-PA3049` for classical literature). In case a Data source is discipline agnostic, the string `all` should be specified." ;
     rdfs:isDefinedBy dcterms: .
 
+foaf:name a owl:DatatypeProperty ;
+    rdfs:label "foaf:name (SKG-IF labels: name)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following data types (range):
+* rdfs:Literal""" ;
+    rdfs:comment "The canonical name of the service." ;
+    rdfs:domain srv:Service ;
+    rdfs:range rdfs:Literal ;
+    rdfs:isDefinedBy foaf: .
+
 foaf:homepage a owl:ObjectProperty ;
     rdfs:label "foaf:homepage (SKG-IF labels: website)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
@@ -499,7 +511,7 @@ srv:Service a owl:Class ;
     rdfs:subClassOf schema:SoftwareApplication ;
     dc:description """The properties that can be used with this class are:
 * datacite:hasIdentifier -[0..N]-> datacite:Identifier
-* skos:prefLabel -[1..N]-> rdfs:Literal
+* foaf:name -[1..1]-> rdfs:Literal
 * skos:altLabel -[0..N]-> rdfs:Literal
 * dcterms:description -[0..N]-> rdfs:langString
 * foaf:homepage -[0..1]-> foaf:Document
