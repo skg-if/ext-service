@@ -48,7 +48,7 @@ New type for portal functionality:
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifying a [Software Service] in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): URL uniquely identifying this Service within the SKG. Should be an absolute URL or a short string resolved to a URL via `@base` in the context of JSON-LD. Can be derived from an existing persistent identifier (e.g. a handle).
 
 {: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities). A local_identifier can also be (derived) from an existing persistent identifier.
@@ -285,7 +285,14 @@ _NOTE_: Unlike research products, services assert topics directly — no provena
 ### `srv_has_research_infrastructure`
 
 *List* (optional): Is associated with an [Organisation] that provides facilities, resources and services for the research communities to conduct research.
-_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
+_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects.
+Simple form (`local_identifier`, preferred for input/storage):
+```json
+     "srv_has_research_infrastructure": [
+       "https://ror.org/03wp25384"
+     ]
+```
+Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```json
      "srv_has_research_infrastructure": [
        {
@@ -297,18 +304,21 @@ _NOTE_ When querying the SKG-IF API, query responses may return as value for thi
            "research_infrastructure"
          ],
          "country": "NL"
-       },
-       {
-         "local_identifier": "https://ror.org/03wp25384",
-         "entity_type": "organisation"
        }
      ]
 ```
 
 ### `srv_has_hosting_organisation`
 *List* (optional): Is depending on [Organisation] responsible for hosting a service or infrastructure component.
-_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
+_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects.
 
+Simple form (`local_identifier`, preferred for input/storage):
+```json
+     "srv_has_hosting_organisation": [
+       "https://ror.org/00dd4fz34"
+     ]
+```
+Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```json
      "srv_has_hosting_organisation": [
        {
@@ -321,36 +331,49 @@ _NOTE_ When querying the SKG-IF API, query responses may return as value for thi
            "hosting_organisation"
          ],
          "country": "CZ"
-       },
-       {
-         "local_identifier": "https://ror.org/00dd4fz34",
-         "entity_type": "organisation"
        }
      ]
 ```
 
 ### `srv_has_hosting_legal_entity`
 *List* (optional): Is the specific [Organisation] legally responsible for the service operation and publishing.
-_NOTE_ When querying the SKG-IF API, query responses may return as value for this property the complete Organisation entity information, but should minimally return `local_identifier` and `entity_type`.
+_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects.
 
+Simple form (`local_identifier`, preferred for input/storage):
 ```json
-     "srv_has_hosting_legal_entity": [{
-        "local_identifier": "https://ror.org/024d6js02",
-        "entity_type": "organisation",
-        "name": "Charles University",
-        "types": [
-          "education",
-          "research"
-        ],
-        "country": "CZ"
-     }]
+     "srv_has_hosting_legal_entity": [
+       "https://ror.org/024d6js02"
+     ]
+```
+Expanded form (Organisation object, as returned by API with `embedding=true`):
+```json
+     "srv_has_hosting_legal_entity": [
+       {
+         "local_identifier": "https://ror.org/024d6js02",
+         "entity_type": "organisation",
+         "name": "Charles University",
+         "types": [
+           "education",
+           "research"
+         ],
+         "country": "CZ"
+       }
+     ]
 ```
 
 
 ### `srv_venues`
 *List* (optional): Portals or catalogues through which the service is advertised and accessible. Each entry references a [Venue] with type `srv_portal`.
-_NOTE_ When querying the SKG-IF API, query responses should minimally return `local_identifier` and `entity_type`.
+_NOTE_ Each item may be a `local_identifier` for a Venue or a Venue object. API responses may expand identifiers to Venue objects.
 
+Simple form (`local_identifier`, preferred for input/storage):
+```json
+    "srv_venues": [
+      "https://ror.org/03sj9b840",
+      "https://portal.ariadne-infrastructure.eu"
+    ]
+```
+Expanded form (Venue objects, as returned by API with `embedding=true`):
 ```json
     "srv_venues": [
         {
@@ -373,7 +396,7 @@ _NOTE_ When querying the SKG-IF API, query responses should minimally return `lo
 ### `relevant_organisations`
 *List* (optional):  [Organisation] identifiers associated with and relevant for a [Service].
 Identifiers can be of local or global identifier system type e.g. ror, uri. Organizations can be given additional types: `"research_infrastructure"`, `"hosting_organisation"` and `"hosting_legal_entity"` to indicate their role.
-_NOTE_ Each item may be a plain identifier string or a full Organisation object. API responses may expand identifiers to full Organisation objects. For semantically typed roles use the specific `srv_has_*` properties instead.
+_NOTE_ Each item may be a plain identifier string or an Organisation object. API responses may expand identifiers to Organisation objects. For semantically typed roles use the specific `srv_has_*` properties instead.
 
 Simple form (flat identifier strings, preferred for input/storage):
 ```json

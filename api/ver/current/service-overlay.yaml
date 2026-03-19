@@ -386,9 +386,13 @@ actions:
                   -  [ { "@id": "https://github.com/ufal/udpipe", "@type": "schema:SoftwareSourceCode"}, { "@id": "http://example.org/research_product/RP_101", "@type": "skg:research_product"} ]
 
               srv_has_hosting_legal_entity:
-                description: organisation (legal entity) legally responsible for the hosted service
-                $ref: '#/components/schemas/Organisation'
-                examples: 
+                description: organisation (legal entity) legally responsible for the hosted service. May be a local_identifier for an Organisation or an Organisation object.
+                anyOf:
+                  - type: string
+                    format: uri
+                    description: local_identifier of the Organisation
+                  - $ref: '#/components/schemas/Organisation'
+                examples:
                     - local_identifier: https://ror.org/024d6js02
                       entity_type: 'organisation'
                       identifiers: [ {scheme: "ror", value: "https://ror.org/024d6js02"}, {scheme: "ISNI", value: "0000 0004 1937 116X"} ]
@@ -400,9 +404,13 @@ actions:
 
               srv_has_hosting_organisation:
                 type: array
-                description: organisation responsible for hosting and operating the service
+                description: organisation responsible for hosting and operating the service. Each item may be a plain identifier string or a full Organisation object.
                 items:
-                  $ref: '#/components/schemas/Organisation'
+                  anyOf:
+                    - type: string
+                      format: uri
+                      description: local_identifier of the Organisation
+                    - $ref: '#/components/schemas/Organisation'
                 example:
                   - local_identifier: https://ror.org/00dd4fz34
                     entity_type: 'organisation'
@@ -413,9 +421,13 @@ actions:
 
               srv_has_research_infrastructure:
                 type: array
-                description: research infrastructure organisation(s) involved
+                description: research infrastructure organisation(s) involved. Each item may be a plain identifier string or a full Organisation object.
                 items:
-                  $ref: '#/components/schemas/Organisation'
+                  anyOf:
+                    - type: string
+                      format: uri
+                      description: local_identifier of the Organisation
+                    - $ref: '#/components/schemas/Organisation'
                 example:
                   - local_identifier: https://ror.org/03wp25384
                     entity_type: 'organisation'
@@ -428,22 +440,13 @@ actions:
 
               srv_venues:
                 type: array
-                description: provide reference to portal/venue through which the service is advertised (catalogue) and accessible.
+                description: provide reference to portal/venue through which the service is advertised (catalogue) and accessible. Each item may be a local_identifier for a Venue or a Venue object.
                 items:
-                  properties:
-                    local_identifier: 
-                      type: string
-                    entity_type: 
-                      type: string
-                    name:
-                      type: string
-                    website:
-                      type: string
-                      format: uri                
-                    types:
-                      type: array
-                      items:
-                        type: string
+                  anyOf:
+                    - type: string
+                      format: uri
+                      description: local_identifier of the Venue
+                    - $ref: '#/components/schemas/Venue'
                 example:
                    - local_identifier: https://ror.org/03sj9b840
                      entity_type: "venue"
@@ -519,7 +522,7 @@ actions:
                   anyOf:
                     - type: string
                       format: uri
-                      description: Organisation identifier (local_identifier or external URI)
+                      description: local_identifier of the Organisation
                     - $ref: '#/components/schemas/Organisation'
                 examples:
                   # Flat identifier list (input / storage form)
