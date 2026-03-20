@@ -1,0 +1,208 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/sshomp/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0BNuGH",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "sshomp",
+          "value": "0BNuGH"
+        },
+        {
+          "scheme": "sshomp-id",
+          "value": "80398"
+        },
+        {
+          "scheme": "url",
+          "value": "https://marketplace.sshopencloud.eu/tool-or-service/0BNuGH"
+        }
+      ],
+      "srv_name": "CLARIAH-DE Tutorial Finder",
+      "descriptions": {
+        "eng": [
+          "The Tutorial Finder allows users to browse freely available and reusable teaching and training materials on procedures, tools, research methods, and topics in the humanities and its related disciplines. \n\nThis resource is supported by Text+. In case of questions you may get in touch with the Text+ helpdesk at textplus-support@gwdg.de."
+        ],
+        "en": [
+          "Terms of use and access — NOTE: dedicated service extension properties for TOU/access metadata are desirable. License: Creative Commons Attribution 4.0 International | Privacy policy URL: https://www.clariah.de/en/privacy"
+        ]
+      },
+      "disciplines": [
+        "https://id.loc.gov/authorities/classification/QA76.9.H85"
+      ],
+      "srv_invocation_type": [
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/webApplication"
+      ],
+      "srv_supported_language": [
+        "eng",
+        "deu"
+      ],
+      "srv_audience_byrole": [
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researchSupport"
+      ],
+      "website": "https://teaching.clariah.de/search/",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/9316",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/2868",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/9704",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/10355"
+      ],
+      "sshomp_last_update": "2026-01-10T10:39:36+0000",
+      "srv_life_cycle_status": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_availability_geographic": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/ww",
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eo"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q13418847",
+            "entity_type": "topic",
+            "labels": {
+              "en": "digital humanities"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q13418847"
+              }
+            ]
+          }
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "name": "CLARIN ERIC",
+          "short_name": "CLARIN",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "website": "https://www.clarin.eu/"
+        },
+        {
+          "local_identifier": "https://ror.org/01gybvy13",
+          "entity_type": "organisation",
+          "name": "DARIAH ERIC",
+          "short_name": "DARIAH",
+          "types": [
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/01gybvy13"
+            }
+          ],
+          "website": "https://www.dariah.eu/"
+        },
+        {
+          "local_identifier": "https://www.text-plus.org",
+          "entity_type": "organisation",
+          "name": "Text+",
+          "short_name": "Text+",
+          "types": [
+            "research_infrastructure"
+          ],
+          "website": "https://www.text-plus.org/"
+        },
+        {
+          "local_identifier": "https://clariah.de",
+          "entity_type": "organisation",
+          "name": "CLARIAH-DE",
+          "short_name": "CLARIAH-DE",
+          "types": [
+            "research_infrastructure"
+          ],
+          "country": "DE",
+          "website": "https://clariah.de"
+        },
+        {
+          "local_identifier": "https://de.dariah.eu",
+          "entity_type": "organisation",
+          "name": "DARIAH-DE",
+          "short_name": "DARIAH-DE",
+          "types": [
+            "research_infrastructure"
+          ],
+          "country": "DE",
+          "website": "https://de.dariah.eu"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://marketplace.sshopencloud.eu",
+          "entity_type": "venue",
+          "name": "SSH Open Marketplace",
+          "website": "https://marketplace.sshopencloud.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_keywords": [
+        "DARIAH Resource",
+        "Textplus",
+        "GKFI e.V.",
+        "Finding",
+        "Discovering"
+      ],
+      "srv_deployment_of": [
+        {
+          "@id": "https://doi.org/10.5281/zenodo.6328000",
+          "@type": "schema:SoftwareSourceCode"
+        }
+      ],
+      "sshomp_disciplines_oefos": [
+        "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605007"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/9316",
+      "entity_type": "organisation",
+      "name": "CLARIAH-DE"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/2868",
+      "entity_type": "organisation",
+      "name": "DARIAH-DE"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+      "entity_type": "organisation",
+      "name": "DARIAH-EU"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/9704",
+      "entity_type": "organisation",
+      "name": "Text+"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/10355",
+      "entity_type": "organisation",
+      "name": "GKFI e.V."
+    }
+  ]
+}

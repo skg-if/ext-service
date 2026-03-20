@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/elg/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/elg/9264",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "elg",
+          "value": "9264"
+        },
+        {
+          "scheme": "url",
+          "value": "https://live.european-language-grid.eu/catalogue/#/tool-or-service/9264"
+        }
+      ],
+      "name": "HelsinkiNLP - OPUS-MT: English/French - Breton machine translation",
+      "other_names": [
+        "OPUS-MT eng+fra-bre"
+      ],
+      "descriptions": {
+        "none": [
+          "Machine translation from English/French to Breton using neural networks (HelsinkiNLP OPUS-MT)."
+        ]
+      },
+      "srv_keywords": [
+        "Machine Translation",
+        "machine translation",
+        "multilingual",
+        "translation"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:bre",
+        "lexvo-iso639-3:eng",
+        "lexvo-iso639-3:fra"
+      ],
+      "is_accessible_for_free": true,
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://live.european-language-grid.eu/execution/process/9264"
+        ]
+      },
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/elg",
+          "entity_type": "organisation",
+          "name": "European Language Grid",
+          "website": "https://live.european-language-grid.eu",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ]
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://live.european-language-grid.eu/catalogue",
+          "entity_type": "venue",
+          "name": "European Language Grid Catalogue",
+          "website": "https://live.european-language-grid.eu/catalogue/#/",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "machine translation"
+            }
+          }
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:dataEngineer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/040af2s02",
+          "entity_type": "organisation",
+          "name": "University of Helsinki",
+          "website": "https://www.helsinki.fi",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/040af2s02"
+            },
+            {
+              "scheme": "url",
+              "value": "https://www.helsinki.fi"
+            }
+          ]
+        }
+      ],
+      "website": "https://opus.nlpl.eu/"
+    }
+  ]
+}

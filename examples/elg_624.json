@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/elg/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/elg/624",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "elg",
+          "value": "624"
+        },
+        {
+          "scheme": "url",
+          "value": "https://live.european-language-grid.eu/catalogue/#/tool-or-service/624"
+        }
+      ],
+      "name": "UEDIN Machine Translation Service for English to German",
+      "other_names": [
+        "UEDIN-MT-EnDe"
+      ],
+      "descriptions": {
+        "none": [
+          "A machine translation (MT) service for English-to-German translation based on the Marian machine translation framework. The translation model is a basic transformer model trained on ca 13.3M sentence pairs using Marian NMT"
+        ]
+      },
+      "srv_keywords": [
+        "English",
+        "German",
+        "Machine Translation",
+        "Marian framework",
+        "Neural machine translation"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:deu",
+        "lexvo-iso639-3:eng"
+      ],
+      "is_accessible_for_free": false,
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://live.european-language-grid.eu/execution/process/624"
+        ]
+      },
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/elg",
+          "entity_type": "organisation",
+          "name": "European Language Grid",
+          "website": "https://live.european-language-grid.eu",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ]
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://live.european-language-grid.eu/catalogue",
+          "entity_type": "venue",
+          "name": "European Language Grid Catalogue",
+          "website": "https://live.european-language-grid.eu/catalogue/#/",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "machine translation"
+            }
+          }
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:dataEngineer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/01nrxwars",
+          "entity_type": "organisation",
+          "name": "University of Edinburgh",
+          "website": "https://www.ed.ac.uk",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/01nrxwars"
+            },
+            {
+              "scheme": "url",
+              "value": "https://www.ed.ac.uk"
+            }
+          ]
+        }
+      ],
+      "website": "https://clickfortranslation.com/german-translation-services.php"
+    }
+  ]
+}

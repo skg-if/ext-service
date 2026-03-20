@@ -1,0 +1,170 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/sshomp/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0EEPnj",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "sshomp",
+          "value": "0EEPnj"
+        },
+        {
+          "scheme": "sshomp-id",
+          "value": "65461"
+        },
+        {
+          "scheme": "url",
+          "value": "https://marketplace.sshopencloud.eu/tool-or-service/0EEPnj"
+        }
+      ],
+      "srv_name": "Discuss Data",
+      "descriptions": {
+        "eng": [
+          "Discuss Data (www.discuss-data.net) is a new open repository for storing, sharing and discussing research data on Eastern Europe, South Caucasus and Central Asia. The platform, launched in September 2020, is funded by the German Research Foundation (DFG) and operated by the Research Centre for East European Studies at the University of Bremen (FSO) and the Göttingen State and University Library (SUB). Discuss Data goes beyond ordinary repositories and offers an interactive online platform for the discussion and quality assessment of research data. Our aim is to create a space for academic communication and for the community-specific publication, curation, annotation and discussion of research data on Eastern Europe, South Caucasus and Central Asia.\n\nIn view of an increasing debate within the academic community about the reliability and validity of research data, especially regarding the post-Soviet region, this is of crucial importance. Also, there is an increasing demand for research data management and transparency, manifested in initiatives like the FAIR Guiding Principles for scientific data management and stewardship. The major German scientific funding institution, the German Research Foundation (DFG), suggests in its \"Proposals for Safeguarding Good Scientific Practice\" to securely store primary research data for ten years. As a project funded by the DFG, Discuss Data is commited to this practice.\n\nDiscuss Data combines the upload and publication of data collections not only with documentations of data collection, but also enables in the same space the interactive evaluation of the data through the assessment of their quality, their contextualisation and discussion. Thus, we enable the international community of experts to report faulty data, in case of missing data to recommend alternative data sources, and to extensively discuss the interpretation and application of data. Discuss Data presents the opportunity to structure and present feedback to research data and to transform the evaluation of research data from an individualistic to a collective procedure that benefits the whole academic community.\n\nFor data storage and long-term digital preservation, Discuss Data is connected to the DARIAH-DE repository, where all open data will be archived, and prospectively the Humanities Data Centre services. Through cross-linkage with various external data sources, the knowledge and debates about research data shall be collected interactively and made accessible to both the academic community and the interested public. Thereby, Discuss Data contributes to the creation of a project-independent, transregional and sustainable information infrastructure."
+        ]
+      },
+      "website": "https://www.discuss-data.net/",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/10355",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/2868",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/8747"
+      ],
+      "sshomp_last_update": "2024-09-02T08:41:11+0000",
+      "srv_invocation_type": [
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/webApplication",
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/library"
+      ],
+      "srv_life_cycle_status": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
+      ],
+      "srv_audience_byrole": [
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/dataEngineer",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/public",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_availability_geographic": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/ww",
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eo"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/8747",
+          "entity_type": "organisation",
+          "name": "Göttingen State and University Library",
+          "types": [
+            "hosting_organisation"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/05745n787"
+            }
+          ]
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/01gybvy13",
+          "entity_type": "organisation",
+          "name": "DARIAH ERIC",
+          "short_name": "DARIAH",
+          "types": [
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/01gybvy13"
+            }
+          ],
+          "website": "https://www.dariah.eu/"
+        },
+        {
+          "local_identifier": "https://de.dariah.eu",
+          "entity_type": "organisation",
+          "name": "DARIAH-DE",
+          "short_name": "DARIAH-DE",
+          "types": [
+            "research_infrastructure"
+          ],
+          "country": "DE",
+          "website": "https://de.dariah.eu"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://marketplace.sshopencloud.eu",
+          "entity_type": "venue",
+          "name": "SSH Open Marketplace",
+          "website": "https://marketplace.sshopencloud.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_keywords": [
+        "DARIAH Resource",
+        "GKFI e.V."
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q13418847",
+            "entity_type": "topic",
+            "labels": {
+              "en": "digital humanities"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q13418847"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/10355",
+      "entity_type": "organisation",
+      "name": "GKFI e.V."
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/2868",
+      "entity_type": "organisation",
+      "name": "DARIAH-DE"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+      "entity_type": "organisation",
+      "name": "DARIAH-EU"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/8747",
+      "entity_type": "organisation",
+      "name": "Göttingen State and University Library",
+      "sshomp_affiliations": [
+        "Georg-August-University Göttingen"
+      ],
+      "identifiers": [
+        {
+          "scheme": "ror",
+          "value": "https://ror.org/05745n787"
+        }
+      ]
+    }
+  ]
+}

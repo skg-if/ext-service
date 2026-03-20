@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/skg-if/extension/srv/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/skg-if/extension/srv/ontology/","name":"The SKG-IF Ontology: Service Extension", "headline":"Document describing the ontology https://w3id.org/skg-if/extension/srv/ontology/", "dateReleased":"Fri Feb 27 21:14:57 CET 2026", "version":"1.1.0", "author":[{"@type":"Person","name":"Scientific Knowledge Graphs – Interoperability Framework (SKG-IF) WG; OSTrails Project"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/skg-if/extension/srv/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/skg-if/extension/srv/ontology/","name":"The SKG-IF Ontology: Service Extension", "headline":"Document describing the ontology https://w3id.org/skg-if/extension/srv/ontology/", "dateReleased":"Fri Mar 20 11:14:58 CET 2026", "version":"1.1.0", "author":[{"@type":"Person","name":"Scientific Knowledge Graphs – Interoperability Framework (SKG-IF) WG; OSTrails Project"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -105,10 +105,18 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/skg-if/extension/srv/ontology/APIProfile">API Profile</a>
    </li>
    <li>
+      <a href="#http://purl.org/spar/bido/BibliometricDataInTime" title="http://purl.org/spar/bido/BibliometricDataInTime">bido:BibliometricDataInTime</a>
+   </li>
+   <li>
       <a href="#http://purl.org/spar/datacite/IdentifierScheme" title="http://purl.org/spar/datacite/IdentifierScheme">datacite:IdentifierScheme</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/Standard" title="http://purl.org/dc/terms/Standard">dcterms:Standard</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/spar/fabio/ExpressionCollection" title="http://purl.org/spar/fabio/ExpressionCollection">
+         <span>Expression Collection</span>
+      </a>
    </li>
    <li>
       <a href="#http://purl.org/spar/fabio/Software" title="http://purl.org/spar/fabio/Software">fabio:Software (SKG-IF labels: software)</a>
@@ -145,6 +153,13 @@ This ontology has the following classes and properties.</span>
       <a href="#https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">schema:SoftwareSourceCode</a>
    </li>
    <li>
+      <a href="#https://w3id.org/skg-if/ontology/research_product"
+         title="https://w3id.org/skg-if/ontology/research_product">skg:research_product</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/skg-if/ontology/Venue" title="https://w3id.org/skg-if/ontology/Venue">skg:Venue</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
          title="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a>
    </li>
@@ -155,6 +170,13 @@ This ontology has the following classes and properties.</span>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
+   <li>
+      <a href="#http://purl.org/spar/bido/holdsBibliometricDataInTime"
+         title="http://purl.org/spar/bido/holdsBibliometricDataInTime">bido:holdsBibliometricDataInTime (SKG-IF labels: topics)</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/spar/bido/withBibliometricData" title="http://purl.org/spar/bido/withBibliometricData">bido:withBibliometricData (SKG-IF labels: term)</a>
+   </li>
    <li>
       <a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo (SKG-IF labels: conformsTo)</a>
    </li>
@@ -205,10 +227,6 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation">srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)</a>
    </li>
    <li>
-      <a href="#hasTopics"
-         title="https://w3id.org/skg-if/extension/srv/ontology/hasTopics">srv:hasTopics (SKG-IF labels: srv_topics)</a>
-   </li>
-   <li>
       <a href="#hasVenue"
          title="https://w3id.org/skg-if/extension/srv/ontology/hasVenue">srv:hasVenue (SKG-IF labels: srv_venues)</a>
    </li>
@@ -246,6 +264,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/dcat#endpointURL" title="http://www.w3.org/ns/dcat#endpointURL">
          <span>endpoint URL</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">foaf:name (SKG-IF labels: name)</a>
    </li>
    <li>
       <a href="#https://schema.org/url" title="https://schema.org/url">
@@ -323,8 +344,10 @@ This section provides details for each class and property defined by SRV-O: Serv
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
   <li><a href="#APIProfile" title="https://w3id.org/skg-if/extension/srv/ontology/APIProfile">API Profile</a></li>
+  <li><a href="#http://purl.org/spar/bido/BibliometricDataInTime" title="http://purl.org/spar/bido/BibliometricDataInTime">bido:BibliometricDataInTime</a></li>
   <li><a href="#http://purl.org/spar/datacite/IdentifierScheme" title="http://purl.org/spar/datacite/IdentifierScheme">datacite:IdentifierScheme</a></li>
   <li><a href="#http://purl.org/dc/terms/Standard" title="http://purl.org/dc/terms/Standard">dcterms:Standard</a></li>
+  <li><a href="#http://purl.org/spar/fabio/ExpressionCollection" title="http://purl.org/spar/fabio/ExpressionCollection"> <span>Expression Collection</span> </a></li>
   <li><a href="#http://purl.org/spar/fabio/Software" title="http://purl.org/spar/fabio/Software">fabio:Software (SKG-IF labels: software)</a></li>
   <li><a href="#http://purl.org/spar/fabio/SubjectTerm" title="http://purl.org/spar/fabio/SubjectTerm">fabio:SubjectTerm (SKG-IF labels: Topic)</a></li>
   <li><a href="#http://purl.org/spar/fabio/Work" title="http://purl.org/spar/fabio/Work">fabio:Work (SKG-IF labels: any)</a></li>
@@ -335,6 +358,8 @@ This section provides details for each class and property defined by SRV-O: Serv
   <li><a href="#http://purl.org/spar/pro/Role" title="http://purl.org/spar/pro/Role">pro:Role</a></li>
   <li><a href="#ResearchInfrastructure" title="https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure">research infrastructure</a></li>
   <li><a href="#https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">schema:SoftwareSourceCode</a></li>
+  <li><a href="#https://w3id.org/skg-if/ontology/research_product" title="https://w3id.org/skg-if/ontology/research_product">skg:research_product</a></li>
+  <li><a href="#https://w3id.org/skg-if/ontology/Venue" title="https://w3id.org/skg-if/ontology/Venue">skg:Venue</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a></li>
   <li><a href="#Service" title="https://w3id.org/skg-if/extension/srv/ontology/Service">srv:Service</a></li>
  </ul>
@@ -373,6 +398,29 @@ This section provides details for each class and property defined by SRV-O: Serv
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://purl.org/spar/bido/BibliometricDataInTime">
+  <h3>bido:BibliometricDataInTime<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spar/bido/BibliometricDataInTime</p>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * bido:withBibliometricData -[1]-&gt; fabio:SubjectTerm</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/spar/bido/">http://purl.org/spar/bido/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://purl.org/spar/bido/withBibliometricData" title="http://purl.org/spar/bido/withBibliometricData">bido:withBibliometricData (SKG-IF labels: term)</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://purl.org/spar/datacite/IdentifierScheme">
   <h3>datacite:IdentifierScheme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/datacite/IdentifierScheme</p>
@@ -408,6 +456,18 @@ This section provides details for each class and property defined by SRV-O: Serv
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://purl.org/spar/fabio/ExpressionCollection">
+  <h3>Expression Collection<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spar/fabio/ExpressionCollection</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/skg-if/ontology/Venue" title="https://w3id.org/skg-if/ontology/Venue">skg:Venue</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://purl.org/spar/fabio/Software">
   <h3>fabio:Software (SKG-IF labels: software)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/fabio/Software</p>
@@ -423,6 +483,9 @@ This section provides details for each class and property defined by SRV-O: Serv
  <div class="entity" id="http://purl.org/spar/fabio/SubjectTerm">
   <h3>fabio:SubjectTerm (SKG-IF labels: Topic)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/fabio/SubjectTerm</p>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * skos:prefLabel -[0..N]-&gt; rdfs:Literal * skos:inScheme -[0..1]-&gt; skos:ConceptScheme</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -436,7 +499,7 @@ This section provides details for each class and property defined by SRV-O: Serv
     is in range of
    </dt>
    <dd>
-    <a href="#hasTopics" title="https://w3id.org/skg-if/extension/srv/ontology/hasTopics">srv:hasTopics (SKG-IF labels: srv_topics)</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.org/spar/bido/withBibliometricData" title="http://purl.org/spar/bido/withBibliometricData">bido:withBibliometricData (SKG-IF labels: term)</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -449,6 +512,14 @@ This section provides details for each class and property defined by SRV-O: Serv
    </dt>
    <dd>
     <a href="http://purl.org/spar/fabio/">http://purl.org/spar/fabio/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/skg-if/ontology/research_product" title="https://w3id.org/skg-if/ontology/research_product">skg:research_product</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -539,7 +610,7 @@ This section provides details for each class and property defined by SRV-O: Serv
    <span class="markdown">Computer programming source code, including full (compile-ready) solutions, code snippet samples, templates, scripts, and other software artefacts. </span>
   </div>
   <div class="info">
-   <span class="markdown"> The properties that can be used with this class are: * foaf:homepage -[0..N]-&gt; foaf:Document * schema:codeRepository -[1..N]-&gt; schema:url </span>
+   <span class="markdown"> The properties that can be used with this class are: * foaf:homepage -[0..N]-&gt; foaf:Document * schema:codeRepository -[1..N]-&gt; xsd:anyURI </span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -564,6 +635,52 @@ This section provides details for each class and property defined by SRV-O: Serv
    </dd>
   </dl>
  </div>
+ <div class="entity" id="https://w3id.org/skg-if/ontology/research_product">
+  <h3>skg:research_product<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/skg-if/ontology/research_product</p>
+  <div class="comment">
+   <span class="markdown">SKG-IF alias for fabio:Work. In a Service context 'research product' better expresses the intent: any scholarly output (software, dataset, publication, workflow) that a service deploys or relates to. The core JSON-LD context maps this as "product": "fabio:Work".</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/skg-if/extension/srv/ontology/">https://w3id.org/skg-if/extension/srv/ontology/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isDeploymentOf" title="https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf">srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedResearchProduct" title="https://w3id.org/skg-if/extension/srv/ontology/relatedResearchProduct">srv:relatedResearchProduct (SKG-IF labels: related_products)</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/skg-if/ontology/Venue">
+  <h3>skg:Venue<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/skg-if/ontology/Venue</p>
+  <div class="comment">
+   <span class="markdown">SKG-IF alias for fabio:ExpressionCollection. In a Service context 'Venue' better expresses the intent: a portal, catalogue, or registry through which a service is advertised and accessible. The core JSON-LD context maps this as "venue": "fabio:ExpressionCollection".</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/skg-if/extension/srv/ontology/">https://w3id.org/skg-if/extension/srv/ontology/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasVenue" title="https://w3id.org/skg-if/extension/srv/ontology/hasVenue">srv:hasVenue (SKG-IF labels: srv_venues)</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://www.w3.org/2004/02/skos/core#ConceptScheme">
   <h3>skos:ConceptScheme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
@@ -575,12 +692,20 @@ This section provides details for each class and property defined by SRV-O: Serv
     <a href="http://www.w3.org/2004/02/skos/core#">http://www.w3.org/2004/02/skos/core#</a>
    </dd>
   </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">skos:inScheme (SKG-IF labels: defined_in)</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
  </div>
  <div class="entity" id="Service">
   <h3>srv:Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/skg-if/extension/srv/ontology/Service</p>
   <div class="info">
-   <span class="markdown">The properties that can be used with this class are: * datacite:hasIdentifier -[0..N]-&gt; datacite:Identifier * skos:prefLabel -[1..N]-&gt; rdfs:Literal * skos:altLabel -[0..N]-&gt; rdfs:Literal * dcterms:description -[0..N]-&gt; rdfs:langString * foaf:homepage -[0..1]-&gt; foaf:Document * srv:audienceJurisdiction -[0..N]-&gt; xsd:string * srv:intendedAudienceRole -[0..N]-&gt; skos:Concept * dcterms:subject -[0..N]-&gt; owl:Thing * srv:invocationType -[0..N]-&gt; skos:Concept * srv:eoscLifeCycleStatus -[0..1]-&gt; skos:Concept * srv:geographicalAvailability -[0..N]-&gt; owl:Thing * srv:supportedLanguage -[0..N]-&gt; lvont:Language * srv:isPartOfResearchInfrastructure -[0..N]-&gt; foaf:Organization * srv:hasHostingOrganisation -[0..N]-&gt; foaf:Organization * srv:hasHostingLegalEntity -[0..1]-&gt; foaf:Organization * dcterms:relation -[0..N]-&gt; foaf:Organization * dcterms:conformsTo -[0..N]-&gt; srv:APIProfile * schema:provider -[0..1]-&gt; srv:FacilityPortal * srv:isDeploymentOf -[0..N]-&gt; fabio:Software * srv:isDeploymentOf -[0..N]-&gt; schema:SoftwareSourceCode * srv:isDeploymentOf -[0..N]-&gt; skg:research_product * srv:relatedResearchProduct -[0..N]-&gt; skg:research_product * dcterms:subject -[0..N]-&gt; fabio:SubjectTerm * srv:hasVenue -[0..1]-&gt; skg:Venue * schema:isAccessibleForFree -[0..1]-&gt; xsd:boolean </span>
+   <span class="markdown">The properties that can be used with this class are: * datacite:hasIdentifier -[0..N]-&gt; datacite:Identifier * foaf:name -[1..1]-&gt; rdfs:Literal * skos:altLabel -[0..N]-&gt; rdfs:Literal * dcterms:description -[0..N]-&gt; rdfs:langString * foaf:homepage -[0..1]-&gt; foaf:Document * srv:audienceJurisdiction -[0..N]-&gt; xsd:string * srv:intendedAudienceRole -[0..N]-&gt; skos:Concept * dcterms:subject -[0..N]-&gt; owl:Thing * srv:invocationType -[0..N]-&gt; skos:Concept * srv:eoscLifeCycleStatus -[0..1]-&gt; skos:Concept * srv:geographicalAvailability -[0..N]-&gt; owl:Thing * srv:supportedLanguage -[0..N]-&gt; lvont:Language * srv:isPartOfResearchInfrastructure -[0..N]-&gt; foaf:Organization * srv:hasHostingOrganisation -[0..N]-&gt; foaf:Organization * srv:hasHostingLegalEntity -[0..1]-&gt; foaf:Organization * dcterms:relation -[0..N]-&gt; foaf:Organization * dcterms:conformsTo -[0..N]-&gt; srv:APIProfile * schema:provider -[0..1]-&gt; srv:FacilityPortal * srv:isDeploymentOf -[0..N]-&gt; fabio:Software * srv:isDeploymentOf -[0..N]-&gt; schema:SoftwareSourceCode * srv:isDeploymentOf -[0..N]-&gt; skg:research_product * srv:relatedResearchProduct -[0..N]-&gt; skg:research_product * bido:holdsBibliometricDataInTime -[0..N]-&gt; bido:BibliometricDataInTime * srv:hasVenue -[0..1]-&gt; skg:Venue * schema:isAccessibleForFree -[0..1]-&gt; xsd:boolean </span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -601,13 +726,15 @@ This section provides details for each class and property defined by SRV-O: Serv
     is in domain of
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo (SKG-IF labels: conformsTo)</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">dcterms:description (SKG-IF labels: description)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/provider" title="https://schema.org/provider">provider</a> <sup class="type-op" title="object property">op</sup>, <a href="#audienceJurisdiction" title="https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction">srv:audienceJurisdiction (SKG-IF labels: srv_audience_byjurisdiction)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eoscLifeCycleStatus" title="https://w3id.org/skg-if/extension/srv/ontology/eoscLifeCycleStatus">srv:eoscLifeCycleStatus (SKG-IF labels: srv_life_cycle_status)</a> <sup class="type-op" title="object property">op</sup>, <a href="#geographicalAvailability" title="https://w3id.org/skg-if/extension/srv/ontology/geographicalAvailability">srv:geographicalAvailability (SKG-IF labels: srv_availability_geographic)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHostingLegalEntity" title="https://w3id.org/skg-if/extension/srv/ontology/hasHostingLegalEntity">srv:hasHostingLegalEntity (SKG-IF labels: srv_has_hosting_legal_entity)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHostingOrganisation" title="https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation">srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTopics" title="https://w3id.org/skg-if/extension/srv/ontology/hasTopics">srv:hasTopics (SKG-IF labels: srv_topics)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVenue" title="https://w3id.org/skg-if/extension/srv/ontology/hasVenue">srv:hasVenue (SKG-IF labels: srv_venues)</a> <sup class="type-op" title="object property">op</sup>, <a href="#intendedAudienceRole" title="https://w3id.org/skg-if/extension/srv/ontology/intendedAudienceRole">srv:intendedAudienceRole (SKG-IF labels: srv_audience_byrole)</a> <sup class="type-op" title="object property">op</sup>, <a href="#invocationType" title="https://w3id.org/skg-if/extension/srv/ontology/invocationType">srv:invocationType (SKG-IF labels: srv_invocation_type)</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDeploymentOf" title="https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf">srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPartOfResearchInfrastructure" title="https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure">srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_has_research_infrastructure)</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedResearchProduct" title="https://w3id.org/skg-if/extension/srv/ontology/relatedResearchProduct">srv:relatedResearchProduct (SKG-IF labels: related_products)</a> <sup class="type-op" title="object property">op</sup>, <a href="#supportedLanguage" title="https://w3id.org/skg-if/extension/srv/ontology/supportedLanguage">srv:supportedLanguage (SKG-IF labels: srv_supported_language)</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.org/spar/bido/holdsBibliometricDataInTime" title="http://purl.org/spar/bido/holdsBibliometricDataInTime">bido:holdsBibliometricDataInTime (SKG-IF labels: topics)</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo (SKG-IF labels: conformsTo)</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">dcterms:description (SKG-IF labels: description)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">foaf:name (SKG-IF labels: name)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/provider" title="https://schema.org/provider">provider</a> <sup class="type-op" title="object property">op</sup>, <a href="#audienceJurisdiction" title="https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction">srv:audienceJurisdiction (SKG-IF labels: srv_audience_byjurisdiction)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eoscLifeCycleStatus" title="https://w3id.org/skg-if/extension/srv/ontology/eoscLifeCycleStatus">srv:eoscLifeCycleStatus (SKG-IF labels: srv_life_cycle_status)</a> <sup class="type-op" title="object property">op</sup>, <a href="#geographicalAvailability" title="https://w3id.org/skg-if/extension/srv/ontology/geographicalAvailability">srv:geographicalAvailability (SKG-IF labels: srv_availability_geographic)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHostingLegalEntity" title="https://w3id.org/skg-if/extension/srv/ontology/hasHostingLegalEntity">srv:hasHostingLegalEntity (SKG-IF labels: srv_has_hosting_legal_entity)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHostingOrganisation" title="https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation">srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVenue" title="https://w3id.org/skg-if/extension/srv/ontology/hasVenue">srv:hasVenue (SKG-IF labels: srv_venues)</a> <sup class="type-op" title="object property">op</sup>, <a href="#intendedAudienceRole" title="https://w3id.org/skg-if/extension/srv/ontology/intendedAudienceRole">srv:intendedAudienceRole (SKG-IF labels: srv_audience_byrole)</a> <sup class="type-op" title="object property">op</sup>, <a href="#invocationType" title="https://w3id.org/skg-if/extension/srv/ontology/invocationType">srv:invocationType (SKG-IF labels: srv_invocation_type)</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDeploymentOf" title="https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf">srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPartOfResearchInfrastructure" title="https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure">srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_has_research_infrastructure)</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedResearchProduct" title="https://w3id.org/skg-if/extension/srv/ontology/relatedResearchProduct">srv:relatedResearchProduct (SKG-IF labels: related_products)</a> <sup class="type-op" title="object property">op</sup>, <a href="#supportedLanguage" title="https://w3id.org/skg-if/extension/srv/ontology/supportedLanguage">srv:supportedLanguage (SKG-IF labels: srv_supported_language)</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#http://purl.org/spar/bido/holdsBibliometricDataInTime" title="http://purl.org/spar/bido/holdsBibliometricDataInTime">bido:holdsBibliometricDataInTime (SKG-IF labels: topics)</a></li>
+  <li><a href="#http://purl.org/spar/bido/withBibliometricData" title="http://purl.org/spar/bido/withBibliometricData">bido:withBibliometricData (SKG-IF labels: term)</a></li>
   <li><a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo (SKG-IF labels: conformsTo)</a></li>
   <li><a href="#http://purl.org/dc/terms/relation" title="http://purl.org/dc/terms/relation">dcterms:relation (SKG-IF labels: relevant_organisations)</a></li>
   <li><a href="#http://purl.org/dc/terms/requires" title="http://purl.org/dc/terms/requires">dcterms:requires (SKG-IF labels: requires)</a></li>
@@ -621,7 +748,6 @@ This section provides details for each class and property defined by SRV-O: Serv
   <li><a href="#geographicalAvailability" title="https://w3id.org/skg-if/extension/srv/ontology/geographicalAvailability">srv:geographicalAvailability (SKG-IF labels: srv_availability_geographic)</a></li>
   <li><a href="#hasHostingLegalEntity" title="https://w3id.org/skg-if/extension/srv/ontology/hasHostingLegalEntity">srv:hasHostingLegalEntity (SKG-IF labels: srv_has_hosting_legal_entity)</a></li>
   <li><a href="#hasHostingOrganisation" title="https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation">srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)</a></li>
-  <li><a href="#hasTopics" title="https://w3id.org/skg-if/extension/srv/ontology/hasTopics">srv:hasTopics (SKG-IF labels: srv_topics)</a></li>
   <li><a href="#hasVenue" title="https://w3id.org/skg-if/extension/srv/ontology/hasVenue">srv:hasVenue (SKG-IF labels: srv_venues)</a></li>
   <li><a href="#intendedAudienceRole" title="https://w3id.org/skg-if/extension/srv/ontology/intendedAudienceRole">srv:intendedAudienceRole (SKG-IF labels: srv_audience_byrole)</a></li>
   <li><a href="#invocationType" title="https://w3id.org/skg-if/extension/srv/ontology/invocationType">srv:invocationType (SKG-IF labels: srv_invocation_type)</a></li>
@@ -630,6 +756,68 @@ This section provides details for each class and property defined by SRV-O: Serv
   <li><a href="#relatedResearchProduct" title="https://w3id.org/skg-if/extension/srv/ontology/relatedResearchProduct">srv:relatedResearchProduct (SKG-IF labels: related_products)</a></li>
   <li><a href="#supportedLanguage" title="https://w3id.org/skg-if/extension/srv/ontology/supportedLanguage">srv:supportedLanguage (SKG-IF labels: srv_supported_language)</a></li>
  </ul>
+ <div class="entity" id="http://purl.org/spar/bido/holdsBibliometricDataInTime">
+  <h3>bido:holdsBibliometricDataInTime (SKG-IF labels: topics)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spar/bido/holdsBibliometricDataInTime</p>
+  <div class="comment">
+   <span class="markdown">The core SKG-IF ontology restricts this property's domain to fabio:Work (research products). This entry extends effective use to srv:Service, following the same pragmatic usage already present in all 120+ ext-srv example files. NOTE: The full BIDO structure (bido:holdsBibliometricDataInTime → bido:BibliometricDataInTime → bido:withBibliometricData → fabio:SubjectTerm) is overkill for Service topic classification. The bido:BibliometricDataInTime wrapper exists to carry provenance (trust scores from multiple inference systems) and temporal tracking — neither of which applies to services, where topics are asserted directly by the service maintainer. Kept for consistency with the core inter-entity relation pattern between entities and Topic entities (both must resolve via the same local_identifier). TODO: Propose to the core team (skg-if/data-model) that bido:holdsBibliometricDataInTime be broadened to a general cross-entity alias not restricted to fabio:Work — topics are equally applicable to Services, Venues, Data Sources, etc. Consider also whether a simpler cross-entity topics relation (without the BIDO provenance wrapper) would better serve non-bibliometric entities.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * fabio:Work * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * bido:BibliometricDataInTime</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/spar/bido/">http://purl.org/spar/bido/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Service" title="https://w3id.org/skg-if/extension/srv/ontology/Service">srv:Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/spar/bido/withBibliometricData">
+  <h3>bido:withBibliometricData (SKG-IF labels: term)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spar/bido/withBibliometricData</p>
+  <div class="comment">
+   <span class="markdown">The identifier of a Topic relevant for the Service.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * bido:BibliometricDataInTime In SKG-IF, it is used to link to entities belonging to the following classes (range): * fabio:SubjectTerm</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/spar/bido/">http://purl.org/spar/bido/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spar/bido/BibliometricDataInTime" title="http://purl.org/spar/bido/BibliometricDataInTime">bido:BibliometricDataInTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spar/fabio/SubjectTerm" title="http://purl.org/spar/fabio/SubjectTerm">fabio:SubjectTerm (SKG-IF labels: Topic)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="http://purl.org/dc/terms/conformsTo">
   <h3>dcterms:conformsTo (SKG-IF labels: conformsTo)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/conformsTo</p>
@@ -708,16 +896,6 @@ This section provides details for each class and property defined by SRV-O: Serv
     <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
    </dd>
   </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has sub-properties
-    </dt>
-    <dd>
-     <a href="#hasTopics" title="https://w3id.org/skg-if/extension/srv/ontology/hasTopics">srv:hasTopics (SKG-IF labels: srv_topics)</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
  </div>
  <div class="entity" id="http://www.w3.org/ns/dcat#endpointURL">
   <h3>endpoint URL<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -797,6 +975,12 @@ This section provides details for each class and property defined by SRV-O: Serv
  <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
   <h3>skos:inScheme (SKG-IF labels: defined_in)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
+  <div class="comment">
+   <span class="markdown">The classification scheme or vocabulary that a Topic term belongs to.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * skos:Concept In SKG-IF, it is used to link to entities belonging to the following classes (range): * skos:ConceptScheme</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -805,6 +989,22 @@ This section provides details for each class and property defined by SRV-O: Serv
     <a href="http://www.w3.org/2004/02/skos/core#">http://www.w3.org/2004/02/skos/core#</a>
    </dd>
   </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
  </div>
  <div class="entity" id="eoscLifeCycleStatus">
   <h3>srv:eoscLifeCycleStatus (SKG-IF labels: srv_life_cycle_status)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -881,7 +1081,7 @@ This section provides details for each class and property defined by SRV-O: Serv
    <span class="markdown">service associated legally responsible hosting organisation (legal entity)</span>
   </div>
   <div class="info">
-   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * foaf:Organisation</span>
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * foaf:Organization</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -903,7 +1103,7 @@ This section provides details for each class and property defined by SRV-O: Serv
      has range
     </dt>
     <dd>
-     <a href="http://xmlns.com/foaf/0.1/Organisation" target="_blank" title="http://xmlns.com/foaf/0.1/Organisation">Organisation</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://xmlns.com/foaf/0.1/Organization" target="_blank" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -915,7 +1115,7 @@ This section provides details for each class and property defined by SRV-O: Serv
    <span class="markdown">service is hosted by</span>
   </div>
   <div class="info">
-   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * foaf:Organisation (type: hosting_organisation)</span>
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * foaf:Organization (type: hosting_organisation)</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -937,44 +1137,7 @@ This section provides details for each class and property defined by SRV-O: Serv
      has range
     </dt>
     <dd>
-     <a href="http://xmlns.com/foaf/0.1/Organisation" target="_blank" title="http://xmlns.com/foaf/0.1/Organisation">Organisation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="hasTopics">
-  <h3>srv:hasTopics (SKG-IF labels: srv_topics)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/skg-if/extension/srv/ontology/hasTopics</p>
-  <div class="info">
-   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link Service to relevant (range): * Topics</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/skg-if/extension/srv/ontology/">https://w3id.org/skg-if/extension/srv/ontology/</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has super-properties
-    </dt>
-    <dd>
-     <a href="#http://purl.org/dc/terms/subject" title="http://purl.org/dc/terms/subject">dcterms:subject (SKG-IF labels: disciplines)</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Service" title="https://w3id.org/skg-if/extension/srv/ontology/Service">srv:Service</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://purl.org/spar/fabio/SubjectTerm" title="http://purl.org/spar/fabio/SubjectTerm">fabio:SubjectTerm (SKG-IF labels: Topic)</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://xmlns.com/foaf/0.1/Organization" target="_blank" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1008,7 +1171,7 @@ This section provides details for each class and property defined by SRV-O: Serv
      has range
     </dt>
     <dd>
-     <a href="https://w3id.org/skg-if/ontology/Venue" target="_blank" title="https://w3id.org/skg-if/ontology/Venue">Venue</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/skg-if/ontology/Venue" title="https://w3id.org/skg-if/ontology/Venue">skg:Venue</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1104,7 +1267,7 @@ This section provides details for each class and property defined by SRV-O: Serv
      has range
     </dt>
     <dd>
-     <a href="#http://purl.org/spar/fabio/Software" title="http://purl.org/spar/fabio/Software">fabio:Software (SKG-IF labels: software)</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">schema:SoftwareSourceCode</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/skg-if/ontology/research_product" target="_blank" title="https://w3id.org/skg-if/ontology/research_product">research product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://purl.org/spar/fabio/Software" title="http://purl.org/spar/fabio/Software">fabio:Software (SKG-IF labels: software)</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">schema:SoftwareSourceCode</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/skg-if/ontology/research_product" title="https://w3id.org/skg-if/ontology/research_product">skg:research_product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1116,7 +1279,7 @@ This section provides details for each class and property defined by SRV-O: Serv
    <span class="markdown">is part of research infrastructure organisation</span>
   </div>
   <div class="info">
-   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * foaf:Organisation (type: research_infrastructure)</span>
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * foaf:Organization (type: research_infrastructure)</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1138,7 +1301,7 @@ This section provides details for each class and property defined by SRV-O: Serv
      has range
     </dt>
     <dd>
-     <a href="http://xmlns.com/foaf/0.1/Organisation" target="_blank" title="http://xmlns.com/foaf/0.1/Organisation">Organisation</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://xmlns.com/foaf/0.1/Organization" target="_blank" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1172,7 +1335,7 @@ This section provides details for each class and property defined by SRV-O: Serv
      has range
     </dt>
     <dd>
-     <a href="https://w3id.org/skg-if/ontology/research_product" target="_blank" title="https://w3id.org/skg-if/ontology/research_product">research product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/skg-if/ontology/research_product" title="https://w3id.org/skg-if/ontology/research_product">skg:research_product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1213,6 +1376,7 @@ This section provides details for each class and property defined by SRV-O: Serv
  <ul class="hlist">
   <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">dcterms:description (SKG-IF labels: description)</a></li>
   <li><a href="#http://www.w3.org/ns/dcat#endpointURL" title="http://www.w3.org/ns/dcat#endpointURL"> <span>endpoint URL</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">foaf:name (SKG-IF labels: name)</a></li>
   <li><a href="#https://schema.org/url" title="https://schema.org/url"> <span>schema:url (SKG-IF labels: api_specification_url)</span> </a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel">skos:altLabel (SKG-IF labels: other_names)</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel">skos:prefLabel (SKG-IF labels: labels)</a></li>
@@ -1262,6 +1426,40 @@ This section provides details for each class and property defined by SRV-O: Serv
     </dt>
     <dd>
      <a href="#http://www.w3.org/ns/dcat#endpointURL">object property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/name">
+  <h3>foaf:name (SKG-IF labels: name)<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/name</p>
+  <div class="comment">
+   <span class="markdown">The canonical name of the service.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following data types (range): * rdfs:Literal</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Service" title="https://w3id.org/skg-if/extension/srv/ontology/Service">srv:Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
     </dd>
    </dl>
   </div>

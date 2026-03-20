@@ -622,12 +622,10 @@ actions:
 # Adds new organisation types for modeling service operations:
 # - hosting_organisation: organisation responsible for hosting a service
 # - research_infrastructure: organisation providing facilities for research
-# - srv_portal: organisation aggregating and cataloging services
 # Remove this section if Organisation is extended in the core
 
   - target: $.components.schemas.Organisation.allOf[1].properties.types.items.enum
     update:
-      - srv_portal
       - research_infrastructure
       - hosting_organisation
 

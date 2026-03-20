@@ -1,0 +1,123 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/elg/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/elg/20197",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "elg",
+          "value": "20197"
+        },
+        {
+          "scheme": "url",
+          "value": "https://live.european-language-grid.eu/catalogue/#/tool-or-service/20197"
+        }
+      ],
+      "name": "Aalto-kaldi-align: Forced aligner EN",
+      "descriptions": {
+        "none": [
+          "Tool for matching speech signal and its orthographic transcription. The original tool is created by Juho Leinonen from Aalto University (see Documentation and Landing page for further information)."
+        ]
+      },
+      "srv_keywords": [
+        "Forced alignment",
+        "Grapheme-based",
+        "Kaldi",
+        "Speech annotation"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:eng"
+      ],
+      "is_accessible_for_free": false,
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://live.european-language-grid.eu/execution/process/20197"
+        ]
+      },
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/elg",
+          "entity_type": "organisation",
+          "name": "European Language Grid",
+          "website": "https://live.european-language-grid.eu",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ]
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://live.european-language-grid.eu/catalogue",
+          "entity_type": "venue",
+          "name": "European Language Grid Catalogue",
+          "website": "https://live.european-language-grid.eu/catalogue/#/",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q860521",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q860521"
+              }
+            ],
+            "labels": {
+              "en": "speech recognition"
+            }
+          }
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:dataEngineer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/05k73zm37",
+          "entity_type": "organisation",
+          "name": "Aalto University",
+          "website": "https://www.aalto.fi",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/05k73zm37"
+            },
+            {
+              "scheme": "url",
+              "value": "https://www.aalto.fi"
+            }
+          ]
+        }
+      ],
+      "website": "https://www.kielipankki.fi/tuki/aalto-asr-automaattinen-puheentunnistin/"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/elg/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/elg/7291",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "elg",
+          "value": "7291"
+        },
+        {
+          "scheme": "url",
+          "value": "https://live.european-language-grid.eu/catalogue/#/tool-or-service/7291"
+        }
+      ],
+      "name": "Lingsoft Neural Machine Translation EN-SV",
+      "other_names": [
+        "LS NMT EN-SV"
+      ],
+      "descriptions": {
+        "none": [
+          "Neural machine translation from English to Swedish (Marian NMT, Lingsoft)."
+        ]
+      },
+      "srv_keywords": [
+        "Machine Translation",
+        "machine translation",
+        "neural machine translation"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:eng",
+        "lexvo-iso639-3:swe"
+      ],
+      "is_accessible_for_free": false,
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://live.european-language-grid.eu/execution/process/7291"
+        ]
+      },
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/elg",
+          "entity_type": "organisation",
+          "name": "European Language Grid",
+          "website": "https://live.european-language-grid.eu",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ]
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://live.european-language-grid.eu/catalogue",
+          "entity_type": "venue",
+          "name": "European Language Grid Catalogue",
+          "website": "https://live.european-language-grid.eu/catalogue/#/",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q30642"
+              }
+            ],
+            "labels": {
+              "en": "machine translation"
+            }
+          }
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:dataEngineer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/lingsoft",
+          "entity_type": "organisation",
+          "name": "Lingsoft",
+          "website": "https://www.lingsoft.fi",
+          "identifiers": [
+            {
+              "scheme": "url",
+              "value": "https://www.lingsoft.fi"
+            }
+          ]
+        }
+      ],
+      "website": "https://www.microsoft.com/en-us/research/project/neural-machine-translation/"
+    }
+  ]
+}

@@ -9,7 +9,9 @@ has_toc: false
 
 # Examples of the extension for Service
 
-An example of an object serialised using this extension can be found on GitHub [here](https://github.com/skg-if/ext-srv/tree/main/examples) against the latest version of the extended [JSON-LD context](w3id.org/skg-if/extension/srv/context/skg-if.json). In particular:
+Examples of objects serialised using this extension can be found on GitHub [here](https://github.com/skg-if/ext-srv/tree/main/examples) against the latest version of the extended [JSON-LD context](https://w3id.org/skg-if/extension/srv/context/skg-if.json). The great majority of the 148 records are derived from real existing metadata records; only a few are hand-crafted for illustrative purposes:
 
-* [srv_1.json](https://github.com/skg-if/ext-srv/tree/main/examples/srv_1.json) contains an example with most of the relevant fields, although not all represent reality
-* additionally about 120 Service records were created on the basis of CLARIN CMDI metadta records obtained from the CLARIN VLO and enriched after conversion
+* [srv_1.json](https://github.com/skg-if/ext-srv/tree/main/examples/srv_1.json) — hand-crafted example covering most of the relevant fields
+* 128 records derived from CLARIN CMDI metadata obtained from the [CLARIN VLO](https://vlo.clarin.eu) and enriched after conversion
+* 10 representative records from the [SSH Open Marketplace (SSHOMP)](https://marketplace.sshopencloud.eu), covering diverse disciplines and invocation types (prefixed `sshomp_`)
+* 10 representative records from the [European Language Grid (ELG)](https://live.european-language-grid.eu/catalogue/), covering diverse NLP tasks and language pairs (prefixed `elg_`)

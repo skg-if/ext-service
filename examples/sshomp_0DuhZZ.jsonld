@@ -1,0 +1,110 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/sshomp/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0DuhZZ",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "sshomp",
+          "value": "0DuhZZ"
+        },
+        {
+          "scheme": "sshomp-id",
+          "value": "78315"
+        },
+        {
+          "scheme": "url",
+          "value": "https://marketplace.sshopencloud.eu/tool-or-service/0DuhZZ"
+        }
+      ],
+      "srv_name": "ELAN",
+      "descriptions": {
+        "eng": [
+          "ELAN is a tool for creating annotations on multiple layers on audio and video resources. The textual content of annotations is in Unicode and the transcription is stored in XML.\n\nWith ELAN a user can add an unlimited number of textual annotations to audio and/or video recordings. An annotation can be a sentence, word or gloss, a comment, translation or a description of any feature observed in the media. Annotations can be created on multiple layers, called tiers. Tiers can be hierarchically interconnected. An annotation can either be time-aligned to the media or it can refer to other existing annotations. The content of annotations consists of Unicode text and annotation documents are stored in an XML format (EAF).\n\nMain features and characteristics of ELAN:\n* provides several ways to view the annotations, each view is connected to and synchronized with the media timeline\n* supports creation of multiple tiers and tier hierarchies\n* supports Controlled Vocabularies\n* allows linking of up to 4 video files with an annotation document\n* media support\n   * builds on existing, native media frameworks, like Windows Media Player, QuickTime or VLC\n   * support for audio and video formats depends on operating system, high performance media playback can usually be achieved\n* technical\n   * written in the Java programming language\n   * distributions available for Windows, macOS and Linux\n   * open source, the sources are available under a GPL 3 license \n\nThe solution was developed by the Language Archive of the Max Planck Institute for Psycholinguistics."
+        ],
+        "en": [
+          "Input/output formats — NOTE: dedicated service extension properties for format metadata are desirable. Input format: CSV | Input format: CHAT | Input format: HTML | Output format: CSV | Output format: CHAT | Output format: EAF | Object format: video | SSHOMP related (is-mentioned-in): https://marketplace.sshopencloud.eu/tool-or-service/27enGK; https://marketplace.sshopencloud.eu/tool-or-service/QJzaKN | SSHOMP related (is-related-to): https://marketplace.sshopencloud.eu/tool-or-service/yMXGqj; https://marketplace.sshopencloud.eu/tool-or-service/fCagRv | SSHOMP related (relates-to): https://marketplace.sshopencloud.eu/tool-or-service/QYW8fM; https://marketplace.sshopencloud.eu/tool-or-service/wPcxzG; https://marketplace.sshopencloud.eu/tool-or-service/o8Qb7b | SSHOMP see-also: https://archive.mpi.nl/tla/elan",
+          "Terms of use and access — NOTE: dedicated service extension properties for TOU/access metadata are desirable. License: GNU General Public License v3.0 only"
+        ]
+      },
+      "srv_invocation_type": [
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/localApplication"
+      ],
+      "website": "https://archive.mpi.nl/tla/elan",
+      "relevant_organisations": [],
+      "sshomp_last_update": "2025-08-26T09:05:42+0000",
+      "sshomp_curation_flags": [
+        "sshomp:conflict-at-source=TRUE"
+      ],
+      "srv_life_cycle_status": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
+      ],
+      "srv_audience_byrole": [
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/public",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_availability_geographic": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eo"
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://sshopencloud.eu",
+          "entity_type": "organisation",
+          "name": "Social Sciences and Humanities Open Cloud",
+          "short_name": "SSHOC",
+          "types": [
+            "project",
+            "research_infrastructure"
+          ]
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://marketplace.sshopencloud.eu",
+          "entity_type": "venue",
+          "name": "SSH Open Marketplace",
+          "website": "https://marketplace.sshopencloud.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_keywords": [
+        "transcription",
+        "audio",
+        "Annotating",
+        "Converting",
+        "CSV",
+        "CHAT",
+        "HTML",
+        "EAF",
+        "video"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/909",
+      "entity_type": "person",
+      "name": "Language Archiving Technology"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/12413",
+      "entity_type": "person",
+      "name": "SSHOC WP3",
+      "sshomp_affiliations": [
+        "SSHOC project"
+      ]
+    }
+  ]
+}

@@ -7,7 +7,9 @@ nav_order: 5
 
 # API extensions
 
-The Service extension introduces a new SKG-IF entity to model software-based services that process data in research workflows (creation, extraction, preparation, analysis, etc.).
+The Service extension introduces a new SKG-IF entity to model software-based services that process data in research workflows (creation, extraction, preparation, analysis, etc.). To prevent clashes with other extensions, properties use the `srv_` prefix where needed.
+
+
 
 It relies on [Research product] (of type software) and code repository entities for detailed modeling of the software source code, but adds information related to operational and usage aspects. Additional references to [Organisation] and [Grant] can be provided for acknowledgement.
 
@@ -40,7 +42,6 @@ The overlay extends the `Organisation` entity with additional types for modeling
 
 - `hosting_organisation` - organisation responsible for hosting and operating a service
 - `research_infrastructure` - organisation providing facilities, resources and services for research communities
-- `srv_portal` - organisation responsible for aggregating and cataloging services
 
 ### Venue types
 

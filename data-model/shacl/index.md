@@ -7,7 +7,12 @@ has_toc: false
 # nav_exclude: true
 ---
 
-# Extension SHACL
+# SHACL
 
-{: .important }
-To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `srv`.
+The Service extension provides a [SHACL](https://www.w3.org/TR/shacl/) document for validating data conforming to the `srv:Service` data model.
+
+The SHACL shapes are auto-generated from the OWL ontology using the [SKG-IF SHACL extractor](https://github.com/skg-if/shacl-extractor) and are available at:
+
+[https://w3id.org/skg-if/shapes/srv/](https://w3id.org/skg-if/shapes/srv/)
+
+The SHACL file should not be edited manually — any changes to the shapes must be made in the ontology (`srv.ttl`) and regenerated.

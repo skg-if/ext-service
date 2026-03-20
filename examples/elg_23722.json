@@ -1,0 +1,145 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/elg/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/elg/23722",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "elg",
+          "value": "23722"
+        },
+        {
+          "scheme": "url",
+          "value": "https://live.european-language-grid.eu/catalogue/#/tool-or-service/23722"
+        }
+      ],
+      "name": "GATE: Multilingual News Genre Classifier",
+      "other_names": [
+        "gate-news-genre-classifier"
+      ],
+      "descriptions": {
+        "none": [
+          "This multilingual classifier is capable of identifying news genre in 104 languages, but it will perform the best on the six languages for which it was trained on: English, French, German, Italian, Polish and Russian. The classifier is based on our submission to the SemEval 2023 Task 3, where it performed the best on English data. The classifier recognises 3 news genre categories: Opinionated News Objective reporting Satire"
+        ]
+      },
+      "srv_keywords": [
+        "Genre categorization",
+        "News",
+        "Text categorization"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:deu",
+        "lexvo-iso639-3:pol",
+        "lexvo-iso639-3:rus",
+        "lexvo-iso639-3:ita",
+        "lexvo-iso639-3:eng",
+        "lexvo-iso639-3:fra"
+      ],
+      "is_accessible_for_free": false,
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://live.european-language-grid.eu/execution/process/23722"
+        ]
+      },
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/elg",
+          "entity_type": "organisation",
+          "name": "European Language Grid",
+          "website": "https://live.european-language-grid.eu",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ]
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://live.european-language-grid.eu/catalogue",
+          "entity_type": "venue",
+          "name": "European Language Grid Catalogue",
+          "website": "https://live.european-language-grid.eu/catalogue/#/",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q3878644",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q3878644"
+              }
+            ],
+            "labels": {
+              "en": "text classification"
+            }
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q11660",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q11660"
+              }
+            ],
+            "labels": {
+              "en": "natural language processing"
+            }
+          }
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:dataEngineer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://ror.org/05krs5044",
+          "entity_type": "organisation",
+          "name": "University of Sheffield",
+          "website": "https://www.sheffield.ac.uk",
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/05krs5044"
+            },
+            {
+              "scheme": "url",
+              "value": "https://www.sheffield.ac.uk"
+            }
+          ]
+        }
+      ],
+      "website": "https://cloud.gate.ac.uk/"
+    }
+  ]
+}

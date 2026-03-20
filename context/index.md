@@ -7,16 +7,17 @@ has_toc: false
 # nav_exclude: false
 ---
 
-# Extended JSON-LD context
+# JSON-LD Context
 
-{: .important }
-To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `srv`.
+The Service extension provides a JSON-LD context that maps the `srv_*` property aliases used in the [extended Interoperability Framework](../extended-interoperability-framework) to their corresponding OWL ontology terms.
 
-## Expected outcome
-In this extension development phase, the JSON-LD context is produced and placed as indicated in the repository structure [guidelines](../structure), in order to be served behind w3id.org.
+The context is available at:
 
-For example, the current (i.e., last) version of the JSON-LD context is available at [https://w3id.org/skg-if/extension/srv/context/skg-if.json](https://w3id.org/skg-if/extension/srv/context/skg-if.json).
+[https://w3id.org/skg-if/extension/srv/context/skg-if.json](https://w3id.org/skg-if/extension/srv/context/skg-if.json)
 
+It is designed to be layered on top of the core SKG-IF contexts. Example JSON-LD documents reference the following contexts in their `@context` array, in order:
+1. [SKG-IF core context](https://w3id.org/skg-if/context/) (v1.1.0)
+2. [SKG-IF API context](https://w3id.org/skg-if/api/context/) (pagination)
+3. This extension context
 
-## Methodological considerations
-This phase is manual and maps the JSON terms that will "surface" in the [extended Interoperability Framework](../extended-interoperability-framework) to the ontology [previously developed](../data-model).
+Properties shared with the core context are declared with `@protected: true` to prevent accidental redefinition.

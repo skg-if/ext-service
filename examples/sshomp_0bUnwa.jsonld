@@ -1,0 +1,159 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/sshomp/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0bUnwa",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "sshomp",
+          "value": "0bUnwa"
+        },
+        {
+          "scheme": "sshomp-id",
+          "value": "80217"
+        },
+        {
+          "scheme": "url",
+          "value": "https://marketplace.sshopencloud.eu/tool-or-service/0bUnwa"
+        }
+      ],
+      "srv_name": "Zero shot classification",
+      "descriptions": {
+        "eng": [
+          "An emergent capability within AI is zero shot classification – i.e. no need to annotate. Do you want to be able to classify examples in a corpus based on your own categories? Test this!"
+        ]
+      },
+      "srv_supported_language": [
+        "swe"
+      ],
+      "website": "https://huggingface.co/KBLab/megatron-bert-large-swedish-cased-165-zero-shot",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/15160",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/10722",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404"
+      ],
+      "sshomp_last_update": "2025-12-11T10:59:55+0000",
+      "srv_invocation_type": [
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/webApplication"
+      ],
+      "srv_life_cycle_status": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
+      ],
+      "srv_audience_byrole": [
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/public",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_availability_geographic": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/ww",
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eo"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/15160",
+          "entity_type": "organisation",
+          "name": "National Library of Sweden / Kungliga biblioteket",
+          "types": [
+            "hosting_organisation"
+          ]
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/01gybvy13",
+          "entity_type": "organisation",
+          "name": "DARIAH ERIC",
+          "short_name": "DARIAH",
+          "types": [
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/01gybvy13"
+            }
+          ],
+          "website": "https://www.dariah.eu/"
+        },
+        {
+          "local_identifier": "https://www.huminfra.se",
+          "entity_type": "organisation",
+          "name": "Huminfra",
+          "short_name": "DARIAH-SE",
+          "types": [
+            "research_infrastructure"
+          ],
+          "country": "SE",
+          "website": "https://www.huminfra.se"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://marketplace.sshopencloud.eu",
+          "entity_type": "venue",
+          "name": "SSH Open Marketplace",
+          "website": "https://marketplace.sshopencloud.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_keywords": [
+        "DARIAH Resource",
+        "Huminfra",
+        "Text Categorization"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q13418847",
+            "entity_type": "topic",
+            "labels": {
+              "en": "digital humanities"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q13418847"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/15161",
+      "entity_type": "person",
+      "name": "KBLab",
+      "sshomp_affiliations": [
+        "National Library of Sweden / Kungliga biblioteket"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/15160",
+      "entity_type": "organisation",
+      "name": "National Library of Sweden / Kungliga biblioteket"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/10722",
+      "entity_type": "organisation",
+      "name": "DARIAH-SE/Huminfra"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+      "entity_type": "organisation",
+      "name": "DARIAH-EU"
+    }
+  ]
+}

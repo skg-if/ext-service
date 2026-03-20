@@ -1,0 +1,123 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/elg/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/elg/23094",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "elg",
+          "value": "23094"
+        },
+        {
+          "scheme": "url",
+          "value": "https://live.european-language-grid.eu/catalogue/#/tool-or-service/23094"
+        }
+      ],
+      "name": "HENSOLDT ANALYTICS Speech-to-text for Romanian",
+      "other_names": [
+        "HENS-ASR-ro_ro"
+      ],
+      "descriptions": {
+        "none": [
+          "HENSOLDT ANALYTICS MediaMiningIndexer ASR - automatic speech recognition speech-to-text engine that provides transcription of audio with spoken sentences into text with timestamps and confidence scores, in a variety of languages."
+        ]
+      },
+      "srv_keywords": [
+        "ASR",
+        "Automatic Speech Recognition",
+        "Romanian",
+        "Speech Recognition",
+        "Speech to Text"
+      ],
+      "srv_supported_language": [
+        "lexvo-iso639-3:ron"
+      ],
+      "srv_invocation_type": [
+        "sshocinvt:restfulWebservice"
+      ],
+      "srv_api_profile": {
+        "dcat:endpointURL": [
+          "https://live.european-language-grid.eu/execution/process/23094"
+        ]
+      },
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production"
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/elg",
+          "entity_type": "organisation",
+          "name": "European Language Grid",
+          "website": "https://live.european-language-grid.eu",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ]
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://live.european-language-grid.eu/catalogue",
+          "entity_type": "venue",
+          "name": "European Language Grid Catalogue",
+          "website": "https://live.european-language-grid.eu/catalogue/#/",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "is_accessible_for_free": false,
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q860521",
+            "entity_type": "topic",
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q860521"
+              }
+            ],
+            "labels": {
+              "en": "speech recognition"
+            }
+          }
+        }
+      ],
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "eoscgeoavail:eo"
+      ],
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "sshocaudience:dataEngineer"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/elg/organisations/hensoldt",
+          "entity_type": "organisation",
+          "name": "HENSOLDT Analytics",
+          "website": "https://www.hensoldt-analytics.com",
+          "identifiers": [
+            {
+              "scheme": "url",
+              "value": "https://www.hensoldt-analytics.com"
+            }
+          ]
+        }
+      ],
+      "website": "https://www.hensoldt.net/"
+    }
+  ]
+}

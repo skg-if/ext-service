@@ -1,0 +1,243 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/sshomp/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0b3L9P",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "sshomp",
+          "value": "0b3L9P"
+        },
+        {
+          "scheme": "sshomp-id",
+          "value": "70153"
+        },
+        {
+          "scheme": "url",
+          "value": "https://marketplace.sshopencloud.eu/tool-or-service/0b3L9P"
+        }
+      ],
+      "srv_name": "Digital Libraries Federation - Federacją Bibliotek Cyfrowych",
+      "descriptions": {
+        "eng": [
+          "Online collections of Polish cultural and scientific institutions with more than 8.4 million objects.\n\nObjectives and content: Polish Digital Libraries Federation is a database which aggregates data about on-line collections of Polish memory institutions. Currently the database contains information about over 4 million records from over a hundred of Polish on-line services. Each object is described with metadata record (extended Dublin Core) and a link to a website on which the object is accessible. The database offers flexible searching and filtering possibilities and can be accessed via API. Polish Digital Libraries Federation is the main Polish metadata aggregator for Europeana.\n\nTargeted public: Researchers and general public interested in cultural heritage collections from Polish libraries, museums and archives, which are available on-line."
+        ],
+        "en": [
+          "Input/output formats — NOTE: dedicated service extension properties for format metadata are desirable. Object format: image | Object format: text"
+        ]
+      },
+      "disciplines": [
+        "https://id.loc.gov/authorities/classification/QA76.9.H85",
+        "https://id.loc.gov/authorities/classification/P",
+        "https://id.loc.gov/authorities/classification/AZ",
+        "https://id.loc.gov/authorities/classification/CC",
+        "https://id.loc.gov/authorities/classification/N"
+      ],
+      "srv_invocation_type": [
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/webApplication"
+      ],
+      "srv_supported_language": [
+        "pol"
+      ],
+      "srv_api_profile": "https://vocabs.sshopencloud.eu/vocabularies/standard/dublin-core",
+      "website": "https://fbc.pionier.net.pl/",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3752",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/9375"
+      ],
+      "sshomp_last_update": "2024-11-06T15:09:53+0000",
+      "sshomp_curation_flags": [
+        "suspect:description=is a database"
+      ],
+      "srv_life_cycle_status": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
+      ],
+      "srv_audience_byrole": [
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/public",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_availability_geographic": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/ww",
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eo"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q210272",
+            "entity_type": "topic",
+            "labels": {
+              "en": "cultural heritage"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q210272"
+              }
+            ]
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q13418847",
+            "entity_type": "topic",
+            "labels": {
+              "en": "digital humanities"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q13418847"
+              }
+            ]
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "labels": {
+              "en": "linguistics"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8162"
+              }
+            ]
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8242",
+            "entity_type": "topic",
+            "labels": {
+              "en": "literature"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q8242"
+              }
+            ]
+          }
+        }
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/9375",
+          "entity_type": "organisation",
+          "name": "Poznan Supercomputing and Networking Center",
+          "types": [
+            "hosting_organisation"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/025cj6e44"
+            }
+          ]
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/01gybvy13",
+          "entity_type": "organisation",
+          "name": "DARIAH ERIC",
+          "short_name": "DARIAH",
+          "types": [
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/01gybvy13"
+            }
+          ],
+          "website": "https://www.dariah.eu/"
+        },
+        {
+          "local_identifier": "https://dariah.pl/en",
+          "entity_type": "organisation",
+          "name": "DARIAH-PL",
+          "short_name": "DARIAH-PL",
+          "types": [
+            "research_infrastructure"
+          ],
+          "country": "PL",
+          "website": "https://dariah.pl/en"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://marketplace.sshopencloud.eu",
+          "entity_type": "venue",
+          "name": "SSH Open Marketplace",
+          "website": "https://marketplace.sshopencloud.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_keywords": [
+        "Bibliographic Listings",
+        "authority-files",
+        "metadata",
+        "DARIAH Resource",
+        "ATRIUM catalogue",
+        "Browsing",
+        "Searching",
+        "Disseminating",
+        "image",
+        "text"
+      ],
+      "sshomp_disciplines_oefos": [
+        "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605007",
+        "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/6020",
+        "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/6",
+        "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605008"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/9223",
+      "entity_type": "person",
+      "name": "Tomasz Parkoła",
+      "sshomp_affiliations": [
+        "Poznan Supercomputing and Networking Center"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+      "entity_type": "organisation",
+      "name": "DARIAH-EU"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/3752",
+      "entity_type": "organisation",
+      "name": "DARIAH-PL"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/9375",
+      "entity_type": "organisation",
+      "name": "Poznan Supercomputing and Networking Center",
+      "identifiers": [
+        {
+          "scheme": "ror",
+          "value": "https://ror.org/025cj6e44"
+        }
+      ]
+    }
+  ]
+}

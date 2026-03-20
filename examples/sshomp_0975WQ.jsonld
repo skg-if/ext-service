@@ -1,0 +1,181 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/sshomp/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0975WQ",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "sshomp",
+          "value": "0975WQ"
+        },
+        {
+          "scheme": "sshomp-id",
+          "value": "74076"
+        },
+        {
+          "scheme": "url",
+          "value": "https://marketplace.sshopencloud.eu/tool-or-service/0975WQ"
+        }
+      ],
+      "srv_name": "TrOCR Kurrent-Model 19th century",
+      "other_names": [
+        "PyTorch"
+      ],
+      "descriptions": {
+        "eng": [
+          "Base model: microsoft/trocr-base-handwritten\n\nTrain Lines: 292'997\nEval Lines: 7'513\nTest Lines: 15'817\n\nEpochs: 19.66 / 20\nEval CER: 0.02827\nTest CER: 0.02655\n\nFinetuned on Kurrent-dataset, containing:\n\nMaterial from the State Archives of Zurich (\"Regierungsratsprotokolle\"), provided by the State Archives of Zurich\nLecture notes of Humboldt Lectures, provided by the Berlin-Brandenburgian Academy of Sciences\nDiary of Eugen Huber, provided by the University of Zurich\nHandwritting and Copies by and of Gottfried Semper\nKonzilsprotokolle, University of Greifswald (19th century)\nas well as many other smaller collections/examples\n\nThe model has not been extensively tested. Potential biases are still to be identified."
+        ],
+        "en": [
+          "Terms of use and access — NOTE: dedicated service extension properties for TOU/access metadata are desirable. License: MIT License"
+        ]
+      },
+      "disciplines": [
+        "https://id.loc.gov/authorities/classification/QA76.9.H85"
+      ],
+      "srv_invocation_type": [
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/script"
+      ],
+      "srv_supported_language": [
+        "deu"
+      ],
+      "srv_audience_byrole": [
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher"
+      ],
+      "website": "https://huggingface.co/dh-unibe/trocr-kurrent",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/10002",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/8222"
+      ],
+      "sshomp_last_update": "2025-04-04T12:35:03+0000",
+      "srv_life_cycle_status": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_availability_geographic": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eo"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q13418847",
+            "entity_type": "topic",
+            "labels": {
+              "en": "digital humanities"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q13418847"
+              }
+            ]
+          }
+        }
+      ],
+      "srv_has_hosting_organisation": [
+        {
+          "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/8222",
+          "entity_type": "organisation",
+          "name": "University of Bern",
+          "types": [
+            "hosting_organisation"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/02k7v4d05"
+            }
+          ]
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/01gybvy13",
+          "entity_type": "organisation",
+          "name": "DARIAH ERIC",
+          "short_name": "DARIAH",
+          "types": [
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/01gybvy13"
+            }
+          ],
+          "website": "https://www.dariah.eu/"
+        },
+        {
+          "local_identifier": "https://www.dariah.ch",
+          "entity_type": "organisation",
+          "name": "DARIAH-CH",
+          "short_name": "DARIAH-CH",
+          "types": [
+            "research_infrastructure"
+          ],
+          "country": "CH",
+          "website": "https://www.dariah.ch"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://marketplace.sshopencloud.eu",
+          "entity_type": "venue",
+          "name": "SSH Open Marketplace",
+          "website": "https://marketplace.sshopencloud.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_keywords": [
+        "DARIAH Resource",
+        "Transcribing"
+      ],
+      "sshomp_disciplines_oefos": [
+        "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605007"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/6735",
+      "entity_type": "person",
+      "name": "Tobias Hodel"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/10002",
+      "entity_type": "organisation",
+      "name": "DARIAH-CH"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+      "entity_type": "organisation",
+      "name": "DARIAH-EU"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/8222",
+      "entity_type": "organisation",
+      "name": "University of Bern",
+      "identifiers": [
+        {
+          "scheme": "ror",
+          "value": "https://ror.org/02k7v4d05"
+        }
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/14052",
+      "entity_type": "person",
+      "name": "Jonas Widmer"
+    }
+  ]
+}

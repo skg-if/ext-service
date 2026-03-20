@@ -6,31 +6,15 @@ layout: default
 nav_order: 2
 ---
 
-*Please note that the Service extension is still work in progress*
-*this extension md file was previously named "SoftwareExtension"
+*Please note that the Service extension is still work in progress. Please check you are using the latest version.*
 
 # SKG-IF Service Extension
 
-A Service is a type of software application or component that provides specific 
-functionality or operations over a network, often via the internet, and is typically accessed 
-through an interface such as an API or a web application.
-(note Service is renaming of Software Service, which is still used in many discussion documents)
-
-
+A Service is a type of software application or component that provides specific functionality or operations over a network, often via the internet, and is typically accessed through an interface such as an API or a web application.
 
 ## Properties
 
-The properties set was suggested and informed from a number of examples both thematic and general:
-- The different CMDI schema for tools & services used in the [VLO catalogue], esp. the  [UDPipe example] 
-- [SSHOMP catalogue] (tools and services) different examples
-- [ELG catalogue] (tools and services) different examples
-- [CLARIN LR Switchboard schema]
-- The [Schema.org SoftwareApplication] type has many useful properties 
-- The [EOSC Service Profile 4.1 rc (latest) and 5.0]
-
-
-
-_NOTE_ property naming: properties introduced by this extension, that are not defined by authorative external origin such as Schema.org or introduced in the SKG-IF core entities are prefixed with "srv_" to avoid clashes with properties with the same name potententially introduced by other extensions. However the practice seems overkill in view of the checks automatically done by json parsing, especially in cases where the extension can be expected to be authorative. TBD.
+Properties introduced by this extension that are not defined by an authoritative external vocabulary (such as Schema.org) or by the SKG-IF core entities are prefixed with `srv_` to avoid clashes with properties of the same name potentially introduced by other extensions.
 
 ## Extensions to core entities
 

@@ -1,0 +1,216 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/sshomp/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "@graph": [
+    {
+      "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0fbhOq",
+      "entity_type": "service",
+      "identifiers": [
+        {
+          "scheme": "sshomp",
+          "value": "0fbhOq"
+        },
+        {
+          "scheme": "sshomp-id",
+          "value": "74559"
+        },
+        {
+          "scheme": "url",
+          "value": "https://marketplace.sshopencloud.eu/tool-or-service/0fbhOq"
+        }
+      ],
+      "srv_name": "DiCoLat",
+      "other_names": [
+        "Online Dictionary"
+      ],
+      "descriptions": {
+        "eng": [
+          "DiCoLat (Dictionary of Latin Collocations on the Internet) is an online dictionary that collects and describes in a systematic and detailed way all verbo-nominal collocations (of the type gratias agere, bellum gerere or inmentem vinore) of the Latin language in a large corpus of authors and works from the 2nd century BC. until the 5th century AD.\n\nThis dictionary provides an exhaustive semantic, syntactic and combinatorial analysis of each of the collocations, as well as real examples of use (with their respective translations into Spanish), frequency of use, distribution by authors and literary genres and diachronic evolution."
+        ]
+      },
+      "disciplines": [
+        "https://id.loc.gov/authorities/classification/QA76.9.H85"
+      ],
+      "srv_invocation_type": [
+        "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/webApplication"
+      ],
+      "srv_supported_language": [
+        "spa"
+      ],
+      "srv_audience_byrole": [
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/trainer",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/citizenScientist",
+        "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher"
+      ],
+      "website": "https://dicolat.iatext.ulpgc.es/",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/12002",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/11803",
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404"
+      ],
+      "sshomp_last_update": "2025-05-12T13:04:55+0000",
+      "srv_life_cycle_status": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
+      ],
+      "srv_audience_byjurisdiction": [
+        "Global"
+      ],
+      "srv_availability_geographic": [
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/ww",
+        "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eo"
+      ],
+      "topics": [
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q13418847",
+            "entity_type": "topic",
+            "labels": {
+              "en": "digital humanities"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q13418847"
+              }
+            ]
+          }
+        },
+        {
+          "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q1122705",
+            "entity_type": "topic",
+            "labels": {
+              "en": "lexicography"
+            },
+            "identifiers": [
+              {
+                "scheme": "wikidata",
+                "value": "https://www.wikidata.org/wiki/Q1122705"
+              }
+            ]
+          }
+        }
+      ],
+      "srv_has_research_infrastructure": [
+        {
+          "local_identifier": "https://ror.org/03wp25384",
+          "entity_type": "organisation",
+          "name": "CLARIN ERIC",
+          "short_name": "CLARIN",
+          "types": [
+            "facility",
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/03wp25384"
+            }
+          ],
+          "website": "https://www.clarin.eu/"
+        },
+        {
+          "local_identifier": "https://ror.org/01gybvy13",
+          "entity_type": "organisation",
+          "name": "DARIAH ERIC",
+          "short_name": "DARIAH",
+          "types": [
+            "research_infrastructure"
+          ],
+          "identifiers": [
+            {
+              "scheme": "ror",
+              "value": "https://ror.org/01gybvy13"
+            }
+          ],
+          "website": "https://www.dariah.eu/"
+        },
+        {
+          "local_identifier": "https://www.clariah.es",
+          "entity_type": "organisation",
+          "name": "CLARIAH-ES",
+          "short_name": "CLARIAH-ES",
+          "types": [
+            "research_infrastructure"
+          ],
+          "country": "ES",
+          "website": "https://www.clariah.es"
+        }
+      ],
+      "srv_venues": [
+        {
+          "local_identifier": "https://marketplace.sshopencloud.eu",
+          "entity_type": "venue",
+          "name": "SSH Open Marketplace",
+          "website": "https://marketplace.sshopencloud.eu",
+          "types": [
+            "srv_portal"
+          ]
+        }
+      ],
+      "srv_keywords": [
+        "DARIAH Resource",
+        "Dictionary of Latin Collocations"
+      ],
+      "sshomp_disciplines_oefos": [
+        "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605007"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/12002",
+      "entity_type": "organisation",
+      "name": "IATEXT: Research Institute of Text Analysis and Applications (Universidad de Las Palmas de Gran Canaria)"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/11803",
+      "entity_type": "organisation",
+      "name": "CLARIAH-ES"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+      "entity_type": "organisation",
+      "name": "DARIAH-EU"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/13947",
+      "entity_type": "person",
+      "name": "José Miguel Baños"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/14102",
+      "entity_type": "person",
+      "name": "Mª. Dolores Jiménez López"
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/12004",
+      "entity_type": "person",
+      "name": "Francisco J. Carreras-Riudavets",
+      "sshomp_affiliations": [
+        "IATEXT: Research Institute of Text Analysis and Applications (Universidad de Las Palmas de Gran Canaria)"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/12003",
+      "entity_type": "person",
+      "name": "Zenón Hernández-Figueroa",
+      "sshomp_affiliations": [
+        "IATEXT: Research Institute of Text Analysis and Applications (Universidad de Las Palmas de Gran Canaria)"
+      ]
+    },
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/12006",
+      "entity_type": "person",
+      "name": "Gustavo Rodríguez Rodríguez",
+      "sshomp_affiliations": [
+        "IATEXT: Research Institute of Text Analysis and Applications (Universidad de Las Palmas de Gran Canaria)"
+      ]
+    }
+  ]
+}
