@@ -1,16 +1,15 @@
 ---
-title: Software service 
-parent: Interoperability framework
+title: Software service (legacy)
+parent: Generic service
+grand_parent: Interoperability framework
 ancestor: Service
 layout: default
-nav_order: 2
+nav_order: 1
 ---
-# SKG-IF Software Service Extension
+# Software Service (legacy)
 
-A software service is a type of software application or component that provides specific 
-functionality or operations over a network, often via the internet, and is typically accessed 
-through an interface such as an API or a web application.
-NOTE THIS DOC IS HERE FOR DOCUMENTATION ONLY, DEVELOPMENT TAKES PLACE IN Service.md
+{: .warning }
+This document is kept for reference only. It represents an earlier draft of the Service entity specification. The current specification is maintained in [Generic service]({% link ext-srv/Service.md %}).
 
 
 
