@@ -80,9 +80,12 @@ info "Step 2: SHACL generation from srv.ttl"
 SHACL_GENERATED="$(mktemp /tmp/srv-shacl-XXXXXX.ttl)"
 trap 'rm -f "$SHACL_GENERATED"' EXIT
 
-"$SHACL_EXTRACTOR_PY" "$SHACL_EXTRACTOR_DIR/src/main_srv_ext.py" \
-    --input "$ONTOLOGY_TTL" \
-    "$SHACL_GENERATED" 2>&1 \
+# Requires shacl-extractor with ext-*** module name fix (PR: dgbroeder/shacl-extractor fix/ext-module-name)
+# Without it, the shapes prefix would be 'ontology_sh:' instead of 'srv_sh:'.
+"$SHACL_EXTRACTOR_PY" -m src.main \
+    "$ONTOLOGY_TTL" \
+    "$SHACL_GENERATED" \
+    --shapes-base https://w3id.org/skg-if/shapes/srv/ 2>&1 \
     && ok "SHACL generated from srv.ttl" \
     || fail "SHACL extraction failed — fix dc:description cardinality format in srv.ttl"
 
@@ -297,6 +300,213 @@ if warnings:
 PYEOF
 
 ok "Alignment check complete"
+
+# ── Step 3b: Service.md ↔ ontology alignment check ───────────────────────────
+info "Step 3b: Service.md ↔ ontology alignment check"
+
+python3 - "$ONTOLOGY_TTL" "$EXT_CTX" "$SKG_CTX_DIR" "$SCRIPT_DIR/Service.md" << 'PYEOF'
+import sys, json, re
+
+ontology_path, ext_ctx_path, skg_ctx_dir, service_md_path = \
+    sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+
+warnings = []
+
+# ── Parse @prefix declarations from srv.ttl ───────────────────────────────────
+ontology_text = open(ontology_path).read()
+ttl_prefixes = {}
+for m in re.finditer(r'@prefix\s+(\w+):\s+<([^>]+)>', ontology_text):
+    ttl_prefixes[m.group(1)] = m.group(2)
+
+def resolve_ttl_curie(curie):
+    if curie.startswith("http"):
+        return curie
+    if ":" in curie:
+        pfx, local = curie.split(":", 1)
+        if pfx in ttl_prefixes:
+            return ttl_prefixes[pfx] + local
+    return curie
+
+# ── Build URI → alias reverse map from core + ext-srv contexts ───────────────
+def load_ctx(path):
+    try:
+        return json.load(open(path)).get("@context", {})
+    except Exception:
+        return {}
+
+core_ctx = load_ctx(f"{skg_ctx_dir}/current/skg-if.json")
+ext_ctx  = load_ctx(ext_ctx_path)
+
+def build_prefix_map(ctx):
+    return {k: v for k, v in ctx.items()
+            if isinstance(v, str) and not k.startswith("@") and not k.startswith("_")
+            and (v.endswith("/") or v.endswith("#"))}
+
+all_prefix = {**build_prefix_map(core_ctx), **build_prefix_map(ext_ctx)}
+
+def ctx_to_reverse_map(ctx):
+    """Build URI → alias map.
+    Two-pass: direct (non-nested) entries take priority; nested entries fill gaps only.
+    This avoids collisions where a URI has both a direct alias and a nested alias
+    (e.g. dcterms:relation → relevant_organisations direct, srv_other nested)
+    while still mapping URIs that only appear as nested entries (cito:isCitedBy → is_cited_by).
+    """
+    def resolve(raw):
+        if not raw or raw == "@nest":
+            return None
+        if raw.startswith("http"):
+            return raw
+        if ":" in raw:
+            pfx, local = raw.split(":", 1)
+            if pfx in all_prefix:
+                return all_prefix[pfx] + local
+        return None
+
+    direct = {}
+    nested = {}
+    for k, v in ctx.items():
+        if k.startswith("_") or k.startswith("@"):
+            continue
+        is_nested = isinstance(v, dict) and "@nest" in v
+        raw = v.get("@id") if isinstance(v, dict) else v if isinstance(v, str) else None
+        uri = resolve(raw)
+        if not uri:
+            continue
+        if is_nested:
+            nested.setdefault(uri, k)   # keep first nested alias per URI
+        else:
+            direct[uri] = k             # direct alias always wins
+    return {**nested, **direct}         # direct overrides nested
+
+uri_to_alias = {**ctx_to_reverse_map(core_ctx), **ctx_to_reverse_map(ext_ctx)}
+
+# ── URIs intentionally absent from Service.md ────────────────────────────────
+ONT_SKIP = {
+    resolve_ttl_curie("schema:provider"),            # noted "not used for now" in srv.ttl
+    resolve_ttl_curie("srv:relatedResearchProduct"),  # superproperty, no JSON-LD alias
+}
+
+# ── Parse srv:Service cardinality block ───────────────────────────────────────
+service_m = re.search(
+    r'srv:Service\s+a\s+owl:Class\s*;.*?dc:description\s+"""(.*?)"""',
+    ontology_text, re.DOTALL
+)
+if not service_m:
+    print("  ✗ Could not locate srv:Service dc:description block", file=sys.stderr)
+    sys.exit(1)
+
+ont_props = {}  # alias → {min, max}
+no_alias  = []
+for line in service_m.group(1).splitlines():
+    m = re.match(r'\*\s+(\S+)\s+-\[([^\]]+)\]->', line.strip())
+    if not m:
+        continue
+    prop_uri = resolve_ttl_curie(m.group(1))
+    if prop_uri in ONT_SKIP:
+        continue
+    lo, hi = (m.group(2).split("..") + [m.group(2)])[:2] if ".." in m.group(2) \
+              else (m.group(2), m.group(2))
+    min_c = int(lo) if str(lo).isdigit() else 0
+    max_c = None if hi == "N" else (int(hi) if str(hi).isdigit() else 1)
+    alias = uri_to_alias.get(prop_uri)
+    if not alias:
+        no_alias.append(prop_uri)
+        continue
+    if alias not in ont_props:
+        ont_props[alias] = {"min": min_c, "max": max_c}
+    else:
+        # same alias, multiple range entries → keep most permissive
+        ont_props[alias]["min"] = min(ont_props[alias]["min"], min_c)
+        ont_props[alias]["max"] = None
+
+for uri in no_alias:
+    warnings.append(f"Ontology property <{uri}> has no alias in either context")
+
+# ── Parse Service.md property sections ───────────────────────────────────────
+service_md = open(service_md_path).read()
+
+md_props = {}  # alias → {mandatory, is_list}
+
+# Top-level: ### `alias`  (possible trailing spaces)\n+  (possible indent)*Type* (card)
+for m in re.finditer(
+    r'^###\s+`(\w+)`[ \t]*\n+[ \t]*\*([^*]+)\*[ \t]*\((mandatory|optional|recommended)\)',
+    service_md, re.MULTILINE
+):
+    alias     = m.group(1)
+    type_label = m.group(2).strip().lower()
+    card_label = m.group(3).lower()
+    md_props[alias] = {"mandatory": card_label == "mandatory", "is_list": type_label == "list"}
+
+# Sub-entries inside `related_products` only: - `alias` *Type* (card)
+rp_m = re.search(r'^###\s+`related_products`.*?(?=^###|\Z)', service_md, re.MULTILINE | re.DOTALL)
+if rp_m:
+    for m in re.finditer(
+        r'^-\s+`(\w+)`\s+\*([^*]+)\*\s+\((mandatory|optional)\)',
+        rp_m.group(0), re.MULTILINE
+    ):
+        alias     = m.group(1)
+        type_label = m.group(2).strip().lower()
+        card_label = m.group(3).lower()
+        md_props[alias] = {"mandatory": card_label == "mandatory", "is_list": type_label == "list"}
+
+# ── Aliases that appear in Service.md for structural/core reasons ─────────────
+MD_STRUCTURAL = {"local_identifier", "entity_type", "related_products"}
+
+# ── Properties exempt from single/list check (e.g. language-map objects) ──────
+CARDINALITY_LIST_EXEMPT = {"descriptions"}  # @language container: Object in JSON, [0..N] in RDF
+
+# ── Check A: Ontology properties absent from Service.md ──────────────────────
+missing_in_md = sorted(a for a in ont_props if a not in md_props)
+if missing_in_md:
+    for alias in missing_in_md:
+        warnings.append(f"Property '{alias}' in ontology but absent from Service.md")
+else:
+    print(f"  ✓ All {len(ont_props)} ontology Service properties documented in Service.md")
+
+# ── Check B: Service.md properties absent from ontology ──────────────────────
+missing_in_ont = sorted(a for a in md_props if a not in ont_props and a not in MD_STRUCTURAL)
+if missing_in_ont:
+    for alias in missing_in_ont:
+        warnings.append(f"Property '{alias}' in Service.md but absent from ontology cardinality block")
+else:
+    print(f"  ✓ All {len(md_props)} Service.md properties accounted for in ontology")
+
+# ── Check C: Cardinality consistency ─────────────────────────────────────────
+card_ok = 0
+for alias in sorted(ont_props):
+    if alias not in md_props:
+        continue
+    ont, md = ont_props[alias], md_props[alias]
+    ont_mandatory = ont["min"] >= 1
+    ont_list      = ont["max"] is None or ont["max"] > 1
+    issues = []
+    if ont_mandatory != md["mandatory"]:
+        issues.append(
+            f"mandatory/optional — ontology: {'mandatory' if ont_mandatory else 'optional'}, "
+            f"Service.md: {'mandatory' if md['mandatory'] else 'optional'}"
+        )
+    if alias not in CARDINALITY_LIST_EXEMPT and ont_list != md["is_list"]:
+        issues.append(
+            f"single/list — ontology: {'list' if ont_list else 'single'}, "
+            f"Service.md: {'list' if md['is_list'] else 'single'}"
+        )
+    if issues:
+        for issue in issues:
+            warnings.append(f"Cardinality mismatch '{alias}': {issue}")
+    else:
+        card_ok += 1
+
+if not any("Cardinality mismatch" in w for w in warnings):
+    print(f"  ✓ All {card_ok} cardinalities consistent between ontology and Service.md")
+
+# ── Summary ───────────────────────────────────────────────────────────────────
+if warnings:
+    print(f"\n  {len(warnings)} Service.md alignment warning(s):")
+    for w in warnings:
+        print(f"  ⚠ {w}")
+PYEOF
+
+ok "Service.md alignment check complete"
 
 # ── Step 4: Generate consolidated spec ───────────────────────────────────────
 info "Step 4: Generating consolidated OpenAPI spec"
