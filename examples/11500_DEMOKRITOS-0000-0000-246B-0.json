@@ -44,7 +44,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://www.ellogon.org/index.php/download",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [

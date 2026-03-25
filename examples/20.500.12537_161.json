@@ -35,7 +35,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/icelandic-lt/tiro-tts",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [

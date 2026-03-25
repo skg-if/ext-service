@@ -25,7 +25,6 @@
           "value": "https://marketplace.sshopencloud.eu/tool-or-service/0DuhZZ"
         }
       ],
-      "srv_name": "ELAN",
       "descriptions": {
         "eng": [
           "ELAN is a tool for creating annotations on multiple layers on audio and video resources. The textual content of annotations is in Unicode and the transcription is stored in XML.\n\nWith ELAN a user can add an unlimited number of textual annotations to audio and/or video recordings. An annotation can be a sentence, word or gloss, a comment, translation or a description of any feature observed in the media. Annotations can be created on multiple layers, called tiers. Tiers can be hierarchically interconnected. An annotation can either be time-aligned to the media or it can refer to other existing annotations. The content of annotations consists of Unicode text and annotation documents are stored in an XML format (EAF).\n\nMain features and characteristics of ELAN:\n* provides several ways to view the annotations, each view is connected to and synchronized with the media timeline\n* supports creation of multiple tiers and tier hierarchies\n* supports Controlled Vocabularies\n* allows linking of up to 4 video files with an annotation document\n* media support\n   * builds on existing, native media frameworks, like Windows Media Player, QuickTime or VLC\n   * support for audio and video formats depends on operating system, high performance media playback can usually be achieved\n* technical\n   * written in the Java programming language\n   * distributions available for Windows, macOS and Linux\n   * open source, the sources are available under a GPL 3 license \n\nThe solution was developed by the Language Archive of the Max Planck Institute for Psycholinguistics."
@@ -91,7 +90,8 @@
         "HTML",
         "EAF",
         "video"
-      ]
+      ],
+      "name": "ELAN"
     },
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/909",

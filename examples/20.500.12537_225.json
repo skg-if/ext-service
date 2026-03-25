@@ -32,11 +32,11 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/tiro-is/tiro-tts/releases/tag/M8",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         },
         {
           "@id": "https://hdl.handle.net/20.500.12537/225",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -100,10 +100,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://tts.tiro.is/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://tts.tiro.is/"
         ]
       },

@@ -25,7 +25,6 @@
           "value": "https://marketplace.sshopencloud.eu/tool-or-service/0CNHsy"
         }
       ],
-      "srv_name": "Palabras TIP",
       "other_names": [
         "Search tool for word examples"
       ],
@@ -146,7 +145,8 @@
       ],
       "sshomp_disciplines_oefos": [
         "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605007"
-      ]
+      ],
+      "name": "Palabras TIP"
     },
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/12002",

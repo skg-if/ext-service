@@ -25,7 +25,6 @@
           "value": "https://marketplace.sshopencloud.eu/tool-or-service/0bUnwa"
         }
       ],
-      "srv_name": "Zero shot classification",
       "descriptions": {
         "eng": [
           "An emergent capability within AI is zero shot classification – i.e. no need to annotate. Do you want to be able to classify examples in a corpus based on your own categories? Test this!"
@@ -130,7 +129,8 @@
             ]
           }
         }
-      ]
+      ],
+      "name": "Zero shot classification"
     },
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/15161",

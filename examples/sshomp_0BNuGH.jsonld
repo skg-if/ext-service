@@ -25,7 +25,6 @@
           "value": "https://marketplace.sshopencloud.eu/tool-or-service/0BNuGH"
         }
       ],
-      "srv_name": "CLARIAH-DE Tutorial Finder",
       "descriptions": {
         "eng": [
           "The Tutorial Finder allows users to browse freely available and reusable teaching and training materials on procedures, tools, research methods, and topics in the humanities and its related disciplines. \n\nThis resource is supported by Text+. In case of questions you may get in touch with the Text+ helpdesk at textplus-support@gwdg.de."
@@ -172,12 +171,13 @@
       "srv_deployment_of": [
         {
           "@id": "https://doi.org/10.5281/zenodo.6328000",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "sshomp_disciplines_oefos": [
         "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605007"
-      ]
+      ],
+      "name": "CLARIAH-DE Tutorial Finder"
     },
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/9316",

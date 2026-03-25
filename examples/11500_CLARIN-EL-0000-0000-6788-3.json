@@ -40,11 +40,11 @@
       "srv_deployment_of": [
         {
           "@id": "https://pypi.org/project/gr-nlp-toolkit/#files",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         },
         {
           "@id": "https://github.com/katkorre/greek_nlp_toolkit",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "topics": [

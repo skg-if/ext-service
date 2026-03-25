@@ -41,7 +41,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://hdl.handle.net/20.500.11752/ILC-1005",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -112,10 +112,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://www.prin-italia-antica.unifi.it/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://www.prin-italia-antica.unifi.it/"
         ]
       },

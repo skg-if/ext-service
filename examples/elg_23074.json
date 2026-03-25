@@ -38,7 +38,7 @@
         "sshocinvt:restfulWebservice"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://live.european-language-grid.eu/execution/process/23074"
         ]
       },

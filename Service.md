@@ -73,7 +73,7 @@ Needed for parsing purposes; fixed to `service`.
 ```
 
 ### `name`
-*String* (optional): The canonical name of the service in English. Maps to `foaf:name`.
+*String* (mandatory): The canonical name of the service in English. Maps to `foaf:name`.
 
 ```json
     "name": "UDPipe"
@@ -108,7 +108,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 
 
 ### `srv_audience_byrole`
-*Object* (optional): The audience(s) that the service is intended to be used by
+*List* (optional): The audience(s) that the service is intended to be used by
 This can both express desire and/or design of the service operators. Values are mandatory taken from 
 the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme 
 
@@ -120,7 +120,7 @@ the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme
 ```
 
 ### `srv_audience_byjurisdiction`
-*Object* (optional): The jurisdiction that is given by the service operator's legal status limits.
+*List* (optional): The jurisdiction that is given by the service operator's legal status limits.
 the audience. Values taken from either `Global`, `Institution`, `National`, or `Regional` aka multiple countries, from (https://zenodo.org/records/15516020).
 ```json
     "srv_audience_byjurisdiction": ["Institution", "National" ]
@@ -156,7 +156,7 @@ In case a [Service] is discipline agnostic, the string "all" should be specified
 ```
 
 ### `srv_invocation_type`
-*List* (mandatory): The way the service is used or called. Multiple values are possible, access rights and licenses are assumed to be the same. Values are specified by vocabulary: https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
+*List* (optional): The way the service is used or called. Multiple values are possible, access rights and licenses are assumed to be the same. Values are specified by vocabulary: https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
 
 ```json
     "@context": {
@@ -173,8 +173,8 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
      "@context": {
         "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
      },
-    "srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6" ]    
-```    
+    "srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6" ]
+```
 
 ### `srv_availability_geographic`
 *List* (optional): list of countries and regions where the service is made available, eg. for license reasons. Values are by the vocabulary: https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/
@@ -188,7 +188,7 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 ```    
 
 ### `website`
-*String* (mandatory): Landingpage for the service. Preferably one maintained by the service operator
+*String* (optional): Landingpage for the service. Preferably one maintained by the service operator
 
 ```json
     "website": "https://ufal.mff.cuni.cz/udpipe/2"
@@ -320,29 +320,25 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```
 
 ### `srv_has_hosting_legal_entity`
-*List* (optional): Is the specific [Organisation] legally responsible for the service operation and publishing.
-_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects.
+*String* (optional): Is the specific [Organisation] legally responsible for the service operation and publishing.
+_NOTE_ The value may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand the identifier to an Organisation object.
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
-     "srv_has_hosting_legal_entity": [
-       "https://ror.org/024d6js02"
-     ]
+     "srv_has_hosting_legal_entity": "https://ror.org/024d6js02"
 ```
 Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```json
-     "srv_has_hosting_legal_entity": [
-       {
-         "local_identifier": "https://ror.org/024d6js02",
-         "entity_type": "organisation",
-         "name": "Charles University",
-         "types": [
-           "education",
-           "research"
-         ],
-         "country": "CZ"
-       }
-     ]
+     "srv_has_hosting_legal_entity": {
+       "local_identifier": "https://ror.org/024d6js02",
+       "entity_type": "organisation",
+       "name": "Charles University",
+       "types": [
+         "education",
+         "research"
+       ],
+       "country": "CZ"
+     }
 ```
 
 
@@ -405,11 +401,12 @@ Expanded form (as may be returned by the API):
 ```
 
 ### `related_products`
-*Object* (optional): A dictionary of objects representing related [Research products], where the semantics of such relationship is specified as a key and the related product identified by its local_identifier.
+*Object* (optional): JSON-LD grouping collecting typed relations to [Research products].
+The key is the relation type; values are lists of identifiers.
 
-For services, the applicable relation types are:
-- `is_documented_by` *List* (optional): Identifiers of [Research products] (e.g. papers, reports) that document this service. Maps to `cito:isDocumentedBy`.
-- `is_cited_by` *List* (optional): Identifiers of [Research products] (e.g. papers) that cite or mention this service. Maps to `cito:isCitedBy`.
+Applicable relation types:
+- `is_documented_by` *List* (optional): Research products documenting this service.
+- `is_cited_by` *List* (optional): Research products citing this service.
 
 ```json
     "related_products": {
@@ -434,20 +431,17 @@ For services, the applicable relation types are:
 ### `srv_deployment_of`                                                                           
   *List* (optional) The software that this service is a running instance of.                        
                                                                                                     
-  Can be:                                                                                           
-  - A URI string (e.g., a source code repository link)                                              
-  - A typed reference:                                                                              
-    - `skg:research_product` — a Research Product of type software                                  
-    - `fabio:Software` — a software entity                                                          
-    - `schema:SoftwareSourceCode` — a source code entity                                            
-                                                                                                    
-```json                                                                                           
-  "srv_deployment_of": [                                                                            
-      "https://github.com/ufal/udpipe",                                                             
-      { "@id": "http://example.org/software/udpipe", "@type": "fabio:Software" },                   
-      { "@id": "http://example.org/source/udpipe", "@type": "schema:SoftwareSourceCode" },          
-      { "@id": "http://example.org/research_product/RP_101", "@type": "skg:research_product" }      
-  ]                                                                                                 
+  Can be:
+  - A plain string `local_identifier` — treated as a cross-reference to an `skg:research_product` (type software) in the SKG-IF graph
+  - A typed external reference:
+    - `fabio:Software` — an external software entity identified by a GitHub/GitLab URL, handle, or DOI. It is a bibliographic class — its inherited properties are about identifying and citing software (DOI, handle, version, date), not describing its technical characteristics.
+
+```json
+  "srv_deployment_of": [
+      "local-id-of-udpipe-software",
+      { "@id": "https://github.com/ufal/udpipe", "@type": "fabio:Software" },
+      { "@id": "https://hdl.handle.net/11234/1-1452", "@type": "fabio:Software" }
+  ]
 ```
 
 

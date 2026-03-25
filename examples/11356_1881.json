@@ -35,7 +35,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://hdl.handle.net/11356/1881",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -106,10 +106,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://www.inz.si/en/dihur/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://www.inz.si/en/dihur/"
         ]
       },

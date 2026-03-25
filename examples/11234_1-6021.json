@@ -37,7 +37,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://hdl.handle.net/11234/1-6021",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -108,10 +108,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://ufal.mff.cuni.cz/automated-speech-scoring-czech"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://ufal.mff.cuni.cz/automated-speech-scoring-czech"
         ]
       },

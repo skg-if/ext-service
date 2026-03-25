@@ -68,6 +68,7 @@ skg:Venue a owl:Class ;
 
 datacite:IdentifierScheme a owl:Class ;
     rdfs:label "datacite:IdentifierScheme" ;
+    rdfs:comment "No property list: instances are remote DataCite scheme IRIs; SHACL cannot validate remote vocabulary membership." ;
     rdfs:isDefinedBy datacite: .
 
 dcterms:Standard a owl:Class ;
@@ -92,6 +93,8 @@ bido:BibliometricDataInTime a owl:Class ;
 
 fabio:Software a owl:Class ;
     rdfs:label "fabio:Software (SKG-IF labels: software)" ;
+    owl:equivalentClass fabio:ComputerProgram ;
+    rdfs:comment "Note: fabio:Software does not formally exist in the FABIO ontology; the correct class is fabio:ComputerProgram. It is used here because it is established usage in the SKG-IF core data model (skg-o.ttl). Declared equivalent to fabio:ComputerProgram for ontological correctness. fabio:ComputerProgram is a bibliographic class — its inherited properties (from frbr:Endeavour) are about identifying and citing software (DOI, handle, version, date), not describing its technical characteristics." ;
     rdfs:isDefinedBy fabio: .
 
 fabio:Work a owl:Class ;
@@ -102,20 +105,15 @@ pro:Role a owl:Class ;
     rdfs:label "pro:Role" ;
     rdfs:isDefinedBy pro: .
 
-skos:ConceptScheme a owl:Class ;
-    rdfs:label "skos:ConceptScheme" ;
+skos:Concept a owl:Class ;
+    rdfs:label "skos:Concept" ;
+    rdfs:comment "No property list: instances are remote SKOS concept IRIs; SHACL cannot validate remote vocabulary membership." ;
     rdfs:isDefinedBy skos: .
 
-schema:SoftwareSourceCode a owl:Class ;
-    rdfs:label "schema:SoftwareSourceCode" ;
-    rdfs:subClassOf schema:CreativeWork ;
-    dc:description """
-The properties that can be used with this class are:
-
-* foaf:homepage -[0..N]-> foaf:Document
-* schema:codeRepository -[1..N]-> xsd:anyURI """ ;
-    rdfs:comment """Computer programming source code, including full (compile-ready) solutions, code snippet samples, templates, scripts, and other software artefacts.  """ ; 
-    rdfs:isDefinedBy schema: .
+skos:ConceptScheme a owl:Class ;
+    rdfs:label "skos:ConceptScheme" ;
+    rdfs:comment "No property list: instances are remote SKOS concept scheme IRIs; SHACL cannot validate remote vocabulary membership." ;
+    rdfs:isDefinedBy skos: .
 
 
 ############################
@@ -137,7 +135,7 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 dcat:endpointURL a owl:ObjectProperty ;
     rdfs:label "endpoint URL" ;
     rdfs:domain srv:APIProfile ;
-    rdfs:range xsd:anyURI ;
+    rdfs:range rdfs:Resource ;
     rdfs:isDefinedBy dcat: .
 
 schema:url a owl:ObjectProperty ;
@@ -146,9 +144,9 @@ schema:url a owl:ObjectProperty ;
 * srv:APIProfile
 
 In SKG-IF, it is used to link to the URL(s) of the API specification document(s) (range):
-* xsd:anyURI""" ;
+* foaf:Document""" ;
     rdfs:domain srv:APIProfile ;
-    rdfs:range xsd:anyURI ;
+    rdfs:range foaf:Document ;
     rdfs:isDefinedBy schema: .
 
 dcterms:conformsTo a owl:ObjectProperty ;
@@ -186,10 +184,31 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 
 dcterms:requires a owl:ObjectProperty ;
     rdfs:label "dcterms:requires (SKG-IF labels: requires)" ;
-    dc:description """In SKG-IF, it is used in the following classes (domain):
-* SoftwareSourceCode, requires the presence of a url (landing page, source code rep.)
-""" ;
     rdfs:isDefinedBy dcterms: .
+
+cito:isCitedBy a owl:ObjectProperty ;
+    rdfs:label "cito:isCitedBy (SKG-IF labels: is_cited_by)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* skg:research_product""" ;
+    rdfs:comment "A research product (e.g. a paper) that cites or mentions this service." ;
+    rdfs:domain srv:Service ;
+    rdfs:range skg:research_product ;
+    rdfs:isDefinedBy cito: .
+
+cito:isDocumentedBy a owl:ObjectProperty ;
+    rdfs:label "cito:isDocumentedBy (SKG-IF labels: is_documented_by)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* skg:research_product""" ;
+    rdfs:comment "A research product (e.g. a paper or report) that documents this service." ;
+    rdfs:domain srv:Service ;
+    rdfs:range skg:research_product ;
+    rdfs:isDefinedBy cito: .
 
 bido:holdsBibliometricDataInTime a owl:ObjectProperty ;
     rdfs:label "bido:holdsBibliometricDataInTime (SKG-IF labels: topics)" ;
@@ -250,6 +269,18 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     rdfs:range rdfs:Literal ;
     rdfs:isDefinedBy foaf: .
 
+schema:keyword a owl:DatatypeProperty ;
+    rdfs:label "schema:keyword (SKG-IF labels: srv_keywords)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following data types (range):
+* xsd:string""" ;
+    rdfs:comment "Keywords relevant for service discovery. Values may be simple strings or concept URIs." ;
+    rdfs:domain srv:Service ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy schema: .
+
 foaf:homepage a owl:ObjectProperty ;
     rdfs:label "foaf:homepage (SKG-IF labels: website)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
@@ -295,11 +326,12 @@ srv:isDeploymentOf a owl:ObjectProperty ;
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * skg:research_product (type software)
 * fabio:Software
-* schema:SoftwareSourceCode""" ;
+
+Plain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph.""" ;
     rdfs:domain srv:Service ;
     rdfs:range [
        a owl:Class ;
-       owl:unionOf ( fabio:Software schema:SoftwareSourceCode skg:research_product)
+       owl:unionOf ( fabio:Software skg:research_product)
     ] ;
     rdfs:comment "A identifier for the software or software research product." ;
     rdfs:isDefinedBy srv: .
@@ -396,19 +428,14 @@ schema:provider a owl:ObjectProperty ;
 srv:APIProfile a owl:Class ;
     rdfs:label "API Profile" ;
     dc:description """A concrete API profile or specification that pairs service endpoints with (possibly) several API standards. The properties that can be used with this class are:
-* dcat:endpointURL -[1]-> xsd:anyURI
-* schema:url -[1..N]-> xsd:anyURI """ ;
+* dcat:endpointURL -[1..N]-> rdfs:Resource
+* schema:url -[0..N]-> foaf:Document """ ;
 
-    rdfs:subClassOf dcterms:Standard ;	
-    # Require that instances have a API endpoint and a spec document
+    rdfs:subClassOf dcterms:Standard ;
+    # Require that instances have an API endpoint; spec document URL is optional
     rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty dcat:endpointURL ;
-        owl:cardinality "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty schema:url ;
         owl:minCardinality "1"^^xsd:nonNegativeInteger
     ] ;
     rdfs:isDefinedBy srv: .
@@ -519,21 +546,23 @@ srv:Service a owl:Class ;
 * srv:intendedAudienceRole -[0..N]-> skos:Concept 
 * dcterms:subject -[0..N]-> owl:Thing
 * srv:invocationType -[0..N]-> skos:Concept 
-* srv:eoscLifeCycleStatus -[0..1]-> skos:Concept 
+* srv:eoscLifeCycleStatus -[0..N]-> skos:Concept
 * srv:geographicalAvailability -[0..N]-> owl:Thing
 * srv:supportedLanguage -[0..N]-> lvont:Language
 * srv:isPartOfResearchInfrastructure -[0..N]-> foaf:Organization
 * srv:hasHostingOrganisation -[0..N]-> foaf:Organization
 * srv:hasHostingLegalEntity -[0..1]-> foaf:Organization
 * dcterms:relation -[0..N]-> foaf:Organization
-* dcterms:conformsTo -[0..N]-> srv:APIProfile
+* dcterms:conformsTo -[0..1]-> srv:APIProfile
 * schema:provider -[0..1]-> srv:FacilityPortal
 * srv:isDeploymentOf -[0..N]-> fabio:Software
-* srv:isDeploymentOf -[0..N]-> schema:SoftwareSourceCode
 * srv:isDeploymentOf -[0..N]-> skg:research_product
 * srv:relatedResearchProduct -[0..N]-> skg:research_product
+* cito:isCitedBy -[0..N]-> skg:research_product
+* cito:isDocumentedBy -[0..N]-> skg:research_product
+* schema:keyword -[0..N]-> xsd:string
 * bido:holdsBibliometricDataInTime -[0..N]-> bido:BibliometricDataInTime
-* srv:hasVenue -[0..1]-> skg:Venue
+* srv:hasVenue -[0..N]-> skg:Venue
 * schema:isAccessibleForFree -[0..1]-> xsd:boolean """ ;
     rdfs:isDefinedBy srv: .
 

@@ -60,7 +60,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/rankastankovic/It-Sr-NER/",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -131,10 +131,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://ners.jerteh.rs/4api"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://ners.jerteh.rs/4api",
           "https://github.com/rankastankovic/It-Sr-NER/"
         ]

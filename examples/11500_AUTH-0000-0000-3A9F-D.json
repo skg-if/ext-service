@@ -39,10 +39,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://www.populismus.gr/observatory/index.php/home"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://www.populismus.gr/observatory/index.php/home"
         ]
       },

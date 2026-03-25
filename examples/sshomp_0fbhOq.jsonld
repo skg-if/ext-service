@@ -25,7 +25,6 @@
           "value": "https://marketplace.sshopencloud.eu/tool-or-service/0fbhOq"
         }
       ],
-      "srv_name": "DiCoLat",
       "other_names": [
         "Online Dictionary"
       ],
@@ -161,7 +160,8 @@
       ],
       "sshomp_disciplines_oefos": [
         "https://vocabs.acdh.oeaw.ac.at/oefosdisciplines/605007"
-      ]
+      ],
+      "name": "DiCoLat"
     },
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/sshomp/actor/12002",

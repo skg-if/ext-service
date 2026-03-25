@@ -39,11 +39,11 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/rankastankovic/It-Sr-NER/",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         },
         {
           "@id": "https://hdl.handle.net/20.500.11752/OPEN-980",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [

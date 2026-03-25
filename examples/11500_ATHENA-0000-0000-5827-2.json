@@ -38,10 +38,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://voyant-tools.org/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://voyant-tools.org/"
         ]
       },

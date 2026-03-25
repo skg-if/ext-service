@@ -29,7 +29,6 @@
           "value": "https://github.com/clarin-eric/clarin-resource-families/blob/main/tools%2Fpos-and-lemmatisation%2Fnchlt-isizulu.json"
         }
       ],
-      "srv_name": "NCHLT isiZulu Lemmatiser",
       "descriptions": {
         "eng": [
           "This tool is a lemmatizer for the Zulu Bantu language developed during the NCHLT Text project (Barnard et al. [2014](https://www.clarin.eu/resource-families/tools-part-speech-tagging-and-lemmatization#Barnard%20et%20al.%202014))."
@@ -91,7 +90,8 @@
       "srv_keywords": [
         "lemmas",
         "Part-of-Speech Tagging and Lemmatisation"
-      ]
+      ],
+      "name": "NCHLT isiZulu Lemmatiser"
     }
   ]
 }

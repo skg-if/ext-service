@@ -34,7 +34,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://hdl.handle.net/11321/295",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -108,10 +108,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://mowa.clarin-pl.eu/transcriber/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://mowa.clarin-pl.eu/transcriber/"
         ]
       },

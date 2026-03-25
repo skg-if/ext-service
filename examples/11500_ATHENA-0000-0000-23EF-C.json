@@ -42,10 +42,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://speech.ilsp.gr/greeklish/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://speech.ilsp.gr/greeklish/"
         ]
       },

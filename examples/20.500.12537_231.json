@@ -31,11 +31,11 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/cadia-lvl/g2p-service/releases/tag/0.2.0",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         },
         {
           "@id": "https://hdl.handle.net/20.500.12537/231",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -99,10 +99,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://nlp.talgreinir.is/pron"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://nlp.talgreinir.is/pron"
         ]
       },

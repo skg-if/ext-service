@@ -54,7 +54,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/ufal/udpipe",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         },
         {
           "@id": "http://example.org/research_product/RP_101",

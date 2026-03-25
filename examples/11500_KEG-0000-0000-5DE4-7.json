@@ -48,10 +48,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://www.greek-language.gr/certification/readability/index.html"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://www.greek-language.gr/certification/readability/index.html"
         ]
       },

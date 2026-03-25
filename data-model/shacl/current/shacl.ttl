@@ -1,174 +1,144 @@
 @prefix bido: <http://purl.org/spar/bido/> .
+@prefix cito: <http://purl.org/spar/cito/> .
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix lvont: <http://lexvo.org/ontology#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skg: <https://w3id.org/skg-if/ontology/> .
-@prefix skg_sh_srv: <https://w3id.org/skg-if/shapes/srv/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix srv: <https://w3id.org/skg-if/extension/srv/ontology/> .
+@prefix srv_sh: <https://w3id.org/skg-if/shapes/srv/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-skg_sh_srv:APIProfileShape a sh:NodeShape ;
-    sh:property [ sh:datatype xsd:anyURI ;
-            sh:minCount 1 ;
-            sh:path dcat:endpointURL ],
-        [ sh:datatype xsd:anyURI ;
-            sh:minCount 1 ;
-            sh:path schema:url ] .
-
-skg_sh_srv:BibliometricDataInTimeShape a sh:NodeShape ;
-    sh:property [ sh:class fabio:SubjectTerm ;
-            sh:minCount 1 ;
+srv_sh:ServiceShape a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:node srv_sh:APIProfileShape ;
+            sh:path dcterms:conformsTo ],
+        [ sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path bido:withBibliometricData ] .
-
-skg_sh_srv:FacilityPortalShape a sh:NodeShape ;
-    sh:property [ sh:class foaf:Organization ;
-            sh:minCount 1 ;
+            sh:path srv:eoscLifeCycleStatus ],
+        [ sh:datatype xsd:string ;
+            sh:minCount 0 ;
+            sh:path schema:keyword ],
+        [ sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path schema:provider ],
+            sh:path srv:invocationType ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path srv:isDeploymentOf ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path srv:intendedAudienceRole ],
         [ sh:minCount 0 ;
             sh:nodeKind sh:Literal ;
             sh:path skos:altLabel ],
-        [ sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path skos:prefLabel ] .
-
-skg_sh_srv:ServiceShape a sh:NodeShape ;
-    sh:property [ sh:class rdfs:langString ;
-            sh:minCount 0 ;
+        [ sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path dcterms:description ],
-        [ sh:class srv:APIProfile ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path dcterms:conformsTo ],
-        [ sh:class fabio:Software ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:isDeploymentOf ],
-        [ sh:class foaf:Document ;
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path foaf:homepage ],
+            sh:path cito:isCitedBy ],
         [ sh:datatype xsd:boolean ;
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path schema:isAccessibleForFree ],
-        [ sh:class skos:Concept ;
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:eoscLifeCycleStatus ],
-        [ sh:class datacite:Identifier ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path datacite:hasIdentifier ],
-        [ sh:class foaf:Organization ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:hasHostingOrganisation ],
         [ sh:minCount 0 ;
-            sh:nodeKind sh:Literal ;
-            sh:path skos:altLabel ],
-        [ sh:class owl:Thing ;
-            sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path srv:relatedResearchProduct ],
+        [ sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:path srv:geographicalAvailability ],
-        [ sh:class foaf:Organization ;
-            sh:maxCount 1 ;
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path cito:isDocumentedBy ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path dcterms:relation ],
+        [ sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path foaf:homepage ],
+        [ sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:path srv:hasHostingLegalEntity ],
-        [ sh:class skg:research_product ;
+        [ sh:maxCount 1 ;
             sh:minCount 0 ;
+            sh:node srv_sh:FacilityPortalShape ;
+            sh:path schema:provider ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path srv:hasVenue ],
+        [ sh:minCount 0 ;
+            sh:node srv_sh:BibliometricDataInTimeShape ;
+            sh:path bido:holdsBibliometricDataInTime ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path dcterms:subject ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path srv:supportedLanguage ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path srv:isPartOfResearchInfrastructure ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:Literal ;
+            sh:path dcterms:description ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path srv:hasHostingOrganisation ],
+        [ sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:path srv:isDeploymentOf ],
-        [ sh:class skos:Concept ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:intendedAudienceRole ],
         [ sh:datatype xsd:string ;
             sh:minCount 0 ;
             sh:path srv:audienceJurisdiction ],
-        [ sh:class schema:SoftwareSourceCode ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:isDeploymentOf ],
-        [ sh:class foaf:Organization ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path dcterms:relation ],
-        [ sh:class owl:Thing ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path dcterms:subject ],
         [ sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:path foaf:name ],
-        [ sh:class srv:FacilityPortal ;
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
+        [ sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path schema:provider ],
-        [ sh:class lvont:Language ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:supportedLanguage ],
-        [ sh:class skg:research_product ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:relatedResearchProduct ],
-        [ sh:class bido:BibliometricDataInTime ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path bido:holdsBibliometricDataInTime ],
-        [ sh:class skg:Venue ;
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:hasVenue ],
-        [ sh:class skos:Concept ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:invocationType ],
-        [ sh:class foaf:Organization ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path srv:isPartOfResearchInfrastructure ] ;
+            sh:path datacite:hasIdentifier ] ;
     sh:targetClass srv:Service .
 
-skg_sh_srv:SoftwareSourceCodeShape a sh:NodeShape ;
-    sh:property [ sh:datatype xsd:anyURI ;
-            sh:minCount 1 ;
-            sh:path schema:codeRepository ],
-        [ sh:class foaf:Document ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path foaf:homepage ] .
-
-skg_sh_srv:StandardShape a sh:NodeShape ;
+srv_sh:StandardShape a sh:NodeShape ;
     sh:property [ sh:minCount 0 ;
             sh:nodeKind sh:Literal ;
-            sh:path skos:prefLabel ] .
+            sh:path skos:prefLabel ] ;
+    sh:targetClass dcterms:Standard .
 
-skg_sh_srv:SubjectTermShape a sh:NodeShape ;
-    sh:property [ sh:class skos:ConceptScheme ;
-            sh:maxCount 1 ;
+srv_sh:APIProfileShape a sh:NodeShape ;
+    sh:property [ sh:minCount 0 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path schema:url ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path dcat:endpointURL ] .
+
+srv_sh:BibliometricDataInTimeShape a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node srv_sh:SubjectTermShape ;
+            sh:path bido:withBibliometricData ] .
+
+srv_sh:FacilityPortalShape a sh:NodeShape ;
+    sh:property [ sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path skos:prefLabel ],
+        [ sh:minCount 0 ;
+            sh:nodeKind sh:Literal ;
+            sh:path skos:altLabel ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path schema:provider ] .
+
+srv_sh:SubjectTermShape a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:path skos:inScheme ],
         [ sh:minCount 0 ;
             sh:nodeKind sh:Literal ;
-            sh:path skos:prefLabel ] ;
-    sh:targetClass fabio:SubjectTerm .
+            sh:path skos:prefLabel ] .
 

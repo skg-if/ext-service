@@ -58,10 +58,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://nlp.ilsp.gr/nws/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://nlp.ilsp.gr/nws/"
         ]
       },

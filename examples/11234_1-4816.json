@@ -102,10 +102,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://lindat.mff.cuni.cz/services/udpipe/api/process"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://lindat.mff.cuni.cz/services/udpipe/api/process",
           "https://lindat.mff.cuni.cz/services/udpipe/",
           "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php",

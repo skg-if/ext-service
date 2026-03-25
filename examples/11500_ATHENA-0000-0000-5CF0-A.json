@@ -41,10 +41,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://inception.clarin.gr/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://inception.clarin.gr/",
           "https://inception-project.github.io/"
         ]

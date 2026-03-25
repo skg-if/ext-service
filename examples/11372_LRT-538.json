@@ -85,10 +85,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://www.panacea-lr.eu/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://www.panacea-lr.eu/"
         ]
       },

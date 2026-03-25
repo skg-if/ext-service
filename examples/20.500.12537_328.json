@@ -34,11 +34,11 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/icelandic-lt/simaromur",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         },
         {
           "@id": "https://hdl.handle.net/20.500.12537/328",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [

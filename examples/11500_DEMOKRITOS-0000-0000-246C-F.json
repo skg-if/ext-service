@@ -41,7 +41,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://users.iit.demokritos.gr/~eleon/",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [

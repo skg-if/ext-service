@@ -48,14 +48,14 @@
       "srv_deployment_of": [
         {
           "@id": "http://speech.ilsp.gr/iplr/downloads.htm",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://speech.ilsp.gr/iplr/NumTool.aspx"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://speech.ilsp.gr/iplr/NumTool.aspx",
           "http://speech.ilsp.gr/iplr/index.htm"
         ]

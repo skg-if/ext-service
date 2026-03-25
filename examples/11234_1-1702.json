@@ -39,7 +39,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://hdl.handle.net/11234/1-1702",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -112,10 +112,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://lindat.mff.cuni.cz/services/udpipe/api/process"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://lindat.mff.cuni.cz/services/udpipe/api/process",
           "https://lindat.mff.cuni.cz/services/udpipe/",
           "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php",

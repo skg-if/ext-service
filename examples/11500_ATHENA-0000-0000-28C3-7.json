@@ -50,10 +50,10 @@
         "sshocinvt:restfulWebservice"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://opennlp.apache.org/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://opennlp.apache.org/"
         ]
       },

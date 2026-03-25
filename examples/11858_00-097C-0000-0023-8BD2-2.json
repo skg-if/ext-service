@@ -94,10 +94,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://prirucka.ujc.cas.cz/l/en/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://prirucka.ujc.cas.cz/l/en/"
         ]
       },

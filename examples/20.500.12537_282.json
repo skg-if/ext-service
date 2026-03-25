@@ -35,11 +35,11 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/icelandic-lt/tts_webapp",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         },
         {
           "@id": "https://hdl.handle.net/20.500.12537/282",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [

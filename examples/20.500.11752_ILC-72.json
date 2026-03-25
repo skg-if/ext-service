@@ -103,10 +103,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://ilc4clarin.ilc.cnr.it/en/services/freeling-it/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://ilc4clarin.ilc.cnr.it/en/services/freeling-it/"
         ]
       },

@@ -106,10 +106,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://lindat.mff.cuni.cz/services/moses/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://lindat.mff.cuni.cz/services/moses/"
         ]
       },

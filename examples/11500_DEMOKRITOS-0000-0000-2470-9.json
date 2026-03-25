@@ -47,10 +47,10 @@
         "sshocinvt:restfulWebservice"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://www.ellogon.org/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://www.ellogon.org/"
         ]
       },

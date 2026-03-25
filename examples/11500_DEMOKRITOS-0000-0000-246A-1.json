@@ -40,10 +40,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://clarin.ellogon.org/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://clarin.ellogon.org/",
           "http://clarin.ellogon.org/"
         ]

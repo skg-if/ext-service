@@ -86,10 +86,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://nlp.lsi.upc.edu/freeling/demo/demo.php"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://nlp.lsi.upc.edu/freeling/demo/demo.php"
         ]
       },

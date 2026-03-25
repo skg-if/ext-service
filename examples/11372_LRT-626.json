@@ -91,10 +91,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://vertimas.vdu.lt/twsas/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://vertimas.vdu.lt/twsas/"
         ]
       },

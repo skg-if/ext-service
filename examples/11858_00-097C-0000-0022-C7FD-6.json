@@ -32,7 +32,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://hdl.handle.net/11858/00-097C-0000-0022-C7FD-6",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -103,10 +103,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://lindat.mff.cuni.cz/services/pmltq/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://lindat.mff.cuni.cz/services/pmltq/"
         ]
       },

@@ -45,7 +45,7 @@
       "srv_deployment_of": [
         {
           "@id": "https://github.com/webanno/webanno/releases/download/webanno-3.6.7/webanno-standalone-3.6.7.jar",
-          "@type": "schema:SoftwareSourceCode"
+          "@type": "fabio:Software"
         }
       ],
       "srv_has_research_infrastructure": [
@@ -114,10 +114,10 @@
         "Global"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "https://webanno.github.io/webanno/"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "https://webanno.github.io/webanno/"
         ]
       },

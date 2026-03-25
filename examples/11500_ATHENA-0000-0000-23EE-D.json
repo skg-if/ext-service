@@ -46,10 +46,10 @@
         "sshocinvt:webApplication"
       ],
       "srv_api_profile": {
-        "dcat:endpointURL": [
+        "srv_api_endpoint": [
           "http://hdl.handle.net/11500/ATHENA-0000-0000-23EE-D"
         ],
-        "schema:url": [
+        "srv_api_specification_uri": [
           "http://hdl.handle.net/11500/ATHENA-0000-0000-23EE-D"
         ]
       },
