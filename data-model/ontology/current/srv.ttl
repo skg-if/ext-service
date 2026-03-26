@@ -94,7 +94,7 @@ bido:BibliometricDataInTime a owl:Class ;
 fabio:Software a owl:Class ;
     rdfs:label "fabio:Software (SKG-IF labels: software)" ;
     owl:equivalentClass fabio:ComputerProgram ;
-    rdfs:comment "Note: fabio:Software does not formally exist in the FABIO ontology; the correct class is fabio:ComputerProgram. It is used here because it is established usage in the SKG-IF core data model (skg-o.ttl). Declared equivalent to fabio:ComputerProgram for ontological correctness. fabio:ComputerProgram is a bibliographic class — its inherited properties (from frbr:Endeavour) are about identifying and citing software (DOI, handle, version, date), not describing its technical characteristics." ;
+    rdfs:comment "A bibliographic class for software; equivalent to fabio:ComputerProgram. Its inherited properties (from frbr:Endeavour) are about identifying and citing software (DOI, handle, version, date), not describing its technical characteristics." ;
     rdfs:isDefinedBy fabio: .
 
 fabio:Work a owl:Class ;
@@ -428,7 +428,7 @@ schema:provider a owl:ObjectProperty ;
 srv:APIProfile a owl:Class ;
     rdfs:label "API Profile" ;
     dc:description """A concrete API profile or specification that pairs service endpoints with (possibly) several API standards. The properties that can be used with this class are:
-* dcat:endpointURL -[1..N]-> rdfs:Resource
+* dcat:endpointURL -[1]-> rdfs:Resource
 * schema:url -[0..N]-> foaf:Document """ ;
 
     rdfs:subClassOf dcterms:Standard ;
@@ -436,7 +436,7 @@ srv:APIProfile a owl:Class ;
     rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty dcat:endpointURL ;
-        owl:minCardinality "1"^^xsd:nonNegativeInteger
+        owl:cardinality "1"^^xsd:nonNegativeInteger
     ] ;
     rdfs:isDefinedBy srv: .
 
