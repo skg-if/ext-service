@@ -7,6 +7,9 @@ nav_order: 1
 # search_exclude: true
 ---
 
+{: .warning }
+> **Note:** This page is a generic template inherited from the SKG-IF extension scaffolding. It does not contain specific information for this (`ext-srv`) extension. URIs and examples shown are illustrative only.
+
 # Repository structure
 The repository for your extension comes with a folder structure that should guide you in the extension development process.
 While most of the structure is in general non-prescriptive, some parts (e.g., versioning) are binding.

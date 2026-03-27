@@ -20,9 +20,9 @@ The model is summarised in the following [Graffoo diagram](https://essepuntato.i
 
 The data model is implemented as an OWL ontology called the **"SKG-IF Ontology: Service Extension"** (SRV-O). Rather than creating new terms from scratch, it reuses and extends existing ontologies including [Schema.org](https://schema.org), the [SPAR Ontologies](http://www.sparontologies.net), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [SKOS](https://www.w3.org/TR/skos-reference/).
 
-Data conforming to this extension is described through the [ext-srv JSON-LD context](https://w3id.org/skg-if/extension/srv/context/) and validated using a dedicated [SHACL document](https://w3id.org/skg-if/shapes/srv/). The SHACL file is auto-generated from the ontology using the [SKG-IF SHACL extractor](https://github.com/skg-if/shacl-extractor).
+Data conforming to this extension is described through the [ext-srv JSON-LD context](https://w3id.org/skg-if/extension/srv/context/skg-if.json) and validated using a dedicated [SHACL document](https://w3id.org/skg-if/extension/srv/validation/shacl/). The SHACL file is auto-generated from the ontology using the [SKG-IF SHACL extractor](https://github.com/skg-if/shacl-extractor).
 
-The ontology is available at [https://w3id.org/skg-if/extension/srv/ontology](https://w3id.org/skg-if/extension/srv/ontology) in four serialisation formats (`.ttl`, `.nt`, `.xml`, `.json`) with an [HTML documentation page](https://w3id.org/skg-if/extension/srv/ontology/srv.html).
+The ontology is available at [https://w3id.org/skg-if/extension/srv/ontology](https://w3id.org/skg-if/extension/srv/ontology) in four serialisation formats (`.ttl`, `.nt`, `.xml`, `.json`) with an [HTML documentation page](https://skg-if.github.io/ext-srv/data-model/ontology/current/srv.html).
 
 ## Methodology
 
