@@ -228,8 +228,8 @@ actions:
           - $ref: "#/components/schemas/Entity"
           - type: object
             required: [
-              "local_identifier","entity_type"
-            ]        
+              "local_identifier","entity_type","name"
+            ]
             properties:
               entity_type:  # was already specified, in /components/schemas/Entity?
                 type: string
