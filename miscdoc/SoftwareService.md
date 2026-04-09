@@ -144,9 +144,9 @@ values are specified by vocabulary https://vocabs.sshopencloud.eu/vocabularies/i
 ### `life_cycle_status`
 *List* (optional): indicates the development cycle and/or maturity status of the service. values are by vocabulary
 https://vocabs.sshopencloud.eu/browse/eosc-life-cycle-status/en/. Originally specified in the EOSC Service Profile. Could extend with TRL classifications.
-````json
+```json
 "life_cycle_status": ["Production", "TRL6"]    
-````    
+```    
 
 ### `website`
 *String* (mandatory): landingpage for the service. preferably one maintained by the service operator 
