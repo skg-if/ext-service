@@ -38,7 +38,7 @@ New type for portal functionality:
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities). A local_identifier can also be (derived) from an existing persistent identifier.
 
 ```json
-    "local_identifier": "11234/1-4816"
+"local_identifier": "11234/1-4816"
 ```
 
 ### `identifiers`
@@ -51,16 +51,16 @@ Each identifier is structured as follows:
 **Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `doi`, `handle`, `pmid`, `url`, `omid`, ...
 
 ```json
-    "identifiers": [
-        {
-            "scheme": "handle",
-            "value": "11234/1-4816"
-        },
-        {
-            "scheme": "doi",
-            "value": "10.18653/v1/K18-2020"
-        }
-    ]
+"identifiers": [
+    {
+        "scheme": "handle",
+        "value": "11234/1-4816"
+    },
+    {
+        "scheme": "doi",
+        "value": "10.18653/v1/K18-2020"
+    }
+]
 ```
 
 ### `entity_type`
@@ -69,21 +69,21 @@ Each identifier is structured as follows:
 Needed for parsing purposes; fixed to `service`.
 
 ```json
-    "entity_type": "service"
+"entity_type": "service"
 ```
 
 ### `name`
 *String* (mandatory): The canonical name of the service in English. Maps to `foaf:name`.
 
 ```json
-    "name": "UDPipe"
+"name": "UDPipe"
 ```
 
 ### `other_names`
 *List* (optional): Accepted alternative names, e.g. native language names or short codes. Maps to `skos:altLabel`.
 
 ```json
-    "other_names": ["UDPipe 工具", "UDPipe 2"]
+"other_names": ["UDPipe 工具", "UDPipe 2"]
 ```
 
 <!-- Previously other_names was modelled as a multilingual object:
@@ -99,11 +99,11 @@ Needed for parsing purposes; fixed to `service`.
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
-    "descriptions": {
-        "en": ["UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them", "Summary"],
-        "cs": ["UDPipe je trénovatelný nástroj pro tokenizaci, tagging, lemmatizaci a závislostní parsing CoNLL-U souborů. UDPipe je jazykově nezávislý a pro natrénování modelů využívá anotovaná data ve formátu Universal Dependencies"],
-        "none": ["ontaligestring"]
-    }
+"descriptions": {
+    "en": ["UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them", "Summary"],
+    "cs": ["UDPipe je trénovatelný nástroj pro tokenizaci, tagging, lemmatizaci a závislostní parsing CoNLL-U souborů. UDPipe je jazykově nezávislý a pro natrénování modelů využívá anotovaná data ve formátu Universal Dependencies"],
+    "none": ["ontaligestring"]
+}
 ```
 
 
@@ -113,17 +113,17 @@ This can both express desire and/or design of the service operators. Values are 
 the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme 
 
 ```json
-    "@context": {
-        "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/"
-    },
-    "srv_audience_byrole": ["sshocaudience:public", "sshocaudience:student" ]
+"@context": {
+    "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/"
+},
+"srv_audience_byrole": ["sshocaudience:public", "sshocaudience:student" ]
 ```
 
 ### `srv_audience_byjurisdiction`
 *List* (optional): The jurisdiction that is given by the service operator's legal status limits.
 the audience. Values taken from either `Global`, `Institution`, `National`, or `Regional` aka multiple countries, from (https://zenodo.org/records/15516020).
 ```json
-    "srv_audience_byjurisdiction": ["Institution", "National" ]
+"srv_audience_byjurisdiction": ["Institution", "National" ]
 ```
 
 ### `disciplines`
@@ -133,18 +133,18 @@ available at https://id.loc.gov/authorities/classification (e.g. PA3000-PA3049 f
 In case a [Service] is discipline agnostic, the string "all" should be specified.
 
 ```json
-    "@context": {
-        "loc": "https://id.loc.gov/authorities/classification/"
-    },
-    "disciplines": [
-        "loc:QC790.95-QC791.8"
-    ]
+"@context": {
+    "loc": "https://id.loc.gov/authorities/classification/"
+},
+"disciplines": [
+    "loc:QC790.95-QC791.8"
+]
 ```
 ```json
-    "@context": {
-        "loc": "https://id.loc.gov/authorities/classification/"
-    },
-    "disciplines": ["all"]
+"@context": {
+    "loc": "https://id.loc.gov/authorities/classification/"
+},
+"disciplines": ["all"]
 ```
 
 ### `is_accessible_for_free`
@@ -159,10 +159,10 @@ In case a [Service] is discipline agnostic, the string "all" should be specified
 *List* (optional): The way the service is used or called. Multiple values are possible, access rights and licenses are assumed to be the same. Values are specified by vocabulary: https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
 
 ```json
-    "@context": {
-        "sshocinvt": "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/"
-    },
-    "srv_invocation_type": [ "sshocinvt:restfullWebservice", "sshocinvt:webApplication" ]
+"@context": {
+    "sshocinvt": "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/"
+},
+"srv_invocation_type": [ "sshocinvt:restfullWebservice", "sshocinvt:webApplication" ]
 ```
 
 ### `srv_life_cycle_status`
@@ -170,28 +170,28 @@ In case a [Service] is discipline agnostic, the string "all" should be specified
 https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally specified in the EOSC Service Profile. Could be extended with TRL classifications.
 
 ```json
-     "@context": {
-        "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
-     },
-    "srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6" ]
+"@context": {
+    "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
+    },
+"srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6" ]
 ```
 
 ### `srv_availability_geographic`
 *List* (optional): list of countries and regions where the service is made available, eg. for license reasons. Values are by the vocabulary: https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/
 
 ```json
-     "@context": {
-        "eoscgeoavail": "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/"
+"@context": {
+    "eoscgeoavail": "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/"
 
-     },
-    "srv_availability_geographic": ["eoscgeoavail:eu","eoscgeoavail:uk"]
+    },
+"srv_availability_geographic": ["eoscgeoavail:eu","eoscgeoavail:uk"]
 ```    
 
 ### `website`
 *String* (optional): Landingpage for the service. Preferably one maintained by the service operator
 
 ```json
-    "website": "https://ufal.mff.cuni.cz/udpipe/2"
+"website": "https://ufal.mff.cuni.cz/udpipe/2"
 ```
 
 ### `srv_api_profile`
@@ -199,19 +199,19 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 
 Simple form (a single URL pointing to API documentation or reference):
 ```json
-    "srv_api_profile": "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
+"srv_api_profile": "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
 ```
 
 Structured form (object with `dcat:endpointURL` and `schema:url`):
 ```json
-    "srv_api_profile": {
-        "dcat:endpointURL": ["https://lindat.mff.cuni.cz/services/udpipe/api/process"],
-        "schema:url": [
-            "https://lindat.mff.cuni.cz/services/udpipe/",
-            "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php",
-            "https://ufal.mff.cuni.cz/udpipe"
-        ]
-    }
+"srv_api_profile": {
+    "dcat:endpointURL": ["https://lindat.mff.cuni.cz/services/udpipe/api/process"],
+    "schema:url": [
+        "https://lindat.mff.cuni.cz/services/udpipe/",
+        "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php",
+        "https://ufal.mff.cuni.cz/udpipe"
+    ]
+}
 ```
 
 ### `srv_supported_language`
@@ -220,10 +220,10 @@ Structured form (object with `dcat:endpointURL` and `schema:url`):
 _NOTE_ properties introduced by this extension, that are not from external origin or also used in core entities are prefixed with "srv_" to avoid clashes with properties with the same name potententially introduced by other extensions
 
 ``` json
-    "@context": {
-       "lexvo-iso639-3": "http://lexvo.org/id/iso639-3"
-     },
-     "srv_supported_language": ["lexvo-iso639-3/deu","lexvo-iso639-3/nld"]
+"@context": {
+    "lexvo-iso639-3": "http://lexvo.org/id/iso639-3"
+},
+"srv_supported_language": ["lexvo-iso639-3/deu","lexvo-iso639-3/nld"]
 ```
 
 ### `topics`
@@ -232,38 +232,38 @@ _NOTE_ properties introduced by this extension, that are not from external origi
 _NOTE_: Unlike research products, services assert topics directly — no provenance or trust scores apply here.
 
 ```json
-    "topics": [
-        {
-            "term": {
-                "local_identifier": "https://www.wikidata.org/wiki/Q8162",
-                "entity_type": "topic",
-                "identifiers": [
-                    {
-                        "scheme": "wikidata",
-                        "value": "https://www.wikidata.org/wiki/Q8162"
-                    }
-                ],
-                "labels": {
-                    "en": "Linguistics"
+"topics": [
+    {
+        "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q8162",
+            "entity_type": "topic",
+            "identifiers": [
+                {
+                    "scheme": "wikidata",
+                    "value": "https://www.wikidata.org/wiki/Q8162"
                 }
-            }
-        },
-        {
-            "term": {
-                "local_identifier": "https://www.wikidata.org/wiki/Q30642",
-                "entity_type": "topic",
-                "identifiers": [
-                    {
-                        "scheme": "wikidata",
-                        "value": "https://www.wikidata.org/wiki/Q30642"
-                    }
-                ],
-                "labels": {
-                    "en": "Natural Language Processing"
-                }
+            ],
+            "labels": {
+                "en": "Linguistics"
             }
         }
-    ]
+    },
+    {
+        "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "entity_type": "topic",
+            "identifiers": [
+                {
+                    "scheme": "wikidata",
+                    "value": "https://www.wikidata.org/wiki/Q30642"
+                }
+            ],
+            "labels": {
+                "en": "Natural Language Processing"
+            }
+        }
+    }
+]
 ```
 
 ### `srv_has_research_infrastructure`
@@ -272,24 +272,24 @@ _NOTE_: Unlike research products, services assert topics directly — no provena
 _NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects.
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
-     "srv_has_research_infrastructure": [
-       "https://ror.org/03wp25384"
-     ]
+"srv_has_research_infrastructure": [
+    "https://ror.org/03wp25384"
+]
 ```
 Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```json
-     "srv_has_research_infrastructure": [
-       {
-         "local_identifier": "https://ror.org/03wp25384",
-         "entity_type": "organisation",
-         "name": "CLARIN ERIC",
-         "types": [
-           "facility",
-           "research_infrastructure"
-         ],
-         "country": "NL"
-       }
-     ]
+"srv_has_research_infrastructure": [
+    {
+        "local_identifier": "https://ror.org/03wp25384",
+        "entity_type": "organisation",
+        "name": "CLARIN ERIC",
+        "types": [
+        "facility",
+        "research_infrastructure"
+        ],
+        "country": "NL"
+    }
+]
 ```
 
 ### `srv_has_hosting_organisation`
@@ -298,25 +298,25 @@ _NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisat
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
-     "srv_has_hosting_organisation": [
-       "https://ror.org/00dd4fz34"
-     ]
+"srv_has_hosting_organisation": [
+    "https://ror.org/00dd4fz34"
+]
 ```
 Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```json
-     "srv_has_hosting_organisation": [
-       {
-         "local_identifier": "https://ror.org/00dd4fz34",
-         "entity_type": "organisation",
-         "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
-         "short_name": "LINDAT",
-         "types": [
-           "facility",
-           "hosting_organisation"
-         ],
-         "country": "CZ"
-       }
-     ]
+"srv_has_hosting_organisation": [
+    {
+        "local_identifier": "https://ror.org/00dd4fz34",
+        "entity_type": "organisation",
+        "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
+        "short_name": "LINDAT",
+        "types": [
+        "facility",
+        "hosting_organisation"
+        ],
+        "country": "CZ"
+    }
+]
 ```
 
 ### `srv_has_hosting_legal_entity`
@@ -325,20 +325,20 @@ _NOTE_ The value may be a `local_identifier` for an Organisation or an Organisat
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
-     "srv_has_hosting_legal_entity": "https://ror.org/024d6js02"
+"srv_has_hosting_legal_entity": "https://ror.org/024d6js02"
 ```
 Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```json
-     "srv_has_hosting_legal_entity": {
-       "local_identifier": "https://ror.org/024d6js02",
-       "entity_type": "organisation",
-       "name": "Charles University",
-       "types": [
-         "education",
-         "research"
-       ],
-       "country": "CZ"
-     }
+"srv_has_hosting_legal_entity": {
+    "local_identifier": "https://ror.org/024d6js02",
+    "entity_type": "organisation",
+    "name": "Charles University",
+    "types": [
+        "education",
+        "research"
+    ],
+    "country": "CZ"
+}
 ```
 
 
@@ -348,29 +348,29 @@ _NOTE_ Each item may be a `local_identifier` for a Venue or a Venue object. API 
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
-    "srv_venues": [
-      "https://ror.org/03sj9b840",
-      "https://portal.ariadne-infrastructure.eu"
-    ]
+"srv_venues": [
+    "https://ror.org/03sj9b840",
+    "https://portal.ariadne-infrastructure.eu"
+]
 ```
 Expanded form (Venue objects, as returned by API with `embedding=true`):
 ```json
-    "srv_venues": [
-        {
-            "local_identifier": "https://ror.org/03sj9b840",
-            "entity_type": "venue",
-            "name": "EOSC node",
-            "types": ["srv_portal"],
-            "website": "https://open-science-cloud.ec.europa.eu/support/getting-started-eosc-eu-node"
-        },
-        {
-            "local_identifier": "https://portal.ariadne-infrastructure.eu",
-            "entity_type": "venue",
-            "name": "Ariadne portal",
-            "types": ["srv_portal"],
-            "website": "https://portal.ariadne-infrastructure.eu/about"
-        }
-    ]
+"srv_venues": [
+    {
+        "local_identifier": "https://ror.org/03sj9b840",
+        "entity_type": "venue",
+        "name": "EOSC node",
+        "types": ["srv_portal"],
+        "website": "https://open-science-cloud.ec.europa.eu/support/getting-started-eosc-eu-node"
+    },
+    {
+        "local_identifier": "https://portal.ariadne-infrastructure.eu",
+        "entity_type": "venue",
+        "name": "Ariadne portal",
+        "types": ["srv_portal"],
+        "website": "https://portal.ariadne-infrastructure.eu/about"
+    }
+]
 ```
 
 ### `relevant_organisations`
@@ -385,19 +385,19 @@ Simple form (flat identifier strings, preferred for input/storage):
 
 Expanded form (as may be returned by the API):
 ```json
-    "relevant_organisations": [
-        {
-            "local_identifier": "https://ror.org/024d6js02",
-            "entity_type": "organisation",
-            "name": "Charles University",
-            "types": ["education", "research"],
-            "country": "CZ"
-        },
-        {
-            "local_identifier": "https://ror.org/03wp25384",
-            "entity_type": "organisation"
-        }
-    ]
+"relevant_organisations": [
+    {
+        "local_identifier": "https://ror.org/024d6js02",
+        "entity_type": "organisation",
+        "name": "Charles University",
+        "types": ["education", "research"],
+        "country": "CZ"
+    },
+    {
+        "local_identifier": "https://ror.org/03wp25384",
+        "entity_type": "organisation"
+    }
+]
 ```
 
 ### `related_products`
@@ -409,10 +409,10 @@ Applicable relation types:
 - `is_cited_by` *List* (optional): Research products citing this service.
 
 ```json
-    "related_products": {
-        "is_documented_by": ["https://doi.org/10.1007/s10579-010-9130-z"],
-        "is_cited_by": ["https://doi.org/10.18653/v1/2020.acl-main.1"]
-    }
+"related_products": {
+    "is_documented_by": ["https://doi.org/10.1007/s10579-010-9130-z"],
+    "is_cited_by": ["https://doi.org/10.18653/v1/2020.acl-main.1"]
+}
 ```
 
 > **Future extension — `related_services` on Research products**: There is a use case for extending the core `research_product` entity with a reciprocal `related_services` nested property, supporting the following relation types from the research product side:
@@ -425,7 +425,7 @@ Applicable relation types:
 *List* (optional): List of keywords relevant for service discovery, values may be simple strings or concept URIs. Maps to `schema:keyword`.
 
 ```json
-    "srv_keywords": ["https://www.wikidata.org/wiki/Q30642","parsing"]
+"srv_keywords": ["https://www.wikidata.org/wiki/Q30642","parsing"]
 ``` 
 
 ### `srv_deployment_of`                                                                           
