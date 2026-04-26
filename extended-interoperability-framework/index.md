@@ -39,4 +39,4 @@ The Service entity can be linked to core SKG-IF entities:
 For the full property specification, see the [Service] documentation.
 
 ----
-[Service]: {% link ext-srv/Service.md %}
+[Service]: {% link ext-srv/extended-interoperability-framework/Service.md %}

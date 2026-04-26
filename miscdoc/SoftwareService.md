@@ -9,7 +9,7 @@ nav_order: 1
 # Software Service (legacy)
 
 {: .warning }
-This document is kept for reference only. It represents an earlier draft of the Service entity specification. The current specification is maintained in [Generic service]({% link ext-srv/Service.md %}).
+This document is kept for reference only. It represents an earlier draft of the Service entity specification. The current specification is maintained in [Generic service]({% link ext-srv/extended-interoperability-framework/Service.md %}).
 
 
 
