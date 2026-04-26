@@ -8,8 +8,7 @@ has_toc: false
 ---
 # (srv) Interoperability framework
 
-{: .important }
-To prevent possible clashes with other extensions, each extension is assigned a unique prefix (e.g., the acronym you provided upon requesting an extension) that you need to prepend when defining new properties and relations for core entities. For this extension, the acronym is `srv`.
+The acronym **`srv`** identifies this extension in the repository name (`ext-srv`), w3id.org URL paths, and ontology file names. It is also the OWL namespace prefix for new terms (`srv:camelCase`, declared as `vann:preferredNamespacePrefix` in `srv.ttl`) and the JSON-LD alias prefix for extension-specific properties (`srv_snake_case`). Properties from the core or external vocabularies carry no `srv_` prefix.
 
 ## Extension-specific entities
 This extension introduces a new entity [Service] that models software applications or components providing specific functionality over a network, typically accessed through an API or web application.
