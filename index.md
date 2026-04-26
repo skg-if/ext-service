@@ -7,7 +7,8 @@ parent: Extensions
 #search_exclude: true
 ---
 
-*Please note that the Service extension is still work in progress. Please check you are using the latest version.*
+{: .highlight }
+Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
 
 # Service extension
 

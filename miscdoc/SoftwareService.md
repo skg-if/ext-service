@@ -31,7 +31,7 @@ The properties set was suggested and informed from a number of examples both the
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-    "local_identifier": "11234/1-4816"
+"local_identifier": "11234/1-4816"
 ```
 
 ### `identifiers`
@@ -44,16 +44,16 @@ Each identifier is structured as follows:
 **Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `doi`, `handle`, `pmid`, `url`, `omid`, ...
 
 ```json
-    "identifiers": [
-        {
-            "scheme": "handle",
-            "value": "11234/1-4816"
-        },
-        {
-            "scheme": "doi",
-            "value": "10.18653/v1/K18-2020"
-        }
-    ]
+"identifiers": [
+    {
+        "scheme": "handle",
+        "value": "11234/1-4816"
+    },
+    {
+        "scheme": "doi",
+        "value": "10.18653/v1/K18-2020"
+    }
+]
 ```
 
 ### `entity_type`
@@ -62,7 +62,7 @@ Each identifier is structured as follows:
 Needed for parsing purposes; fixed to `service`.
 
 ```json
-    "entity_type": "service"
+"entity_type": "service"
 ```
 
 ### `names`
@@ -71,10 +71,10 @@ Needed for parsing purposes; fixed to `service`.
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
 
 ```json
-    "names": {
-        "en": ["UDPipe", "UDPipe 2", "UDPipe 2.0"],
-        "zh-cn": "UDPipe 工具"        
-    }
+"names": {
+    "en": ["UDPipe", "UDPipe 2", "UDPipe 2.0"],
+    "zh-cn": "UDPipe 工具"        
+}
 ```
 
 ### `descriptions`
@@ -83,10 +83,10 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
-    "descriptions": {
-        "en": ["UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them", "Summary"],
-        "none": ["ontaligestring"]
-    }
+"descriptions": {
+    "en": ["UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them", "Summary"],
+    "none": ["ontaligestring"]
+}
 ```
 
 
@@ -95,15 +95,14 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 This can  both express desire and/or design of the service operators. Values are mandatory taken from 
 the https://vocabs.sshopencloud.eu/browse/sshoc-audience/en/page/audienceScheme 
 ```json
-    "intended_audience": ["Institution", "Student"
-    ]
+"intended_audience": ["Institution", "Student"]
 ```
 
 ### `audiencebyjurisdiction`
 *Object* (optional): the jurisdiction that is given by the service operator's legal status limits
 the audience. value take from https://github.com/EOSC-PLATFORM/service-profile/blob/4.0/docs/_vocabularies/DS_JURISDICTION.rst  
 ```json
-    "jurisdiction": ["ds_jurisdiction_research_infrastructure", "ds_jurisdiction-regional"
+"jurisdiction": ["ds_jurisdiction_research_infrastructure", "ds_jurisdiction-regional"
     ]
 ```
 
@@ -113,9 +112,9 @@ The disciplines must be specified using the Library of Congress Classification c
 available at https://id.loc.gov/authorities/classification (e.g. PA3000-PA3049 for classical literature). 
 In case a [Software Service] is discipline agnostic, the string all should be specified.
 ```json
-    "discipline": [
-        "QC790.95-QC791.8"
-    ]
+"discipline": [
+    "QC790.95-QC791.8"
+]
 ```
 
 ### `accessiblefor free`
@@ -131,7 +130,7 @@ description String (recommended): describe and qualify the specific status selec
 Needed for parsing purposes; fixed to `service`.
 
 ```json
-    "entity_type": "service"
+"entity_type": "service"
 ```
 
 ### `invocation_type`
@@ -139,87 +138,84 @@ Needed for parsing purposes; fixed to `service`.
 values are specified by vocabulary https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
 
 ```json
-    "invocation_type": [ "RESTfull webservice", "Web Application"
-    ]
+"invocation_type": ["RESTfull webservice", "Web Application"]
 ```
 
 ### `life_cycle_status`
 *List* (optional): indicates the development cycle and/or maturity status of the service. values are by vocabulary
 https://vocabs.sshopencloud.eu/browse/eosc-life-cycle-status/en/. Originally specified in the EOSC Service Profile. Could extend with TRL classifications.
-````json
-    "life_cycle_status": ["Production", "TRL6"
-]    
-````    
+```json
+"life_cycle_status": ["Production", "TRL6"]    
+```    
 
 ### `website`
 *String* (mandatory): landingpage for the service. preferably one maintained by the service operator 
 
 
 ```json
-    "website": "https://ufal.mff.cuni.cz/udpipe/2"
+"website": "https://ufal.mff.cuni.cz/udpipe/2"
 ```
 
 ### `availablity_geographic`
 *List* (optional): list of countries and regions where the service is made available eg. for license reasons 
-````json
-    "availability_geographic": ["European Union","United Kingdom"]
-]    
-````    
+```json
+"availability_geographic": ["European Union","United Kingdom"]
+]   
+```   
 
 ###processing_language
 *List* (optional) if applicable the content language the service is able to process, values provided as ISO369-2 language codes
-```` json
+```json
 "processing_language": ["de","nl"]
-````
+```
 
 
 ### `keywords`
 *List* (optional): list of keywords relevant for service discovery, values may be simple strings or concept URIs
-````json
-    "keywords": ["https://www.wikidata.org/wiki/Q30642","parsing",]
+```json
+"keywords": ["https://www.wikidata.org/wiki/Q30642","parsing",]
 ]    
-```` 
+```
 
 ### `venues`
 *Object*  (optional): A service can be part of a website or online platform that serves as a centralized gateway to a variety of services, information, and resources
-````json
-    "venue" 
-        {   
-            "local_identifier": "https://cloud.gate.ac.uk",
-            "identifiers": {
-                "scheme": "URI",
-                "value": "https://cloud.gate.ac.uk"
-            },
-            "name": "Gate Cloud",          
-            "type": "portal",         
-            "site": "https://cloud.gate.ac.uk",
-            "contributions": [ {"by": "University of Sheffield", "role": "operator"}
-            ]            
-        }        
+```json
+"venue" 
+    {   
+        "local_identifier": "https://cloud.gate.ac.uk",
+        "identifiers": {
+            "scheme": "URI",
+            "value": "https://cloud.gate.ac.uk"
+        },
+        "name": "Gate Cloud",          
+        "type": "portal",         
+        "site": "https://cloud.gate.ac.uk",
+        "contributions": [ {"by": "University of Sheffield", "role": "operator"}
+        ]            
+    }        
 ]    
-````
+```
 
 ### `isDeploymentOf`
 *List* (optional) Research Product of type software or github link that the service is based on
-````json
-"isDeploymentOf": [ "https://github.com/ufal/udpipe" ]
-]
-````
+```json
+"isDeploymentOf": ["https://github.com/ufal/udpipe"]
+```
 
 ### `contributions`
 *List* of contributions (optional): 
-````json
-    "contributions": [ 
-           {
-                    "by": "University of Sheffield",
-                    "role": "operator"
-                },
-                {
-                    "by": "UK Research and Innovation agency",
-                    "role": "funder"
-                }  
+```json
+"contributions": [ 
+    {
+        "by": "University of Sheffield",
+        "role": "operator"
+    },
+    {
+        "by": "UK Research and Innovation agency",
+        "role": "funder"
+    }  
 ]    
-````
+```
 
 
 ----
