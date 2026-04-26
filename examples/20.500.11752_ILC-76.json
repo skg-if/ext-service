@@ -169,7 +169,11 @@
           }
         }
       ],
-      "name": "SCF Extractor (IT)"
+      "name": "SCF Extractor (IT)",
+      "relevant_organisations": [
+        "https://ror.org/02d8a5s53",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

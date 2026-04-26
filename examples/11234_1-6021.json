@@ -147,7 +147,11 @@
           }
         }
       ],
-      "name": "Evaldio-residency | Automatic Assessment of Spoken Czech as a Foreign Language: Permanent Residency in the Czech Republic"
+      "name": "Evaldio-residency | Automatic Assessment of Spoken Czech as a Foreign Language: Permanent Residency in the Czech Republic",
+      "relevant_organisations": [
+        "https://ror.org/00dd4fz34",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

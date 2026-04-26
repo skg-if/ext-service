@@ -117,7 +117,11 @@
           ]
         }
       ],
-      "website": "https://www.kielipankki.fi/tuki/aalto-asr-automaattinen-puheentunnistin/"
+      "website": "https://www.kielipankki.fi/tuki/aalto-asr-automaattinen-puheentunnistin/",
+      "relevant_organisations": [
+        "https://ror.org/05k73zm37",
+        "https://w3id.org/skg-if/sandbox/elg/organisations/elg"
+      ]
     }
   ]
 }

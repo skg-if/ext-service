@@ -180,6 +180,10 @@
       "other_names": [
         "TEXT - Εργαλείο εξαγωγής πληροφορίας για γράμματα",
         "TEXT"
+      ],
+      "relevant_organisations": [
+        "https://ror.org/0576by029",
+        "https://ror.org/03wp25384"
       ]
     }
   ]

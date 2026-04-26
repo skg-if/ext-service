@@ -196,6 +196,10 @@
       "other_names": [
         "OpenNLP Part-of-Speech Tagger (Αγγλικά)",
         "OpenNLP_PoS_en"
+      ],
+      "relevant_organisations": [
+        "https://ror.org/0576by029",
+        "https://ror.org/03wp25384"
       ]
     }
   ]

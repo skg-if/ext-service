@@ -51,7 +51,9 @@
       "relevant_organisations": [
         "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
         "https://w3id.org/skg-if/sandbox/sshomp/actor/3752",
-        "https://w3id.org/skg-if/sandbox/sshomp/actor/9375"
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/9375",
+        "https://ror.org/01gybvy13",
+        "https://dariah.pl/en"
       ],
       "sshomp_last_update": "2024-11-06T15:09:53+0000",
       "sshomp_curation_flags": [

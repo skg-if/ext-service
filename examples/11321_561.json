@@ -150,7 +150,11 @@
           }
         }
       ],
-      "name": "Periphraser"
+      "name": "Periphraser",
+      "relevant_organisations": [
+        "https://ror.org/00yae6e25",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

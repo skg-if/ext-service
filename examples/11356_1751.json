@@ -132,7 +132,11 @@
           }
         }
       ],
-      "name": "Slovenian text summarization models"
+      "name": "Slovenian text summarization models",
+      "relevant_organisations": [
+        "https://ror.org/05060sz93",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

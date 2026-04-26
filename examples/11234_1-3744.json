@@ -151,7 +151,11 @@
           }
         }
       ],
-      "name": "Translation Models (en-ru) (v1.0)"
+      "name": "Translation Models (en-ru) (v1.0)",
+      "relevant_organisations": [
+        "https://ror.org/00dd4fz34",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

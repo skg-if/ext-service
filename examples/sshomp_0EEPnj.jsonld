@@ -35,7 +35,9 @@
         "https://w3id.org/skg-if/sandbox/sshomp/actor/10355",
         "https://w3id.org/skg-if/sandbox/sshomp/actor/2868",
         "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
-        "https://w3id.org/skg-if/sandbox/sshomp/actor/8747"
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/8747",
+        "https://ror.org/01gybvy13",
+        "https://de.dariah.eu"
       ],
       "sshomp_last_update": "2024-09-02T08:41:11+0000",
       "srv_invocation_type": [

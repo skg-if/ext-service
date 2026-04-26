@@ -122,7 +122,11 @@
           ]
         }
       ],
-      "website": "https://opus.nlpl.eu/"
+      "website": "https://opus.nlpl.eu/",
+      "relevant_organisations": [
+        "https://ror.org/040af2s02",
+        "https://w3id.org/skg-if/sandbox/elg/organisations/elg"
+      ]
     }
   ]
 }

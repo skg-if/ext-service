@@ -146,6 +146,10 @@
       "other_names": [
         "Μορφολογικός Tagger (Δέσμη εργαλείων για ΕΦΓ για τα ελληνικά)",
         "Morphological Tagger (gr-nlp-toolkit)"
+      ],
+      "relevant_organisations": [
+        "https://ror.org/0576by029",
+        "https://ror.org/03wp25384"
       ]
     }
   ]

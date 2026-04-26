@@ -141,7 +141,11 @@
           }
         }
       ],
-      "name": "Lithuanian speech-to-text Transcriber"
+      "name": "Lithuanian speech-to-text Transcriber",
+      "relevant_organisations": [
+        "https://ror.org/02jzgtq86",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

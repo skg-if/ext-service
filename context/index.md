@@ -18,6 +18,6 @@ The context is available at:
 It is designed to be layered on top of the core SKG-IF contexts. Example JSON-LD documents reference the following contexts in their `@context` array, in order:
 1. [SKG-IF core context](https://w3id.org/skg-if/context/1.1.0/skg-if.json) (v1.1.0)
 2. [SKG-IF API context](https://w3id.org/skg-if/context/1.0.0/skg-if-api.json) (pagination)
-3. This extension context
+3. [This extension context](https://w3id.org/skg-if/extension/srv/context/skg-if.json)
 
 Properties shared with the core context are declared with `@protected: true` to prevent accidental redefinition.

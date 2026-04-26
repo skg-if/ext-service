@@ -117,7 +117,11 @@
           ]
         }
       ],
-      "website": "https://www.hensoldt.net/"
+      "website": "https://www.hensoldt.net/",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/elg/organisations/hensoldt",
+        "https://w3id.org/skg-if/sandbox/elg/organisations/elg"
+      ]
     }
   ]
 }

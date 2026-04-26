@@ -147,7 +147,11 @@
           }
         }
       ],
-      "name": "ASR model evaluator"
+      "name": "ASR model evaluator",
+      "relevant_organisations": [
+        "https://ror.org/05060sz93",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

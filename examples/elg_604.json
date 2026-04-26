@@ -146,7 +146,11 @@
           ]
         }
       ],
-      "website": "https://www.tilde.com/"
+      "website": "https://www.tilde.com/",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/elg/organisations/tilde",
+        "https://w3id.org/skg-if/sandbox/elg/organisations/elg"
+      ]
     }
   ]
 }

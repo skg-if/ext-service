@@ -196,7 +196,11 @@
           }
         }
       ],
-      "name": "Bulgarian-English parallel corpus MaCoCu-bg-en 2.0"
+      "name": "Bulgarian-English parallel corpus MaCoCu-bg-en 2.0",
+      "relevant_organisations": [
+        "https://ror.org/05060sz93",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

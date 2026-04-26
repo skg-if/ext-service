@@ -37,7 +37,9 @@
       "relevant_organisations": [
         "https://w3id.org/skg-if/sandbox/sshomp/actor/15160",
         "https://w3id.org/skg-if/sandbox/sshomp/actor/10722",
-        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404"
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+        "https://ror.org/01gybvy13",
+        "https://www.huminfra.se"
       ],
       "sshomp_last_update": "2025-12-11T10:59:55+0000",
       "srv_invocation_type": [

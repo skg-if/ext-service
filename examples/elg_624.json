@@ -122,7 +122,11 @@
           ]
         }
       ],
-      "website": "https://clickfortranslation.com/german-translation-services.php"
+      "website": "https://clickfortranslation.com/german-translation-services.php",
+      "relevant_organisations": [
+        "https://ror.org/01nrxwars",
+        "https://w3id.org/skg-if/sandbox/elg/organisations/elg"
+      ]
     }
   ]
 }

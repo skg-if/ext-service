@@ -108,3 +108,58 @@ Substring and cross-field search filters — not direct attributes of the `servi
 ## Local testing setup
 
 See [`api/testing/`](testing/README.md) for a self-contained Docker Compose setup (Prism proxy + FastAPI + Swagger UI) for testing the `/services` endpoint against local JSON-LD data.
+
+---
+
+## TODO — implementation notes (identified 2026-04-13)
+
+The ext-srv **spec** (service-overlay.yaml) is well-aligned with the core SKG-IF API spec.
+The notes below concern the reference DEMOSERVICES implementation (`skg-if-ServiceServiceAPI`).
+
+### 1. `@context` without `@base` — spec gap, not implementation bug
+
+The service-overlay requires `minItems: 4` context entries (core, API, `@base`, ext-srv),
+but the list endpoint intentionally returns 3 — no `@base`.
+**Reason:** the server aggregates records from multiple sources, each with a different
+`@base`. The loader resolves all `local_identifier` values to absolute IRIs at startup,
+so a shared `@base` is neither available nor necessary.
+**Action needed:** the `minItems: 4` constraint in the overlay spec does not accommodate
+multi-source aggregators. Relax it to `minItems: 3` (or make `@base` explicitly optional)
+and note in the spec that aggregator implementations may omit `@base` when all
+`local_identifier` values are already absolute IRIs. Single-source implementations
+(and single-entity responses) correctly include `@base`.
+
+### 2. `source` filter — document in overlay or mark as extension
+
+The implementation accepts `filter=source:elg` (and `source:sshomp`, `source:vlo`, etc.)
+to filter by harvest source. This is documented in the implementation's CLAUDE.md but
+does not appear in the service-overlay attribute-filter table.
+**Fix:** add `source` as an optional implementation-extension filter key in
+service-overlay.yaml and api.md, with a note that the available values are
+deployment-specific.
+
+### 3. `part_of.local_identifier` omits active filter params
+
+Per the core spec examples, `part_of.local_identifier` should represent the full filtered
+search, e.g. `.../services?filter=cf.search.name:UDPipe`. The implementation currently
+sets it to the bare endpoint URL without query params, regardless of the active filter.
+```python
+# current (server.py)
+"part_of": {"local_identifier": base_url, ...}   # bare URL only
+# should be
+"part_of": {"local_identifier": f"{base_url}?{filter_qs.lstrip('&')}" if filter else base_url, ...}
+```
+**Fix:** include the active `filter` (and optionally `page_size`) in
+`part_of.local_identifier` to match the spec intent.
+
+### 4. Handle identifier value format — pipeline data issue
+
+The service-overlay filter example uses a full resolver URL:
+`identifiers.value:https://hdl.handle.net/11234/1-1702`
+but DEMOSERVICES_VLO records store handle values with a bare `hdl:` prefix:
+`{"scheme": "handle", "value": "hdl:11471/521.1.1"}`.
+A client following the spec example will not find VLO records by handle.
+This is a data-normalisation issue in the VLO enrichment pipeline, not in this server.
+**Fix:** normalise handle values in the VLO pipeline to bare handles (e.g. `11471/521.1.1`)
+and align the filter example accordingly, or explicitly document the `hdl:` prefix
+convention as an allowed identifier value form.

@@ -180,6 +180,10 @@
       "other_names": [
         "NUM - Εργαλείο υπολογισμού ποσοτικών μετρήσεων",
         "NUM"
+      ],
+      "relevant_organisations": [
+        "https://ror.org/0576by029",
+        "https://ror.org/03wp25384"
       ]
     }
   ]

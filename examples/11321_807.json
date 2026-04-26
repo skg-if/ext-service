@@ -164,7 +164,11 @@
           }
         }
       ],
-      "name": "Metaphor annotations in Polish political debates from 2020 (TVP 2019-10-01 and TVN 2019-10-08) – presidential election"
+      "name": "Metaphor annotations in Polish political debates from 2020 (TVP 2019-10-01 and TVN 2019-10-08) – presidential election",
+      "relevant_organisations": [
+        "https://ror.org/00yae6e25",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

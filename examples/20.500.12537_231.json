@@ -123,7 +123,11 @@
           }
         }
       ],
-      "name": "g2p-service (20.11)"
+      "name": "g2p-service (20.11)",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

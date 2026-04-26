@@ -128,6 +128,9 @@
             }
           ]
         }
+      ],
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/elg/organisations/elg"
       ]
     }
   ]

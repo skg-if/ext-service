@@ -175,7 +175,11 @@
           }
         }
       ],
-      "name": "It-Sr-NER: CLARIN compatible NER and geoparsing web services for parallel texts: case study Italian and Serbian"
+      "name": "It-Sr-NER: CLARIN compatible NER and geoparsing web services for parallel texts: case study Italian and Serbian",
+      "relevant_organisations": [
+        "https://ror.org/02d8a5s53",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

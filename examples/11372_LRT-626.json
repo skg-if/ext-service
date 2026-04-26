@@ -130,7 +130,11 @@
           }
         }
       ],
-      "name": "English-Lithuanian Machine Translation Service"
+      "name": "English-Lithuanian Machine Translation Service",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/lrt",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

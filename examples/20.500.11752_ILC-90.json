@@ -158,7 +158,11 @@
           }
         }
       ],
-      "name": "SCF Extractor (language indipendent)"
+      "name": "SCF Extractor (language indipendent)",
+      "relevant_organisations": [
+        "https://ror.org/02d8a5s53",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

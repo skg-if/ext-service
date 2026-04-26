@@ -107,7 +107,8 @@
           "types": [
             "nonprofit"
           ]
-        }
+        },
+        "https://ror.org/03wp25384"
       ],
       "srv_life_cycle_status": [
         "elcs:life_cycle_status-production"

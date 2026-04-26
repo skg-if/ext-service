@@ -116,7 +116,11 @@
           ]
         }
       ],
-      "website": "https://www.microsoft.com/en-us/research/project/neural-machine-translation/"
+      "website": "https://www.microsoft.com/en-us/research/project/neural-machine-translation/",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/elg/organisations/lingsoft",
+        "https://w3id.org/skg-if/sandbox/elg/organisations/elg"
+      ]
     }
   ]
 }

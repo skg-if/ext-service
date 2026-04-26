@@ -52,7 +52,10 @@
       "relevant_organisations": [
         "https://w3id.org/skg-if/sandbox/sshomp/actor/12002",
         "https://w3id.org/skg-if/sandbox/sshomp/actor/11803",
-        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404"
+        "https://w3id.org/skg-if/sandbox/sshomp/actor/3404",
+        "https://ror.org/03wp25384",
+        "https://ror.org/01gybvy13",
+        "https://www.clariah.es"
       ],
       "sshomp_last_update": "2025-05-12T13:00:36+0000",
       "srv_life_cycle_status": [

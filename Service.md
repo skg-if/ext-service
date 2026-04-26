@@ -269,7 +269,7 @@ _NOTE_: Unlike research products, services assert topics directly — no provena
 ### `srv_has_research_infrastructure`
 
 *List* (optional): Is associated with an [Organisation] that provides facilities, resources and services for the research communities to conduct research.
-_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects.
+_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects. Also include each organisation's `local_identifier` in `relevant_organisations` (see below).
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
      "srv_has_research_infrastructure": [
@@ -294,7 +294,7 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
 
 ### `srv_has_hosting_organisation`
 *List* (optional): Is depending on [Organisation] responsible for hosting a service or infrastructure component.
-_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects.
+_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects. Also include each organisation's `local_identifier` in `relevant_organisations` (see below).
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
@@ -321,7 +321,7 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
 
 ### `srv_has_hosting_legal_entity`
 *String* (optional): Is the specific [Organisation] legally responsible for the service operation and publishing.
-_NOTE_ The value may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand the identifier to an Organisation object.
+_NOTE_ The value may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand the identifier to an Organisation object. Also include this organisation's `local_identifier` in `relevant_organisations` (see below).
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
@@ -374,9 +374,12 @@ Expanded form (Venue objects, as returned by API with `embedding=true`):
 ```
 
 ### `relevant_organisations`
-*List* (optional):  [Organisation] identifiers associated with and relevant for a [Service].
-Identifiers can be of local or global identifier system type e.g. ror, uri. Organizations can be given additional types: `"research_infrastructure"`, `"hosting_organisation"` and `"hosting_legal_entity"` to indicate their role.
-_NOTE_ Each item may be a plain identifier string or an Organisation object. API responses may expand identifiers to Organisation objects. For semantically typed roles use the specific `srv_has_*` properties instead.
+*List* (optional): Generic queryable index of all [Organisation] identifiers associated with and relevant for a [Service].
+Identifiers can be of local or global identifier system type e.g. ror, uri. Organisations can be given additional types: `"research_infrastructure"`, `"hosting_organisation"` and `"hosting_legal_entity"` to indicate their role.
+
+_NOTE_ Each item may be a plain identifier string or an Organisation object. API responses may expand identifiers to Organisation objects.
+
+For semantically typed roles use the specific `srv_has_*` properties and include their `local_identifier` here for completeness.
 
 Simple form (flat identifier strings, preferred for input/storage):
 ```json

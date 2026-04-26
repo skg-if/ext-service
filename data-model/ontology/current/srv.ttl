@@ -180,6 +180,7 @@ dcterms:relation a owl:ObjectProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * foaf:Organization""" ;
+    rdfs:comment """Generic queryable index of all organisations associated with a Service. The specific properties srv:hasHostingOrganisation, srv:hasHostingLegalEntity, and srv:isPartOfResearchInfrastructure are semantically narrower and are intended to be declared rdfs:subPropertyOf dcterms:relation once the ontology is finalised. Until those subproperty axioms are added, data producers must explicitly copy the local_identifier of each organisation referenced in those specific properties into this field, so that generic organisation queries against relevant_organisations remain complete.""" ;
     rdfs:isDefinedBy dcterms: .
 
 dcterms:requires a owl:ObjectProperty ;

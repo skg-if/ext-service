@@ -146,7 +146,11 @@
           }
         }
       ],
-      "name": "Icelandic TTS for Android (24.04.)"
+      "name": "Icelandic TTS for Android (24.04.)",
+      "relevant_organisations": [
+        "https://w3id.org/skg-if/sandbox/clarin-vlo/organisations/clarin-is",
+        "https://ror.org/03wp25384"
+      ]
     }
   ]
 }

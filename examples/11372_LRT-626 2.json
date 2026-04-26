@@ -82,7 +82,8 @@
           "types": [
             "education"
           ]
-        }
+        },
+        "https://ror.org/03wp25384"
       ],
       "srv_invocation_type": [
         "sshocinvt:restfulWebservice",

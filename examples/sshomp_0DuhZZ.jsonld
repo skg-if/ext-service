@@ -38,7 +38,9 @@
         "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/localApplication"
       ],
       "website": "https://archive.mpi.nl/tla/elan",
-      "relevant_organisations": [],
+      "relevant_organisations": [
+        "https://sshopencloud.eu"
+      ],
       "sshomp_last_update": "2025-08-26T09:05:42+0000",
       "sshomp_curation_flags": [
         "sshomp:conflict-at-source=TRUE"
