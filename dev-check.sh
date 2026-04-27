@@ -304,7 +304,7 @@ ok "Alignment check complete"
 # ── Step 3b: Service.md ↔ ontology alignment check ───────────────────────────
 info "Step 3b: Service.md ↔ ontology alignment check"
 
-python3 - "$ONTOLOGY_TTL" "$EXT_CTX" "$SKG_CTX_DIR" "$SCRIPT_DIR/extended-interoperability-framework/Service.md" << 'PYEOF'
+python3 - "$ONTOLOGY_TTL" "$EXT_CTX" "$SKG_CTX_DIR" "$SCRIPT_DIR/extended-interoperability-framework/extension-entities/Service.md" << 'PYEOF'
 import sys, json, re
 
 ontology_path, ext_ctx_path, skg_ctx_dir, service_md_path = \
