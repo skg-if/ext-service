@@ -9,7 +9,7 @@ nav_order: 2
 {: .highlight }
 Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
 
-# (srv) Venue
+# Venue extended by the Service extension
 
 This extension adds a new type to the core [Venue] entity.
 
