@@ -6,6 +6,9 @@ layout: default
 nav_order: 3
 ---
 
+{: .highlight }
+Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
+
 # (srv) Organisation
 
 This extension adds new types to the core [Organisation] entity for modeling service operations.
