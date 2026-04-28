@@ -1,11 +1,11 @@
----
+<!-- ---
 title: Software service (legacy)
 parent: Generic service
 grand_parent: Interoperability framework
 ancestor: Service
 layout: default
 nav_order: 1
----
+--- -->
 # Software Service (legacy)
 
 {: .warning }
