@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # dev-check.sh — SKG-IF local development check and run
 #
+# NOTE: This script is specific to the ext-srv extension and is provided without any guarantees.
+#
 # 1. Ontology syntax check (riot — srv.ttl only)
 # 2. SHACL generation from srv.ttl (shacl-extractor); validates cardinality format; riot-validates output
 # 3. Cross-file alignment: ontology ↔ JSON-LD context ↔ SHACL ↔ OpenAPI overlay + rdfs:label check
