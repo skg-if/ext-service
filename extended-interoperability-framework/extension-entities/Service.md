@@ -127,6 +127,8 @@ the audience. Values taken from either `Global`, `Institution`, `National`, or `
 "srv_audience_byjurisdiction": ["Institution", "National" ]
 ```
 
+> **TODO:** The SKG-IF core defines an `audience` property for [Data source] entities (mapped to `schema:audience`) with a closely overlapping vocabulary: `Global`, `National`, `Regional`, `Institution`, `Research Infrastructure`, `e-Infrastructure`. The ext-srv `srv_audience_byjurisdiction` (flat string list) and the core `audience` (list of `{ "audience_type": "..." }` objects) model the same concept with different structure and partially different vocabularies. These should be aligned or merged — ideally by reusing the core `audience` property for services and extending the vocabulary with any service-specific values. Also consider alignment with the [EOSC Service Profile 4.1 rc (latest) and 5.0] which is the source of the current vocabulary.
+
 ### `disciplines`
 *List* (optional):  The disciplines to which a [Software Service] is dedicated. 
 The disciplines must be specified using the Library of Congress Classification codes, 
@@ -134,17 +136,11 @@ available at https://id.loc.gov/authorities/classification (e.g. PA3000-PA3049 f
 In case a [Service] is discipline agnostic, the string "all" should be specified.
 
 ```json
-"@context": {
-    "loc": "https://id.loc.gov/authorities/classification/"
-},
 "disciplines": [
-    "loc:QC790.95-QC791.8"
+    "QC790.95-QC791.8"
 ]
 ```
 ```json
-"@context": {
-    "loc": "https://id.loc.gov/authorities/classification/"
-},
 "disciplines": ["all"]
 ```
 
