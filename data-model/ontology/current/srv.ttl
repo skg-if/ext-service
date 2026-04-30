@@ -314,7 +314,7 @@ srv:audienceJurisdiction a owl:DatatypeProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following data types (range):
 * xsd:string""" ;
-    rdfs:comment "The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve (i.e., either Global, Institution, National, or Regional aka multiple countries, from https://zenodo.org/records/15516020)." ;
+    rdfs:comment "The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve. Values align with the SKG-IF core audience vocabulary: Global, National, Regional, Institution, Research Infrastructure, e-Infrastructure (EOSC Service Profile DS_JURISDICTION: https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html)." ;
     rdfs:domain srv:Service ;
     rdfs:range xsd:string ;
     rdfs:isDefinedBy srv: .

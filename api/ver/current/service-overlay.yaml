@@ -291,11 +291,11 @@ actions:
                   - ["sshocaudience:public", "sshocaudience:student" ]
 
               srv_audience_byjurisdiction:
-                description: The jurisdiction(s) given by the service operator's legal status that limit the audience. Values are from Global, Institution, National, or Regional (multiple countries), from https://zenodo.org/records/15516020
+                description: "The jurisdiction(s) given by the service operator's legal status that limit the audience. Values from the EOSC Service Profile DS_JURISDICTION vocabulary: https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html"
                 type: array
                 items:
                   type: string
-                  enum: ["Global", "Institution", "National", "Regional"]
+                  enum: ["Global", "Institution", "National", "Regional", "Research Infrastructure", "e-Infrastructure"]
                 examples:
                   - ["Global"]
                   - ["National", "Regional"]

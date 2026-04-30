@@ -121,13 +121,14 @@ the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme
 ```
 
 ### `srv_audience_byjurisdiction`
-*List* (optional): The jurisdiction that is given by the service operator's legal status limits.
-the audience. Values taken from either `Global`, `Institution`, `National`, or `Regional` aka multiple countries, from (https://zenodo.org/records/15516020).
+*List* (optional): The jurisdiction that is given by the service operator's legal status limits
+the audience. Values from the EOSC Service Profile [DS_JURISDICTION](https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html) vocabulary:
+`Global`, `National`, `Regional`, `Institution`, `Research Infrastructure`, `e-Infrastructure`.
 ```json
 "srv_audience_byjurisdiction": ["Institution", "National" ]
 ```
 
-> **TODO:** The SKG-IF core defines an `audience` property for [Data source] entities (mapped to `schema:audience`) with a closely overlapping vocabulary: `Global`, `National`, `Regional`, `Institution`, `Research Infrastructure`, `e-Infrastructure`. The ext-srv `srv_audience_byjurisdiction` (flat string list) and the core `audience` (list of `{ "audience_type": "..." }` objects) model the same concept with different structure and partially different vocabularies. These should be aligned or merged — ideally by reusing the core `audience` property for services and extending the vocabulary with any service-specific values. Also consider alignment with the [EOSC Service Profile 4.1 rc (latest) and 5.0] which is the source of the current vocabulary.
+> **TODO:** Consider adopting `schema:Audience` as a structured object to unify `srv_audience_byjurisdiction` and `srv_audience_byrole` under a single `audience` property, aligned with the SKG-IF core model. See also alignment with [EOSC Service Profile 4.1 rc (latest) and 5.0].
 
 ### `disciplines`
 *List* (optional):  The disciplines to which a [Software Service] is dedicated. 
