@@ -11,13 +11,15 @@ Please note that the Service extension is still **work in progress**. Please fol
 
 # Venue extended by the Service extension
 
-This extension adds a new type to the core [Venue] entity.
+The [Service] extension introduces a new type of the core [Venue] entity.
 
 ## Extended types
 
+Venues are typed by their `types` property value.
+
 ### `srv_portal`
 
-A portal or catalogue through which services are discoverable and accessible.
+Venues with type `srv_portal` model a portal or catalogue through which services are discoverable and accessible.
 
 Portals aggregate and catalog metadata of services, supporting users in search and access.
 
@@ -48,3 +50,5 @@ Services can reference venues/portals via `srv_venues`:
 
 ----
 [Venue]: {% link interoperability-framework/docs/venue.md %}
+[Service]: {% link ext-srv/extended-interoperability-framework
+/extension-entities/Service.md %}
