@@ -13,10 +13,6 @@ The acronym **`srv`** identifies this extension in the repository name (`ext-srv
 ## Extension-specific entities
 This extension introduces a new entity [Service] that models software applications or components providing specific functionality over a network, typically accessed through an API or web application.
 
-Supporting classes include:
-- **srv:APIProfile** - pairs service endpoints with API specifications
-- **srv:FacilityPortal** - organizational facility that operates services
-
 ## Extensions to core entities
 
 ### Organisation
