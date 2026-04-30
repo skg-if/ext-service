@@ -11,7 +11,7 @@
 # 6. Lint consolidated OpenAPI spec with Spectral
 # 7. Check ext-srv context file compatibility (all srv_* properties declared)
 # 8. Copy consolidated spec to api/Docker/ and start the development stack
-# 9. API smoke tests against Prism
+# 9. API health checks against Prism
 #
 # Usage:
 #   ./dev-check.sh              # run all steps including docker compose up
@@ -619,7 +619,7 @@ APPLESCRIPT
 
 ok "Done. Use 'docker compose down' in $DOCKER_DIR to stop."
 
-# ── Step 9: API smoke tests ───────────────────────────────────────────────────
+# ── Step 9: API health checks ────────────────────────────────────────────────
 info "Step 9: Waiting for Prism to be ready"
 
 PRISM_URL="http://localhost:4010"
@@ -635,7 +635,7 @@ for i in $(seq 1 $MAX_WAIT); do
     sleep 1
 done
 
-info "Step 9: Running API smoke tests against $PRISM_URL"
+info "Step 9: Running API health checks against $PRISM_URL"
 
 PASS=0; FAIL=0
 
@@ -708,4 +708,4 @@ api_test "GET /services/{id}  not found → 404"            404 "$PRISM_URL/serv
 # ── summary ───────────────────────────────────────────────────────────────────
 echo ""
 echo -e "  Tests passed: ${GREEN}${PASS}${NC}   Failed: ${RED}${FAIL}${NC}"
-[[ $FAIL -eq 0 ]] && ok "All API smoke tests passed." || fail "${FAIL} smoke test(s) failed."
+[[ $FAIL -eq 0 ]] && ok "All API health checks passed." || fail "${FAIL} API health check(s) failed."
