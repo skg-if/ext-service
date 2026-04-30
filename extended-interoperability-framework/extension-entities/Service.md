@@ -120,15 +120,15 @@ the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme
 "srv_audience_byrole": ["sshocaudience:public", "sshocaudience:student" ]
 ```
 
-### `srv_audience_byjurisdiction`
+### `srv_audience_by_jurisdiction`
 *List* (optional): The jurisdiction that is given by the service operator's legal status limits
 the audience. Values from the EOSC Service Profile [DS_JURISDICTION](https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html) vocabulary:
 `Global`, `National`, `Regional`, `Institution`, `Research Infrastructure`, `e-Infrastructure`.
 ```json
-"srv_audience_byjurisdiction": ["Institution", "National" ]
+"srv_audience_by_jurisdiction": ["Institution", "National" ]
 ```
 
-> **TODO:** Consider adopting `schema:Audience` as a structured object to unify `srv_audience_byjurisdiction` and `srv_audience_byrole` under a single `audience` property, aligned with the SKG-IF core model. See also alignment with [EOSC Service Profile 4.1 rc (latest) and 5.0].
+> **TODO:** Consider adopting `schema:Audience` as a structured object to unify `srv_audience_by_jurisdiction` and `srv_audience_byrole` under a single `audience` property, aligned with the SKG-IF core model. See also alignment with [EOSC Service Profile 4.1 rc (latest) and 5.0].
 
 ### `disciplines`
 *List* (optional):  The disciplines to which a [Software Service] is dedicated. 
@@ -193,14 +193,16 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 ```
 
 ### `srv_api_profile`
-*String or Object* (optional): IRI of the API profile/standard, either as a simple link or a structured object with endpoint and documentation URLs.
+*Object* (optional): Endpoint and documentation URLs for the service API. At least one of `dcat:endpointURL` or `schema:url` should be provided.
 
-Simple form (a single URL pointing to API documentation or reference):
+Minimal form (documentation URL only):
 ```json
-"srv_api_profile": "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
+"srv_api_profile": {
+    "schema:url": "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
+}
 ```
 
-Structured form (object with `dcat:endpointURL` and `schema:url`):
+Full form (endpoint + documentation URLs):
 ```json
 "srv_api_profile": {
     "dcat:endpointURL": ["https://lindat.mff.cuni.cz/services/udpipe/api/process"],
@@ -215,7 +217,6 @@ Structured form (object with `dcat:endpointURL` and `schema:url`):
 ### `srv_supported_language`
 
 *List* (optional) if applicable the language(s) the service is able to process, values provided as ISO369-3 language codes using Lexvo.org published vocabulary
-_NOTE_ properties introduced by this extension, that are not from external origin or also used in core entities are prefixed with "srv_" to avoid clashes with properties with the same name potententially introduced by other extensions
 
 ``` json
 "@context": {

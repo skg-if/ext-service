@@ -290,7 +290,7 @@ actions:
                 examples:
                   - ["sshocaudience:public", "sshocaudience:student" ]
 
-              srv_audience_byjurisdiction:
+              srv_audience_by_jurisdiction:
                 description: "The jurisdiction(s) given by the service operator's legal status that limit the audience. Values from the EOSC Service Profile DS_JURISDICTION vocabulary: https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html"
                 type: array
                 items:
@@ -471,13 +471,8 @@ actions:
                   - cites: ["10.18653/v1/k17-3009", "10.30564/fls.v6i5.6957", "10.18653/v1/k18-2020"]
 
               srv_api_profile:
-                description: IRI of the API profile/standard, either simple link or complex (embedded) structure
-                anyOf:
-                  - type: string
-                    format: uri
-                  - $ref: "#/components/schemas/srv_api_profile"
-                example:
-                  - "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
+                description: Endpoint and documentation URLs for the service API.
+                $ref: "#/components/schemas/srv_api_profile"
 
               topics:
                 type: array
@@ -550,8 +545,7 @@ actions:
 
       srv_api_profile:
         type: object
-        description: API profile (endpoint + one or more spec document urls).
-        required: ["dcat:endpointURL", "schema:url"]
+        description: Endpoint and documentation URLs for the service API. At least one of dcat:endpointURL or schema:url should be provided.
         properties:
           "dcat:endpointURL":
             minitems: 1
