@@ -53,7 +53,7 @@
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "srv_availability_geographic": [

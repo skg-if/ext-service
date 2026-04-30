@@ -56,7 +56,7 @@
     "srv_keywords": "schema:keyword",
 
     "srv_audience_byrole":       { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@base": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" } },
-    "srv_audience_byjurisdiction": { "@id": "srv:audienceJurisdiction" },
+    "srv_audience_by_jurisdiction": { "@id": "srv:audienceJurisdiction" },
 
     "is_accessible_for_free":    { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
 

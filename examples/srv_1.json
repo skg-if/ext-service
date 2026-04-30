@@ -30,7 +30,7 @@
         "sshocaudience:public",
         "sshocaudience:student"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "is_accessible_for_free": true,

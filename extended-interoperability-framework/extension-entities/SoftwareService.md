@@ -98,7 +98,7 @@ the https://vocabs.sshopencloud.eu/browse/sshoc-audience/en/page/audienceScheme
 "intended_audience": ["Institution", "Student"]
 ```
 
-### `audiencebyjurisdiction`
+### `srv_audience_by_jurisdiction`
 *Object* (optional): the jurisdiction that is given by the service operator's legal status limits
 the audience. value take from https://github.com/EOSC-PLATFORM/service-profile/blob/4.0/docs/_vocabularies/DS_JURISDICTION.rst  
 ```json

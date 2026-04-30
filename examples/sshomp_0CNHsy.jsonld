@@ -61,7 +61,7 @@
       "srv_life_cycle_status": [
         "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "srv_availability_geographic": [

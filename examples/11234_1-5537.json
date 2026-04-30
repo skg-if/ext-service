@@ -103,7 +103,7 @@
         "sshocaudience:student",
         "sshocaudience:trainer"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "topics": [

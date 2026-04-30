@@ -308,7 +308,7 @@ skos:altLabel a owl:DatatypeProperty ;
 ############################
 
 srv:audienceJurisdiction a owl:DatatypeProperty ;
-    rdfs:label "srv:audienceJurisdiction (SKG-IF labels: srv_audience_byjurisdiction)" ;
+    rdfs:label "srv:audienceJurisdiction (SKG-IF labels: srv_audience_by_jurisdiction)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 

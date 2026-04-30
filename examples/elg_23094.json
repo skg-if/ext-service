@@ -100,7 +100,7 @@
         "sshocaudience:researcher",
         "sshocaudience:dataEngineer"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "srv_has_hosting_organisation": [

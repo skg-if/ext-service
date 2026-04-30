@@ -139,7 +139,7 @@
         "sshocaudience:dataEngineer",
         "sshocaudience:researcher"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "name": "Morphological Tagger (Greek NLP toolkit)",

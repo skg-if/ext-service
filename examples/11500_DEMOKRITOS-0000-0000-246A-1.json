@@ -109,7 +109,7 @@
         "sshocaudience:researcher",
         "sshocaudience:student"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "topics": [

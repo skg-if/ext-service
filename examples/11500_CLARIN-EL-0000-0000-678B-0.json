@@ -142,7 +142,7 @@
         "sshocaudience:dataEngineer",
         "sshocaudience:researcher"
       ],
-      "srv_audience_byjurisdiction": [
+      "srv_audience_by_jurisdiction": [
         "Global"
       ],
       "name": "Part-of-Speech Tagger (Greek NLP toolkit)",
