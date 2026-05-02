@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://w3id.org/skg-if/context/1.1.0/skg-if.json",
+    "https://w3id.org/skg-if/context/1.0.0/skg-if-api.json",
+    {
+      "@base": "https://w3id.org/skg-if/sandbox/clarin-vlo/"
+    },
+    "https://w3id.org/skg-if/extension/srv/context/skg-if.json"
+  ],
+  "_comment": "Canonical example demonstrating that CURIE form and bare term form resolve to the same IRI for each vocabulary property. Each property lists the CURIE form first, then the equivalent bare term — both must produce the same N-Quad triple.",
+  "@graph": [
+    {
+      "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/canonical/vocab-resolution-test",
+      "entity_type": "service",
+      "name": "Canonical vocabulary resolution test",
+
+      "srv_invocation_type": [
+        "sshocinvt:webApplication",
+        "webApplication"
+      ],
+
+      "srv_life_cycle_status": [
+        "elcs:life_cycle_status-production",
+        "life_cycle_status-production"
+      ],
+
+      "srv_availability_geographic": [
+        "eoscgeoavail:ww",
+        "ww"
+      ],
+
+      "srv_audience_byrole": [
+        "sshocaudience:researcher",
+        "researcher"
+      ],
+
+      "srv_supported_language": [
+        "lexvo-iso639-3:eng",
+        "eng"
+      ]
+    }
+  ]
+}

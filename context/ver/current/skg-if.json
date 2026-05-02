@@ -55,20 +55,20 @@
 
     "srv_keywords": "schema:keyword",
 
-    "srv_audience_byrole":       { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@base": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" } },
+    "srv_audience_byrole":       { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:sshoc-audience/" } },
     "srv_audience_by_jurisdiction": { "@id": "srv:audienceJurisdiction" },
 
     "is_accessible_for_free":    { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
 
-    "srv_invocation_type":       { "@id": "srv:invocationType", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:invocation-type" } },
-    "srv_life_cycle_status":     { "@id": "srv:eoscLifeCycleStatus", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:eosc-life-cycle-status/" } },
-    "srv_availability_geographic": { "@id": "srv:geographicalAvailability", "@type": "@vocab", "@context": { "@base": "sshopencloudvocabs:eosc-geographical-availability" } },
+    "srv_invocation_type":       { "@id": "srv:invocationType", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:invocation-type/" } },
+    "srv_life_cycle_status":     { "@id": "srv:eoscLifeCycleStatus", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:eosc-life-cycle-status/" } },
+    "srv_availability_geographic": { "@id": "srv:geographicalAvailability", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:eosc-geographical-availability/" } },
 
     "srv_api_profile":           { "@id": "dcterms:conformsTo", "@type": "@id" },
     "srv_api_endpoint":          { "@id": "dcat:endpointURL", "@type": "@id" },
     "srv_api_specification_uri": { "@id": "schema:url", "@type": "@id" },
 
-    "srv_supported_language":    { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@base": "http://lexvo.org/id/iso639-3" } },
+    "srv_supported_language":    { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@vocab": "http://lexvo.org/id/iso639-3/" } },
 
     "srv_deployment_of":         { "@id": "srv:isDeploymentOf", "@type": "@id" },
 
