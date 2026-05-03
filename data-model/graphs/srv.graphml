@@ -263,10 +263,10 @@ note the modifications to core entities.
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="212.96822102864604" x="449.0238342285155" y="723.0"/>
-          <y:Fill color="#CCFFCC" transparent="false"/>
+          <y:Fill color="#99CCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.84375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="108.546875" x="52.21067301432299" xml:space="preserve" y="10.578125">skos:Concept</y:NodeLabel>
-          <y:Shape type="parallelogram"/>
+          <y:Shape type="rectangle3d"/>
         </y:ShapeNode>
       </data>
     </node>
@@ -426,7 +426,7 @@ dcterms:description (descriptions)
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#00FF00" type="dotted" width="1.0"/>
+          <y:LineStyle color="#008000" type="dotted" width="1.0"/>
           <y:Arrows source="transparent_circle" target="white_delta"/>
           <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="41.6875" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="146.2734375" x="-18.121632893880133" xml:space="preserve" y="26.6490478515625">dcat:endpointURL
 (srv_api_endpoint)<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
@@ -472,9 +472,9 @@ dcterms:description (descriptions)
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#00FF00" type="dotted" width="1.0"/>
-          <y:Arrows source="transparent_circle" target="white_delta"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="135.90625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#339966" verticalTextPosition="bottom" visible="true" width="225.4453125" x="-121.46320073626862" xml:space="preserve" y="101.9364502864097">srv:intendedAudienceRole
+          <y:LineStyle color="#000080" type="dotted" width="1.0"/>
+          <y:Arrows source="circle" target="delta"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="135.90625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="225.4453125" x="-121.46320073626862" xml:space="preserve" y="101.9364502864097">srv:intendedAudienceRole
 srv:audienceJurisdiction
 srv:geographicalAvailability
 srv:eoscLifeCycleStatus
