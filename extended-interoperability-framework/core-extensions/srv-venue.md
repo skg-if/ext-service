@@ -50,5 +50,4 @@ Services can reference venues/portals via `srv_venues`:
 
 ----
 [Venue]: {% link interoperability-framework/docs/venue.md %}
-[Service]: {% link ext-srv/extended-interoperability-framework
-/extension-entities/Service.md %}
+[Service]: {% link ext-srv/extended-interoperability-framework/extension-entities/Service.md %}
