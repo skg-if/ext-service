@@ -44,13 +44,5 @@ Organisation that provides facilities, resources and services for research commu
 }
 ```
 
-## Related properties
-
-Services reference organisations via:
-- `srv_has_hosting_organisation` - organisation hosting the service
-- `srv_has_research_infrastructure` - research infrastructure the service is part of
-- `srv_has_hosting_legal_entity` - legally responsible organisation
-- `relevant_organisations` - other relevant organisations
-
 ----
 [Organisation]: {% link interoperability-framework/docs/agent.md %}

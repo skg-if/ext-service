@@ -33,21 +33,6 @@ Portals aggregate and catalog metadata of services, supporting users in search a
 }
 ```
 
-## Related properties
-
-Services can reference venues/portals via `srv_venues`:
-
-```json
-"srv_venues": [
-    {
-        "local_identifier": "https://ror.org/03sj9b840",
-        "entity_type": "venue",
-        "name": "EOSC node",
-        "types": ["srv_portal"]
-    }
-]
-```
-
 ----
 [Venue]: {% link interoperability-framework/docs/venue.md %}
 [Service]: {% link ext-srv/extended-interoperability-framework/extension-entities/Service.md %}
