@@ -33,13 +33,10 @@ New type for portal functionality:
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): URL uniquely identifying this Service within the SKG. Should be an absolute URL or a short string resolved to a URL via `@base` in the context of JSON-LD. Can be derived from an existing persistent identifier (e.g. a handle).
-
-{: .highlight }
-**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities). A local_identifier can also be (derived) from an existing persistent identifier.
+*String* (mandatory): Unique code identifying a Service in the SKG. Suggestion: Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-"local_identifier": "11234/1-4816"
+"local_identifier": "https://hdl.handle.net/11234/1-4816"
 ```
 
 ### `identifiers`
@@ -127,8 +124,6 @@ the audience. Values from the EOSC Service Profile [DS_JURISDICTION](https://eos
 ```json
 "srv_audience_by_jurisdiction": ["Institution", "National" ]
 ```
-
-> **TODO:** Consider adopting `schema:Audience` as a structured object to unify `srv_audience_by_jurisdiction` and `srv_audience_by_role` under a single `audience` property, aligned with the SKG-IF core model. See also alignment with [EOSC Service Profile 4.1 rc (latest) and 5.0].
 
 ### `disciplines`
 *List* (optional):  The disciplines to which a [Software Service] is dedicated. 
