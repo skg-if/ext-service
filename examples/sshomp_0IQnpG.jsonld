@@ -46,7 +46,7 @@
         "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
       ],
       "is_accessible_for_free": true,
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/public",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student"

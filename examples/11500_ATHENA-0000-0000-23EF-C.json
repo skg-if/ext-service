@@ -105,7 +105,7 @@
         "eoscgeoavail:eo",
         "eoscgeoavail:gr"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "sshocaudience:public",
         "sshocaudience:researcher",
         "sshocaudience:student"

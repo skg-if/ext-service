@@ -55,7 +55,9 @@
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -153,6 +155,7 @@ In SKG-IF, it is used to link a Service to an APIProfile instance describing end
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * foaf:Organization</dc:description>
+        <rdfs:comment>Generic queryable index of all organisations associated with a Service. The specific properties srv:hasHostingOrganisation, srv:hasHostingLegalEntity, and srv:isPartOfResearchInfrastructure are semantically narrower and are intended to be declared rdfs:subPropertyOf dcterms:relation once the ontology is finalised. Until those subproperty axioms are added, data producers must explicitly copy the local_identifier of each organisation referenced in those specific properties into this field, so that generic organisation queries against relevant_organisations remain complete.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label>dcterms:relation (SKG-IF labels: relevant_organisations)</rdfs:label>
     </owl:ObjectProperty>
@@ -163,9 +166,6 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/requires">
-        <dc:description>In SKG-IF, it is used in the following classes (domain):
-* SoftwareSourceCode, requires the presence of a url (landing page, source code rep.)
-</dc:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label>dcterms:requires (SKG-IF labels: requires)</rdfs:label>
     </owl:ObjectProperty>
@@ -244,6 +244,42 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
     
 
 
+    <!-- http://purl.org/spar/cito/isCitedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/isCitedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/skg-if/ontology/research_product"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* skg:research_product</dc:description>
+        <rdfs:comment>A research product (e.g. a paper) that cites or mentions this service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+        <rdfs:label>cito:isCitedBy (SKG-IF labels: is_cited_by)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/isDocumentedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/isDocumentedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/skg-if/ontology/research_product"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* skg:research_product</dc:description>
+        <rdfs:comment>A research product (e.g. a paper or report) that documents this service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+        <rdfs:label>cito:isDocumentedBy (SKG-IF labels: is_documented_by)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
 
@@ -267,6 +303,9 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#endpointURL">
         <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/APIProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
+        <rdfs:label>endpoint URL</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -292,6 +331,7 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
     <owl:ObjectProperty rdf:about="https://schema.org/provider">
         <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
         <rdfs:range rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal"/>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
     </owl:ObjectProperty>
     
 
@@ -301,6 +341,14 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 
     <owl:ObjectProperty rdf:about="https://schema.org/url">
         <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/APIProfile"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:APIProfile
+
+In SKG-IF, it is used to link to the URL(s) of the API specification document(s) (range):
+* foaf:Document</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label>schema:url (SKG-IF labels: api_specification_url)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -433,7 +481,6 @@ In SKG-IF, it is used to indicate the method of service invocation using values 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/spar/fabio/Software"/>
-                    <rdf:Description rdf:about="https://schema.org/SoftwareSourceCode"/>
                     <rdf:Description rdf:about="https://w3id.org/skg-if/ontology/research_product"/>
                 </owl:unionOf>
             </owl:Class>
@@ -444,7 +491,8 @@ In SKG-IF, it is used to indicate the method of service invocation using values 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * skg:research_product (type software)
 * fabio:Software
-* schema:SoftwareSourceCode</dc:description>
+
+Plain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph.</dc:description>
         <rdfs:comment>A identifier for the software or software research product.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label>srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)</rdfs:label>
@@ -555,15 +603,6 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     
 
 
-    <!-- http://www.w3.org/ns/dcat#endpointURL -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#endpointURL">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/name -->
 
 
@@ -582,11 +621,20 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     
 
 
-    <!-- https://schema.org/url -->
+    <!-- https://schema.org/keyword -->
 
 
-    <owl:DatatypeProperty rdf:about="https://schema.org/url">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:DatatypeProperty rdf:about="https://schema.org/keyword">
+        <rdfs:domain rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following data types (range):
+* xsd:string</dc:description>
+        <rdfs:comment>Keywords relevant for service discovery. Values may be simple strings or concept URIs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label>schema:keyword (SKG-IF labels: srv_keywords)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -602,9 +650,9 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
 
 In SKG-IF, it is used to link to entities belonging to the following data types (range):
 * xsd:string</dc:description>
-        <rdfs:comment>The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve (i.e., either Global, Institution, National, or Regional aka multiple countries, from https://zenodo.org/records/15516020).</rdfs:comment>
+        <rdfs:comment>The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve. Values align with the SKG-IF core audience vocabulary: Global, National, Regional, Institution, Research Infrastructure, e-Infrastructure (EOSC Service Profile DS_JURISDICTION: https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
-        <rdfs:label>srv:audienceJurisdiction (SKG-IF labels: srv_audience_byjurisdiction)</rdfs:label>
+        <rdfs:label>srv:audienceJurisdiction (SKG-IF labels: srv_audience_by_jurisdiction)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -657,8 +705,18 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
 
 
     <owl:Class rdf:about="http://purl.org/spar/datacite/IdentifierScheme">
+        <rdfs:comment>No property list: instances are remote DataCite scheme IRIs; SHACL cannot validate remote vocabulary membership.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
         <rdfs:label>datacite:IdentifierScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/ComputerProgram -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/ComputerProgram">
+        <owl:equivalentClass rdf:resource="http://purl.org/spar/fabio/Software"/>
     </owl:Class>
     
 
@@ -676,6 +734,7 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
 
 
     <owl:Class rdf:about="http://purl.org/spar/fabio/Software">
+        <rdfs:comment>A bibliographic class for software; equivalent to fabio:ComputerProgram. Its inherited properties (from frbr:Endeavour) are about identifying and citing software (DOI, handle, version, date), not describing its technical characteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
         <rdfs:label>fabio:Software (SKG-IF labels: software)</rdfs:label>
     </owl:Class>
@@ -712,6 +771,7 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     <owl:Class rdf:about="http://purl.org/spar/frapo/Facility">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/frapo/InfrastructureEntity"/>
         <rdfs:comment xml:lang="en">A place or installation built or designed to serve a specific function or provide a specific service, for example an animal breeding centre, a DNA sequencing facility or a confocal imaging laboratory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/frapo/"/>
         <rdfs:label xml:lang="en">facility</rdfs:label>
     </owl:Class>
     
@@ -734,10 +794,21 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:comment>No property list: instances are remote SKOS concept IRIs; SHACL cannot validate remote vocabulary membership.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+        <rdfs:label>skos:Concept</rdfs:label>
+    </owl:Class>
     
 
 
@@ -745,6 +816,7 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
 
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:comment>No property list: instances are remote SKOS concept scheme IRIs; SHACL cannot validate remote vocabulary membership.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
         <rdfs:label>skos:ConceptScheme</rdfs:label>
     </owl:Class>
@@ -758,6 +830,13 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/Organization -->
 
 
@@ -765,34 +844,10 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     
 
 
-    <!-- https://schema.org/CreativeWork -->
-
-
-    <owl:Class rdf:about="https://schema.org/CreativeWork"/>
-    
-
-
     <!-- https://schema.org/SoftwareApplication -->
 
 
     <owl:Class rdf:about="https://schema.org/SoftwareApplication"/>
-    
-
-
-    <!-- https://schema.org/SoftwareSourceCode -->
-
-
-    <owl:Class rdf:about="https://schema.org/SoftwareSourceCode">
-        <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
-        <dc:description>
-The properties that can be used with this class are:
-
-* foaf:homepage -[0..N]-&gt; foaf:Document
-* schema:codeRepository -[1..N]-&gt; xsd:anyURI </dc:description>
-        <rdfs:comment>Computer programming source code, including full (compile-ready) solutions, code snippet samples, templates, scripts, and other software artefacts.  </rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-        <rdfs:label>schema:SoftwareSourceCode</rdfs:label>
-    </owl:Class>
     
 
 
@@ -810,19 +865,13 @@ The properties that can be used with this class are:
         <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Standard"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://schema.org/url"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#endpointURL"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A concrete API profile or specification that pairs service endpoints with (possibly) several API standards. The properties that can be used with this class are:
-* dcat:endpointURL -[1]-&gt; xsd:anyURI
-* schema:url -[1..N]-&gt; xsd:anyURI </dc:description>
+* dcat:endpointURL -[1]-&gt; rdfs:Resource
+* schema:url -[0..N]-&gt; foaf:Document </dc:description>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label>API Profile</rdfs:label>
     </owl:Class>
@@ -854,6 +903,7 @@ The properties that can be used with this class are:
 * skos:altLabel -[0..N]-&gt; rdfs:Literal
 </dc:description>
         <rdfs:comment>organizational facility that operates services and provides portal access to them</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label>Facility Portal</rdfs:label>
     </owl:Class>
     
@@ -863,7 +913,9 @@ The properties that can be used with this class are:
 
 
     <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:comment xml:lang="en">organisation reponsible for hosting a service or infrastructure component</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label xml:lang="en">hosting organisation</rdfs:label>
     </owl:Class>
     
@@ -875,6 +927,7 @@ The properties that can be used with this class are:
     <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/Portal">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:comment xml:lang="en">organisation responsible for aggregating and cataloging meta data of data sets and services and supporting users search access</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label>portal</rdfs:label>
     </owl:Class>
     
@@ -884,7 +937,9 @@ The properties that can be used with this class are:
 
 
     <owl:Class rdf:about="https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:comment xml:lang="en">organisation that provides facilities, resources and services for the research communities to conduct research.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label>research infrastructure</rdfs:label>
     </owl:Class>
     
@@ -905,21 +960,23 @@ The properties that can be used with this class are:
 * srv:intendedAudienceRole -[0..N]-&gt; skos:Concept 
 * dcterms:subject -[0..N]-&gt; owl:Thing
 * srv:invocationType -[0..N]-&gt; skos:Concept 
-* srv:eoscLifeCycleStatus -[0..1]-&gt; skos:Concept 
+* srv:eoscLifeCycleStatus -[0..N]-&gt; skos:Concept
 * srv:geographicalAvailability -[0..N]-&gt; owl:Thing
 * srv:supportedLanguage -[0..N]-&gt; lvont:Language
 * srv:isPartOfResearchInfrastructure -[0..N]-&gt; foaf:Organization
 * srv:hasHostingOrganisation -[0..N]-&gt; foaf:Organization
 * srv:hasHostingLegalEntity -[0..1]-&gt; foaf:Organization
 * dcterms:relation -[0..N]-&gt; foaf:Organization
-* dcterms:conformsTo -[0..N]-&gt; srv:APIProfile
+* dcterms:conformsTo -[0..1]-&gt; srv:APIProfile
 * schema:provider -[0..1]-&gt; srv:FacilityPortal
 * srv:isDeploymentOf -[0..N]-&gt; fabio:Software
-* srv:isDeploymentOf -[0..N]-&gt; schema:SoftwareSourceCode
 * srv:isDeploymentOf -[0..N]-&gt; skg:research_product
 * srv:relatedResearchProduct -[0..N]-&gt; skg:research_product
+* cito:isCitedBy -[0..N]-&gt; skg:research_product
+* cito:isDocumentedBy -[0..N]-&gt; skg:research_product
+* schema:keyword -[0..N]-&gt; xsd:string
 * bido:holdsBibliometricDataInTime -[0..N]-&gt; bido:BibliometricDataInTime
-* srv:hasVenue -[0..1]-&gt; skg:Venue
+* srv:hasVenue -[0..N]-&gt; skg:Venue
 * schema:isAccessibleForFree -[0..1]-&gt; xsd:boolean </dc:description>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label>srv:Service</rdfs:label>
@@ -958,18 +1015,20 @@ The properties that can be used with this class are:
      -->
 
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endpointURL">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
-        <rdfs:label>endpoint URL</rdfs:label>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://schema.org/url">
-        <dc:description>In SKG-IF, it is used in the following classes (domain):
-* srv:APIProfile
-
-In SKG-IF, it is used to link to the URL(s) of the API specification document(s) (range):
-* xsd:anyURI</dc:description>
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-        <rdfs:label>schema:url (SKG-IF labels: api_specification_url)</rdfs:label>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
     </rdf:Description>
 </rdf:RDF>
 

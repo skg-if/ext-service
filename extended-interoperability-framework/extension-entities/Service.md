@@ -108,7 +108,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 
-### `srv_audience_byrole`
+### `srv_audience_by_role`
 *List* (optional): The audience(s) that the service is intended to be used by
 This can both express desire and/or design of the service operators. Values are mandatory taken from 
 the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme 
@@ -117,7 +117,7 @@ the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme
 "@context": {
     "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/"
 },
-"srv_audience_byrole": ["sshocaudience:public", "sshocaudience:student" ]
+"srv_audience_by_role": ["sshocaudience:public", "sshocaudience:student" ]
 ```
 
 ### `srv_audience_by_jurisdiction`
@@ -128,7 +128,7 @@ the audience. Values from the EOSC Service Profile [DS_JURISDICTION](https://eos
 "srv_audience_by_jurisdiction": ["Institution", "National" ]
 ```
 
-> **TODO:** Consider adopting `schema:Audience` as a structured object to unify `srv_audience_by_jurisdiction` and `srv_audience_byrole` under a single `audience` property, aligned with the SKG-IF core model. See also alignment with [EOSC Service Profile 4.1 rc (latest) and 5.0].
+> **TODO:** Consider adopting `schema:Audience` as a structured object to unify `srv_audience_by_jurisdiction` and `srv_audience_by_role` under a single `audience` property, aligned with the SKG-IF core model. See also alignment with [EOSC Service Profile 4.1 rc (latest) and 5.0].
 
 ### `disciplines`
 *List* (optional):  The disciplines to which a [Software Service] is dedicated. 

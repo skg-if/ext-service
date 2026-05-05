@@ -45,7 +45,7 @@
       "srv_supported_language": [
         "deu"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher"
       ],
       "website": "https://huggingface.co/dh-unibe/trocr-kurrent",

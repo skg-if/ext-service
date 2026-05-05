@@ -26,7 +26,7 @@
           "UDPipe je trénovatelný nástroj pro tokenizaci, tagging, lemmatizaci a závislostní parsing CoNLL-U souborů. UDPipe je jazykově nezávislý a pro natrénování modelů využívá anotovaná data ve formátu Universal Dependencies"
         ]
       },
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "sshocaudience:public",
         "sshocaudience:student"
       ],

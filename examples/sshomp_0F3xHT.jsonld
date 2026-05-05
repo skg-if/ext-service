@@ -48,7 +48,7 @@
       "srv_life_cycle_status": [
         "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/dataEngineer",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student"

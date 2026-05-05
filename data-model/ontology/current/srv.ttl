@@ -389,7 +389,7 @@ In SKG-IF, it is used to indicate the maturity of the Service using values from 
 
 
 srv:intendedAudienceRole a owl:ObjectProperty ;
-    rdfs:label "srv:intendedAudienceRole (SKG-IF labels: srv_audience_byrole)" ;
+    rdfs:label "srv:intendedAudienceRole (SKG-IF labels: srv_audience_by_role)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 

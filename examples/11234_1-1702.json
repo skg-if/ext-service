@@ -102,7 +102,7 @@
         "eoscgeoavail:eo",
         "eoscgeoavail:cz"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "sshocaudience:dataEngineer",
         "sshocaudience:public",
         "sshocaudience:researcher",

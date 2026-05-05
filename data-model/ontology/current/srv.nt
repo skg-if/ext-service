@@ -28,6 +28,7 @@
 # 
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
 # 
 # http://purl.org/dc/elements/1.1/rights
 <http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -76,12 +77,12 @@
 # http://purl.org/dc/terms/relation
 <http://purl.org/dc/terms/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/relation> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n* fabio:Work\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization" .
+<http://purl.org/dc/terms/relation> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic queryable index of all organisations associated with a Service. The specific properties srv:hasHostingOrganisation, srv:hasHostingLegalEntity, and srv:isPartOfResearchInfrastructure are semantically narrower and are intended to be declared rdfs:subPropertyOf dcterms:relation once the ontology is finalised. Until those subproperty axioms are added, data producers must explicitly copy the local_identifier of each organisation referenced in those specific properties into this field, so that generic organisation queries against relevant_organisations remain complete." .
 <http://purl.org/dc/terms/relation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/relation> <http://www.w3.org/2000/01/rdf-schema#label> "dcterms:relation (SKG-IF labels: relevant_organisations)" .
 # 
 # http://purl.org/dc/terms/requires
 <http://purl.org/dc/terms/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/dc/terms/requires> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* SoftwareSourceCode, requires the presence of a url (landing page, source code rep.)\n" .
 <http://purl.org/dc/terms/requires> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/requires> <http://www.w3.org/2000/01/rdf-schema#label> "dcterms:requires (SKG-IF labels: requires)" .
 # 
@@ -112,10 +113,27 @@
 <http://purl.org/spar/bido/withBibliometricData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/bido/> .
 <http://purl.org/spar/bido/withBibliometricData> <http://www.w3.org/2000/01/rdf-schema#label> "bido:withBibliometricData (SKG-IF labels: term)" .
 # 
+# http://purl.org/spar/cito/isCitedBy
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/skg-if/ontology/research_product> .
+<http://purl.org/spar/cito/isCitedBy> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* skg:research_product" .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A research product (e.g. a paper) that cites or mentions this service." .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#label> "cito:isCitedBy (SKG-IF labels: is_cited_by)" .
+# 
+# http://purl.org/spar/cito/isDocumentedBy
+<http://purl.org/spar/cito/isDocumentedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/isDocumentedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
+<http://purl.org/spar/cito/isDocumentedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/skg-if/ontology/research_product> .
+<http://purl.org/spar/cito/isDocumentedBy> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* skg:research_product" .
+<http://purl.org/spar/cito/isDocumentedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A research product (e.g. a paper or report) that documents this service." .
+<http://purl.org/spar/cito/isDocumentedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/isDocumentedBy> <http://www.w3.org/2000/01/rdf-schema#label> "cito:isDocumentedBy (SKG-IF labels: is_documented_by)" .
+# 
 # http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* skos:Concept\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* skos:ConceptScheme" .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The classification scheme or vocabulary that a Topic term belongs to." .
@@ -125,6 +143,10 @@
 # http://www.w3.org/ns/dcat#endpointURL
 <http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/APIProfile> .
+<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint URL" .
 # 
 # http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -136,10 +158,16 @@
 <https://schema.org/provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://schema.org/provider> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
 <https://schema.org/provider> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> .
+<https://schema.org/provider> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
 # 
 # https://schema.org/url
 <https://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/APIProfile> .
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/url> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:APIProfile\n\nIn SKG-IF, it is used to link to the URL(s) of the API specification document(s) (range):\n* foaf:Document" .
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#label> "schema:url (SKG-IF labels: api_specification_url)" .
 # 
 # https://w3id.org/skg-if/extension/srv/ontology/eoscLifeCycleStatus
 <https://w3id.org/skg-if/extension/srv/ontology/eoscLifeCycleStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -206,18 +234,15 @@
 <https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
 <https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/skg-if/ontology/research_product> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/SoftwareSourceCode> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/fabio/Software> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/fabio/Software> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n        \nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* skg:research_product (type software)\n* fabio:Software\n* schema:SoftwareSourceCode" .
+<https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n        \nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* skg:research_product (type software)\n* fabio:Software\n\nPlain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph." .
 <https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A identifier for the software or software research product." .
 <https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf> <http://www.w3.org/2000/01/rdf-schema#label> "srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)" .
@@ -276,10 +301,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#label> "skos:prefLabel (SKG-IF labels: labels)" .
 # 
-# http://www.w3.org/ns/dcat#endpointURL
-<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-# 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
@@ -289,18 +310,23 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#label> "foaf:name (SKG-IF labels: name)" .
 # 
-# https://schema.org/url
-<https://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# https://schema.org/keyword
+<https://schema.org/keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
+<https://schema.org/keyword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/keyword> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following data types (range):\n* xsd:string" .
+<https://schema.org/keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "Keywords relevant for service discovery. Values may be simple strings or concept URIs." .
+<https://schema.org/keyword> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/keyword> <http://www.w3.org/2000/01/rdf-schema#label> "schema:keyword (SKG-IF labels: srv_keywords)" .
 # 
 # https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction
 <https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
 <https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following data types (range):\n* xsd:string" .
-<https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve (i.e., either Global, Institution, National, or Regional aka multiple countries, from https://zenodo.org/records/15516020)." .
+<https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve. Values align with the SKG-IF core audience vocabulary: Global, National, Regional, Institution, Research Infrastructure, e-Infrastructure (EOSC Service Profile DS_JURISDICTION: https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html)." .
 <https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
-<https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/2000/01/rdf-schema#label> "srv:audienceJurisdiction (SKG-IF labels: srv_audience_byjurisdiction)" .
+<https://w3id.org/skg-if/extension/srv/ontology/audienceJurisdiction> <http://www.w3.org/2000/01/rdf-schema#label> "srv:audienceJurisdiction (SKG-IF labels: srv_audience_by_jurisdiction)" .
 # 
 # 
 # 
@@ -327,8 +353,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/spar/datacite/IdentifierScheme
 <http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "No property list: instances are remote DataCite scheme IRIs; SHACL cannot validate remote vocabulary membership." .
 <http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "datacite:IdentifierScheme" .
+# 
+# http://purl.org/spar/fabio/ComputerProgram
+<http://purl.org/spar/fabio/ComputerProgram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/ComputerProgram> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/spar/fabio/Software> .
 # 
 # http://purl.org/spar/fabio/ExpressionCollection
 <http://purl.org/spar/fabio/ExpressionCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -336,6 +367,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/spar/fabio/Software
 <http://purl.org/spar/fabio/Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/Software> <http://www.w3.org/2000/01/rdf-schema#comment> "A bibliographic class for software; equivalent to fabio:ComputerProgram. Its inherited properties (from frbr:Endeavour) are about identifying and citing software (DOI, handle, version, date), not describing its technical characteristics." .
 <http://purl.org/spar/fabio/Software> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
 <http://purl.org/spar/fabio/Software> <http://www.w3.org/2000/01/rdf-schema#label> "fabio:Software (SKG-IF labels: software)" .
 # 
@@ -356,6 +388,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/spar/frapo/Facility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/frapo/InfrastructureEntity> .
 <http://purl.org/spar/frapo/InfrastructureEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/spar/frapo/Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "A place or installation built or designed to serve a specific function or provide a specific service, for example an animal breeding centre, a DNA sequencing facility or a confocal imaging laboratory."@en .
+<http://purl.org/spar/frapo/Facility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/frapo/> .
 <http://purl.org/spar/frapo/Facility> <http://www.w3.org/2000/01/rdf-schema#label> "facility"@en .
 # 
 # http://purl.org/spar/frapo/InfrastructureEntity
@@ -365,31 +398,29 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/spar/pro/Role> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro/> .
 <http://purl.org/spar/pro/Role> <http://www.w3.org/2000/01/rdf-schema#label> "pro:Role" .
 # 
+# http://www.w3.org/2000/01/rdf-schema#Resource
+# 
 # http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#comment> "No property list: instances are remote SKOS concept IRIs; SHACL cannot validate remote vocabulary membership." .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "skos:Concept" .
 # 
 # http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "No property list: instances are remote SKOS concept scheme IRIs; SHACL cannot validate remote vocabulary membership." .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "skos:ConceptScheme" .
 # 
 # http://www.w3.org/ns/dcat#Catalog
 <http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# http://xmlns.com/foaf/0.1/Organization
+# http://xmlns.com/foaf/0.1/Document
 # 
-# https://schema.org/CreativeWork
-<https://schema.org/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://xmlns.com/foaf/0.1/Organization
 # 
 # https://schema.org/SoftwareApplication
 <https://schema.org/SoftwareApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://schema.org/SoftwareSourceCode
-<https://schema.org/SoftwareSourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
-<https://schema.org/SoftwareSourceCode> <http://purl.org/dc/elements/1.1/description> "\nThe properties that can be used with this class are:\n\n* foaf:homepage -[0..N]-> foaf:Document\n* schema:codeRepository -[1..N]-> xsd:anyURI " .
-<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Computer programming source code, including full (compile-ready) solutions, code snippet samples, templates, scripts, and other software artefacts.  " .
-<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
-<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "schema:SoftwareSourceCode" .
 # 
 # https://schema.org/WebSite
 <https://schema.org/WebSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -397,15 +428,11 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/skg-if/extension/srv/ontology/APIProfile
 <https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/Standard> .
-<https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/url> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/dcat#endpointURL> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://purl.org/dc/elements/1.1/description> "A concrete API profile or specification that pairs service endpoints with (possibly) several API standards. The properties that can be used with this class are:\n* dcat:endpointURL -[1]-> xsd:anyURI\n* schema:url -[1..N]-> xsd:anyURI " .
+<https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/dcat#endpointURL> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://purl.org/dc/elements/1.1/description> "A concrete API profile or specification that pairs service endpoints with (possibly) several API standards. The properties that can be used with this class are:\n* dcat:endpointURL -[1]-> rdfs:Resource\n* schema:url -[0..N]-> foaf:Document " .
 <https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/APIProfile> <http://www.w3.org/2000/01/rdf-schema#label> "API Profile" .
 # 
@@ -414,38 +441,44 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Catalog> .
 <https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
 <https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/WebSite> .
-<https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://xmlns.com/foaf/0.1/Organization> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/provider> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/provider> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/provider> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/provider> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:\n* schema:provider -[1]-> foaf:Organization\n* skos:prefLabel -[1..N]-> rdfs:Literal\n* skos:altLabel -[0..N]-> rdfs:Literal\n" .
 <https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#comment> "organizational facility that operates services and provides portal access to them" .
+<https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/FacilityPortal> <http://www.w3.org/2000/01/rdf-schema#label> "Facility Portal" .
 # 
 # https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation
 <https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
 <https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "organisation reponsible for hosting a service or infrastructure component"@en .
+<https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "hosting organisation"@en .
 # 
 # https://w3id.org/skg-if/extension/srv/ontology/Portal
 <https://w3id.org/skg-if/extension/srv/ontology/Portal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/skg-if/extension/srv/ontology/Portal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Catalog> .
 <https://w3id.org/skg-if/extension/srv/ontology/Portal> <http://www.w3.org/2000/01/rdf-schema#comment> "organisation responsible for aggregating and cataloging meta data of data sets and services and supporting users search access"@en .
+<https://w3id.org/skg-if/extension/srv/ontology/Portal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/Portal> <http://www.w3.org/2000/01/rdf-schema#label> "portal" .
 # 
 # https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure
 <https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
 <https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#comment> "organisation that provides facilities, resources and services for the research communities to conduct research."@en .
+<https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/ResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#label> "research infrastructure" .
 # 
 # https://w3id.org/skg-if/extension/srv/ontology/Service
 <https://w3id.org/skg-if/extension/srv/ontology/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/skg-if/extension/srv/ontology/Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/SoftwareApplication> .
-<https://w3id.org/skg-if/extension/srv/ontology/Service> <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:\n* datacite:hasIdentifier -[0..N]-> datacite:Identifier\n* foaf:name -[1..1]-> rdfs:Literal\n* skos:altLabel -[0..N]-> rdfs:Literal\n* dcterms:description -[0..N]-> rdfs:langString\n* foaf:homepage -[0..1]-> foaf:Document\n* srv:audienceJurisdiction -[0..N]-> xsd:string\n* srv:intendedAudienceRole -[0..N]-> skos:Concept \n* dcterms:subject -[0..N]-> owl:Thing\n* srv:invocationType -[0..N]-> skos:Concept \n* srv:eoscLifeCycleStatus -[0..1]-> skos:Concept \n* srv:geographicalAvailability -[0..N]-> owl:Thing\n* srv:supportedLanguage -[0..N]-> lvont:Language\n* srv:isPartOfResearchInfrastructure -[0..N]-> foaf:Organization\n* srv:hasHostingOrganisation -[0..N]-> foaf:Organization\n* srv:hasHostingLegalEntity -[0..1]-> foaf:Organization\n* dcterms:relation -[0..N]-> foaf:Organization\n* dcterms:conformsTo -[0..N]-> srv:APIProfile\n* schema:provider -[0..1]-> srv:FacilityPortal\n* srv:isDeploymentOf -[0..N]-> fabio:Software\n* srv:isDeploymentOf -[0..N]-> schema:SoftwareSourceCode\n* srv:isDeploymentOf -[0..N]-> skg:research_product\n* srv:relatedResearchProduct -[0..N]-> skg:research_product\n* bido:holdsBibliometricDataInTime -[0..N]-> bido:BibliometricDataInTime\n* srv:hasVenue -[0..1]-> skg:Venue\n* schema:isAccessibleForFree -[0..1]-> xsd:boolean " .
+<https://w3id.org/skg-if/extension/srv/ontology/Service> <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:\n* datacite:hasIdentifier -[0..N]-> datacite:Identifier\n* foaf:name -[1..1]-> rdfs:Literal\n* skos:altLabel -[0..N]-> rdfs:Literal\n* dcterms:description -[0..N]-> rdfs:langString\n* foaf:homepage -[0..1]-> foaf:Document\n* srv:audienceJurisdiction -[0..N]-> xsd:string\n* srv:intendedAudienceRole -[0..N]-> skos:Concept \n* dcterms:subject -[0..N]-> owl:Thing\n* srv:invocationType -[0..N]-> skos:Concept \n* srv:eoscLifeCycleStatus -[0..N]-> skos:Concept\n* srv:geographicalAvailability -[0..N]-> owl:Thing\n* srv:supportedLanguage -[0..N]-> lvont:Language\n* srv:isPartOfResearchInfrastructure -[0..N]-> foaf:Organization\n* srv:hasHostingOrganisation -[0..N]-> foaf:Organization\n* srv:hasHostingLegalEntity -[0..1]-> foaf:Organization\n* dcterms:relation -[0..N]-> foaf:Organization\n* dcterms:conformsTo -[0..1]-> srv:APIProfile\n* schema:provider -[0..1]-> srv:FacilityPortal\n* srv:isDeploymentOf -[0..N]-> fabio:Software\n* srv:isDeploymentOf -[0..N]-> skg:research_product\n* srv:relatedResearchProduct -[0..N]-> skg:research_product\n* cito:isCitedBy -[0..N]-> skg:research_product\n* cito:isDocumentedBy -[0..N]-> skg:research_product\n* schema:keyword -[0..N]-> xsd:string\n* bido:holdsBibliometricDataInTime -[0..N]-> bido:BibliometricDataInTime\n* srv:hasVenue -[0..N]-> skg:Venue\n* schema:isAccessibleForFree -[0..1]-> xsd:boolean " .
 <https://w3id.org/skg-if/extension/srv/ontology/Service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/Service> <http://www.w3.org/2000/01/rdf-schema#label> "srv:Service" .
 # 
@@ -470,11 +503,14 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
-<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint URL" .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
 # 
-<https://schema.org/url> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:APIProfile\n\nIn SKG-IF, it is used to link to the URL(s) of the API specification document(s) (range):\n* xsd:anyURI" .
-<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
-<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#label> "schema:url (SKG-IF labels: api_specification_url)" .
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
+# 
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
+# 
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann/> .
+# 
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann/> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

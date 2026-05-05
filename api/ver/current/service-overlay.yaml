@@ -281,7 +281,7 @@ actions:
                 examples:
                    - {"en": ["UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them", "Summary"], "cs": ["UDPipe je trénovatelný nástroj pro tokenizaci, tagging, lemmatizaci a závislostní parsing CoNLL-U souborů. UDPipe je jazykově nezávislý a pro natrénování modelů využívá anotovaná data ve formátu Universal Dependencies"] }
 
-              srv_audience_byrole:
+              srv_audience_by_role:
                 description:  The audience(s) for which the service is intended to be used. This can  both express desire and/or design of the service operators. Values are defined in "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme", and should be used with prefix "sshocaudience" defined in the context.
                 type: array
                 items:

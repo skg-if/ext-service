@@ -97,7 +97,7 @@
         "eoscgeoavail:eo",
         "eoscgeoavail:pl"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "sshocaudience:dataCreator",
         "sshocaudience:dataEngineer",
         "sshocaudience:researcher"

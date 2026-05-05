@@ -42,7 +42,7 @@
       "srv_supported_language": [
         "spa"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/student",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/trainer",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/citizenScientist",

@@ -43,7 +43,7 @@
         "eng",
         "deu"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researchSupport"
       ],

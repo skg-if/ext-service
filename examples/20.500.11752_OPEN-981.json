@@ -123,7 +123,7 @@
         "eoscgeoavail:eo",
         "eoscgeoavail:it"
       ],
-      "srv_audience_byrole": [
+      "srv_audience_by_role": [
         "sshocaudience:dataEngineer",
         "sshocaudience:researcher"
       ],

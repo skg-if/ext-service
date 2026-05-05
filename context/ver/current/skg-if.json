@@ -55,7 +55,7 @@
 
     "srv_keywords": "schema:keyword",
 
-    "srv_audience_byrole":       { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:sshoc-audience/" } },
+    "srv_audience_by_role":       { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:sshoc-audience/" } },
     "srv_audience_by_jurisdiction": { "@id": "srv:audienceJurisdiction" },
 
     "is_accessible_for_free":    { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
