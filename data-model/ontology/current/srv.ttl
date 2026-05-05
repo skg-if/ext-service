@@ -29,17 +29,23 @@
 # Annotation properties
 ############################
 
-dc:date a owl:AnnotationProperty .
+dc:date a owl:AnnotationProperty ;
+    rdfs:isDefinedBy dc: .
 
-dc:description a owl:AnnotationProperty .
+dc:description a owl:AnnotationProperty ;
+    rdfs:isDefinedBy dc: .
 
-dc:rights a owl:AnnotationProperty .
+dc:rights a owl:AnnotationProperty ;
+    rdfs:isDefinedBy dc: .
 
-dc:title a owl:AnnotationProperty .
+dc:title a owl:AnnotationProperty ;
+    rdfs:isDefinedBy dc: .
 
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty ;
+    rdfs:isDefinedBy vann: .
 
-vann:preferredNamespaceUri a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty ;
+    rdfs:isDefinedBy vann: .
 
 ############################
 # Reused Classes
@@ -419,7 +425,8 @@ In SKG-IF, it is used to indicate the languages (identifiers)the Service can pro
 #not used for now
 schema:provider a owl:ObjectProperty ;
     rdfs:domain srv:Service ;
-    rdfs:range srv:FacilityPortal .
+    rdfs:range srv:FacilityPortal ;
+    rdfs:isDefinedBy schema: .
 
 
 ############################
@@ -460,7 +467,8 @@ srv:FacilityPortal a owl:Class ;
         a owl:Restriction ;
         owl:onProperty schema:provider ;
         owl:minCardinality "1"^^xsd:nonNegativeInteger
-    ] .
+    ] ;
+    rdfs:isDefinedBy srv: .
 
 #
 # special types / concepts for Service ontology    
@@ -480,11 +488,14 @@ srv:FacilityPortal a owl:Class ;
 frapo:Facility a owl:Class ;
     rdfs:label "facility"@en ;
     rdfs:comment "A place or installation built or designed to serve a specific function or provide a specific service, for example an animal breeding centre, a DNA sequencing facility or a confocal imaging laboratory."@en ;
-    rdfs:subClassOf frapo:InfrastructureEntity .
+    rdfs:subClassOf frapo:InfrastructureEntity ;
+    rdfs:isDefinedBy frapo: .
 
 srv:ResearchInfrastructure a owl:Class ;
     rdfs:label "research infrastructure" ;
-    rdfs:comment "organisation that provides facilities, resources and services for the research communities to conduct research."@en .
+    rdfs:subClassOf foaf:Organization ;
+    rdfs:comment "organisation that provides facilities, resources and services for the research communities to conduct research."@en ;
+    rdfs:isDefinedBy srv: .
 srv:isPartOfResearchInfrastructure a owl:ObjectProperty ;
    rdfs:label "srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_has_research_infrastructure)"@en ;
    rdfs:domain srv:Service ;
@@ -499,7 +510,9 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 
 srv:HostingOrganisation a owl:Class ;
    rdfs:label "hosting organisation"@en ;
-   rdfs:comment "organisation reponsible for hosting a service or infrastructure component"@en .
+   rdfs:subClassOf foaf:Organization ;
+   rdfs:comment "organisation reponsible for hosting a service or infrastructure component"@en ;
+   rdfs:isDefinedBy srv: .
 srv:hasHostingOrganisation a owl:ObjectProperty ;
    rdfs:label "srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)"@en ;
    rdfs:domain srv:Service ;
@@ -526,7 +539,8 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 srv:Portal a owl:Class ;
     rdfs:label "portal" ;
     rdfs:comment "organisation responsible for aggregating and cataloging meta data of data sets and services and supporting users search access"@en ;
-    rdfs:subClassOf dcat:Catalog .
+    rdfs:subClassOf dcat:Catalog ;
+    rdfs:isDefinedBy srv: .
 
 
 
