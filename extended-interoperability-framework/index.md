@@ -10,9 +10,6 @@ has_toc: false
 
 The acronym **`srv`** identifies this extension in the repository name (`ext-srv`), w3id.org URL paths, and ontology file names. It is also the OWL namespace prefix for new terms (`srv:camelCase`, declared as `vann:preferredNamespacePrefix` in `srv.ttl`) and the JSON-LD alias prefix for extension-specific properties (`srv_snake_case`). Properties from the core or external vocabularies carry no `srv_` prefix.
 
-## Extension-specific entities
-This extension introduces a new entity [Service] that models software applications or components providing specific functionality over a network, typically accessed through an API or web application.
-
 ## Extensions to core entities
 
 ### Organisation
@@ -23,6 +20,9 @@ New types for modeling service operations:
 ### Venue
 New type for portal functionality:
 - `srv_portal` - a portal/catalogue through which services are discoverable and accessible
+
+## Extension-specific entities
+This extension introduces a new entity [Service] that models software applications or components providing specific functionality over a network, typically accessed through an API or web application.
 
 ---
 [Service]: {% link ext-srv/extended-interoperability-framework/extension-entities/Service.md %}
