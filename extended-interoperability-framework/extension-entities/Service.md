@@ -211,13 +211,13 @@ Full form (endpoint + documentation URLs):
 
 ### `srv_supported_language`
 
-*List* (optional) if applicable the language(s) the service is able to process, values provided as ISO369-3 language codes using Lexvo.org published vocabulary
+*List* (optional): The language(s) the service is able to process, as ISO 639-3 language codes using the [Lexvo.org](http://lexvo.org/id/iso639-3/) vocabulary.
 
 ``` json
 "@context": {
-    "lexvo-iso639-3": "http://lexvo.org/id/iso639-3"
+    "lexvo-iso639-3": "http://lexvo.org/id/iso639-3/"
 },
-"srv_supported_language": ["lexvo-iso639-3/deu","lexvo-iso639-3/nld"]
+"srv_supported_language": ["lexvo-iso639-3:deu", "lexvo-iso639-3:nld"]
 ```
 
 ### `topics`

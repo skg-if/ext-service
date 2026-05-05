@@ -413,14 +413,20 @@ related but not necessarily deployed by the service.""" ;
 
 srv:supportedLanguage a owl:ObjectProperty ;
     rdfs:label "srv:supportedLanguage (SKG-IF labels: srv_supported_language)" ;
+    rdfs:comment "Values are ISO 639-3 language code IRIs from the Lexvo vocabulary (http://lexvo.org/id/iso639-3/). Example: http://lexvo.org/id/iso639-3/deu for German." ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
-        
+
 In SKG-IF, it is used to indicate the languages (identifiers)the Service can process (range):
 * lvont:Language""" ;
     rdfs:domain srv:Service ;
     rdfs:range lvont:Language ;
     rdfs:isDefinedBy srv: .
+
+lvont:Language a owl:Class ;
+    rdfs:label "Language" ;
+    rdfs:comment "A natural language, identified by an ISO 639-3 code IRI from the Lexvo vocabulary." ;
+    rdfs:isDefinedBy lvont: .
 
 #not used for now
 schema:provider a owl:ObjectProperty ;
