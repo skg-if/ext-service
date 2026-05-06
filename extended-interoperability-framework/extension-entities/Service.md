@@ -148,7 +148,7 @@ In case the service is discipline-agnostic, the string "all" should be specified
 ```
 
 ### `srv_invocation_type`
-*List* (optional): The way the service is used or called. Multiple values are possible, access rights and licenses are assumed to be the same. Values are specified by vocabulary: https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
+*List* (optional): The way the service is used or called. Multiple values are possible, access conditions are assumed to be the same. Values are specified by vocabulary: https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
 
 ```json
 "@context": {
@@ -169,7 +169,7 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 ```
 
 ### `srv_availability_geographic`
-*List* (optional): list of countries and regions where the service is made available, eg. for license reasons. Values are by the vocabulary: https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/
+*List* (optional): list of countries and regions where the service is made available, eg. for legal or contractual reasons. Values are by the vocabulary: https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/
 
 ```json
 "@context": {
