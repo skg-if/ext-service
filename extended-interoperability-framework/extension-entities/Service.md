@@ -165,7 +165,7 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 "@context": {
     "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
     },
-"srv_life_cycle_status": ["elcs:life_cycle_status_production"]
+"srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6"]
 ```
 
 ### `srv_availability_geographic`
