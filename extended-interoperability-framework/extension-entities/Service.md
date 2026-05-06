@@ -94,7 +94,7 @@ Needed for parsing purposes; fixed to `service`.
 ### `descriptions`
 *Object* (optional): The descriptions of a [Service] (multiple for multilingualism).
 
-The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
 
 ```json
 "descriptions": {
@@ -106,8 +106,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 
 
 ### `srv_audience_by_role`
-*List* (optional): The audience(s) that the service is intended to be used by
-This can both express desire and/or design of the service operators. Values are mandatory taken from 
+*List* (optional): The audience(s) that the service is intended to be used by. This can both express desire and/or design of the service operators. Values must be taken from
 the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme 
 
 ```json
@@ -126,10 +125,10 @@ the audience. Values from the EOSC Service Profile [DS_JURISDICTION](https://eos
 ```
 
 ### `disciplines`
-*List* (optional):  The disciplines to which a [Software Service] is dedicated. 
+*List* (optional): The disciplines to which this service is dedicated.
 The disciplines must be specified using the Library of Congress Classification codes, 
 available at https://id.loc.gov/authorities/classification (e.g. PA3000-PA3049 for classical literature). 
-In case a [Service] is discipline agnostic, the string "all" should be specified.
+In case the service is discipline-agnostic, the string "all" should be specified.
 
 ```json
 "disciplines": [
@@ -221,7 +220,7 @@ Full form (endpoint + documentation URLs):
 ```
 
 ### `topics`
-*List* (optional): [Topic] entities relevant for the scope of a [Service]. Each entry wraps a Topic reference via the `term` key. The Topic is identified by its `local_identifier` (preferably a Wikidata IRI) and may inline `entity_type`, `identifiers`, and human-readable `labels` for convenience.
+*List* (optional): [Topic] entities relevant for the scope of a service. Each entry wraps a Topic reference via the `term` key. The Topic is identified by its `local_identifier` (preferably a Wikidata IRI) and may inline `entity_type`, `identifiers`, and human-readable `labels` for convenience.
 
 _NOTE_: Unlike research products, services assert topics directly — no provenance or trust scores apply here.
 
@@ -262,8 +261,8 @@ _NOTE_: Unlike research products, services assert topics directly — no provena
 
 ### `srv_has_research_infrastructure`
 
-*List* (optional): Is associated with an [Organisation] that provides facilities, resources and services for the research communities to conduct research.
-_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects. Also include each organisation's `local_identifier` in `relevant_organisations` (see below).
+*List* (optional): An [Organisation] that provides facilities, resources and services for the research communities to conduct research.
+_NOTE:_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects. Also include each organisation's `local_identifier` in `relevant_organisations` (see below).
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
 "srv_has_research_infrastructure": [
@@ -287,8 +286,8 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```
 
 ### `srv_has_hosting_organisation`
-*List* (optional): Is depending on [Organisation] responsible for hosting a service or infrastructure component.
-_NOTE_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects. Also include each organisation's `local_identifier` in `relevant_organisations` (see below).
+*List* (optional): An [Organisation] responsible for hosting a service or infrastructure component.
+_NOTE:_ Each item may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand identifiers to Organisation objects. Also include each organisation's `local_identifier` in `relevant_organisations` (see below).
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
@@ -314,8 +313,8 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
 ```
 
 ### `srv_has_hosting_legal_entity`
-*String* (optional): Is the specific [Organisation] legally responsible for the service operation and publishing.
-_NOTE_ The value may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand the identifier to an Organisation object. Also include this organisation's `local_identifier` in `relevant_organisations` (see below).
+*String* (optional): The specific [Organisation] legally responsible for the service operation and publishing.
+_NOTE:_ The value may be a `local_identifier` for an Organisation or an Organisation object. API responses may expand the identifier to an Organisation object. Also include this organisation's `local_identifier` in `relevant_organisations` (see below).
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
@@ -338,7 +337,7 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
 
 ### `srv_venues`
 *List* (optional): Portals or catalogues through which the service is advertised and accessible. Each entry references a [Venue] of type "portal" (value `srv_portal`).
-_NOTE_ Each item may be a `local_identifier` for a Venue or a Venue object. API responses may expand identifiers to Venue objects.
+_NOTE:_ Each item may be a `local_identifier` for a Venue or a Venue object. API responses may expand identifiers to Venue objects.
 
 Simple form (`local_identifier`, preferred for input/storage):
 ```json
@@ -368,10 +367,10 @@ Expanded form (Venue objects, as returned by API with `embedding=true`):
 ```
 
 ### `relevant_organisations`
-*List* (optional): Generic queryable index of all [Organisation] identifiers associated with and relevant for a [Service].
+*List* (optional): Generic queryable index of all [Organisation] identifiers associated with and relevant for a service.
 Identifiers can be of local or global identifier system type e.g. ror, uri. Organisations can be given additional types: `"research_infrastructure"` and `"hosting_organisation"` to indicate their role.
 
-_NOTE_ Each item may be a plain identifier string or an Organisation object. API responses may expand identifiers to Organisation objects.
+_NOTE:_ Each item may be a plain identifier string or an Organisation object. API responses may expand identifiers to Organisation objects.
 
 For semantically typed roles use the specific `srv_has_*` properties and include their `local_identifier` here for completeness.
 
