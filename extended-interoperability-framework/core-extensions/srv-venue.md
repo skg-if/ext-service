@@ -11,9 +11,9 @@ Please note that the Service extension is still **work in progress**. Please fol
 
 # Venue extended by the Service extension
 
-The [Service] extension introduces a new type of the core [Venue] entity.
+The [Service] extension introduces a new allowed value to the `types` property of the core [Venue] entity.
 
-## Extended types
+## New allowed value to the `types` property
 
 Venues are typed by their `types` property value.
 

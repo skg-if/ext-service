@@ -19,15 +19,15 @@ Properties introduced by this extension that are not defined by an authoritative
 
 ## Extensions to core entities
 
-This extension adds new types to existing SKG-IF core entities:
+This extension adds new allowed values to the `types` property of the existing SKG-IF core entities Organisation and Venue:
 
 ### Organisation
-New types for modeling service operations:
+New allowed values to the `types` property for modeling service operations:
 - `hosting_organisation` - organisation responsible for hosting and operating a service
 - `research_infrastructure` - organisation providing facilities, resources and services for research communities
 
 ### Venue
-New type for portal functionality:
+A new allowed value to the `types` property for modeling portal functionality:
 - `srv_portal` - a portal/catalogue through which services are discoverable and accessible
 
 ## Properties

@@ -11,9 +11,9 @@ Please note that the Service extension is still **work in progress**. Please fol
 
 # Organisation extended by the Service extensions
 
-This extension adds new types to the core [Organisation] entity for modeling service operations.
+This extension adds new allowed values to the `types` property of the core [Organisation] entity for modeling service operations.
 
-## Extended types
+## New allowed values to the `types` property
 
 ### `hosting_organisation`
 
