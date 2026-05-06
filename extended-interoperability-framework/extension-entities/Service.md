@@ -46,7 +46,7 @@ Each identifier is structured as follows:
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
 
-**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `doi`, `handle`, `pmid`, `url`, `omid`, ...
+**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `doi`, `handle`, `pmid`, `url`, `omid`, ... For a complete list see [external identifiers of entities](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
 "identifiers": [
