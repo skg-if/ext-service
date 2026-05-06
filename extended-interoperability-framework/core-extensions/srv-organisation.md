@@ -9,15 +9,15 @@ nav_order: 3
 {: .highlight }
 Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
 
-# Organisation extended by the Service extensions
+# Organisation extended by the Service extension
 
-This extension adds new allowed values to the `types` property of the core [Organisation] entity for modeling service operations.
+This extension introduces two new types of Organisation for modelling service operations: "hosting organisation" and "research infrastructure". These are expressed by values `hosting_organisation` and `research_infrastructure` of the `types` property.
 
-## New allowed values to the `types` property
+## New Organisation types
 
 ### `hosting_organisation`
 
-Organisation responsible for hosting and operating a service or infrastructure component.
+A "hosting organisation" hosts and operates a service or infrastructure component.
 
 ```json
 {
@@ -32,7 +32,7 @@ Organisation responsible for hosting and operating a service or infrastructure c
 
 ### `research_infrastructure`
 
-Organisation that provides facilities, resources and services for research communities to conduct research.
+A "research infrastructure" provides facilities, resources and services for research communities.
 
 ```json
 {

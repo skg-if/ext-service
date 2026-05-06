@@ -11,17 +11,13 @@ Please note that the Service extension is still **work in progress**. Please fol
 
 # Venue extended by the Service extension
 
-The [Service] extension introduces a new allowed value to the `types` property of the core [Venue] entity.
+The [Service] extension introduces a new type of Venue for modelling portal functionality: "portal". This is expressed by the value `srv_portal` of the `types` property.
 
-## New allowed value to the `types` property
-
-Venues are typed by their `types` property value.
+## New Venue type
 
 ### `srv_portal`
 
-Venues with type `srv_portal` model a portal or catalogue through which services are discoverable and accessible.
-
-Portals aggregate and catalog metadata of services, supporting users in search and access.
+A "portal" venue aggregates and catalogs service metadata, supporting users in discovery and access.
 
 ```json
 {

@@ -19,16 +19,16 @@ Properties introduced by this extension that are not defined by an authoritative
 
 ## Extensions to core entities
 
-This extension adds new allowed values to the `types` property of the existing SKG-IF core entities Organisation and Venue:
+This extension introduces new types of the core Organisation and Venue entities, expressed by values of the `types` property:
 
 ### Organisation
-New allowed values to the `types` property for modeling service operations:
-- `hosting_organisation` - organisation responsible for hosting and operating a service
-- `research_infrastructure` - organisation providing facilities, resources and services for research communities
+New types for modelling service operations:
+- `hosting_organisation` ("hosting organisation") — organisation responsible for hosting and operating a service
+- `research_infrastructure` ("research infrastructure") — organisation providing facilities, resources and services for research communities
 
 ### Venue
-A new allowed value to the `types` property for modeling portal functionality:
-- `srv_portal` - a portal/catalogue through which services are discoverable and accessible
+A new type for modelling portal functionality:
+- `srv_portal` ("portal") — a portal/catalogue through which services are discoverable and accessible
 
 ## Properties
 
@@ -337,7 +337,7 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
 
 
 ### `srv_venues`
-*List* (optional): Portals or catalogues through which the service is advertised and accessible. Each entry references a [Venue] with type `srv_portal`.
+*List* (optional): Portals or catalogues through which the service is advertised and accessible. Each entry references a [Venue] of type "portal" (value `srv_portal`).
 _NOTE_ Each item may be a `local_identifier` for a Venue or a Venue object. API responses may expand identifiers to Venue objects.
 
 Simple form (`local_identifier`, preferred for input/storage):
@@ -369,7 +369,7 @@ Expanded form (Venue objects, as returned by API with `embedding=true`):
 
 ### `relevant_organisations`
 *List* (optional): Generic queryable index of all [Organisation] identifiers associated with and relevant for a [Service].
-Identifiers can be of local or global identifier system type e.g. ror, uri. Organisations can be given additional types: `"research_infrastructure"`, `"hosting_organisation"` and `"hosting_legal_entity"` to indicate their role.
+Identifiers can be of local or global identifier system type e.g. ror, uri. Organisations can be given additional types: `"research_infrastructure"` and `"hosting_organisation"` to indicate their role.
 
 _NOTE_ Each item may be a plain identifier string or an Organisation object. API responses may expand identifiers to Organisation objects.
 
