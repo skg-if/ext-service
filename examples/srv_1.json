@@ -39,8 +39,7 @@
         "sshocinvt:webApplication"
       ],
       "srv_life_cycle_status": [
-        "elcs:life_cycle_status_production",
-        "elcs:TRL6"
+        "elcs:life_cycle_status_production"
       ],
       "website": "https://ufal.mff.cuni.cz/udpipe",
       "srv_availability_geographic": [

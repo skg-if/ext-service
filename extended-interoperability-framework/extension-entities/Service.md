@@ -159,13 +159,13 @@ In case the service is discipline-agnostic, the string "all" should be specified
 
 ### `srv_life_cycle_status`
 *List* (optional): Indicates the development cycle and/or maturity status of the service. Values are by vocabulary:
-https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally specified in the EOSC Service Profile. Could be extended with TRL classifications.
+https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally specified in the EOSC Service Profile. TRL classifications are planned to be added to this vocabulary.
 
 ```json
 "@context": {
     "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
     },
-"srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6" ]
+"srv_life_cycle_status": ["elcs:life_cycle_status_production"]
 ```
 
 ### `srv_availability_geographic`
