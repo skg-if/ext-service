@@ -238,10 +238,6 @@ _NOTE_: Unlike research products, services assert topics directly — no provena
                 {
                     "scheme": "wikidata",
                     "value": "https://www.wikidata.org/wiki/Q8162"
-                },
-                {
-                    "scheme": "elsst",
-                    "value": "https://elsst.cessda.eu/id/6/1951407b-586e-422a-92d7-7551e93e9277"
                 }
             ],
             "labels": {
@@ -251,16 +247,39 @@ _NOTE_: Unlike research products, services assert topics directly — no provena
     },
     {
         "term": {
-            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
+            "local_identifier": "https://www.wikidata.org/wiki/Q97377656",
             "entity_type": "topic",
             "identifiers": [
                 {
                     "scheme": "wikidata",
-                    "value": "https://www.wikidata.org/wiki/Q30642"
+                    "value": "https://www.wikidata.org/wiki/Q97377656"
+                },
+                {
+                    "scheme": "elsst",
+                    "value": "https://elsst.cessda.eu/id/6/1951407b-586e-422a-92d7-7551e93e9277"
                 }
             ],
             "labels": {
-                "en": "Natural Language Processing"
+                "en": "Linguistic Analysis"
+            }
+        }
+    },
+    {
+        "term": {
+            "local_identifier": "https://www.wikidata.org/wiki/Q35395",
+            "entity_type": "topic",
+            "identifiers": [
+                {
+                    "scheme": "wikidata",
+                    "value": "https://www.wikidata.org/wiki/Q35395"
+                },
+                {
+                    "scheme": "csd-linguistic-subjects",
+                    "value": "https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/0027"
+                }
+            ],
+            "labels": {
+                "en": "Phonetics"
             }
         }
     }
