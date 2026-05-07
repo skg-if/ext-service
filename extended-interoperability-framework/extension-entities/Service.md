@@ -251,31 +251,16 @@ _NOTE_: Unlike research products, services assert topics directly — no provena
     },
     {
         "term": {
-            "local_identifier": "https://elsst.cessda.eu/id/6/da8c6947-2999-41bf-914b-9360015e85c6",
+            "local_identifier": "https://www.wikidata.org/wiki/Q30642",
             "entity_type": "topic",
             "identifiers": [
                 {
-                    "scheme": "elsst",
-                    "value": "https://elsst.cessda.eu/id/6/da8c6947-2999-41bf-914b-9360015e85c6"
+                    "scheme": "wikidata",
+                    "value": "https://www.wikidata.org/wiki/Q30642"
                 }
             ],
             "labels": {
-                "en": "Linguistic Analysis"
-            }
-        }
-    },
-    {
-        "term": {
-            "local_identifier": "https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/0027",
-            "entity_type": "topic",
-            "identifiers": [
-                {
-                    "scheme": "csd-linguistic-subjects",
-                    "value": "https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/0027"
-                }
-            ],
-            "labels": {
-                "en": "Phonetics"
+                "en": "Natural Language Processing"
             }
         }
     }
