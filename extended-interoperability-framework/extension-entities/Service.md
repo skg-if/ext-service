@@ -221,7 +221,7 @@ Full form (endpoint + documentation URLs):
 
 ### `topics`
 *List* (optional): [Topic] entities relevant for the scope of a service. Each entry wraps a Topic reference via the `term` key:
-- `local_identifier` — we recommend a Wikidata IRI; other authoritative topic vocabulary IRIs are also accepted — see the core [Topic] entity for guidance
+- `local_identifier` — we recommend a Wikidata IRI or an IRI from another authoritative topic vocabulary (e.g. ELSST, CSD Linguistic Subjects); see the core [Topic] entity for guidance
 - `identifiers` — list of scheme/value objects referencing the topic in external vocabularies
 - `labels` — multilingual object; keys are ISO 639-1 language codes, with `none` as special key when the language is unknown
 - `entity_type` — fixed to `topic`
