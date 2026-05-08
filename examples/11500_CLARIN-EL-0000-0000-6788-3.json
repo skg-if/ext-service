@@ -30,7 +30,7 @@
         "Apache-2.0"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ell"
+        "iso639-3:ell"
       ],
       "website": "https://pypi.org/project/gr-nlp-toolkit",
       "is_accessible_for_free": true,

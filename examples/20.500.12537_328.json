@@ -27,7 +27,7 @@
         "android app"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:isl"
+        "iso639-3:isl"
       ],
       "website": "https://github.com/icelandic-lt/simaromur",
       "is_accessible_for_free": true,

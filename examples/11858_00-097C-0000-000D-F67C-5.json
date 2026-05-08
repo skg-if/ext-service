@@ -28,7 +28,7 @@
         "spellchecker"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ces"
+        "iso639-3:ces"
       ],
       "website": "https://redmine.ms.mff.cuni.cz/projects/korektor",
       "is_accessible_for_free": true,

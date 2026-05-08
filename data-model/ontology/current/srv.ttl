@@ -23,7 +23,6 @@
 @prefix tvc:   <http://www.essepuntato.it/2012/04/tvc/> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix lvont: <http://lexvo.org/ontology#> .
 
 ############################
 # Annotation properties
@@ -413,20 +412,15 @@ related but not necessarily deployed by the service.""" ;
 
 srv:supportedLanguage a owl:ObjectProperty ;
     rdfs:label "srv:supportedLanguage (SKG-IF labels: srv_supported_language)" ;
-    rdfs:comment "Values are ISO 639-3 language code IRIs from the Lexvo vocabulary (http://lexvo.org/id/iso639-3/). Example: http://lexvo.org/id/iso639-3/deu for German." ;
+    rdfs:comment "Values are ISO 639-3 language code IRIs from the ACDH-CH/DARIAH vocabulary (https://vocabs.acdh.oeaw.ac.at/iso6393/). Example: https://vocabs.acdh.oeaw.ac.at/iso6393/deu for German." ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
 In SKG-IF, it is used to indicate the languages (identifiers)the Service can process (range):
-* lvont:Language""" ;
+* skos:Concept""" ;
     rdfs:domain srv:Service ;
-    rdfs:range lvont:Language ;
+    rdfs:range skos:Concept ;
     rdfs:isDefinedBy srv: .
-
-lvont:Language a owl:Class ;
-    rdfs:label "Language" ;
-    rdfs:comment "A natural language, identified by an ISO 639-3 code IRI from the Lexvo vocabulary." ;
-    rdfs:isDefinedBy lvont: .
 
 #not used for now
 schema:provider a owl:ObjectProperty ;
@@ -569,7 +563,7 @@ srv:Service a owl:Class ;
 * srv:invocationType -[0..N]-> skos:Concept 
 * srv:eoscLifeCycleStatus -[0..N]-> skos:Concept
 * srv:geographicalAvailability -[0..N]-> owl:Thing
-* srv:supportedLanguage -[0..N]-> lvont:Language
+* srv:supportedLanguage -[0..N]-> skos:Concept
 * srv:isPartOfResearchInfrastructure -[0..N]-> foaf:Organization
 * srv:hasHostingOrganisation -[0..N]-> foaf:Organization
 * srv:hasHostingLegalEntity -[0..1]-> foaf:Organization

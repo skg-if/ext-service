@@ -48,8 +48,8 @@
         "eoscgeoavail:uk"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:eng",
-        "lexvo-iso639-3:nld"
+        "iso639-3:eng",
+        "iso639-3:nld"
       ],
       "srv_deployment_of": [
         {

@@ -29,10 +29,10 @@
         "language resource"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:spa",
-        "lexvo-iso639-3:deu",
-        "lexvo-iso639-3:ces",
-        "lexvo-iso639-3:eng"
+        "iso639-3:spa",
+        "iso639-3:deu",
+        "iso639-3:ces",
+        "iso639-3:eng"
       ],
       "website": "https://ufal.mff.cuni.cz/synsemclass/synsemclass-search-tool",
       "is_accessible_for_free": true,

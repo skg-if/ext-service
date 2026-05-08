@@ -36,8 +36,8 @@
         "ru-en"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:rus",
-        "lexvo-iso639-3:eng"
+        "iso639-3:rus",
+        "iso639-3:eng"
       ],
       "srv_invocation_type": [
         "sshocinvt:restfulWebservice"

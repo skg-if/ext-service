@@ -28,7 +28,7 @@
         "Lithuanian"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:lit"
+        "iso639-3:lit"
       ],
       "website": "https://semantika.lt/",
       "is_accessible_for_free": true,

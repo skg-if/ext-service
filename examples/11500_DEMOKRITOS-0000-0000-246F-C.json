@@ -40,7 +40,7 @@
         "PartOfSpeech"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ell"
+        "iso639-3:ell"
       ],
       "website": "http://www.ellogon.org/",
       "is_accessible_for_free": true,

@@ -35,11 +35,11 @@
         "BSD-2-Clause"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:fra",
-        "lexvo-iso639-3:nld",
-        "lexvo-iso639-3:eng",
-        "lexvo-iso639-3:ell",
-        "lexvo-iso639-3:deu"
+        "iso639-3:fra",
+        "iso639-3:nld",
+        "iso639-3:eng",
+        "iso639-3:ell",
+        "iso639-3:deu"
       ],
       "website": "http://hdl.handle.net/11500/ATHENA-0000-0000-23E7-4",
       "is_accessible_for_free": true,

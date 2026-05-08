@@ -27,7 +27,7 @@
         "grapheme-to-phoneme"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:pol"
+        "iso639-3:pol"
       ],
       "website": "http://mowa.clarin-pl.eu/transcriber/",
       "is_accessible_for_free": true,

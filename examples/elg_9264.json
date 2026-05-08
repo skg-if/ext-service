@@ -37,9 +37,9 @@
         "translation"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:bre",
-        "lexvo-iso639-3:eng",
-        "lexvo-iso639-3:fra"
+        "iso639-3:bre",
+        "iso639-3:eng",
+        "iso639-3:fra"
       ],
       "is_accessible_for_free": true,
       "srv_invocation_type": [

@@ -361,9 +361,9 @@ actions:
                 description: The languages supported by the service
                 items:
                   type: string
-                  pattern: "^lexvo-iso639-3:[a-z]{3}$"
+                  pattern: "^iso639-3:[a-z]{3}$"
                 examples:
-                   - ["lexvo-iso639-3:eng", "lexvo-iso639-3:nld"]
+                   - ["iso639-3:eng", "iso639-3:nld"]
 
               srv_deployment_of:
                 type: array

@@ -36,7 +36,7 @@
         "Sentence"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:por"
+        "iso639-3:por"
       ],
       "website": "https://opennlp.apache.org/",
       "is_accessible_for_free": true,

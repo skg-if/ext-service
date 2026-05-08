@@ -34,7 +34,7 @@
         "Semantic web"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:eng"
+        "iso639-3:eng"
       ],
       "website": "https://www.prin-italia-antica.unifi.it/",
       "is_accessible_for_free": true,

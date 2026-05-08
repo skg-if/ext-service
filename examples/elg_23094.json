@@ -38,7 +38,7 @@
         "Speech to Text"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ron"
+        "iso639-3:ron"
       ],
       "srv_invocation_type": [
         "sshocinvt:restfulWebservice"

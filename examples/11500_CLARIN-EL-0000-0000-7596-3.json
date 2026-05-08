@@ -39,7 +39,7 @@
         "HateSpeechRecognition"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:eng"
+        "iso639-3:eng"
       ],
       "website": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-7596-3",
       "is_accessible_for_free": true,

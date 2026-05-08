@@ -28,8 +28,8 @@
         "neural machine translation"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:deu",
-        "lexvo-iso639-3:eng"
+        "iso639-3:deu",
+        "iso639-3:eng"
       ],
       "website": "https://hdl.handle.net/11234/1-4680",
       "is_accessible_for_free": true,

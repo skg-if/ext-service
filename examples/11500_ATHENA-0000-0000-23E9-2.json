@@ -42,7 +42,7 @@
         "DependencyTree"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ell"
+        "iso639-3:ell"
       ],
       "website": "http://hdl.handle.net/11500/ATHENA-0000-0000-23E9-2",
       "is_accessible_for_free": true,

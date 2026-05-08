@@ -29,12 +29,12 @@
         "demo"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:eng",
-        "lexvo-iso639-3:ukr",
-        "lexvo-iso639-3:deu",
-        "lexvo-iso639-3:ces",
-        "lexvo-iso639-3:rus",
-        "lexvo-iso639-3:fra"
+        "iso639-3:eng",
+        "iso639-3:ukr",
+        "iso639-3:deu",
+        "iso639-3:ces",
+        "iso639-3:rus",
+        "iso639-3:fra"
       ],
       "website": "http://lindat.mff.cuni.cz/services/moses/",
       "is_accessible_for_free": true,

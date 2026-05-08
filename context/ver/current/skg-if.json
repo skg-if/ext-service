@@ -20,8 +20,7 @@
 
     "srv":             "https://w3id.org/skg-if/extension/srv/ontology/",
     "skg":             "https://w3id.org/skg-if/ontology/",
-    "lvont":           "http://lexvo.org/ontology#",
-    "lexvo-iso639-3":  "http://lexvo.org/id/iso639-3/",
+    "iso639-3":        "https://vocabs.acdh.oeaw.ac.at/iso6393/",
     "sshopencloudvocabs": "https://vocabs.sshopencloud.eu/vocabularies/",
     "sshocaudience":   "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/",
     "sshocinvt":       "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/",
@@ -68,7 +67,7 @@
     "srv_api_endpoint":          { "@id": "dcat:endpointURL", "@type": "@id" },
     "srv_api_specification_uri": { "@id": "schema:url", "@type": "@id" },
 
-    "srv_supported_language":    { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@vocab": "http://lexvo.org/id/iso639-3/" } },
+    "srv_supported_language":    { "@id": "srv:supportedLanguage", "@type": "@vocab", "@context": { "@vocab": "https://vocabs.acdh.oeaw.ac.at/iso6393/" } },
 
     "srv_deployment_of":         { "@id": "srv:isDeploymentOf", "@type": "@id" },
 

@@ -35,7 +35,7 @@
         "Named Entity Recognition"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ces"
+        "iso639-3:ces"
       ],
       "srv_invocation_type": [
         "sshocinvt:restfulWebservice"

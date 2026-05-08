@@ -31,8 +31,8 @@
         "Italian"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:srp",
-        "lexvo-iso639-3:ita"
+        "iso639-3:srp",
+        "iso639-3:ita"
       ],
       "website": "https://github.com/rankastankovic/It-Sr-NER/",
       "is_accessible_for_free": true,

@@ -29,7 +29,7 @@
         "Syntactic analysis"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ita"
+        "iso639-3:ita"
       ],
       "website": "http://www.panacea-lr.eu",
       "is_accessible_for_free": true,

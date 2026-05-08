@@ -37,7 +37,7 @@
         "BSD-2-Clause"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ell"
+        "iso639-3:ell"
       ],
       "website": "http://speech.ilsp.gr/iplr/index.htm",
       "is_accessible_for_free": true,

@@ -28,8 +28,8 @@
         "transformer"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:rus",
-        "lexvo-iso639-3:eng"
+        "iso639-3:rus",
+        "iso639-3:eng"
       ],
       "website": "https://hdl.handle.net/11234/1-3744",
       "is_accessible_for_free": true,

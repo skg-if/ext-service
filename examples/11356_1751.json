@@ -28,7 +28,7 @@
         "graph methods"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:slv"
+        "iso639-3:slv"
       ],
       "website": "https://rsdo.slovenscina.eu/",
       "is_accessible_for_free": true,

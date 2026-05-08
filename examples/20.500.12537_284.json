@@ -27,7 +27,7 @@
         "Android"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:isl"
+        "iso639-3:isl"
       ],
       "website": "https://github.com/grammatek/simacorrect/releases/tag/v1.0.1",
       "is_accessible_for_free": true,

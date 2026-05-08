@@ -36,12 +36,12 @@
         "Text categorization"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:deu",
-        "lexvo-iso639-3:pol",
-        "lexvo-iso639-3:rus",
-        "lexvo-iso639-3:ita",
-        "lexvo-iso639-3:eng",
-        "lexvo-iso639-3:fra"
+        "iso639-3:deu",
+        "iso639-3:pol",
+        "iso639-3:rus",
+        "iso639-3:ita",
+        "iso639-3:eng",
+        "iso639-3:fra"
       ],
       "is_accessible_for_free": false,
       "srv_invocation_type": [

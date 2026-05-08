@@ -27,7 +27,7 @@
         "javascript"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:eng"
+        "iso639-3:eng"
       ],
       "website": "https://hdl.handle.net/11234/1-4669",
       "is_accessible_for_free": true,

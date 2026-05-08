@@ -35,7 +35,7 @@
         "argument"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:pol"
+        "iso639-3:pol"
       ],
       "website": "https://hdl.handle.net/11321/833",
       "is_accessible_for_free": true,

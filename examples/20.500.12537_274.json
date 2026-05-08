@@ -28,7 +28,7 @@
         "android"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:isl"
+        "iso639-3:isl"
       ],
       "website": "https://github.com/tiro-is/heyra",
       "is_accessible_for_free": true,

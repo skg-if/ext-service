@@ -31,7 +31,7 @@
         "automatic error detection"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:pol"
+        "iso639-3:pol"
       ],
       "website": "http://zil.ipipan.waw.pl/Periphraser",
       "is_accessible_for_free": true,

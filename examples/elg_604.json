@@ -37,7 +37,7 @@
         "Text-To-Speech"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:lav"
+        "iso639-3:lav"
       ],
       "srv_invocation_type": [
         "sshocinvt:restfulWebservice"

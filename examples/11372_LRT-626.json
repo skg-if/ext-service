@@ -23,8 +23,8 @@
         ]
       },
       "srv_supported_language": [
-        "lexvo-iso639-3:lit",
-        "lexvo-iso639-3:eng"
+        "iso639-3:lit",
+        "iso639-3:eng"
       ],
       "website": "http://vertimas.vdu.lt/twsas/",
       "is_accessible_for_free": true,

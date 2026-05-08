@@ -28,7 +28,7 @@
         "Italian"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ita"
+        "iso639-3:ita"
       ],
       "website": "http://www.panacea-lr.eu/system/deliverables/PANACEA_D6.2.pdf",
       "is_accessible_for_free": true,

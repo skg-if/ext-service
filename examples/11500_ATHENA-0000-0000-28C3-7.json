@@ -41,7 +41,7 @@
         "ConstituencyTree"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:eng"
+        "iso639-3:eng"
       ],
       "website": "https://opennlp.apache.org/",
       "is_accessible_for_free": true,

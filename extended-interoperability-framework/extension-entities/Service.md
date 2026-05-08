@@ -210,13 +210,13 @@ Full form (endpoint + documentation URLs):
 
 ### `srv_supported_language`
 
-*List* (optional): The language(s) the service is able to process, as ISO 639-3 language codes using the [Lexvo.org](http://lexvo.org/id/iso639-3/) vocabulary.
+*List* (optional): The language(s) the service is able to process, as ISO 639-3 language codes. Values are CURIEs using the `iso639-3:` prefix, which resolves to the [ACDH-CH/DARIAH ISO 639-3 vocabulary](https://vocabs.acdh.oeaw.ac.at/iso6393/) (hosted by the Austrian Academy of Sciences on ACONET infrastructure).
 
 ``` json
 "@context": {
-    "lexvo-iso639-3": "http://lexvo.org/id/iso639-3/"
+    "iso639-3": "https://vocabs.acdh.oeaw.ac.at/iso6393/"
 },
-"srv_supported_language": ["lexvo-iso639-3:deu", "lexvo-iso639-3:nld"]
+"srv_supported_language": ["iso639-3:deu", "iso639-3:nld"]
 ```
 
 ### `topics`

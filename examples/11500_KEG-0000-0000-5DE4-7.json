@@ -40,7 +40,7 @@
         "CC-BY-NC-SA-4.0"
       ],
       "srv_supported_language": [
-        "lexvo-iso639-3:ell"
+        "iso639-3:ell"
       ],
       "website": "http://www.greek-language.gr/certification/readability/index.html",
       "is_accessible_for_free": true,
