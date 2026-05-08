@@ -22,7 +22,7 @@
         }
       ],
       "name": "Aalto-kaldi-align: Forced aligner EN",
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Tool for matching speech signal and its orthographic transcription. The original tool is created by Juho Leinonen from Aalto University (see Documentation and Landing page for further information)."
         ]

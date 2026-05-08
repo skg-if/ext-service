@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/20.500.11752/OPEN-981"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "It-Sr-NER tool is a CLARIN compatible NER web service for parallel texts with case study on Italian and Serbian; it can be used for recognizing and classifying named entities in bilingual natural language texts. Input parallel texts should be TMX (Translation Memory eXchange) files, e.g. Sr-It. It-Sr-NER can recognize six NER classes: demonyms (DEMO), works of art (WORK), person names (PERS), places (LOC), events (EVENT) and organisations (ORG). The service can also be used for monolingual text NER annotation for available spaCy NER models. It-Sr-NER uses a CNN architecture within the spaCy tool and Named Entity linking with Wikidata using spaCyOpenTapioca.\r\n\r\nFor further details:\r\n API usage is described in: http://ners.jerteh.rs/4api \r\nA Postman example is available at https://github.com/rankastankovic/It-Sr-NER/blob/main/static/Postman_call_ners-mono.PNG"
         ]

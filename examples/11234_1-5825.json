@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11234/1-5825"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "This package includes Czech-to-Ukrainian translation model adapted for the educational domain. The model is exported into the TensorFlow Serving format (using Tensor2tensor version 1.6.6), so it can be used in the Charles Translator service (https://translator.cuni.cz) and in the web portal Škola s nadhledem. This model was developed within the EdUKate project, which aims to help mitigate language barriers between non-Czech-speaking children in the Czech Republic and the education in the Czech school system. The project focuses on the development and dissemination of multilingual digital learning materials for students in primary and secondary schools."
         ]

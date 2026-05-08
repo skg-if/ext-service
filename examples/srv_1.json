@@ -17,7 +17,7 @@
         }
       ],
       "entity_type": "service",
-      "descriptions": {
+      "srv_descriptions": {
         "en": [
           "UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them",
           "Summary"

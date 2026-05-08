@@ -91,13 +91,13 @@ Needed for parsing purposes; fixed to `service`.
     This form is superseded by the flat list above. -->
 
 
-### `descriptions`
+### `srv_descriptions`
 *Object* (optional): The descriptions of a [Service] (multiple for multilingualism).
 
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
 
 ```json
-"descriptions": {
+"srv_descriptions": {
     "en": ["UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them", "Summary"],
     "cs": ["UDPipe je trénovatelný nástroj pro tokenizaci, tagging, lemmatizaci a závislostní parsing CoNLL-U souborů. UDPipe je jazykově nezávislý a pro natrénování modelů využívá anotovaná data ve formátu Universal Dependencies"],
     "none": ["ontaligestring"]

@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11234/1-1451"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "An interactive web demo of selected ÚFAL MT systems.",
           "FP7-ICT-2011-7-288487 MosesCore"

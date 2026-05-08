@@ -25,7 +25,7 @@
       "other_names": [
         "Tilde TTS LV Child"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Tilde has worked on spoken language processing since the late 1990s. The special attention is paid to data sparseness problem that is typical for morphologically rich languages and to novel methods for data acquisition from the web. Tilde continues research on speech recognition by adapting developed technologies for new languages and for specific domains."
         ]

@@ -28,7 +28,7 @@
       "other_names": [
         "PyTorch"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "eng": [
           "Base model: microsoft/trocr-base-handwritten\n\nTrain Lines: 292'997\nEval Lines: 7'513\nTest Lines: 15'817\n\nEpochs: 19.66 / 20\nEval CER: 0.02827\nTest CER: 0.02655\n\nFinetuned on Kurrent-dataset, containing:\n\nMaterial from the State Archives of Zurich (\"Regierungsratsprotokolle\"), provided by the State Archives of Zurich\nLecture notes of Humboldt Lectures, provided by the Berlin-Brandenburgian Academy of Sciences\nDiary of Eugen Huber, provided by the University of Zurich\nHandwritting and Copies by and of Gottfried Semper\nKonzilsprotokolle, University of Greifswald (19th century)\nas well as many other smaller collections/examples\n\nThe model has not been extensively tested. Potential biases are still to be identified."
         ],

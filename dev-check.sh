@@ -455,7 +455,7 @@ if rp_m:
 MD_STRUCTURAL = {"local_identifier", "entity_type", "related_products"}
 
 # ── Properties exempt from single/list check (e.g. language-map objects) ──────
-CARDINALITY_LIST_EXEMPT = {"descriptions"}  # @language container: Object in JSON, [0..N] in RDF
+CARDINALITY_LIST_EXEMPT = {"srv_descriptions"}  # @language container: Object in JSON, [0..N] in RDF
 
 # ── Check A: Ontology properties absent from Service.md ──────────────────────
 missing_in_md = sorted(a for a in ont_props if a not in md_props)

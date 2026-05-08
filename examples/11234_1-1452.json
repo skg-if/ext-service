@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11234/1-1452"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "An interactive web demo for querying selected ÚFAL and LINDAT corpora. LINDAT/CLARIN KonText is a fork of ÚČNK KonText (https://github.com/czcorpus/kontext, maintained by Tomáš Machálek) that contains some modifications and additional features. Kontext, in turn, is a fork of the Bonito 2.68 python web interface to the corpus management tool Manatee (http://nlp.fi.muni.cz/trac/noske, created by Pavel Rychlý)."
         ]

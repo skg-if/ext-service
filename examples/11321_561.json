@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11321/561"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Periphraser is a tool for storing and presenting knowledge base of conventionalized periphrastic nominal expressions (i.e. phrases headed by a noun) together with their textually attested realizations. For instance, the database entry for the phrase ,,Robert Lewandowski'' in the demo for Polish will include the phrase ,,the Polish international'' while ,,pediatrics'' will be featured as ,,medical care for children''. It allows contacting with database using REST API as well as exporting it to XML or CSV format. For Polish language, it also provides some more complex mechanisms like: automatic semantic and syntactic normalization, errors autodetection (also based on NKJP frequency and amount of results returned by the web browser), and simple interface for commenting and marking possibly wrong entries or ones needing improvement."
         ]

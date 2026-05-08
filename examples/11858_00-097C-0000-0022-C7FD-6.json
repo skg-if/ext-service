@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11858/00-097C-0000-0022-C7FD-6"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Simple web build on the top of the PML Tree Query service."
         ]

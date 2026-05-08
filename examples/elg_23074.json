@@ -25,7 +25,7 @@
       "other_names": [
         "HENS-AGE"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "HENSOLDT ANALYTICS MediaMiningIndexer AGE - Age detection provides a speaker age information that can be detected on audio recording."
         ]

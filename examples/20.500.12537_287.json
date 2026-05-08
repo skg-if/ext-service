@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/20.500.12537/287"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "ENGLISH:\r\nThe Símarómur application provides an Icelandic TTS application for the Android TTS service. The application provides access to voices over network of the Tiro TTS API and on-device voices that are bundled via assets. The app offers connections to most of the voices that have been developed within the LT program at this time. The voices themselves and the TTS service were developed at Reykjavik University and at Tiro ehf. (see e.g. http://hdl.handle.net/20.500.12537/268)\r\n\r\n\r\nÍSLENSKA:\r\nSímarómur er Android app sem gerir notendum kleift að nota íslenskan talgervil í símunum, t.d. sem skjálesara. Símarómur býður upp á tengingar við flestar þær raddir sem þróaðar hafa verið innan Máltækniáætlunarinnar, annars vegar gegnum vefþjónustu Tiro og hins vegar sem raddir sem keyra á símanum sjálfum. Raddirnar sem Símarómur notar voru þjálfaðar hjá Háskólanum í Reykjavík, Tiro ehf. þróaði TTS-vefþjónustuna sem Símarómur notar (sjá http://hdl.handle.net/20.500.12537/268)"
         ]

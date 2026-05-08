@@ -25,7 +25,7 @@
       "other_names": [
         "HENS-ASR-ro_ro"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "HENSOLDT ANALYTICS MediaMiningIndexer ASR - automatic speech recognition speech-to-text engine that provides transcription of audio with spoken sentences into text with timestamps and confidence scores, in a variety of languages."
         ]

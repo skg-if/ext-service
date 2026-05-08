@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11356/1751"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "A text summarisation task aims to convert a longer text into a shorter text while preserving the essential information of the source text. In general, there are two approaches to text summarization. The extractive approach simply rewrites the most important sentences or parts of the text, whereas the abstractive approach is more similar to human-made summaries. We release 5 models that cover extractive, abstractive, and hybrid types:\r\n\r\nMetamodel: a neural model based on the Doc2Vec document representation that suggests the best summariser.\r\nGraph-based model: unsupervised graph-based extractive approach that returns the N most relevant sentences.\r\nHeadline model: a supervised abstractive approach (T5 architecture) that returns returns headline-like abstracts.\r\nArticle model: a supervised abstract approach (T5 architecture) that returns short summaries.\r\nHybrid-long model: unsupervised hybrid (graph-based and transformer model-based) approach that returns short summaries of long texts.\r\n\r\nDetails and instructions to run and train the models are available at https://github.com/clarinsi/SloSummarizer. \r\n\r\nThe web service with a demo is available at https://slovenscina.eu/povzemanje."
         ]

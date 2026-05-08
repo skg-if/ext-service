@@ -25,7 +25,7 @@
       "other_names": [
         "LS NMT EN-SV"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Neural machine translation from English to Swedish (Marian NMT, Lingsoft)."
         ]

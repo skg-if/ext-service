@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11234/1-3744"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "En-Ru translation models, exported via TensorFlow Serving, available in the Lindat translation service (https://lindat.mff.cuni.cz/services/translation/).\r\n\r\nModels are compatible with Tensor2tensor version 1.6.6.\r\n\r\nFor details about the model training (data, model hyper-parameters), please contact the archive maintainer.\r\n\r\nEvaluation on newstest2020 (BLEU):\r\nen->ru: 18.0\r\nru->en: 30.4\r\n(Evaluated using multeval: https://github.com/jhclark/multeval)"
         ]

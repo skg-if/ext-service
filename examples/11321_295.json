@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11321/295"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "This archive contains the source code of the Polish grapheme-to-phoneme conversion tool and the webservice located at http://mowa.clarin-pl.eu/transcriber/"
         ]

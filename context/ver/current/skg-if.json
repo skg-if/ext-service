@@ -46,9 +46,9 @@
     "related_products":       "@nest",
 
     "_comment3": "### aliases unique for the service extension",
-    "_comment3_descriptions": "### 'descriptions' follows the core pattern of 'titles'/'abstracts' (language-map, plural key) — fills a gap core left with its singular xsd:string 'description'",
+    "_comment3_descriptions": "### 'srv_descriptions' follows the core pattern of 'titles'/'abstracts' (language-map, plural key) — fills a gap core left with its singular xsd:string 'description'; prefixed srv_ per extension convention; a core-level 'descriptions' may be introduced later",
 
-    "descriptions":  { "@id": "dcterms:description", "@container": "@language" },
+    "srv_descriptions":  { "@id": "dcterms:description", "@container": "@language" },
     "is_cited_by":   { "@id": "cito:isCitedBy", "@type": "@vocab", "@nest": "related_products" },
 
     "TODO_WHEN_MADE_AVAILABLE eosc_service_profile": "https://github.com/EOSC-PLATFORM/service-profile/tree/4.0/",

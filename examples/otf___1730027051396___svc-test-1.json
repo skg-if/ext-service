@@ -18,7 +18,7 @@
           "value": "https://example.org/test-service"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "en": [
           "A minimal service record created to test the on-the-fly local_identifier form in the SKG-IF ext-srv API."
         ]

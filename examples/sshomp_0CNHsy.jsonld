@@ -28,7 +28,7 @@
       "other_names": [
         "Search tool for word examples"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "eng": [
           "Palabras TIP is a Digital Humanities tool that helps find words with specific characteristics. Using filters, you can search for words based on the position and content of their characters, as well as their morphological, syllabic, and grammatical features."
         ]

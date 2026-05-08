@@ -25,7 +25,7 @@
       "other_names": [
         "OPUS-MT eng+fra-bre"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Machine translation from English/French to Breton using neural networks (HelsinkiNLP OPUS-MT)."
         ]

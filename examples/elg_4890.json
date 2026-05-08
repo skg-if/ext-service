@@ -25,7 +25,7 @@
       "other_names": [
         "CUNI_Translation-T2T-ru-en"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Transformer ru-en translation model performs automatic translation of raw text from ru to en"
         ]

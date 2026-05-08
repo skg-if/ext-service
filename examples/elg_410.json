@@ -25,7 +25,7 @@
       "other_names": [
         "CUNI_NameTag-cs"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Identify named entities (like personal names, organizations, locations etc.) in Czech text."
         ]

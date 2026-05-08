@@ -25,7 +25,7 @@
       "other_names": [
         "gate-news-genre-classifier"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "This multilingual classifier is capable of identifying news genre in 104 languages, but it will perform the best on the six languages for which it was trained on: English, French, German, Italian, Polish and Russian. The classifier is based on our submission to the SemEval 2023 Task 3, where it performed the best on English data. The classifier recognises 3 news genre categories: Opinionated News Objective reporting Satire"
         ]

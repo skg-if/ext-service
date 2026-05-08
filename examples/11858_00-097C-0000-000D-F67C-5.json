@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11858/00-097C-0000-000D-F67C-5"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Statistical spell- and (occasional) grammar-checker. There are three versions: a unix command line utility and an OS X SpellServer with a System Service, that integrates with native OS X GUI applications, and a web service run by Lindat-Clarin, that can be used either through a web form in a browser, or by web applications using API.",
           "The LINDAT-CLARIN project (LM2010013), fully supported by TheMinistry of Education, Sports and Youth of The Czech Republic under the programme LM of \"Large Infrastructures\""

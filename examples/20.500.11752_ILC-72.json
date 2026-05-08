@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/20.500.11752/ILC-72"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Freeling IT is a web service that performs sentence splitting, tokenization, part-of-speech tagging, morphological analysis and lemmatization on Italian texts only. It was originally deployed within the EU-FP7-STREP PANACEA project (www.panacea-lr.eu) and implements the Freeling 2.1 libraries with no modification of the original code (which is available at http://devel.cpl.upc.edu/freeling/downloads?order=time&desc=1).\r\nFor a description of the Freeling tool see Lluís Padró and Miquel Collado and Samuel Reese and Marina Lloberes and Irene Castellón. FreeLing 2.1: Five Years of Open-Source Language Processing Tools Proceedings of 7th Language Resources and Evaluation Conference (LREC 2010), ELRA La Valletta, Malta. May, 2010."
         ]

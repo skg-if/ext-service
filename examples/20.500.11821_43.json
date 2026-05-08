@@ -17,7 +17,7 @@
           "value": "http://hdl.handle.net/20.500.11821/43"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Speech to text automatic transcriber for Lithuanian is a containerized application implemented into 17 containers. It covers four areas: administrative, legal, medical and general spoken language. For the installation of Transcriber, we recommend the installation of Docker and Docker Compose.  Demo service is provided at \r\nhttps://semantika.lt/Analysis/Transcriber, while IT solutions can be found at https://semantika.lt/Help/Info/Solutions. The transcription result is a set of files containing the same, but differently formatted information: plain text, a WebVTT format file (for subtitling purposes) and a file with data about transcription synchronization with the audio record. This latter file is intended for convenient editing of an audio-synchronized transcription. A transcription editor for this purpose can be found (http://semantikadocker.vdu.lt/files/transcription-editor-multi.zip)."
         ]

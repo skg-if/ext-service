@@ -25,7 +25,7 @@
       "other_names": [
         "UEDIN-MT-EnDe"
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "A machine translation (MT) service for English-to-German translation based on the Marian machine translation framework. The translation model is a basic transformer model trained on ca 13.3M sentence pairs using Marian NMT"
         ]

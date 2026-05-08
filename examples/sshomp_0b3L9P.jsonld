@@ -25,7 +25,7 @@
           "value": "https://marketplace.sshopencloud.eu/tool-or-service/0b3L9P"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "eng": [
           "Online collections of Polish cultural and scientific institutions with more than 8.4 million objects.\n\nObjectives and content: Polish Digital Libraries Federation is a database which aggregates data about on-line collections of Polish memory institutions. Currently the database contains information about over 4 million records from over a hundred of Polish on-line services. Each object is described with metadata record (extended Dublin Core) and a link to a website on which the object is accessible. The database offers flexible searching and filtering possibilities and can be accessed via API. Polish Digital Libraries Federation is the main Polish metadata aggregator for Europeana.\n\nTargeted public: Researchers and general public interested in cultural heritage collections from Polish libraries, museums and archives, which are available on-line."
         ],

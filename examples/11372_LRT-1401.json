@@ -17,7 +17,7 @@
           "value": "https://hdl.handle.net/11372/LRT-1401"
         }
       ],
-      "descriptions": {
+      "srv_descriptions": {
         "none": [
           "Format conversion service: a command line tool for applying XSLT stylesheets to XML documents"
         ]
