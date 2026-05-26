@@ -14,6 +14,7 @@
 @prefix frapo: <http://purl.org/spar/frapo/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix pro:   <http://purl.org/spar/pro/> .
 @prefix pso:   <http://purl.org/spar/pso/> .
@@ -71,6 +72,13 @@ skg:Venue a owl:Class ;
 
 # ────────────────────────────────────────────────────────────────────────────────────────────────
 
+datacite:Identifier a owl:Class ;
+    rdfs:label "datacite:Identifier" ;
+    dc:description """The properties that can be used with this class are:
+* datacite:usesIdentifierScheme -[1]-> datacite:IdentifierScheme
+* literal:hasLiteralValue -[1]-> rdfs:Literal""" ;
+    rdfs:isDefinedBy datacite: .
+
 datacite:IdentifierScheme a owl:Class ;
     rdfs:label "datacite:IdentifierScheme" ;
     rdfs:comment "No property list: instances are remote DataCite scheme IRIs; SHACL cannot validate remote vocabulary membership." ;
@@ -125,6 +133,42 @@ skos:ConceptScheme a owl:Class ;
 # Reused Properties
 ############################
 
+datacite:hasIdentifier a owl:ObjectProperty ;
+    rdfs:label "datacite:hasIdentifier (SKG-IF labels: identifiers)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* datacite:Identifier""" ;
+    rdfs:comment "Objects representing external identifiers for the Service." ;
+    rdfs:domain srv:Service ;
+    rdfs:range datacite:Identifier ;
+    rdfs:isDefinedBy datacite: .
+
+datacite:usesIdentifierScheme a owl:ObjectProperty ;
+    rdfs:label "datacite:usesIdentifierScheme (SKG-IF labels: scheme)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* datacite:Identifier
+
+In SKG-IF, it is used to link to entities belonging to the following classes (range):
+* datacite:IdentifierScheme""" ;
+    rdfs:comment "Links a datacite:Identifier node to its scheme; values are datacite: named individual IRIs (e.g. datacite:doi, datacite:handle)." ;
+    rdfs:domain datacite:Identifier ;
+    rdfs:range datacite:IdentifierScheme ;
+    rdfs:isDefinedBy datacite: .
+
+literal:hasLiteralValue a owl:DatatypeProperty ;
+    rdfs:label "literal:hasLiteralValue (SKG-IF labels: value)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* datacite:Identifier
+
+In SKG-IF, it is used to link to entities belonging to the following data types (range):
+* rdfs:Literal""" ;
+    rdfs:comment "The string value of the external identifier." ;
+    rdfs:domain datacite:Identifier ;
+    rdfs:range rdfs:Literal ;
+    rdfs:isDefinedBy literal: .
+
 skos:inScheme a owl:ObjectProperty ;
     rdfs:label "skos:inScheme (SKG-IF labels: defined_in)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
@@ -138,13 +182,13 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
     rdfs:isDefinedBy skos: .
 
 dcat:endpointURL a owl:ObjectProperty ;
-    rdfs:label "endpoint URL" ;
+    rdfs:label "dcat:endpointURL (SKG-IF labels: srv_api_endpoint)" ;
     rdfs:domain srv:APIProfile ;
     rdfs:range rdfs:Resource ;
     rdfs:isDefinedBy dcat: .
 
 schema:url a owl:ObjectProperty ;
-    rdfs:label "schema:url (SKG-IF labels: api_specification_url)" ;
+    rdfs:label "schema:url (SKG-IF labels: srv_api_specification_uri)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:APIProfile
 
@@ -155,7 +199,7 @@ In SKG-IF, it is used to link to the URL(s) of the API specification document(s)
     rdfs:isDefinedBy schema: .
 
 dcterms:conformsTo a owl:ObjectProperty ;
-    rdfs:label "dcterms:conformsTo (SKG-IF labels: conformsTo)" ;
+    rdfs:label "dcterms:conformsTo (SKG-IF labels: srv_api_profile)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 
 * srv:Service
@@ -167,14 +211,14 @@ In SKG-IF, it is used to link a Service to an APIProfile instance describing end
     rdfs:isDefinedBy dcterms: .
 
 dcterms:description a owl:DatatypeProperty ;
-    rdfs:label "dcterms:description (SKG-IF labels: description)" ;
+    rdfs:label "dcterms:description (SKG-IF labels: srv_descriptions)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
 In SKG-IF, it is used to link to entities belonging to the following data types (range):
-* xsd:string""" ;
+* rdfs:langString""" ;
     rdfs:domain srv:Service ;
-    rdfs:comment "Describe the type of Service and its function." ;
+    rdfs:comment "Descriptions of the Service, supporting multilinguality via a language-keyed map (ISO 639-1 codes; key 'none' for language-unknown). Aliased as srv_descriptions following the core pattern of titles/abstracts. A core-level 'descriptions' alias may be proposed in a future revision of the core ontology." ;
     rdfs:isDefinedBy dcterms: .
 
 dcterms:relation a owl:ObjectProperty ;
@@ -186,10 +230,6 @@ dcterms:relation a owl:ObjectProperty ;
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * foaf:Organization""" ;
     rdfs:comment """Generic queryable index of all organisations associated with a Service. The specific properties srv:hasHostingOrganisation, srv:hasHostingLegalEntity, and srv:isPartOfResearchInfrastructure are semantically narrower and are intended to be declared rdfs:subPropertyOf dcterms:relation once the ontology is finalised. Until those subproperty axioms are added, data producers must explicitly copy the local_identifier of each organisation referenced in those specific properties into this field, so that generic organisation queries against relevant_organisations remain complete.""" ;
-    rdfs:isDefinedBy dcterms: .
-
-dcterms:requires a owl:ObjectProperty ;
-    rdfs:label "dcterms:requires (SKG-IF labels: requires)" ;
     rdfs:isDefinedBy dcterms: .
 
 cito:isCitedBy a owl:ObjectProperty ;
@@ -247,7 +287,7 @@ bido:withBibliometricData a owl:ObjectProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * fabio:SubjectTerm""" ;
-    rdfs:comment "The identifier of a Topic relevant for the Service." ;
+    rdfs:comment "Links a bido:BibliometricDataInTime wrapper node to the fabio:SubjectTerm (Topic) it carries." ;
     rdfs:domain bido:BibliometricDataInTime ;
     rdfs:range fabio:SubjectTerm ;
     rdfs:isDefinedBy bido: .
@@ -260,7 +300,7 @@ dcterms:subject a owl:ObjectProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * owl:Thing""" ;
-    rdfs:comment "The disciplines for which a Service, Data source is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at https://id.loc.gov/authorities/classification (e.g. `PA3000-PA3049` for classical literature). In case a Data source is discipline agnostic, the string `all` should be specified." ;
+    rdfs:comment "Library of Congress Classification code IRI for the discipline of the Service. Use the 'all' shortcut (→ loc:classification) for discipline-agnostic services." ;
     rdfs:isDefinedBy dcterms: .
 
 foaf:name a owl:DatatypeProperty ;
@@ -274,6 +314,17 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     rdfs:domain srv:Service ;
     rdfs:range rdfs:Literal ;
     rdfs:isDefinedBy foaf: .
+
+schema:isAccessibleForFree a owl:DatatypeProperty ;
+    rdfs:label "schema:isAccessibleForFree (SKG-IF labels: is_accessible_for_free)" ;
+    dc:description """In SKG-IF, it is used in the following classes (domain):
+* srv:Service
+
+In SKG-IF, it is used to link to entities belonging to the following data types (range):
+* xsd:boolean""" ;
+    rdfs:domain srv:Service ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy schema: .
 
 schema:keyword a owl:DatatypeProperty ;
     rdfs:label "schema:keyword (SKG-IF labels: srv_keywords)" ;
@@ -296,10 +347,6 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 * foaf:Document""" ;
     rdfs:isDefinedBy foaf: .
 
-skos:inScheme a owl:ObjectProperty ;
-    rdfs:label "skos:inScheme (SKG-IF labels: defined_in)" ;
-    rdfs:isDefinedBy skos: .
-
 skos:prefLabel a owl:DatatypeProperty ;
     rdfs:label "skos:prefLabel (SKG-IF labels: labels)" ;
     rdfs:isDefinedBy skos: .
@@ -319,7 +366,7 @@ srv:audienceJurisdiction a owl:DatatypeProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following data types (range):
 * xsd:string""" ;
-    rdfs:comment "The type of the audience based on the Jurisdiction vocabulary: pool of users the Service is intended to serve. Values align with the SKG-IF core audience vocabulary: Global, National, Regional, Institution, Research Infrastructure, e-Infrastructure (EOSC Service Profile DS_JURISDICTION: https://eosc-service-profile.readthedocs.io/en/5.0/_vocabularies/DS_JURISDICTION.html)." ;
+    rdfs:comment "Geographic or administrative jurisdiction of the intended audience. Values are plain strings; refer to the EOSC Service Profile DS_JURISDICTION vocabulary for the recommended value set." ;
     rdfs:domain srv:Service ;
     rdfs:range xsd:string ;
     rdfs:isDefinedBy srv: .
@@ -339,7 +386,7 @@ Plain string values are treated as local_identifier cross-references to skg:rese
        a owl:Class ;
        owl:unionOf ( fabio:Software skg:research_product)
     ] ;
-    rdfs:comment "A identifier for the software or software research product." ;
+    rdfs:comment "Links a Service to the software it deploys or instantiates; range is fabio:Software or skg:research_product (type software)." ;
     rdfs:isDefinedBy srv: .
 
 srv:geographicalAvailability a owl:ObjectProperty ;
@@ -436,16 +483,10 @@ schema:provider a owl:ObjectProperty ;
 srv:APIProfile a owl:Class ;
     rdfs:label "API Profile" ;
     dc:description """A concrete API profile or specification that pairs service endpoints with (possibly) several API standards. The properties that can be used with this class are:
-* dcat:endpointURL -[1]-> rdfs:Resource
+* dcat:endpointURL -[0..N]-> rdfs:Resource
 * schema:url -[0..N]-> foaf:Document """ ;
 
     rdfs:subClassOf dcterms:Standard ;
-    # Require that instances have an API endpoint; spec document URL is optional
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty dcat:endpointURL ;
-        owl:cardinality "1"^^xsd:nonNegativeInteger
-    ] ;
     rdfs:isDefinedBy srv: .
 
 srv:FacilityPortal a owl:Class ;
@@ -455,7 +496,7 @@ srv:FacilityPortal a owl:Class ;
 * skos:prefLabel -[1..N]-> rdfs:Literal
 * skos:altLabel -[0..N]-> rdfs:Literal
 """ ;
-    rdfs:comment "organizational facility that operates services and provides portal access to them" ;
+    rdfs:comment "A web portal operated by a research facility through which access to its services is provided; subclass of schema:WebSite, foaf:Organization, and dcat:Catalog." ;
     rdfs:subClassOf schema:WebSite , foaf:Organization, dcat:Catalog ;
     # Require that instances have a API endpoint and a spec document
     rdfs:subClassOf [
@@ -487,14 +528,14 @@ srv:FacilityPortal a owl:Class ;
 #
 frapo:Facility a owl:Class ;
     rdfs:label "facility"@en ;
-    rdfs:comment "A place or installation built or designed to serve a specific function or provide a specific service, for example an animal breeding centre, a DNA sequencing facility or a confocal imaging laboratory."@en ;
+    rdfs:comment "A place or installation built or designed to serve a specific function or provide a specific service, for example an animal breeding centre, a DNA sequencing facility or a confocal imaging laboratory." ;
     rdfs:subClassOf frapo:InfrastructureEntity ;
     rdfs:isDefinedBy frapo: .
 
 srv:ResearchInfrastructure a owl:Class ;
     rdfs:label "research infrastructure" ;
     rdfs:subClassOf foaf:Organization ;
-    rdfs:comment "organisation that provides facilities, resources and services for the research communities to conduct research."@en ;
+    rdfs:comment "Organisation that provides facilities, resources and services for research communities to conduct research." ;
     rdfs:isDefinedBy srv: .
 srv:isPartOfResearchInfrastructure a owl:ObjectProperty ;
    rdfs:label "srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_has_research_infrastructure)"@en ;
@@ -505,13 +546,13 @@ srv:isPartOfResearchInfrastructure a owl:ObjectProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * foaf:Organization (type: research_infrastructure)""" ;
-   rdfs:comment "is part of research infrastructure organisation"@en ;
+   rdfs:comment "Links a Service to the research infrastructure (foaf:Organization typed research_infrastructure) it is part of." ;
    rdfs:isDefinedBy srv: .
 
 srv:HostingOrganisation a owl:Class ;
    rdfs:label "hosting organisation"@en ;
    rdfs:subClassOf foaf:Organization ;
-   rdfs:comment "organisation reponsible for hosting a service or infrastructure component"@en ;
+   rdfs:comment "Organisation responsible for operating and hosting a Service or infrastructure component." ;
    rdfs:isDefinedBy srv: .
 srv:hasHostingOrganisation a owl:ObjectProperty ;
    rdfs:label "srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)"@en ;
@@ -522,7 +563,7 @@ srv:hasHostingOrganisation a owl:ObjectProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * foaf:Organization (type: hosting_organisation)""" ;
-   rdfs:comment "service is hosted by"@en ;
+   rdfs:comment "Links a Service to its hosting organisation (foaf:Organization typed hosting_organisation)." ;
    rdfs:isDefinedBy srv: .
 srv:hasHostingLegalEntity a owl:ObjectProperty ;
    rdfs:label "srv:hasHostingLegalEntity (SKG-IF labels: srv_has_hosting_legal_entity)"@en ;
@@ -533,12 +574,12 @@ srv:hasHostingLegalEntity a owl:ObjectProperty ;
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * foaf:Organization""" ;
-   rdfs:comment "service associated legally responsible hosting organisation (legal entity)"@en ;
+   rdfs:comment "Links a Service to the legally responsible hosting entity (foaf:Organization); use for formal accountability, e.g. EOSC hostingLegalEntity." ;
    rdfs:isDefinedBy srv: .
 
 srv:Portal a owl:Class ;
     rdfs:label "portal" ;
-    rdfs:comment "organisation responsible for aggregating and cataloging meta data of data sets and services and supporting users search access"@en ;
+    rdfs:comment "A portal or catalogue through which a Service is advertised and made accessible; subclass of dcat:Catalog." ;
     rdfs:subClassOf dcat:Catalog ;
     rdfs:isDefinedBy srv: .
 

@@ -140,7 +140,7 @@ In case the service is discipline-agnostic, the string "all" should be specified
 ```
 
 ### `is_accessible_for_free`
-*Boolean* (optional): A property to signal that the Service is accessible for free.
+*Boolean* (optional): Flag indicating whether the Service is accessible for free (`true`) or subject to access restrictions or payment (`false`). If omitted, accessibility status is not specified.
 
 ``` json
 
@@ -187,20 +187,20 @@ https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally s
 ```
 
 ### `srv_api_profile`
-*Object* (optional): Endpoint and documentation URLs for the service API. At least one of `dcat:endpointURL` or `schema:url` should be provided.
+*Object* (optional): Endpoint and documentation URLs for the service API. At least one of `srv_api_endpoint` or `srv_api_specification_uri` should be provided.
 
 Minimal form (documentation URL only):
 ```json
 "srv_api_profile": {
-    "schema:url": "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
+    "srv_api_specification_uri": "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php"
 }
 ```
 
 Full form (endpoint + documentation URLs):
 ```json
 "srv_api_profile": {
-    "dcat:endpointURL": ["https://lindat.mff.cuni.cz/services/udpipe/api/process"],
-    "schema:url": [
+    "srv_api_endpoint": ["https://lindat.mff.cuni.cz/services/udpipe/api/process"],
+    "srv_api_specification_uri": [
         "https://lindat.mff.cuni.cz/services/udpipe/",
         "https://lindat.mff.cuni.cz/services/udpipe/api-reference.php",
         "https://ufal.mff.cuni.cz/udpipe"
@@ -451,13 +451,12 @@ Applicable relation types:
 "srv_keywords": ["https://www.wikidata.org/wiki/Q30642","parsing"]
 ``` 
 
-### `srv_deployment_of`                                                                           
-  *List* (optional) The software that this service is a running instance of.                        
-                                                                                                    
-  Can be:
-  - A plain string `local_identifier` — treated as a cross-reference to an `skg:research_product` (type software) in the SKG-IF graph
-  - A typed external reference:
-    - `fabio:Software` — an external software entity identified by a GitHub/GitLab URL, handle, or DOI. It is a bibliographic class — its inherited properties are about identifying and citing software (DOI, handle, version, date), not describing its technical characteristics.
+### `srv_deployment_of`
+*List* (optional): The software that this service is a running instance of.
+
+Can be:
+- A plain string `local_identifier` — treated as a cross-reference to an `skg:research_product` (type software) in the SKG-IF graph
+- A typed external reference using a GitHub/GitLab URL, DOI, or handle — use this when no local SKG-IF record exists for the software.
 
 ```json
   "srv_deployment_of": [

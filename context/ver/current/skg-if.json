@@ -75,8 +75,6 @@
 
     "_comment4": "### nested org-role block — NOT used in examples or API spec; kept for reference only; prefer the flat srv_has_* properties above",
     "srv_related_organisations":   "@nest",
-    "srv_research_infrastructure": { "@id": "dcterms:partOf", "@type": "@vocab", "@nest": "related organisations" },
-    "srv_in_portal":               { "@id": "dcterms:publisher", "@type": "@vocab", "@nest": "related organisations" },
     "srv_hosting_legal_entity":    { "@id": "srv:hasHostingLegalEntity", "@type": "@vocab", "@nest": "related organisations" },
     "srv_other":                   { "@id": "dcterms:relation", "@type": "@vocab", "@nest": "related organisations" },
 

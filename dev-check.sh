@@ -264,35 +264,86 @@ if conflicts:
 else:
     print(f"  ✓ No conflicting term definitions between ext-srv and core context")
 
-# ── Check 7: rdfs:label (SKG-IF labels: X) present and X in ext-srv context ──
+# ── Check 7: rdfs:label (SKG-IF labels: X) present and X in combined context ──
+# 7a: all srv:* properties must carry the pattern (completeness)
+# 7b: every (SKG-IF labels: X) annotation anywhere in the ontology must resolve
+#     to a term in the combined context (core + ext-srv) — catches stale aliases
+#     on reused external properties (dcat:, schema:, dcterms:, etc.)
 RDFS_LABEL = str(RDFS.label)
+combined_ctx = {**core_ctx, **ctx}   # ext-srv terms shadow core terms
 label_issues = []
+
+# 7a — completeness: srv:* properties
 for prop_uri in sorted(ont_srv_props):
     labels = [str(o) for s, p, o in g_ont
               if str(s) == prop_uri and str(p) == RDFS_LABEL]
     if not labels:
         label_issues.append(f"srv:{prop_uri[len(SRV_NS):]} has no rdfs:label")
         continue
-    found = False
-    for lbl in labels:
-        m = re.search(r'\(SKG-IF labels:\s*(\w+)\)', lbl)
-        if m:
-            json_name = m.group(1)
-            if json_name not in ctx:
-                label_issues.append(
-                    f"srv:{prop_uri[len(SRV_NS):]} rdfs:label references "
-                    f"'{json_name}' — not found in ext-srv context")
-            found = True
-            break
-    if not found:
+    if not any(re.search(r'\(SKG-IF labels:\s*\w+\)', str(o)) for o in labels):
         label_issues.append(
             f"srv:{prop_uri[len(SRV_NS):]} rdfs:label missing '(SKG-IF labels: X)' pattern")
+
+# 7b — correctness: all properties with the pattern (any namespace)
+# Restrict to property subjects only — class labels use (SKG-IF labels: X) for
+# entity-type names, not JSON-LD aliases, so they must not be checked here.
+all_prop_uris = {str(s) for s, p, o in g_ont
+                 if str(p) == str(RDF.type) and str(o) in PROP_TYPES}
+for s, p, o in g_ont:
+    if str(p) != RDFS_LABEL or str(s) not in all_prop_uris:
+        continue
+    m = re.search(r'\(SKG-IF labels:\s*(\w+)\)', str(o))
+    if m:
+        json_name = m.group(1)
+        if json_name not in combined_ctx:
+            prop_uri = str(s)
+            display = (f"srv:{prop_uri[len(SRV_NS):]}"
+                       if prop_uri.startswith(SRV_NS) else f"<{prop_uri}>")
+            label_issues.append(
+                f"{display} rdfs:label references '{json_name}'"
+                f" — not found in combined context")
 
 if label_issues:
     for issue in label_issues:
         warnings.append(f"Label: {issue}")
 else:
-    print(f"  ✓ All {len(ont_srv_props)} ontology srv:* properties have correct SKG-IF label format")
+    print(f"  ✓ All srv:* properties labelled; all (SKG-IF labels: X) annotations resolve in context")
+
+# ── Check 8: Every property URI in ext-srv context declared in ontology ───────
+# The template requires a minimal presence (a owl:*Property + rdfs:label +
+# rdfs:isDefinedBy) for every property reused in the extension, regardless of
+# namespace. Class aliases in the context are excluded.
+declared_props   = {str(s) for s, p, o in g_ont
+                    if str(p) == str(RDF.type) and str(o) in PROP_TYPES}
+declared_classes = {str(s) for s, p, o in g_ont
+                    if str(p) == str(RDF.type) and str(o) in ENTITY_TYPES - PROP_TYPES}
+# Only dict-form context entries (those with explicit @id) are property aliases.
+# Plain-string entries are namespace prefixes or vocabulary value shortcuts.
+ctx_prop_uris = {}
+for k, v in ctx.items():
+    if k.startswith("_") or k.startswith("@") or not isinstance(v, dict):
+        continue
+    raw_id = v.get("@id")
+    if not raw_id or raw_id.startswith("@"):
+        continue   # @nest, @type etc.
+    uri = resolve_curie(raw_id)
+    if uri:
+        ctx_prop_uris[k] = uri
+
+missing_decl = []
+for term, uri in ctx_prop_uris.items():
+    if uri in declared_props:
+        continue
+    if uri in declared_classes:
+        continue   # class alias — not a property, skip
+    display = f"srv:{uri[len(SRV_NS):]}" if uri.startswith(SRV_NS) else f"<{uri}>"
+    missing_decl.append(f"Context term '{term}' → {display} has no owl:*Property declaration in ontology")
+
+if missing_decl:
+    for issue in missing_decl:
+        warnings.append(f"MissingDecl: {issue}")
+else:
+    print(f"  ✓ All context property URIs have a declaration in the ontology")
 
 # ── Summary ───────────────────────────────────────────────────────────────────
 if warnings:
