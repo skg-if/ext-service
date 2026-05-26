@@ -35,12 +35,12 @@
       ],
       "is_accessible_for_free": true,
       "srv_invocation_type": [
-        "sshocinvt:restfullWebservice",
+        "sshocinvt:restfulWebservice",
         "sshocinvt:webApplication"
       ],
       "srv_life_cycle_status": [
-        "elcs:life_cycle_status_production",
-        "elcs:TRL6"
+        "elcs:life_cycle_status-production",
+        "elcs:trl-6"
       ],
       "website": "https://ufal.mff.cuni.cz/udpipe",
       "srv_availability_geographic": [
