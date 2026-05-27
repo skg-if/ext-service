@@ -379,14 +379,15 @@ srv:isDeploymentOf a owl:ObjectProperty ;
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * skg:research_product (type software)
 * fabio:Software
+* schema:SoftwareSourceCode
 
 Plain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph.""" ;
     rdfs:domain srv:Service ;
     rdfs:range [
        a owl:Class ;
-       owl:unionOf ( fabio:Software skg:research_product)
+       owl:unionOf ( fabio:Software schema:SoftwareSourceCode skg:research_product)
     ] ;
-    rdfs:comment "Links a Service to the software it deploys or instantiates; range is fabio:Software or skg:research_product (type software)." ;
+    rdfs:comment "Links a Service to the software it deploys or instantiates; range is fabio:Software, schema:SoftwareSourceCode, or skg:research_product (type software). Use schema:SoftwareSourceCode for source code repositories (e.g. GitHub); fabio:Software for bibliographic software records (e.g. CLARIN/LINDAT handle)." ;
     rdfs:isDefinedBy srv: .
 
 srv:geographicalAvailability a owl:ObjectProperty ;
@@ -612,6 +613,7 @@ srv:Service a owl:Class ;
 * dcterms:conformsTo -[0..1]-> srv:APIProfile
 * schema:provider -[0..1]-> srv:FacilityPortal
 * srv:isDeploymentOf -[0..N]-> fabio:Software
+* srv:isDeploymentOf -[0..N]-> schema:SoftwareSourceCode
 * srv:isDeploymentOf -[0..N]-> skg:research_product
 * srv:relatedResearchProduct -[0..N]-> skg:research_product
 * cito:isCitedBy -[0..N]-> skg:research_product

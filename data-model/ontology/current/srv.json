@@ -5,11 +5,13 @@
     "@list" : [ {
       "@id" : "http://purl.org/spar/fabio/Software"
     }, {
+      "@id" : "https://schema.org/SoftwareSourceCode"
+    }, {
       "@id" : "https://w3id.org/skg-if/ontology/research_product"
     } ]
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Organization"
@@ -18,7 +20,7 @@
     "@id" : "https://schema.org/provider"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -536,6 +538,9 @@
   "@id" : "https://schema.org/SoftwareApplication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "https://schema.org/SoftwareSourceCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://schema.org/WebSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -684,9 +689,9 @@
   }, {
     "@id" : "https://schema.org/WebSite"
   }, {
-    "@id" : "_:genid4"
-  }, {
     "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "https://w3id.org/skg-if/extension/srv/ontology/HostingOrganisation",
@@ -738,7 +743,7 @@
   "@id" : "https://w3id.org/skg-if/extension/srv/ontology/Service",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "The properties that can be used with this class are:\n* datacite:hasIdentifier -[0..N]-> datacite:Identifier\n* foaf:name -[1..1]-> rdfs:Literal\n* skos:altLabel -[0..N]-> rdfs:Literal\n* dcterms:description -[0..N]-> rdfs:langString\n* foaf:homepage -[0..1]-> foaf:Document\n* srv:audienceJurisdiction -[0..N]-> xsd:string\n* srv:intendedAudienceRole -[0..N]-> skos:Concept \n* dcterms:subject -[0..N]-> owl:Thing\n* srv:invocationType -[0..N]-> skos:Concept \n* srv:eoscLifeCycleStatus -[0..N]-> skos:Concept\n* srv:geographicalAvailability -[0..N]-> owl:Thing\n* srv:supportedLanguage -[0..N]-> skos:Concept\n* srv:isPartOfResearchInfrastructure -[0..N]-> foaf:Organization\n* srv:hasHostingOrganisation -[0..N]-> foaf:Organization\n* srv:hasHostingLegalEntity -[0..1]-> foaf:Organization\n* dcterms:relation -[0..N]-> foaf:Organization\n* dcterms:conformsTo -[0..1]-> srv:APIProfile\n* schema:provider -[0..1]-> srv:FacilityPortal\n* srv:isDeploymentOf -[0..N]-> fabio:Software\n* srv:isDeploymentOf -[0..N]-> skg:research_product\n* srv:relatedResearchProduct -[0..N]-> skg:research_product\n* cito:isCitedBy -[0..N]-> skg:research_product\n* cito:isDocumentedBy -[0..N]-> skg:research_product\n* schema:keyword -[0..N]-> xsd:string\n* bido:holdsBibliometricDataInTime -[0..N]-> bido:BibliometricDataInTime\n* srv:hasVenue -[0..N]-> skg:Venue\n* schema:isAccessibleForFree -[0..1]-> xsd:boolean "
+    "@value" : "The properties that can be used with this class are:\n* datacite:hasIdentifier -[0..N]-> datacite:Identifier\n* foaf:name -[1..1]-> rdfs:Literal\n* skos:altLabel -[0..N]-> rdfs:Literal\n* dcterms:description -[0..N]-> rdfs:langString\n* foaf:homepage -[0..1]-> foaf:Document\n* srv:audienceJurisdiction -[0..N]-> xsd:string\n* srv:intendedAudienceRole -[0..N]-> skos:Concept \n* dcterms:subject -[0..N]-> owl:Thing\n* srv:invocationType -[0..N]-> skos:Concept \n* srv:eoscLifeCycleStatus -[0..N]-> skos:Concept\n* srv:geographicalAvailability -[0..N]-> owl:Thing\n* srv:supportedLanguage -[0..N]-> skos:Concept\n* srv:isPartOfResearchInfrastructure -[0..N]-> foaf:Organization\n* srv:hasHostingOrganisation -[0..N]-> foaf:Organization\n* srv:hasHostingLegalEntity -[0..1]-> foaf:Organization\n* dcterms:relation -[0..N]-> foaf:Organization\n* dcterms:conformsTo -[0..1]-> srv:APIProfile\n* schema:provider -[0..1]-> srv:FacilityPortal\n* srv:isDeploymentOf -[0..N]-> fabio:Software\n* srv:isDeploymentOf -[0..N]-> schema:SoftwareSourceCode\n* srv:isDeploymentOf -[0..N]-> skg:research_product\n* srv:relatedResearchProduct -[0..N]-> skg:research_product\n* cito:isCitedBy -[0..N]-> skg:research_product\n* cito:isDocumentedBy -[0..N]-> skg:research_product\n* schema:keyword -[0..N]-> xsd:string\n* bido:holdsBibliometricDataInTime -[0..N]-> bido:BibliometricDataInTime\n* srv:hasVenue -[0..N]-> skg:Venue\n* schema:isAccessibleForFree -[0..1]-> xsd:boolean "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/skg-if/extension/srv/ontology/"
@@ -914,10 +919,10 @@
   "@id" : "https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n        \nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* skg:research_product (type software)\n* fabio:Software\n\nPlain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph."
+    "@value" : "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n        \nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* skg:research_product (type software)\n* fabio:Software\n* schema:SoftwareSourceCode\n\nPlain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a Service to the software it deploys or instantiates; range is fabio:Software or skg:research_product (type software)."
+    "@value" : "Links a Service to the software it deploys or instantiates; range is fabio:Software, schema:SoftwareSourceCode, or skg:research_product (type software). Use schema:SoftwareSourceCode for source code repositories (e.g. GitHub); fabio:Software for bibliographic software records (e.g. CLARIN/LINDAT handle)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/skg-if/extension/srv/ontology/Service"

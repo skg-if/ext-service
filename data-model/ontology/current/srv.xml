@@ -507,6 +507,7 @@ In SKG-IF, it is used to indicate the method of service invocation using values 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/spar/fabio/Software"/>
+                    <rdf:Description rdf:about="https://schema.org/SoftwareSourceCode"/>
                     <rdf:Description rdf:about="https://w3id.org/skg-if/ontology/research_product"/>
                 </owl:unionOf>
             </owl:Class>
@@ -517,9 +518,10 @@ In SKG-IF, it is used to indicate the method of service invocation using values 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
 * skg:research_product (type software)
 * fabio:Software
+* schema:SoftwareSourceCode
 
 Plain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph.</dc:description>
-        <rdfs:comment>Links a Service to the software it deploys or instantiates; range is fabio:Software or skg:research_product (type software).</rdfs:comment>
+        <rdfs:comment>Links a Service to the software it deploys or instantiates; range is fabio:Software, schema:SoftwareSourceCode, or skg:research_product (type software). Use schema:SoftwareSourceCode for source code repositories (e.g. GitHub); fabio:Software for bibliographic software records (e.g. CLARIN/LINDAT handle).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label>srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)</rdfs:label>
     </owl:ObjectProperty>
@@ -919,6 +921,13 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     
 
 
+    <!-- https://schema.org/SoftwareSourceCode -->
+
+
+    <owl:Class rdf:about="https://schema.org/SoftwareSourceCode"/>
+    
+
+
     <!-- https://schema.org/WebSite -->
 
 
@@ -1032,6 +1041,7 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
 * dcterms:conformsTo -[0..1]-&gt; srv:APIProfile
 * schema:provider -[0..1]-&gt; srv:FacilityPortal
 * srv:isDeploymentOf -[0..N]-&gt; fabio:Software
+* srv:isDeploymentOf -[0..N]-&gt; schema:SoftwareSourceCode
 * srv:isDeploymentOf -[0..N]-&gt; skg:research_product
 * srv:relatedResearchProduct -[0..N]-&gt; skg:research_product
 * cito:isCitedBy -[0..N]-&gt; skg:research_product

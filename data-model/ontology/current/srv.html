@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/skg-if/extension/srv/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/skg-if/extension/srv/ontology/","name":"The SKG-IF Ontology: Service Extension", "headline":"Document describing the ontology https://w3id.org/skg-if/extension/srv/ontology/", "dateReleased":"Wed May 27 09:15:00 CEST 2026", "version":"1.1.0", "author":[{"@type":"Person","name":"Scientific Knowledge Graphs – Interoperability Framework (SKG-IF) WG; OSTrails Project"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/skg-if/extension/srv/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/skg-if/extension/srv/ontology/","name":"The SKG-IF Ontology: Service Extension", "headline":"Document describing the ontology https://w3id.org/skg-if/extension/srv/ontology/", "dateReleased":"Wed May 27 10:33:32 CEST 2026", "version":"1.1.0", "author":[{"@type":"Person","name":"Scientific Knowledge Graphs – Interoperability Framework (SKG-IF) WG; OSTrails Project"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -840,7 +840,7 @@ This section provides details for each class and property defined by SRV-O: Serv
   <h3>srv:Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/skg-if/extension/srv/ontology/Service</p>
   <div class="info">
-   <span class="markdown">The properties that can be used with this class are: * datacite:hasIdentifier -[0..N]-&gt; datacite:Identifier * foaf:name -[1..1]-&gt; rdfs:Literal * skos:altLabel -[0..N]-&gt; rdfs:Literal * dcterms:description -[0..N]-&gt; rdfs:langString * foaf:homepage -[0..1]-&gt; foaf:Document * srv:audienceJurisdiction -[0..N]-&gt; xsd:string * srv:intendedAudienceRole -[0..N]-&gt; skos:Concept * dcterms:subject -[0..N]-&gt; owl:Thing * srv:invocationType -[0..N]-&gt; skos:Concept * srv:eoscLifeCycleStatus -[0..N]-&gt; skos:Concept * srv:geographicalAvailability -[0..N]-&gt; owl:Thing * srv:supportedLanguage -[0..N]-&gt; skos:Concept * srv:isPartOfResearchInfrastructure -[0..N]-&gt; foaf:Organization * srv:hasHostingOrganisation -[0..N]-&gt; foaf:Organization * srv:hasHostingLegalEntity -[0..1]-&gt; foaf:Organization * dcterms:relation -[0..N]-&gt; foaf:Organization * dcterms:conformsTo -[0..1]-&gt; srv:APIProfile * schema:provider -[0..1]-&gt; srv:FacilityPortal * srv:isDeploymentOf -[0..N]-&gt; fabio:Software * srv:isDeploymentOf -[0..N]-&gt; skg:research_product * srv:relatedResearchProduct -[0..N]-&gt; skg:research_product * cito:isCitedBy -[0..N]-&gt; skg:research_product * cito:isDocumentedBy -[0..N]-&gt; skg:research_product * schema:keyword -[0..N]-&gt; xsd:string * bido:holdsBibliometricDataInTime -[0..N]-&gt; bido:BibliometricDataInTime * srv:hasVenue -[0..N]-&gt; skg:Venue * schema:isAccessibleForFree -[0..1]-&gt; xsd:boolean </span>
+   <span class="markdown">The properties that can be used with this class are: * datacite:hasIdentifier -[0..N]-&gt; datacite:Identifier * foaf:name -[1..1]-&gt; rdfs:Literal * skos:altLabel -[0..N]-&gt; rdfs:Literal * dcterms:description -[0..N]-&gt; rdfs:langString * foaf:homepage -[0..1]-&gt; foaf:Document * srv:audienceJurisdiction -[0..N]-&gt; xsd:string * srv:intendedAudienceRole -[0..N]-&gt; skos:Concept * dcterms:subject -[0..N]-&gt; owl:Thing * srv:invocationType -[0..N]-&gt; skos:Concept * srv:eoscLifeCycleStatus -[0..N]-&gt; skos:Concept * srv:geographicalAvailability -[0..N]-&gt; owl:Thing * srv:supportedLanguage -[0..N]-&gt; skos:Concept * srv:isPartOfResearchInfrastructure -[0..N]-&gt; foaf:Organization * srv:hasHostingOrganisation -[0..N]-&gt; foaf:Organization * srv:hasHostingLegalEntity -[0..1]-&gt; foaf:Organization * dcterms:relation -[0..N]-&gt; foaf:Organization * dcterms:conformsTo -[0..1]-&gt; srv:APIProfile * schema:provider -[0..1]-&gt; srv:FacilityPortal * srv:isDeploymentOf -[0..N]-&gt; fabio:Software * srv:isDeploymentOf -[0..N]-&gt; schema:SoftwareSourceCode * srv:isDeploymentOf -[0..N]-&gt; skg:research_product * srv:relatedResearchProduct -[0..N]-&gt; skg:research_product * cito:isCitedBy -[0..N]-&gt; skg:research_product * cito:isDocumentedBy -[0..N]-&gt; skg:research_product * schema:keyword -[0..N]-&gt; xsd:string * bido:holdsBibliometricDataInTime -[0..N]-&gt; bido:BibliometricDataInTime * srv:hasVenue -[0..N]-&gt; skg:Venue * schema:isAccessibleForFree -[0..1]-&gt; xsd:boolean </span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1531,10 +1531,10 @@ This section provides details for each class and property defined by SRV-O: Serv
   <h3>srv:isDeploymentOf (SKG-IF labels: srv_deployment_of)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/skg-if/extension/srv/ontology/isDeploymentOf</p>
   <div class="comment">
-   <span class="markdown">Links a Service to the software it deploys or instantiates; range is fabio:Software or skg:research_product (type software).</span>
+   <span class="markdown">Links a Service to the software it deploys or instantiates; range is fabio:Software, schema:SoftwareSourceCode, or skg:research_product (type software). Use schema:SoftwareSourceCode for source code repositories (e.g. GitHub); fabio:Software for bibliographic software records (e.g. CLARIN/LINDAT handle).</span>
   </div>
   <div class="info">
-   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * skg:research_product (type software) * fabio:Software Plain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph.</span>
+   <span class="markdown">In SKG-IF, it is used in the following classes (domain): * srv:Service In SKG-IF, it is used to link to entities belonging to the following classes (range): * skg:research_product (type software) * fabio:Software * schema:SoftwareSourceCode Plain string values are treated as local_identifier cross-references to skg:research_product (type software) in the SKG-IF graph.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1556,7 +1556,7 @@ This section provides details for each class and property defined by SRV-O: Serv
      has range
     </dt>
     <dd>
-     <a href="#http://purl.org/spar/fabio/Software" title="http://purl.org/spar/fabio/Software">fabio:Software (SKG-IF labels: software)</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/skg-if/ontology/research_product" title="https://w3id.org/skg-if/ontology/research_product">skg:research_product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://purl.org/spar/fabio/Software" title="http://purl.org/spar/fabio/Software">fabio:Software (SKG-IF labels: software)</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://schema.org/SoftwareSourceCode" target="_blank" title="https://schema.org/SoftwareSourceCode">Software Source Code</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/skg-if/ontology/research_product" title="https://w3id.org/skg-if/ontology/research_product">skg:research_product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

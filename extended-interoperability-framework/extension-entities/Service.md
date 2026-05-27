@@ -461,7 +461,7 @@ Can be:
 ```json
   "srv_deployment_of": [
       "local-id-of-udpipe-software",
-      { "@id": "https://github.com/ufal/udpipe", "@type": "fabio:Software" },
+      { "@id": "https://github.com/ufal/udpipe", "@type": "schema:SoftwareSourceCode" },
       { "@id": "https://hdl.handle.net/11234/1-1452", "@type": "fabio:Software" }
   ]
 ```
