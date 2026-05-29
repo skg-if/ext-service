@@ -1,0 +1,59 @@
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Environment and secrets
+.analysis_env
+.env
+.env.*
+token
+*.token
+
+# IDE and tool configs
+.claude/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+analysis.log
+
+# Generated documentation (WIDOCO outputs)
+widoco-output/
+widoco-output-*/
+data-model/ontology/current/index-en.html
+data-model/ontology/current/intro-en.html
+
+# Analysis outputs
+analysis_reports/
+
+# Backup and temporary files
+*.orig
+*.old
+*.bak
+*.keep
+*.tmp
+kanweg
+
+# Accidental downloads (files with query strings)
+*\?*
+
+# Large binary working files (keep committed versions, ignore new ones)
+# Uncomment if you want to ignore these:
+# *.graphml
+# *.png
+
+# Python (if used for scripts)
+__pycache__/
+*.py[cod]
+.Python
+venv/
+.venv/
+
+# Node.js (if used)
+node_modules/

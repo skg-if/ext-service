@@ -440,8 +440,8 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 * srv:Service
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
-* foaf:Organization (type: hosting_organisation)</dc:description>
-        <rdfs:comment>Links a Service to its hosting organisation (foaf:Organization typed hosting_organisation).</rdfs:comment>
+* foaf:Organization (type: srv_hosting_organisation)</dc:description>
+        <rdfs:comment>Links a Service to its hosting organisation (foaf:Organization typed srv_hosting_organisation).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label xml:lang="en">srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)</rdfs:label>
     </owl:ObjectProperty>
@@ -538,8 +538,8 @@ Plain string values are treated as local_identifier cross-references to skg:rese
 * srv:Service
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
-* foaf:Organization (type: research_infrastructure)</dc:description>
-        <rdfs:comment>Links a Service to the research infrastructure (foaf:Organization typed research_infrastructure) it is part of.</rdfs:comment>
+* foaf:Organization (type: srv_research_infrastructure)</dc:description>
+        <rdfs:comment>Links a Service to the research infrastructure (foaf:Organization typed srv_research_infrastructure) it is part of.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/skg-if/extension/srv/ontology/"/>
         <rdfs:label xml:lang="en">srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_has_research_infrastructure)</rdfs:label>
     </owl:ObjectProperty>

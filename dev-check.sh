@@ -402,7 +402,7 @@ def ctx_to_reverse_map(ctx):
     Two-pass: direct (non-nested) entries take priority; nested entries fill gaps only.
     This avoids collisions where a URI has both a direct alias and a nested alias
     (e.g. dcterms:relation → relevant_organisations direct, srv_other nested)
-    while still mapping URIs that only appear as nested entries (cito:isCitedBy → is_cited_by).
+    while still mapping URIs that only appear as nested entries (cito:isCitedBy → srv_is_cited_by).
     """
     def resolve(raw):
         if not raw or raw == "@nest":

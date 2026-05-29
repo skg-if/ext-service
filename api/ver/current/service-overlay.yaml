@@ -614,8 +614,8 @@ actions:
 
 # ORGANISATION EXTENSION - BEGIN
 # Adds new organisation types for modeling service operations:
-# - hosting_organisation: organisation responsible for hosting a service
-# - research_infrastructure: organisation providing facilities for research
+# - srv_hosting_organisation: organisation responsible for hosting a service
+# - srv_research_infrastructure: organisation providing facilities for research
 # Remove this section if Organisation is extended in the core
 
   - target: $.components.schemas.Organisation.allOf[1].properties.types.items.enum

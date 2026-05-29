@@ -23,8 +23,8 @@ This extension introduces new types of the core Organisation and Venue entities,
 
 ### Organisation
 New types for modelling service operations:
-- `hosting_organisation` ("hosting organisation") — organisation responsible for hosting and operating a service
-- `research_infrastructure` ("research infrastructure") — organisation providing facilities, resources and services for research communities
+- `srv_hosting_organisation` ("hosting organisation") — organisation responsible for hosting and operating a service
+- `srv_research_infrastructure` ("research infrastructure") — organisation providing facilities, resources and services for research communities
 
 ### Venue
 A new type for modelling portal functionality:
@@ -109,11 +109,10 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 *List* (optional): The audience(s) that the service is intended to be used by. This can both express desire and/or design of the service operators. Values must be taken from
 the https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme 
 
+_NOTE_: Bare terms are the recommended form — the JSON-LD context expands them to full IRIs via the vocabulary URL above. Alternatively, prefixed CURIEs (e.g. `"sshocaudience:public"`) make the vocabulary source explicit in the value itself.
+
 ```json
-"@context": {
-    "sshocaudience": "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/"
-},
-"srv_audience_by_role": ["sshocaudience:public", "sshocaudience:student" ]
+"srv_audience_by_role": ["public", "student"]
 ```
 
 ### `srv_audience_by_jurisdiction`
@@ -151,10 +150,7 @@ In case the service is discipline-agnostic, the string "all" should be specified
 *List* (optional): The way the service is used or called. Multiple values are possible, access conditions are assumed to be the same. Values are specified by vocabulary: https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme
 
 ```json
-"@context": {
-    "sshocinvt": "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/"
-},
-"srv_invocation_type": [ "sshocinvt:restfullWebservice", "sshocinvt:webApplication" ]
+"srv_invocation_type": ["restfulWebservice", "webApplication"]
 ```
 
 ### `srv_life_cycle_status`
@@ -162,22 +158,15 @@ In case the service is discipline-agnostic, the string "all" should be specified
 https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/ Originally specified in the EOSC Service Profile. TRL classifications are planned to be added to this vocabulary.
 
 ```json
-"@context": {
-    "elcs": "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/"
-    },
-"srv_life_cycle_status": ["elcs:life_cycle_status_production", "elcs:TRL6"]
+"srv_life_cycle_status": ["life_cycle_status_production", "trl-6"]
 ```
 
 ### `srv_availability_geographic`
 *List* (optional): list of countries and regions where the service is made available, eg. for legal or contractual reasons. Values are by the vocabulary: https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/
 
 ```json
-"@context": {
-    "eoscgeoavail": "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/"
-
-    },
-"srv_availability_geographic": ["eoscgeoavail:eu","eoscgeoavail:uk"]
-```    
+"srv_availability_geographic": ["eu", "uk"]
+```
 
 ### `website`
 *String* (optional): Landingpage for the service. Preferably one maintained by the service operator
@@ -212,10 +201,9 @@ Full form (endpoint + documentation URLs):
 
 *List* (optional): The language(s) the service is able to process, as ISO 639-3 language codes. Values are CURIEs using the `iso639-3:` prefix, which resolves to the [ACDH-CH/DARIAH ISO 639-3 vocabulary](https://vocabs.acdh.oeaw.ac.at/iso6393/) (hosted by the Austrian Academy of Sciences on ACONET infrastructure).
 
+_NOTE_: Unlike other vocabulary properties, bare codes (e.g. `"deu"`) are not recommended here — the bare code alone does not distinguish ISO 639-3 from ISO 639-2. Use the prefixed CURIE form.
+
 ``` json
-"@context": {
-    "iso639-3": "https://vocabs.acdh.oeaw.ac.at/iso6393/"
-},
 "srv_supported_language": ["iso639-3:deu", "iso639-3:nld"]
 ```
 

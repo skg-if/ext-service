@@ -546,8 +546,8 @@ srv:isPartOfResearchInfrastructure a owl:ObjectProperty ;
 * srv:Service
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
-* foaf:Organization (type: research_infrastructure)""" ;
-   rdfs:comment "Links a Service to the research infrastructure (foaf:Organization typed research_infrastructure) it is part of." ;
+* foaf:Organization (type: srv_research_infrastructure)""" ;
+   rdfs:comment "Links a Service to the research infrastructure (foaf:Organization typed srv_research_infrastructure) it is part of." ;
    rdfs:isDefinedBy srv: .
 
 srv:HostingOrganisation a owl:Class ;
@@ -563,8 +563,8 @@ srv:hasHostingOrganisation a owl:ObjectProperty ;
 * srv:Service
 
 In SKG-IF, it is used to link to entities belonging to the following classes (range):
-* foaf:Organization (type: hosting_organisation)""" ;
-   rdfs:comment "Links a Service to its hosting organisation (foaf:Organization typed hosting_organisation)." ;
+* foaf:Organization (type: srv_hosting_organisation)""" ;
+   rdfs:comment "Links a Service to its hosting organisation (foaf:Organization typed srv_hosting_organisation)." ;
    rdfs:isDefinedBy srv: .
 srv:hasHostingLegalEntity a owl:ObjectProperty ;
    rdfs:label "srv:hasHostingLegalEntity (SKG-IF labels: srv_has_hosting_legal_entity)"@en ;

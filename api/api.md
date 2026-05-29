@@ -40,8 +40,8 @@ The Service extension adds the following endpoints:
 
 The overlay extends the `Organisation` entity with additional types for modeling service operations:
 
-- `hosting_organisation` - organisation responsible for hosting and operating a service
-- `research_infrastructure` - organisation providing facilities, resources and services for research communities
+- `srv_hosting_organisation` - organisation responsible for hosting and operating a service
+- `srv_research_infrastructure` - organisation providing facilities, resources and services for research communities
 
 ### Venue types
 

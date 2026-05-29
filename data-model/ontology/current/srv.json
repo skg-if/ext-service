@@ -840,10 +840,10 @@
   "@id" : "https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: hosting_organisation)"
+    "@value" : "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: srv_hosting_organisation)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a Service to its hosting organisation (foaf:Organization typed hosting_organisation)."
+    "@value" : "Links a Service to its hosting organisation (foaf:Organization typed srv_hosting_organisation)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/skg-if/extension/srv/ontology/Service"
@@ -940,10 +940,10 @@
   "@id" : "https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: research_infrastructure)"
+    "@value" : "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: srv_research_infrastructure)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a Service to the research infrastructure (foaf:Organization typed research_infrastructure) it is part of."
+    "@value" : "Links a Service to the research infrastructure (foaf:Organization typed srv_research_infrastructure) it is part of."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/skg-if/extension/srv/ontology/Service"

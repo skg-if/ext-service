@@ -213,8 +213,8 @@
 <https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
 <https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
-<https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: hosting_organisation)" .
-<https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Service to its hosting organisation (foaf:Organization typed hosting_organisation)." .
+<https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: srv_hosting_organisation)" .
+<https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Service to its hosting organisation (foaf:Organization typed srv_hosting_organisation)." .
 <https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/hasHostingOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "srv:hasHostingOrganisation (SKG-IF labels: srv_has_hosting_organisation)"@en .
 # 
@@ -268,8 +268,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/skg-if/extension/srv/ontology/Service> .
 <https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
-<https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: research_infrastructure)" .
-<https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Service to the research infrastructure (foaf:Organization typed research_infrastructure) it is part of." .
+<https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://purl.org/dc/elements/1.1/description> "In SKG-IF, it is used in the following classes (domain):\n* srv:Service\n\nIn SKG-IF, it is used to link to entities belonging to the following classes (range):\n* foaf:Organization (type: srv_research_infrastructure)" .
+<https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Service to the research infrastructure (foaf:Organization typed srv_research_infrastructure) it is part of." .
 <https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/skg-if/extension/srv/ontology/> .
 <https://w3id.org/skg-if/extension/srv/ontology/isPartOfResearchInfrastructure> <http://www.w3.org/2000/01/rdf-schema#label> "srv:isPartOfResearchInfrastructure (SKG-IF labels: srv_has_research_infrastructure)"@en .
 # 
