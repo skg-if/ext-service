@@ -207,7 +207,7 @@
     "@id" : "http://purl.org/spar/cito/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "cito:isCitedBy (SKG-IF labels: is_cited_by)"
+    "@value" : "cito:isCitedBy (SKG-IF labels: srv_is_cited_by)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/skg-if/ontology/research_product"
@@ -556,7 +556,7 @@
     "@id" : "https://schema.org/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "schema:isAccessibleForFree (SKG-IF labels: is_accessible_for_free)"
+    "@value" : "schema:isAccessibleForFree (SKG-IF labels: srv_is_accessible_for_free)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"

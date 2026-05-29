@@ -233,7 +233,7 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
     rdfs:isDefinedBy dcterms: .
 
 cito:isCitedBy a owl:ObjectProperty ;
-    rdfs:label "cito:isCitedBy (SKG-IF labels: is_cited_by)" ;
+    rdfs:label "cito:isCitedBy (SKG-IF labels: srv_is_cited_by)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 
@@ -316,7 +316,7 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
     rdfs:isDefinedBy foaf: .
 
 schema:isAccessibleForFree a owl:DatatypeProperty ;
-    rdfs:label "schema:isAccessibleForFree (SKG-IF labels: is_accessible_for_free)" ;
+    rdfs:label "schema:isAccessibleForFree (SKG-IF labels: srv_is_accessible_for_free)" ;
     dc:description """In SKG-IF, it is used in the following classes (domain):
 * srv:Service
 

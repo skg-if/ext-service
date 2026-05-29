@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0975WQ",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -89,7 +89,7 @@
           "entity_type": "organisation",
           "name": "University of Bern",
           "types": [
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ],
           "identifiers": [
             {
@@ -106,7 +106,7 @@
           "name": "DARIAH ERIC",
           "short_name": "DARIAH",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "identifiers": [
             {
@@ -122,7 +122,7 @@
           "name": "DARIAH-CH",
           "short_name": "DARIAH-CH",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "CH",
           "website": "https://www.dariah.ch"

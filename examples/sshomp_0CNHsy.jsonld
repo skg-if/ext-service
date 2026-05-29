@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0CNHsy",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -93,7 +93,7 @@
           "short_name": "CLARIN",
           "types": [
             "facility",
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "identifiers": [
             {
@@ -109,7 +109,7 @@
           "name": "DARIAH ERIC",
           "short_name": "DARIAH",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "identifiers": [
             {
@@ -125,7 +125,7 @@
           "name": "CLARIAH-ES",
           "short_name": "CLARIAH-ES",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "ES",
           "website": "https://www.clariah.es"

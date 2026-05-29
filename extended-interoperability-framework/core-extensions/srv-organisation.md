@@ -11,11 +11,11 @@ Please note that the Service extension is still **work in progress**. Please fol
 
 # Organisation extended by the Service extension
 
-This extension introduces two new types of Organisation for modelling service operations: "hosting organisation" and "research infrastructure". These are expressed by values `hosting_organisation` and `research_infrastructure` of the `types` property.
+This extension introduces two new types of Organisation for modelling service operations: "hosting organisation" and "research infrastructure". These are expressed by values `srv_hosting_organisation` and `srv_research_infrastructure` of the `types` property.
 
 ## New Organisation types
 
-### `hosting_organisation`
+### `srv_hosting_organisation`
 
 A "hosting organisation" hosts and operates a service or infrastructure component.
 
@@ -25,12 +25,12 @@ A "hosting organisation" hosts and operates a service or infrastructure componen
     "entity_type": "organisation",
     "name": "Digital Research Infrastructure for Language Technologies, Arts and Humanities",
     "short_name": "LINDAT",
-    "types": ["facility", "hosting_organisation"],
+    "types": ["facility", "srv_hosting_organisation"],
     "country": "CZ"
 }
 ```
 
-### `research_infrastructure`
+### `srv_research_infrastructure`
 
 A "research infrastructure" provides facilities, resources and services for research communities.
 
@@ -39,7 +39,7 @@ A "research infrastructure" provides facilities, resources and services for rese
     "local_identifier": "https://ror.org/03wp25384",
     "entity_type": "organisation",
     "name": "CLARIN ERIC",
-    "types": ["facility", "research_infrastructure"],
+    "types": ["facility", "srv_research_infrastructure"],
     "country": "NL"
 }
 ```

@@ -64,10 +64,10 @@ Each identifier is structured as follows:
 ### `entity_type`
 *String* (mandatory): Field stating what kind of entity is being serialised. 
 
-Needed for parsing purposes; fixed to `service`.
+Needed for parsing purposes; fixed to `srv_service`.
 
 ```json
-"entity_type": "service"
+"entity_type": "srv_service"
 ```
 
 ### `name`
@@ -139,12 +139,12 @@ In case the service is discipline-agnostic, the string "all" should be specified
 "disciplines": ["all"]
 ```
 
-### `is_accessible_for_free`
+### `srv_is_accessible_for_free`
 *Boolean* (optional): Flag indicating whether the Service is accessible for free (`true`) or subject to access restrictions or payment (`false`). If omitted, accessibility status is not specified.
 
 ``` json
 
-    "is_accessible_for_free": true
+    "srv_is_accessible_for_free": true
 ```
 
 ### `srv_invocation_type`
@@ -305,7 +305,7 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
         "name": "CLARIN ERIC",
         "types": [
         "facility",
-        "research_infrastructure"
+        "srv_research_infrastructure"
         ],
         "country": "NL"
     }
@@ -332,7 +332,7 @@ Expanded form (Organisation object, as returned by API with `embedding=true`):
         "short_name": "LINDAT",
         "types": [
         "facility",
-        "hosting_organisation"
+        "srv_hosting_organisation"
         ],
         "country": "CZ"
     }
@@ -395,7 +395,7 @@ Expanded form (Venue objects, as returned by API with `embedding=true`):
 
 ### `relevant_organisations`
 *List* (optional): Generic queryable index of all [Organisation] identifiers associated with and relevant for a service.
-Identifiers can be of local or global identifier system type e.g. ror, uri. Organisations can be given additional types: `"research_infrastructure"` and `"hosting_organisation"` to indicate their role.
+Identifiers can be of local or global identifier system type e.g. ror, uri. Organisations can be given additional types: `"srv_research_infrastructure"` and `"srv_hosting_organisation"` to indicate their role.
 
 _NOTE:_ Each item may be a plain identifier string or an Organisation object. API responses may expand identifiers to Organisation objects.
 
@@ -429,12 +429,12 @@ The key is the relation type; values are lists of identifiers.
 
 Applicable relation types:
 - `is_documented_by` *List* (optional): Research products documenting this service.
-- `is_cited_by` *List* (optional): Research products citing this service.
+- `srv_is_cited_by` *List* (optional): Research products citing this service.
 
 ```json
 "related_products": {
     "is_documented_by": ["https://doi.org/10.1007/s10579-010-9130-z"],
-    "is_cited_by": ["https://doi.org/10.18653/v1/2020.acl-main.1"]
+    "srv_is_cited_by": ["https://doi.org/10.18653/v1/2020.acl-main.1"]
 }
 ```
 

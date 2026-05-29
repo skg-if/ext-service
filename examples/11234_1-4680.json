@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11234/1-4680",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "handle",
@@ -32,7 +32,7 @@
         "iso639-3:eng"
       ],
       "website": "https://hdl.handle.net/11234/1-4680",
-      "is_accessible_for_free": true,
+      "srv_is_accessible_for_free": true,
       "srv_deployment_of": [
         {
           "@id": "https://hdl.handle.net/11234/1-4680",
@@ -52,7 +52,7 @@
           "name": "CLARIN ERIC",
           "types": [
             "facility",
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "NL"
         }
@@ -89,7 +89,7 @@
           "short_name": "LINDAT/CLARIAH-CZ",
           "types": [
             "facility",
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ]
         }
       ],

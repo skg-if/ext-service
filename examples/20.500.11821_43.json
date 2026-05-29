@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/20.500.11821/43",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "handle",
@@ -31,7 +31,7 @@
         "iso639-3:lit"
       ],
       "website": "https://semantika.lt/",
-      "is_accessible_for_free": true,
+      "srv_is_accessible_for_free": true,
       "srv_has_research_infrastructure": [
         {
           "local_identifier": "https://ror.org/03wp25384",
@@ -45,7 +45,7 @@
           "name": "CLARIN ERIC",
           "types": [
             "facility",
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "NL"
         }
@@ -83,7 +83,7 @@
           "short_name": "CLARIN-LT",
           "types": [
             "facility",
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ]
         }
       ],

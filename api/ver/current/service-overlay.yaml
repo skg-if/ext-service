@@ -9,8 +9,8 @@ info:
 # (1) add FacilityPortal class to model information about place & organisation that facilitates the service
 # (2) modify Venue core entity, with a new type "portal" allowing Venue to model information about place and organisation facilitating the service
 # (3) modify Organisation core entity with new organisation types, allowing modelling of information about place and organisation facilitating the service via the "relevant_organisations" property. this does not determine the role of the organisation is this specific relation, but only suggests it.
-# (4) add a new "related_organisations" property folowing  "related_products". with the folwing relation types: "research_infrastructure", "portal", "hosting_legal_entity" and "other". this allows more deterministic to specify a specific relation between a service and organisation.
-# (5) use two separate properties: "research_infrastructure" and "hosting_legal_entity" to model the roles of organisations in managing & operating the service
+# (4) add a new "related_organisations" property folowing  "related_products". with the folwing relation types: "srv_research_infrastructure", "portal", "hosting_legal_entity" and "other". this allows more deterministic to specify a specific relation between a service and organisation.
+# (5) use two separate properties: "srv_research_infrastructure" and "hosting_legal_entity" to model the roles of organisations in managing & operating the service
 # option (4) makes (3) superfluous since it allows relations of type "other"
 # option (5) is semanticaly more accurate than option (3)
 # for now v1.0.0 enables option (2) and (5) 
@@ -29,7 +29,7 @@ actions:
           summary: Get list of service. 
           operationId: getServices
           description: |
-              Get a list of `service`. See definition in SKG-IF [Service] (https://skg-if.github.io/interoperability-framework/docs/service.html) (entity_type: service ).
+              Get a list of `service`. See definition in SKG-IF [Service] (https://skg-if.github.io/interoperability-framework/docs/service.html) (entity_type: srv_service ).
 
               __Attribute filters__ \
               You can filter using these attributes of the `service` object. Exact match.
@@ -233,9 +233,9 @@ actions:
             properties:
               entity_type:  # was already specified, in /components/schemas/Entity?
                 type: string
-                default: "service"
+                default: "srv_service"
                 x-faker:
-                  fake: ["service"]
+                  fake: ["srv_service"]
               identifiers:
                 type: array
                 items:
@@ -318,7 +318,7 @@ actions:
                 examples:
                   - ["https://www.wikidata.org/wiki/Q30642", "parsing", "NLP"]
 
-              is_accessible_for_free:
+              srv_is_accessible_for_free:
                 description: A property to flag that the Service is accessible for free, in the academic world most services are free or have a free modus
                 type: boolean
                 default: true
@@ -416,7 +416,7 @@ actions:
                     entity_type: 'organisation'
                     name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
                     short_name: "LINDAT"
-                    types: [facility, hosting_organisation]
+                    types: [facility, srv_hosting_organisation]
                     country: CZ
 
               srv_has_research_infrastructure:
@@ -435,7 +435,7 @@ actions:
                       - scheme: ror
                         value: https://ror.org/03wp25384
                     name: "CLARIN ERIC"
-                    types: [facility, research_infrastructure]
+                    types: [facility, srv_research_infrastructure]
                     country: NL
 
               srv_venues:
@@ -528,7 +528,7 @@ actions:
                       entity_type: organisation
                       name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
                       short_name: "LINDAT"
-                      types: [facility, hosting_organisation]
+                      types: [facility, srv_hosting_organisation]
                       country: CZ
                     - local_identifier: https://ror.org/024d6js02
                       entity_type: organisation
@@ -538,7 +538,7 @@ actions:
                     - local_identifier: https://ror.org/03wp25384
                       entity_type: organisation
                       name: "CLARIN ERIC"
-                      types: [facility, research_infrastructure]
+                      types: [facility, srv_research_infrastructure]
                       country: NL
 
 #some additional organisation types should be added, see below
@@ -620,8 +620,8 @@ actions:
 
   - target: $.components.schemas.Organisation.allOf[1].properties.types.items.enum
     update:
-      - research_infrastructure
-      - hosting_organisation
+      - srv_research_infrastructure
+      - srv_hosting_organisation
 
 # ORGANISATION EXTENSION - END
 

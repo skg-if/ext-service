@@ -247,7 +247,7 @@ In SKG-IF, it is used to link to entities belonging to the following classes (ra
 * skg:research_product</dc:description>
         <rdfs:comment>A research product (e.g. a paper) that cites or mentions this service.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
-        <rdfs:label>cito:isCitedBy (SKG-IF labels: is_cited_by)</rdfs:label>
+        <rdfs:label>cito:isCitedBy (SKG-IF labels: srv_is_cited_by)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -680,7 +680,7 @@ In SKG-IF, it is used to link to entities belonging to the following data types 
 In SKG-IF, it is used to link to entities belonging to the following data types (range):
 * xsd:boolean</dc:description>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-        <rdfs:label>schema:isAccessibleForFree (SKG-IF labels: is_accessible_for_free)</rdfs:label>
+        <rdfs:label>schema:isAccessibleForFree (SKG-IF labels: srv_is_accessible_for_free)</rdfs:label>
     </owl:DatatypeProperty>
     
 

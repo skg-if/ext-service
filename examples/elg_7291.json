@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/elg/7291",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "elg",
@@ -39,7 +39,7 @@
         "iso639-3:eng",
         "iso639-3:swe"
       ],
-      "is_accessible_for_free": false,
+      "srv_is_accessible_for_free": false,
       "srv_invocation_type": [
         "sshocinvt:restfulWebservice"
       ],
@@ -59,7 +59,7 @@
           "website": "https://live.european-language-grid.eu",
           "types": [
             "facility",
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ]
         }
       ],

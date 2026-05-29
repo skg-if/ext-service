@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0EEPnj",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -66,7 +66,7 @@
           "entity_type": "organisation",
           "name": "Göttingen State and University Library",
           "types": [
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ],
           "identifiers": [
             {
@@ -83,7 +83,7 @@
           "name": "DARIAH ERIC",
           "short_name": "DARIAH",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "identifiers": [
             {
@@ -99,7 +99,7 @@
           "name": "DARIAH-DE",
           "short_name": "DARIAH-DE",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "DE",
           "website": "https://de.dariah.eu"

@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0IQnpG",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -45,7 +45,7 @@
       "srv_life_cycle_status": [
         "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/life_cycle_status-production"
       ],
-      "is_accessible_for_free": true,
+      "srv_is_accessible_for_free": true,
       "srv_audience_by_role": [
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/public",
         "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/researcher",

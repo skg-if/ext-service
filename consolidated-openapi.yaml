@@ -1339,7 +1339,7 @@ paths:
       summary: Get list of service.
       operationId: getServices
       description: |
-        Get a list of `service`. See definition in SKG-IF [Service] (https://skg-if.github.io/interoperability-framework/docs/service.html) (entity_type: service ).
+        Get a list of `service`. See definition in SKG-IF [Service] (https://skg-if.github.io/interoperability-framework/docs/service.html) (entity_type: srv_service ).
 
         __Attribute filters__ \
         You can filter using these attributes of the `service` object. Exact match.
@@ -2215,8 +2215,8 @@ components:
                   - funder
                   - research
                   - unspecified
-                  - research_infrastructure
-                  - hosting_organisation
+                  - srv_research_infrastructure
+                  - srv_hosting_organisation
       examples:
         - local_identifiers: 'otf_session12324_org_1124'
           entity_type: 'organisation'
@@ -2941,9 +2941,9 @@ components:
           properties:
             entity_type: # was already specified, in /components/schemas/Entity?
               type: string
-              default: "service"
+              default: "srv_service"
               x-faker:
-                fake: ["service"]
+                fake: ["srv_service"]
             identifiers:
               type: array
               items:
@@ -3021,7 +3021,7 @@ components:
                 type: string
               examples:
                 - ["https://www.wikidata.org/wiki/Q30642", "parsing", "NLP"]
-            is_accessible_for_free:
+            srv_is_accessible_for_free:
               description: A property to flag that the Service is accessible for free, in the academic world most services are free or have a free modus
               type: boolean
               default: true
@@ -3110,7 +3110,7 @@ components:
                   entity_type: 'organisation'
                   name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
                   short_name: "LINDAT"
-                  types: [facility, hosting_organisation]
+                  types: [facility, srv_hosting_organisation]
                   country: CZ
             srv_has_research_infrastructure:
               type: array
@@ -3128,7 +3128,7 @@ components:
                     - scheme: ror
                       value: https://ror.org/03wp25384
                   name: "CLARIN ERIC"
-                  types: [facility, research_infrastructure]
+                  types: [facility, srv_research_infrastructure]
                   country: NL
             srv_venues:
               type: array
@@ -3213,7 +3213,7 @@ components:
                     entity_type: organisation
                     name: "Digital Research Infrastructure for Language Technologies, Arts and Humanities"
                     short_name: "LINDAT"
-                    types: [facility, hosting_organisation]
+                    types: [facility, srv_hosting_organisation]
                     country: CZ
                   - local_identifier: https://ror.org/024d6js02
                     entity_type: organisation
@@ -3223,7 +3223,7 @@ components:
                   - local_identifier: https://ror.org/03wp25384
                     entity_type: organisation
                     name: "CLARIN ERIC"
-                    types: [facility, research_infrastructure]
+                    types: [facility, srv_research_infrastructure]
                     country: NL
                     #some additional organisation types should be added, see below
       FacilityPortal:

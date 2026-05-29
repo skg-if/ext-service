@@ -16,7 +16,7 @@
           "value": "0000-0003-0530-4305"
         }
       ],
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "srv_descriptions": {
         "en": [
           "UDPipe 2 is a Python prototype, capable of performing tagging, lemmatization and syntactic analysis of CoNLL-U input. It took part in several competitions, reaching excellent results in all of them",
@@ -33,7 +33,7 @@
       "srv_audience_by_jurisdiction": [
         "Global"
       ],
-      "is_accessible_for_free": true,
+      "srv_is_accessible_for_free": true,
       "srv_invocation_type": [
         "sshocinvt:restfulWebservice",
         "sshocinvt:webApplication"
@@ -69,7 +69,7 @@
           "short_name": "LINDAT",
           "types": [
             "facility",
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ],
           "country": "CZ"
         }
@@ -87,7 +87,7 @@
           "name": "CLARIN ERIC",
           "types": [
             "facility",
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "NL"
         }

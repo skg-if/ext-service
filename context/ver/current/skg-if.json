@@ -48,7 +48,7 @@
     "_comment3_descriptions": "### 'srv_descriptions' follows the core pattern of 'titles'/'abstracts' (language-map, plural key) — fills a gap core left with its singular xsd:string 'description'; prefixed srv_ per extension convention; a core-level 'descriptions' may be introduced later",
 
     "srv_descriptions":  { "@id": "dcterms:description", "@container": "@language" },
-    "is_cited_by":   { "@id": "cito:isCitedBy", "@type": "@vocab", "@nest": "related_products" },
+    "srv_is_cited_by":   { "@id": "cito:isCitedBy", "@type": "@vocab", "@nest": "related_products" },
 
     "TODO_WHEN_MADE_AVAILABLE eosc_service_profile": "https://github.com/EOSC-PLATFORM/service-profile/tree/4.0/",
 
@@ -57,7 +57,7 @@
     "srv_audience_by_role":       { "@id": "srv:intendedAudienceRole", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:sshoc-audience/" } },
     "srv_audience_by_jurisdiction": { "@id": "srv:audienceJurisdiction" },
 
-    "is_accessible_for_free":    { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
+    "srv_is_accessible_for_free":    { "@id": "schema:isAccessibleForFree", "@type": "xsd:boolean" },
 
     "srv_invocation_type":       { "@id": "srv:invocationType", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:invocation-type/" } },
     "srv_life_cycle_status":     { "@id": "srv:eoscLifeCycleStatus", "@type": "@vocab", "@context": { "@vocab": "sshopencloudvocabs:eosc-life-cycle-status/" } },
@@ -78,15 +78,15 @@
     "srv_hosting_legal_entity":    { "@id": "srv:hasHostingLegalEntity", "@type": "@vocab", "@nest": "related organisations" },
     "srv_other":                   { "@id": "dcterms:relation", "@type": "@vocab", "@nest": "related organisations" },
 
-    "service":          "srv:Service",
+    "srv_service":      "srv:Service",
     "srv_FacilityPortal": "srv:FacilityPortal",
     "srv_APIProfile":   "srv:APIProfile",
 
     "srv_portal":                    "srv:Portal",
-    "research_infrastructure":       "srv:ResearchInfrastructure",
+    "srv_research_infrastructure":   "srv:ResearchInfrastructure",
     "srv_has_research_infrastructure": "srv:isPartOfResearchInfrastructure",
     "srv_has_hosting_legal_entity":  "srv:hasHostingLegalEntity",
     "srv_has_hosting_organisation":  "srv:hasHostingOrganisation",
-    "hosting_organisation":          "srv:HostingOrganisation"
+    "srv_hosting_organisation":      "srv:HostingOrganisation"
   }
 }

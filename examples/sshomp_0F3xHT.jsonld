@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0F3xHT",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -65,7 +65,7 @@
           "entity_type": "organisation",
           "name": "Smithsonian Institution",
           "types": [
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ]
         }
       ],

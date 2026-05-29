@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/11500/CLARIN-EL-0000-0000-7B9E-5",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "handle",
@@ -18,7 +18,7 @@
         }
       ],
       "website": "http://hdl.handle.net/11500/CLARIN-EL-0000-0000-7B9E-5",
-      "is_accessible_for_free": true,
+      "srv_is_accessible_for_free": true,
       "srv_has_research_infrastructure": [
         {
           "local_identifier": "https://ror.org/03wp25384",
@@ -32,7 +32,7 @@
           "name": "CLARIN ERIC",
           "types": [
             "facility",
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "NL"
         }
@@ -66,7 +66,7 @@
           "short_name": "CLARIN:EL",
           "types": [
             "facility",
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ]
         }
       ],

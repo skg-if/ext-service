@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0b3L9P",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -142,7 +142,7 @@
           "entity_type": "organisation",
           "name": "Poznan Supercomputing and Networking Center",
           "types": [
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ],
           "identifiers": [
             {
@@ -159,7 +159,7 @@
           "name": "DARIAH ERIC",
           "short_name": "DARIAH",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "identifiers": [
             {
@@ -175,7 +175,7 @@
           "name": "DARIAH-PL",
           "short_name": "DARIAH-PL",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "PL",
           "website": "https://dariah.pl/en"

@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0bUnwa",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -66,7 +66,7 @@
           "entity_type": "organisation",
           "name": "National Library of Sweden / Kungliga biblioteket",
           "types": [
-            "hosting_organisation"
+            "srv_hosting_organisation"
           ]
         }
       ],
@@ -77,7 +77,7 @@
           "name": "DARIAH ERIC",
           "short_name": "DARIAH",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "identifiers": [
             {
@@ -93,7 +93,7 @@
           "name": "Huminfra",
           "short_name": "DARIAH-SE",
           "types": [
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ],
           "country": "SE",
           "website": "https://www.huminfra.se"

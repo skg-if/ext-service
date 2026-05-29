@@ -10,7 +10,7 @@
   "@graph": [
     {
       "local_identifier": "https://marketplace.sshopencloud.eu/tool-or-service/0DuhZZ",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "identifiers": [
         {
           "scheme": "sshomp",
@@ -67,7 +67,7 @@
           "short_name": "SSHOC",
           "types": [
             "project",
-            "research_infrastructure"
+            "srv_research_infrastructure"
           ]
         }
       ],

@@ -11,7 +11,7 @@
   "@graph": [
     {
       "local_identifier": "https://w3id.org/skg-if/sandbox/clarin-vlo/canonical/vocab-resolution-test",
-      "entity_type": "service",
+      "entity_type": "srv_service",
       "name": "Canonical vocabulary resolution test",
 
       "srv_invocation_type": [
