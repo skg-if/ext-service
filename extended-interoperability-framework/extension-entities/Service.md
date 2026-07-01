@@ -6,9 +6,6 @@ layout: default
 nav_order: 2
 ---
 
-{: .highlight }
-Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
-
 # Generic service
 
 A Service is a type of software application or component that provides specific functionality or operations over a network, often via the internet, and is typically accessed through an interface such as an API or a web application.

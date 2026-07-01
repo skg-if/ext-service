@@ -6,9 +6,6 @@ layout: default
 nav_order: 2
 ---
 
-{: .highlight }
-Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
-
 # Venue extended by the Service extension
 
 The [Service] extension introduces a new type of Venue for modelling portal functionality: "portal". This is expressed by the value `srv_portal` of the `types` property.

@@ -7,9 +7,6 @@ parent: Extensions
 #search_exclude: true
 ---
 
-{: .highlight }
-Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
-
 # Service extension
 
 The Service extension has been developed in the context of the EU project [OSTrails](https://ostrails.eu) for better modelling the research process documentation.

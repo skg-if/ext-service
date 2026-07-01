@@ -6,9 +6,6 @@ layout: default
 nav_order: 3
 ---
 
-{: .highlight }
-Please note that the Service extension is still **work in progress**. Please follow the issue tracker [here](https://github.com/skg-if/ext-srv/issues).
-
 # Organisation extended by the Service extension
 
 This extension introduces two new types of Organisation for modelling service operations: "hosting organisation" and "research infrastructure". These are expressed by values `srv_hosting_organisation` and `srv_research_infrastructure` of the `types` property.
