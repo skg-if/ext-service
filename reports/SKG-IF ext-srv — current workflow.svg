@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 730" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <style>
+    .section-label { font-size: 12px; font-weight: 600; fill: #555; letter-spacing: 0.5px; }
+    .manual { fill: #fff4d6; stroke: #d9a92a; stroke-width: 1.5; }
+    .manual-title { font-size: 12px; font-weight: 600; fill: #5a3f00; }
+    .manual-text { font-size: 11px; fill: #6a4f0a; }
+    .external { fill: #f5f5f5; stroke: #aaa; stroke-width: 1.2; stroke-dasharray: 4 2; }
+    .external-title { font-size: 11px; font-weight: 600; fill: #555; }
+    .external-text { font-size: 10px; fill: #777; font-style: italic; }
+    .generated { fill: #dcedf8; stroke: #4b8bc4; stroke-width: 1.5; }
+    .generated-title { font-size: 12px; font-weight: 600; fill: #143a5f; }
+    .generated-text { font-size: 11px; fill: #1f4a78; }
+    .pipeline-box { fill: #f5f5ff; stroke: #7070c8; stroke-width: 2; }
+    /* ext-srv authored steps */
+    .step-box { fill: #eaeaff; stroke: #9090cc; stroke-width: 1.2; }
+    .step-text { font-size: 11px; fill: #2a2a6a; }
+    .step-num { font-size: 11px; font-weight: 700; fill: #2a2a9a; }
+    /* external tool steps (riot, Spectral, Prism) */
+    .ext-step { fill: #f0f0f0; stroke: #888; stroke-width: 1.2; }
+    .ext-step-num { font-size: 11px; font-weight: 700; fill: #444; }
+    /* SKG-IF provided tool (shacl-extractor) */
+    .skg-step { fill: #e8f5e8; stroke: #4a9a4a; stroke-width: 1.4; }
+    .skg-step-num { font-size: 11px; font-weight: 700; fill: #2a6a2a; }
+    .aux-box { fill: #f0fbf0; stroke: #70aa70; stroke-width: 1.2; stroke-dasharray: 5 3; }
+    .aux-title { font-size: 12px; font-weight: 600; fill: #2d6b2d; }
+    .aux-text { font-size: 11px; fill: #3a7a3a; }
+    .arrow { stroke: #777; stroke-width: 1.6; fill: none; }
+    .arrow-gen { stroke: #4b8bc4; stroke-width: 1.6; fill: none; }
+    .caption { font-size: 11px; fill: #777; font-style: italic; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#777"/>
+    </marker>
+    <marker id="ah-gen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b8bc4"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="430" y="28" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a1a">ext-srv — current extension workflow</text>
+  <text x="430" y="46" text-anchor="middle" class="caption">6 artefacts hand-authored or curated · shacl.ttl auto-generated · dev-check.sh validation pipeline (ext-srv authored, not SKG-IF mandated)</text>
+
+  <!-- ===== HAND-AUTHORED ARTEFACTS ===== -->
+  <text x="20" y="70" class="section-label">HAND-AUTHORED / CURATED</text>
+
+  <!-- srv.ttl -->
+  <rect x="20"  y="78" width="130" height="68" class="manual" rx="5"/>
+  <text x="85"  y="98"  text-anchor="middle" class="manual-title">srv.ttl</text>
+  <text x="85"  y="114" text-anchor="middle" class="manual-text">OWL ontology</text>
+  <text x="85"  y="129" text-anchor="middle" class="manual-text">source of truth</text>
+  <text x="85"  y="141" text-anchor="middle" class="manual-text">hand-maintained</text>
+
+  <!-- skg-if.json -->
+  <rect x="160" y="78" width="130" height="68" class="manual" rx="5"/>
+  <text x="225" y="98"  text-anchor="middle" class="manual-title">skg-if.json</text>
+  <text x="225" y="114" text-anchor="middle" class="manual-text">JSON-LD context</text>
+  <text x="225" y="129" text-anchor="middle" class="manual-text">hand-maintained</text>
+
+  <!-- service-overlay.yaml -->
+  <rect x="300" y="78" width="145" height="68" class="manual" rx="5"/>
+  <text x="372" y="98"  text-anchor="middle" class="manual-title">service-overlay.yaml</text>
+  <text x="372" y="114" text-anchor="middle" class="manual-text">OpenAPI overlay</text>
+  <text x="372" y="129" text-anchor="middle" class="manual-text">hand-maintained</text>
+
+  <!-- Service.md -->
+  <rect x="455" y="78" width="130" height="68" class="manual" rx="5"/>
+  <text x="520" y="98"  text-anchor="middle" class="manual-title">Service.md</text>
+  <text x="520" y="114" text-anchor="middle" class="manual-text">464-line prose</text>
+  <text x="520" y="129" text-anchor="middle" class="manual-text">specification</text>
+
+  <!-- examples/ -->
+  <rect x="595" y="78" width="130" height="68" class="manual" rx="5"/>
+  <text x="660" y="98"  text-anchor="middle" class="manual-title">examples/</text>
+  <text x="660" y="114" text-anchor="middle" class="manual-text">120+ JSON-LD</text>
+  <text x="660" y="129" text-anchor="middle" class="manual-text">records, curated</text>
+
+  <!-- core-openapi.yaml (external upstream) -->
+  <rect x="735" y="78" width="105" height="68" class="external" rx="5"/>
+  <text x="787" y="97"  text-anchor="middle" class="external-title">core-openapi</text>
+  <text x="787" y="111" text-anchor="middle" class="external-title">.yaml</text>
+  <text x="787" y="128" text-anchor="middle" class="external-text">upstream</text>
+  <text x="787" y="141" text-anchor="middle" class="external-text">skg-if/api</text>
+
+  <!-- ===== DEV-CHECK.SH PIPELINE BOX ===== -->
+  <rect x="20" y="170" width="820" height="330" class="pipeline-box" rx="8"/>
+  <text x="430" y="193" text-anchor="middle" font-size="13" font-weight="700" fill="#333399">dev-check.sh — 9-step validation pipeline (authored by ext-srv team; not part of official SKG-IF workflow)</text>
+
+  <!-- Step 1: riot (external tool) -->
+  <rect x="35"  y="204" width="140" height="56" class="ext-step" rx="4"/>
+  <text x="105" y="222" text-anchor="middle" class="ext-step-num">① riot</text>
+  <text x="105" y="237" text-anchor="middle" class="step-text">syntax check</text>
+  <text x="105" y="251" text-anchor="middle" class="step-text">srv.ttl only</text>
+
+  <!-- Step 2: shacl-extractor (SKG-IF provided) -->
+  <rect x="185" y="204" width="160" height="56" class="skg-step" rx="4"/>
+  <text x="265" y="220" text-anchor="middle" class="skg-step-num">② shacl-extractor</text>
+  <text x="265" y="234" text-anchor="middle" class="step-text">srv.ttl → shacl.ttl</text>
+  <text x="265" y="248" text-anchor="middle" class="step-text">output validated</text>
+
+  <!-- Step 3: alignment check (ext-srv authored) -->
+  <rect x="355" y="204" width="155" height="56" class="step-box" rx="4"/>
+  <text x="432" y="220" text-anchor="middle" class="step-num">③ alignment check</text>
+  <text x="432" y="234" text-anchor="middle" class="step-text">ontology ↔ context</text>
+  <text x="432" y="248" text-anchor="middle" class="step-text">↔ SHACL ↔ overlay</text>
+
+  <!-- Step 4: overlay merge (ext-srv authored) -->
+  <rect x="520" y="204" width="150" height="56" class="step-box" rx="4"/>
+  <text x="595" y="220" text-anchor="middle" class="step-num">④ overlay merge</text>
+  <text x="595" y="234" text-anchor="middle" class="step-text">core + overlay →</text>
+  <text x="595" y="248" text-anchor="middle" class="step-text">consolidated spec</text>
+
+  <!-- Steps 5+6: Spectral (external tool) -->
+  <rect x="680" y="204" width="145" height="56" class="ext-step" rx="4"/>
+  <text x="752" y="220" text-anchor="middle" class="ext-step-num">⑤⑥ Spectral</text>
+  <text x="752" y="234" text-anchor="middle" class="step-text">lint core spec</text>
+  <text x="752" y="248" text-anchor="middle" class="step-text">+ consolidated spec</text>
+
+  <!-- Step 7: context check (ext-srv authored) -->
+  <rect x="35"  y="278" width="155" height="52" class="step-box" rx="4"/>
+  <text x="112" y="295" text-anchor="middle" class="step-num">⑦ context check</text>
+  <text x="112" y="309" text-anchor="middle" class="step-text">all srv_* properties</text>
+  <text x="112" y="323" text-anchor="middle" class="step-text">declared in context</text>
+
+  <!-- Step 8: copy + start Prism stack (external tool) -->
+  <rect x="200" y="278" width="155" height="52" class="ext-step" rx="4"/>
+  <text x="277" y="295" text-anchor="middle" class="ext-step-num">⑧ copy + start stack</text>
+  <text x="277" y="309" text-anchor="middle" class="step-text">spec → Docker/</text>
+  <text x="277" y="323" text-anchor="middle" class="step-text">Prism port 4010</text>
+
+  <!-- Step 9: API health checks (ext-srv authored) -->
+  <rect x="365" y="278" width="155" height="52" class="step-box" rx="4"/>
+  <text x="442" y="295" text-anchor="middle" class="step-num">⑨ API health checks</text>
+  <text x="442" y="309" text-anchor="middle" class="step-text">20 tests against</text>
+  <text x="442" y="323" text-anchor="middle" class="step-text">Prism</text>
+
+  <!-- Step flow arrows (row 1) -->
+  <path d="M 175 232 L 185 232" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 345 232 L 355 232" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 510 232 L 520 232" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 670 232 L 680 232" class="arrow" marker-end="url(#ah)"/>
+  <!-- wrap to row 2 -->
+  <path d="M 752 260 L 752 270 L 35 270 L 35 278" class="arrow" marker-end="url(#ah)"/>
+  <!-- row 2 -->
+  <path d="M 190 304 L 200 304" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 355 304 L 365 304" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- GENERATED outputs within pipeline box -->
+  <text x="35" y="358" class="section-label" fill="#143a5f">GENERATED BY PIPELINE</text>
+
+  <!-- shacl.ttl -->
+  <rect x="35"  y="366" width="145" height="60" class="generated" rx="5"/>
+  <text x="107" y="386" text-anchor="middle" class="generated-title">shacl.ttl</text>
+  <text x="107" y="402" text-anchor="middle" class="generated-text">SHACL shapes</text>
+  <text x="107" y="416" text-anchor="middle" class="generated-text">from step ②</text>
+
+  <!-- consolidated-openapi.yaml -->
+  <rect x="190" y="366" width="180" height="60" class="generated" rx="5"/>
+  <text x="280" y="386" text-anchor="middle" class="generated-title">consolidated-openapi.yaml</text>
+  <text x="280" y="402" text-anchor="middle" class="generated-text">full OpenAPI 3.1 doc</text>
+  <text x="280" y="416" text-anchor="middle" class="generated-text">from step ④</text>
+
+  <!-- Pipeline result note -->
+  <text x="530" y="395" class="step-text" font-size="12" fill="#333399">All 9 steps pass: extension is self-consistent.</text>
+
+  <!-- Arrows from steps to generated -->
+  <path d="M 107 330 L 107 366" class="arrow-gen" marker-end="url(#ah-gen)"/>
+  <path d="M 595 260 L 595 450 L 280 450 L 280 426" class="arrow-gen" marker-end="url(#ah-gen)"/>
+
+  <!-- Input arrows to pipeline -->
+  <path d="M 85  146 L 85  170" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 225 146 L 225 170" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 372 146 L 372 170" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 787 146 L 787 175 L 595 175 L 595 204" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- ===== AUXILIARY (outside dev-check.sh) ===== -->
+  <text x="20" y="528" class="section-label">AUXILIARY — outside dev-check.sh, optional</text>
+
+  <!-- Widoco -->
+  <rect x="20"  y="538" width="230" height="65" class="aux-box" rx="5"/>
+  <text x="135" y="558" text-anchor="middle" class="aux-title">Widoco → HTML docs</text>
+  <text x="135" y="574" text-anchor="middle" class="aux-text">HTML documentation site + RDF/XML,</text>
+  <text x="135" y="588" text-anchor="middle" class="aux-text">N-Triples, JSON-LD serialisations</text>
+
+  <!-- Graffoo -->
+  <rect x="260" y="538" width="230" height="65" class="aux-box" rx="5"/>
+  <text x="375" y="558" text-anchor="middle" class="aux-title">yEd / Graffoo</text>
+  <text x="375" y="574" text-anchor="middle" class="aux-text">hand-authored class/property</text>
+  <text x="375" y="588" text-anchor="middle" class="aux-text">diagram (srv.graphml → srv.png)</text>
+
+  <!-- Arrows from srv.ttl down through pipeline to auxiliary -->
+  <line x1="85" y1="500" x2="85" y2="520" stroke="#777" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <path d="M 85 520 L 135 520 L 135 538" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 85 520 L 375 520 L 375 538" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Sync cost callout -->
+  <rect x="510" y="538" width="330" height="65" fill="#fff8f0" stroke="#c87020" stroke-width="1.2" rx="5"/>
+  <text x="675" y="558" text-anchor="middle" font-size="12" font-weight="600" fill="#7a3a00">Synchronisation cost</text>
+  <text x="675" y="574" text-anchor="middle" font-size="11" fill="#555">Every non-trivial change propagates through</text>
+  <text x="675" y="588" text-anchor="middle" font-size="11" fill="#555">multiple artefacts in the right order to pass ①–⑨.</text>
+  <text x="675" y="600" text-anchor="middle" font-size="11" fill="#555">Cross-artefact drift reappears after every significant change.</text>
+
+  <!-- Legend row 1 -->
+  <rect x="20"  y="628" width="14" height="14" class="manual" rx="2"/>
+  <text x="40"  y="640" font-size="12" fill="#333">hand-authored</text>
+  <rect x="145" y="628" width="14" height="14" class="generated" rx="2"/>
+  <text x="165" y="640" font-size="12" fill="#333">generated</text>
+  <rect x="250" y="628" width="14" height="14" class="aux-box" rx="2"/>
+  <text x="270" y="640" font-size="12" fill="#333">auxiliary / optional</text>
+  <rect x="400" y="628" width="14" height="14" class="external" rx="2"/>
+  <text x="420" y="640" font-size="12" fill="#333">external upstream input</text>
+
+  <!-- Legend row 2 -->
+  <rect x="20"  y="650" width="14" height="14" class="step-box" rx="2"/>
+  <text x="40"  y="662" font-size="12" fill="#333">ext-srv authored step</text>
+  <rect x="200" y="650" width="14" height="14" class="ext-step" rx="2"/>
+  <text x="220" y="662" font-size="12" fill="#333">external tool invoked by pipeline</text>
+  <rect x="460" y="650" width="14" height="14" class="skg-step" rx="2"/>
+  <text x="480" y="662" font-size="12" fill="#333">SKG-IF provided tool</text>
+
+</svg>

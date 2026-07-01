@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 970" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <style>
+    .panel { fill: #fafafa; stroke: #c8c8c8; stroke-width: 1.5; }
+    .panel-title { font-size: 22px; font-weight: 600; fill: #222; }
+    .section-label { font-size: 13px; font-weight: 600; fill: #555; letter-spacing: 0.5px; }
+    .sub-label { font-size: 11px; font-weight: 600; fill: #666; letter-spacing: 0.5px; }
+    .manual { fill: #fff4d6; stroke: #d9a92a; stroke-width: 1.5; }
+    .manual-text { font-size: 12px; fill: #6a4f0a; }
+    .manual-title { font-size: 13px; font-weight: 600; fill: #5a3f00; }
+    .manual-ext { fill: #fff0c0; stroke: #b08010; stroke-width: 1.5; stroke-dasharray: 4 2; }
+    .manual-changed { fill: #fce8d4; stroke: #d97810; stroke-width: 2; }
+    .manual-changed-text { font-size: 12px; fill: #6a2e00; }
+    .manual-changed-title { font-size: 13px; font-weight: 600; fill: #5a2800; }
+    .tool { fill: #e8e8e8; stroke: #888; stroke-width: 1.5; }
+    .tool-text { font-size: 13px; font-weight: 600; fill: #333; font-family: 'SF Mono', 'Menlo', monospace; }
+    .generated { fill: #dcedf8; stroke: #4b8bc4; stroke-width: 1.5; }
+    .generated-text { font-size: 12px; fill: #1f4a78; }
+    .generated-title { font-size: 13px; font-weight: 600; fill: #143a5f; }
+    .removed { fill: #f0f0f0; stroke: #999; stroke-width: 1; stroke-dasharray: 4 2; opacity: 0.85; }
+    .removed-text { font-size: 11px; fill: #888; }
+    .removed-title { font-size: 13px; font-weight: 600; fill: #666; text-decoration: line-through; }
+    .arrow { stroke: #666; stroke-width: 1.8; fill: none; }
+    .arrow-overlay { stroke: #a06418; stroke-width: 1.8; fill: none; }
+    .caption { font-size: 12px; fill: #666; font-style: italic; }
+    .count-bubble { fill: #f5b942; stroke: #a87017; stroke-width: 1.2; }
+    .count-bubble-text { font-size: 16px; font-weight: 700; fill: #3a2600; }
+    .divider { stroke: #c8c8c8; stroke-width: 1; stroke-dasharray: 4 3; }
+    .subpanel { fill: none; stroke: #b08010; stroke-width: 1.2; stroke-dasharray: 6 3; }
+    .changed-badge { fill: #d97810; }
+    .changed-badge-text { font-size: 9px; font-weight: 700; fill: #fff; letter-spacing: 0.4px; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="arrowhead-overlay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a06418"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="420" y="35" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Minimal-extension tier — JSON-LD context + SHACL only</text>
+  <text x="420" y="58" text-anchor="middle" class="caption">ext-srv without OWL; context + SHACL carry the semantic load (report §7.1, OWL-replacement analysis)</text>
+
+  <!-- Main panel -->
+  <rect x="20" y="80" width="800" height="870" class="panel" rx="8"/>
+
+  <!-- OpenAPI overlay sub-section background -->
+  <rect x="540" y="165" width="255" height="320" class="subpanel" rx="6"/>
+  <text x="667" y="183" text-anchor="middle" class="sub-label">OPENAPI OVERLAY WORKFLOW</text>
+
+  <!-- HAND-AUTHORED row heading -->
+  <text x="40" y="175" class="section-label">HAND-AUTHORED</text>
+  <circle cx="510" cy="170" r="16" class="count-bubble"/>
+  <text x="510" y="175" text-anchor="middle" class="count-bubble-text">4</text>
+
+  <!-- Row 1: Service.md + skg-if.json (enriched, changed role) -->
+  <rect x="40" y="195" width="225" height="85" class="manual" rx="5"/>
+  <text x="152" y="218" text-anchor="middle" class="manual-title">Service.md</text>
+  <text x="152" y="240" text-anchor="middle" class="manual-text">prose specification —</text>
+  <text x="152" y="256" text-anchor="middle" class="manual-text">primary human-readable</text>
+  <text x="152" y="272" text-anchor="middle" class="manual-text">documentation</text>
+
+  <rect x="285" y="195" width="235" height="85" class="manual-changed" rx="5"/>
+  <text x="402" y="218" text-anchor="middle" class="manual-changed-title">skg-if.json (enriched)</text>
+  <text x="402" y="238" text-anchor="middle" class="manual-changed-text">extension JSON-LD context —</text>
+  <text x="402" y="254" text-anchor="middle" class="manual-changed-text">URI bindings, @type coercions,</text>
+  <text x="402" y="270" text-anchor="middle" class="manual-changed-text">prefix map for all srv:* terms</text>
+  <!-- Changed badge -->
+  <rect x="478" y="186" width="50" height="16" rx="2" class="changed-badge"/>
+  <text x="503" y="198" text-anchor="middle" class="changed-badge-text">EXPANDED</text>
+
+  <!-- OpenAPI overlay inputs -->
+  <rect x="555" y="200" width="110" height="85" class="manual-ext" rx="5"/>
+  <text x="610" y="220" text-anchor="middle" class="manual-title" font-size="12">core-openapi.yaml</text>
+  <text x="610" y="242" text-anchor="middle" class="manual-text">upstream</text>
+  <text x="610" y="258" text-anchor="middle" class="manual-text">(skg-if/api)</text>
+  <text x="610" y="276" text-anchor="middle" class="manual-text" font-style="italic">external</text>
+
+  <rect x="675" y="200" width="110" height="85" class="manual" rx="5"/>
+  <text x="730" y="220" text-anchor="middle" class="manual-title" font-size="12">openapi-</text>
+  <text x="730" y="235" text-anchor="middle" class="manual-title" font-size="12">overlay.yaml</text>
+  <text x="730" y="256" text-anchor="middle" class="manual-text">paths +</text>
+  <text x="730" y="272" text-anchor="middle" class="manual-text">schemas inline</text>
+
+  <!-- Row 2: shacl.ttl hand-authored (changed role) -->
+  <rect x="40" y="300" width="480" height="145" class="manual-changed" rx="5"/>
+  <text x="280" y="323" text-anchor="middle" class="manual-changed-title">shacl.ttl  (now hand-authored)</text>
+  <text x="280" y="352" text-anchor="middle" class="manual-changed-text">• cardinality — sh:minCount, sh:maxCount</text>
+  <text x="280" y="370" text-anchor="middle" class="manual-changed-text">• ranges — sh:class, sh:datatype, sh:nodeKind</text>
+  <text x="280" y="388" text-anchor="middle" class="manual-changed-text">• controlled values — sh:in for inline enums</text>
+  <text x="280" y="406" text-anchor="middle" class="manual-changed-text">• external vocab — sh:class skos:Concept</text>
+  <text x="280" y="429" text-anchor="middle" class="manual-changed-text" font-style="italic">no OWL ontology to extract from; SHACL is the authoritative schema</text>
+  <!-- Changed badge -->
+  <rect x="350" y="291" width="140" height="16" rx="2" class="changed-badge"/>
+  <text x="420" y="303" text-anchor="middle" class="changed-badge-text">WAS GENERATED → NOW MANUAL</text>
+
+  <!-- Overlay merge tool -->
+  <rect x="550" y="305" width="235" height="55" class="tool" rx="5"/>
+  <text x="667" y="330" text-anchor="middle" class="tool-text">overlay / merge</text>
+  <text x="667" y="348" text-anchor="middle" font-size="11" fill="#555" font-style="italic">(yq, redocly, or manual)</text>
+
+  <!-- Arrows: inputs → merge -->
+  <path d="M 610 285 L 625 305" class="arrow-overlay" marker-end="url(#arrowhead-overlay)"/>
+  <path d="M 730 285 L 700 305" class="arrow-overlay" marker-end="url(#arrowhead-overlay)"/>
+
+  <!-- merged API spec (generated) -->
+  <rect x="550" y="385" width="235" height="85" class="generated" rx="5"/>
+  <text x="667" y="408" text-anchor="middle" class="generated-title">merged service</text>
+  <text x="667" y="424" text-anchor="middle" class="generated-title">API spec</text>
+  <text x="667" y="445" text-anchor="middle" class="generated-text">full OpenAPI 3.1 doc</text>
+  <text x="667" y="461" text-anchor="middle" class="generated-text">(core + extension)</text>
+
+  <path d="M 667 360 L 667 385" class="arrow-overlay" marker-end="url(#arrowhead-overlay)"/>
+
+  <!-- Divider -->
+  <line x1="40" y1="505" x2="800" y2="505" class="divider"/>
+
+  <!-- WHAT'S GONE vs. current stack -->
+  <text x="40" y="528" class="section-label">WHAT'S GONE  (vs. current stack)</text>
+
+  <rect x="40" y="540" width="180" height="52" class="removed" rx="5"/>
+  <text x="130" y="562" text-anchor="middle" class="removed-title">srv.ttl</text>
+  <text x="130" y="581" text-anchor="middle" class="removed-text">OWL ontology</text>
+
+  <rect x="230" y="540" width="180" height="52" class="removed" rx="5"/>
+  <text x="320" y="562" text-anchor="middle" class="removed-title">shacl-extractor</text>
+  <text x="320" y="581" text-anchor="middle" class="removed-text">no OWL to parse</text>
+
+  <rect x="420" y="540" width="180" height="52" class="removed" rx="5"/>
+  <text x="510" y="562" text-anchor="middle" class="removed-title">Widoco docs</text>
+  <text x="510" y="581" text-anchor="middle" class="removed-text">Service.md covers</text>
+
+  <rect x="610" y="540" width="180" height="52" class="removed" rx="5"/>
+  <text x="700" y="562" text-anchor="middle" class="removed-title">srv.graphml</text>
+  <text x="700" y="581" text-anchor="middle" class="removed-text">optional; Graffoo</text>
+
+  <!-- OWL residue -->
+  <text x="40" y="625" class="section-label">OWL-SPECIFIC RESIDUE — semantics not expressible</text>
+  <text x="40" y="650" font-size="13" fill="#555">• class-hierarchy reasoning (<tspan font-family="monospace" font-size="12">owl:subClassOf</tspan> inferences at query time)</text>
+  <text x="40" y="672" font-size="13" fill="#555">• <tspan font-family="monospace" font-size="12">rdfs:subPropertyOf</tspan> axioms (e.g. <tspan font-family="monospace" font-size="12">geographicalAvailability → dcterms:scope</tspan>)</text>
+  <text x="40" y="694" font-size="13" fill="#555">• <tspan font-family="monospace" font-size="12">owl:equivalentClass</tspan>, <tspan font-family="monospace" font-size="12">owl:disjointWith</tspan>, <tspan font-family="monospace" font-size="12">owl:propertyChainAxiom</tspan></text>
+  <text x="40" y="716" font-size="13" fill="#555">• property characteristics: transitive, symmetric, functional, <tspan font-family="monospace" font-size="12">inverseOf</tspan></text>
+  <text x="40" y="742" font-size="13" fill="#333" font-style="italic">None of the above are used by any current OSTrails consumer (per §7.1 OWL-replacement analysis)</text>
+
+  <!-- Effort summary -->
+  <rect x="40" y="775" width="760" height="150" fill="#fff" stroke="#d0a020" stroke-width="1.5" rx="5"/>
+  <text x="420" y="798" text-anchor="middle" font-size="14" font-weight="600" fill="#5a3f00">AUTHOR EFFORT</text>
+  <text x="60" y="823" font-size="13" fill="#333">• 4 hand-authored files (Service.md, skg-if.json, shacl.ttl, openapi-overlay.yaml)</text>
+  <text x="60" y="845" font-size="13" fill="#333">• 1 tool invocation (OpenAPI overlay / merge)</text>
+  <text x="60" y="867" font-size="13" fill="#333">• SHACL shapes authored directly — no shacl-extractor indirection</text>
+  <text x="60" y="889" font-size="13" fill="#333">• extension context carries URI + @type-coercion load (richer than current extension context)</text>
+  <text x="60" y="911" font-size="13" fill="#333">• ~90% of srv.ttl's declarative content reachable by this route (per §7.1 analysis)</text>
+</svg>

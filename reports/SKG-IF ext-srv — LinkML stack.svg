@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <style>
+    .panel        { fill: #fafafa; stroke: #c8c8c8; stroke-width: 1.5; }
+    .panel-title  { font-size: 28px; font-weight: 600; fill: #222; }
+    .subtitle     { font-size: 15px; fill: #666; font-style: italic; }
+    .sec-label    { font-size: 15px; font-weight: 600; fill: #555; letter-spacing: 0.6px; }
+
+    .manual       { fill: #fff4d6; stroke: #d9a92a; stroke-width: 1.5; }
+    .manual-head  { font-size: 17px; font-weight: 700; fill: #5a3f00; }
+    .manual-body  { font-size: 14px; fill: #6a4f0a; }
+
+    .tool         { fill: #e8e8e8; stroke: #888; stroke-width: 1.5; }
+    .tool-text    { font-size: 15px; font-weight: 600; fill: #333;
+                    font-family: 'SF Mono','Menlo','Consolas',monospace; }
+
+    .gen          { fill: #dcedf8; stroke: #4b8bc4; stroke-width: 1.5; }
+    .gen-new      { fill: #d9f0d4; stroke: #4b9c48; stroke-width: 1.5; }
+    .gen-head     { font-size: 15px; font-weight: 700; fill: #143a5f; }
+    .gen-head-new { font-size: 15px; font-weight: 700; fill: #1f5a1c; }
+    .gen-body     { font-size: 13px; fill: #1f4a78; }
+    .gen-body-new { font-size: 13px; fill: #1f5a1c; }
+
+    .conv         { fill: #f5f5f5; stroke: #999; stroke-width: 1.2; stroke-dasharray: 5 3; }
+    .conv-head    { font-size: 13px; font-weight: 600; fill: #444;
+                    font-family: 'SF Mono','Menlo','Consolas',monospace; }
+    .conv-body    { font-size: 12px; fill: #666; }
+
+    .arrow        { stroke: #666;    stroke-width: 2;   fill: none; }
+    .arrow-blue   { stroke: #2a6d9e; stroke-width: 2.5; fill: none; }
+    .arrow-dash   { stroke: #999;    stroke-width: 1.5; fill: none; stroke-dasharray: 5 3; }
+
+    .bubble-amber { fill: #f5b942; stroke: #a87017; stroke-width: 1.2; }
+    .bubble-green { fill: #4b9c48; stroke: #2f6c2c; stroke-width: 1.2; }
+    .bubble-n-a   { font-size: 19px; font-weight: 700; fill: #3a2600; }
+    .bubble-n-g   { font-size: 19px; font-weight: 700; fill: #fff; }
+
+    .profile-box  { fill: #fff; stroke: #4b9c48; stroke-width: 1.5; }
+    .profile-head { font-size: 15px; font-weight: 600; fill: #2f6c2c; }
+    .profile-body { font-size: 14px; fill: #333; }
+    .note-text    { font-size: 13px; fill: #888; font-style: italic; }
+  </style>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a6d9e"/>
+    </marker>
+    <marker id="arr-d" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#999"/>
+    </marker>
+  </defs>
+
+  <!-- Background panel -->
+  <rect x="10" y="10" width="980" height="800" class="panel" rx="10"/>
+
+  <!-- Title -->
+  <text x="500" y="52" text-anchor="middle" class="panel-title">LinkML-generated stack — ext-srv</text>
+  <text x="500" y="76" text-anchor="middle" class="subtitle">Two hand-authored files → five standard generators → five artefacts (§7.3 and Appendix A)</text>
+
+  <!-- ── HAND-AUTHORED ─────────────────────────────────────── -->
+  <text x="28" y="106" class="sec-label">HAND-AUTHORED</text>
+  <circle cx="963" cy="101" r="19" class="bubble-amber"/>
+  <text x="963" y="108" text-anchor="middle" class="bubble-n-a">2</text>
+
+  <!-- service.yaml  x=20..491, w=471 -->
+  <rect x="20" y="116" width="471" height="128" class="manual" rx="6"/>
+  <text x="256" y="143" text-anchor="middle" class="manual-head">service.yaml</text>
+  <text x="256" y="166" text-anchor="middle" class="manual-body">LinkML schema — single source of truth</text>
+  <text x="256" y="185" text-anchor="middle" class="manual-body">classes · slots · ranges · enums</text>
+  <text x="256" y="204" text-anchor="middle" class="manual-body">required / multivalued / cardinality</text>
+  <text x="256" y="223" text-anchor="middle" class="manual-body">code_set + reachable_from (SKOS vocabularies)</text>
+
+  <!-- Service.md  x=509..980, w=471 -->
+  <rect x="509" y="116" width="471" height="128" class="manual" rx="6"/>
+  <text x="744" y="143" text-anchor="middle" class="manual-head">Service.md</text>
+  <text x="744" y="166" text-anchor="middle" class="manual-body">prose specification — argumentation,</text>
+  <text x="744" y="185" text-anchor="middle" class="manual-body">scoping decisions, community-discussion text</text>
+  <text x="744" y="204" text-anchor="middle" class="manual-body">(not replaceable by generated docs —</text>
+  <text x="744" y="223" text-anchor="middle" class="manual-body">same role as in the current workflow)</text>
+
+  <!-- ── GENERATORS ──────────────────────────────────────────── -->
+  <!-- 5 boxes: w=182, gap=12; x = 20, 214, 408, 602, 796; centres = 111, 305, 499, 693, 887 -->
+  <text x="28" y="283" class="sec-label">GENERATORS  (LinkML standard)</text>
+  <circle cx="963" cy="278" r="19" class="bubble-green"/>
+  <text x="963" y="285" text-anchor="middle" class="bubble-n-g">5</text>
+
+  <rect x="20"  y="293" width="182" height="62" class="tool" rx="6"/>
+  <text x="111" y="330" text-anchor="middle" class="tool-text">gen-owl</text>
+
+  <rect x="214" y="293" width="182" height="62" class="tool" rx="6"/>
+  <text x="305" y="330" text-anchor="middle" class="tool-text">gen-shacl</text>
+
+  <rect x="408" y="293" width="182" height="62" class="tool" rx="6"/>
+  <text x="499" y="320" text-anchor="middle" class="tool-text">gen-jsonld-</text>
+  <text x="499" y="340" text-anchor="middle" class="tool-text">context</text>
+
+  <rect x="602" y="293" width="182" height="62" class="tool" rx="6"/>
+  <text x="693" y="320" text-anchor="middle" class="tool-text">gen-json-</text>
+  <text x="693" y="340" text-anchor="middle" class="tool-text">schema</text>
+
+  <rect x="796" y="293" width="182" height="62" class="tool" rx="6"/>
+  <text x="887" y="330" text-anchor="middle" class="tool-text">gen-doc</text>
+
+  <!-- Arrows: service.yaml bottom-centre (256, 244) → each generator top (y=293) -->
+  <path d="M 256,244 C 256,272 111,280 111,293" class="arrow-blue" marker-end="url(#arr-b)"/>
+  <path d="M 256,244 C 256,272 305,280 305,293" class="arrow-blue" marker-end="url(#arr-b)"/>
+  <path d="M 256,244 C 280,272 499,280 499,293" class="arrow-blue" marker-end="url(#arr-b)"/>
+  <path d="M 256,244 C 320,272 693,280 693,293" class="arrow-blue" marker-end="url(#arr-b)"/>
+  <path d="M 256,244 C 380,272 887,280 887,293" class="arrow-blue" marker-end="url(#arr-b)"/>
+
+  <!-- ── GENERATED ────────────────────────────────────────────── -->
+  <text x="28" y="400" class="sec-label">GENERATED ARTEFACTS</text>
+  <circle cx="963" cy="395" r="19" class="bubble-green"/>
+  <text x="963" y="402" text-anchor="middle" class="bubble-n-g">5</text>
+
+  <!-- Vertical arrows: generator bottom (355) → generated top (410) -->
+  <line x1="111" y1="355" x2="111" y2="410" class="arrow" marker-end="url(#arr)"/>
+  <line x1="305" y1="355" x2="305" y2="410" class="arrow" marker-end="url(#arr)"/>
+  <line x1="499" y1="355" x2="499" y2="410" class="arrow" marker-end="url(#arr)"/>
+  <line x1="693" y1="355" x2="693" y2="410" class="arrow" marker-end="url(#arr)"/>
+  <line x1="887" y1="355" x2="887" y2="410" class="arrow" marker-end="url(#arr)"/>
+
+  <!-- srv.ttl -->
+  <rect x="20"  y="410" width="182" height="112" class="gen" rx="6"/>
+  <text x="111" y="433" text-anchor="middle" class="gen-head">srv.ttl</text>
+  <text x="111" y="453" text-anchor="middle" class="gen-body">OWL ontology</text>
+  <text x="111" y="470" text-anchor="middle" class="gen-body">(now generated,</text>
+  <text x="111" y="487" text-anchor="middle" class="gen-body">not hand-authored)</text>
+
+  <!-- shacl.ttl -->
+  <rect x="214" y="410" width="182" height="112" class="gen" rx="6"/>
+  <text x="305" y="433" text-anchor="middle" class="gen-head">shacl.ttl</text>
+  <text x="305" y="453" text-anchor="middle" class="gen-body">SHACL shapes</text>
+  <text x="305" y="470" text-anchor="middle" class="gen-body">(broader than</text>
+  <text x="305" y="487" text-anchor="middle" class="gen-body">extractor output)</text>
+
+  <!-- skg-if.json -->
+  <rect x="408" y="410" width="182" height="112" class="gen" rx="6"/>
+  <text x="499" y="433" text-anchor="middle" class="gen-head">skg-if.json</text>
+  <text x="499" y="453" text-anchor="middle" class="gen-body">JSON-LD context</text>
+  <text x="499" y="470" text-anchor="middle" class="gen-body">(extension)</text>
+
+  <!-- service.schema.json — new (green) -->
+  <rect x="602" y="410" width="182" height="112" class="gen-new" rx="6"/>
+  <text x="693" y="430" text-anchor="middle" class="gen-head-new">service.</text>
+  <text x="693" y="448" text-anchor="middle" class="gen-head-new">schema.json</text>
+  <text x="693" y="468" text-anchor="middle" class="gen-body-new">JSON Schema</text>
+  <text x="693" y="485" text-anchor="middle" class="gen-body-new">(new capability)</text>
+
+  <!-- docs/ Markdown -->
+  <rect x="796" y="410" width="182" height="112" class="gen" rx="6"/>
+  <text x="887" y="433" text-anchor="middle" class="gen-head">docs/</text>
+  <text x="887" y="453" text-anchor="middle" class="gen-body">Markdown per class</text>
+  <text x="887" y="470" text-anchor="middle" class="gen-body">and slot — equiv. to</text>
+  <text x="887" y="487" text-anchor="middle" class="gen-body">Widoco HTML docs</text>
+  <text x="887" y="504" text-anchor="middle" class="gen-body">(HTML via mkdocs)</text>
+
+  <!-- ── RIOT CONVERSION STEP (below srv.ttl only) ───────────── -->
+  <line x1="111" y1="522" x2="111" y2="543" class="arrow-dash" marker-end="url(#arr-d)"/>
+  <rect x="20" y="543" width="182" height="68" class="conv" rx="6"/>
+  <text x="111" y="562" text-anchor="middle" class="conv-head">riot</text>
+  <text x="111" y="579" text-anchor="middle" class="conv-body">W3C serialisations from</text>
+  <text x="111" y="594" text-anchor="middle" class="conv-body">gen-owl Turtle output:</text>
+  <text x="111" y="609" text-anchor="middle" class="conv-body">.rdf · .nt · JSON-LD OWL</text>
+
+  <!-- ── AUTHOR PROFILE ────────────────────────────────────────── -->
+  <rect x="20" y="640" width="957" height="90" class="profile-box" rx="6"/>
+  <text x="500" y="664" text-anchor="middle" class="profile-head">Author profile</text>
+  <text x="40"  y="688" class="profile-body">• 2 hand-authored files (service.yaml + Service.md) → 5 generated artefacts including OWL and reference documentation</text>
+  <text x="40"  y="711" class="profile-body">• W3C serialisations (.rdf · .nt) require one additional riot conversion step from the gen-owl Turtle output (no equivalent step needed today: Widoco handles this)</text>
+
+  <!-- ── FOOTNOTE ───────────────────────────────────────────────── -->
+  <text x="500" y="753" text-anchor="middle" class="note-text">OpenAPI overlay (service-overlay.yaml) and examples/ remain hand-authored on this route, as in the current workflow.</text>
+  <text x="500" y="773" text-anchor="middle" class="note-text">The synchronisation cost of §5.3 is largely eliminated: OWL, SHACL, JSON-LD context and reference docs all derive from service.yaml.</text>
+
+</svg>
