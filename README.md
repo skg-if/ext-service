@@ -12,4 +12,6 @@ See also the rationale and [discussion doc](https://docs.google.com/document/d/1
 
 Proponent(s): Daan Broeder (dgbroeder), Menzo Windhouwer (menzowindhouwer), Matej Durco (vronk), Renauld Duyme (rduyme), Baptise Cecconi (BaptisteCecconi)
 
+Contact for the Service extension is Menzo Windhouwer <menzo.windhouwer@di.huc.knaw.nl>
+
 

@@ -10,7 +10,6 @@ Investigates potential workflow alternatives. DOI: https://doi.org/10.5281/zenod
 | File | Description |
 |---|---|
 | `SKG-IF extension WF -  draft 0.10.pdf` | Report — draft 0.10 (also published on Zenodo) |
-| `SKG-IF extension WF -  draft 0.10.docx` | Editable source (Word) |
 | `SKG-IF ext-srv — current workflow.svg` | Diagram: current ext-srv development workflow |
 | `SKG-IF ext-srv — LinkML stack.svg` | Diagram: proposed LinkML stack comparison |
 | `SKG-IF ext-srv — minimal-tier stack diagram.svg` | Diagram: minimal-tier stack proposal |
